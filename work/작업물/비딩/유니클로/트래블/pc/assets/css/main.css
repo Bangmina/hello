@@ -1,0 +1,348 @@
+@charset "UTF-8";
+/*
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+*/
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 300;
+  src: url(NanumSquareL.eot);
+  src: local("☺"), url(NanumSquareL.eot?#iefix) format("embedded-opentype"), url(NanumSquareL.woff) format("woff"), url(NanumSquareL.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 400;
+  src: url(NanumSquareR.eot);
+  src: local("☺"), url(NanumSquareR.eot?#iefix) format("embedded-opentype"), url(NanumSquareR.woff) format("woff"), url(NanumSquareR.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 700;
+  src: url(NanumSquareB.eot);
+  src: local("☺"), url(NanumSquareB.eot?#iefix) format("embedded-opentype"), url(NanumSquareB.woff) format("woff"), url(NanumSquareB.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 800;
+  src: url(NanumSquareEB.eot);
+  src: local("☺"), url(NanumSquareEB.eot?#iefix) format("embedded-opentype"), url(NanumSquareEB.woff) format("woff"), url(NanumSquareEB.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff") format("woff");
+}
+.header {
+  height: 100px;
+  background: blue;
+}
+
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.deco {
+  position: absolute;
+}
+
+.visual {
+  height: 860px;
+  background: url("../images/visual_bg.png") no-repeat;
+  background-size: cover;
+}
+.visual .wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.visual__box {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.visual__box--left, .visual__box--right {
+  display: flex;
+}
+.visual__box--left {
+  align-items: center;
+}
+.visual__box--right {
+  justify-content: center;
+  flex-direction: column;
+}
+.visual__txt {
+  margin-top: 60px;
+  padding-left: 30px;
+  font-size: 20px;
+}
+.visual__txt p {
+  line-height: 1.4;
+}
+.visual__txt p:not(:first-child) {
+  margin-top: 25px;
+}
+.visual__swiper--wrap {
+  width: 545px;
+  height: 548px;
+  background: #fff;
+  padding: 40px 40px 0;
+  border-radius: 10px;
+  box-shadow: 1px -2px 8px 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px -2px 8px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px -2px 8px 1px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.visual__swiper .swiper-slide {
+  width: 100%;
+}
+.visual__swiper .swiper-slide img {
+  width: 100%;
+}
+.visual__card--txt, .visual__card--plus {
+  text-align: center;
+}
+.visual__card--txt {
+  margin-top: 30px;
+}
+.visual__card--plus {
+  margin-top: 20px;
+}
+.visual__derector {
+  font-size: 20px;
+  color: #636363;
+  text-align: right;
+  margin-bottom: 18px;
+}
+.visual__img--smile {
+  position: absolute;
+  left: -65px;
+  bottom: -80px;
+}
+
+.section {
+  padding: 65px 0 75px;
+}
+
+.art {
+  background: #f4efeb;
+}
+.art .title {
+  text-align: right;
+}
+.art__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.art__item01 {
+  margin-top: -65px;
+}
+.art__item--title {
+  font-size: 48px;
+}
+.art__item--title .green {
+  font-weight: 900;
+  padding: 8px 10px;
+  margin-top: 8px;
+  display: inline-block;
+  background: #85e82d;
+}
+.art__item--title:not(:first-child) {
+  margin-top: 10px;
+}
+.art__item--content {
+  font-size: 24px;
+  margin-top: 45px;
+}
+.art__item--content p {
+  line-height: 1.4;
+  word-break: keep-all;
+}
+.art__item--content p:not(:first-child) {
+  margin-top: 27px;
+}
+
+.eat {
+  background: url("../images/eat_bg.png") no-repeat;
+  background-size: cover;
+}
+.eat .title {
+  text-align: center;
+  margin-bottom: 85px;
+}
+.eat__list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.eat__item {
+  position: relative;
+}
+.eat__best {
+  position: absolute;
+  left: 10px;
+  top: -70px;
+}
+.eat__desc {
+  margin-top: 25px;
+  padding: 20px 0 45px;
+  font-size: 24px;
+  line-height: 1.4;
+  border-top: 1px solid #000;
+  border-bottom: 2px solid #000;
+  word-break: keep-all;
+}
+.eat__desc p {
+  line-height: 1.4;
+}
+.eat__desc p:not(:first-child) {
+  margin-top: 25px;
+}
+.eat__box:not(:first-child) {
+  margin-top: 95px;
+}
+
+.drink {
+  background: url("../images/coffe_place_bg.png") no-repeat;
+  background-size: cover;
+  padding: 305px 0 130px;
+}
+.drink .wrap {
+  width: 1165px;
+}
+.drink__card {
+  padding: 45px 50px 20px;
+  max-width: 815px;
+  margin: 0 auto;
+  position: relative;
+  background: url("../images/coffe_bg.png") repeat;
+}
+.drink__txt {
+  line-height: 1.4;
+  font-size: 24px;
+  margin-top: 20px;
+  word-break: keep-all;
+}
+.drink__title {
+  top: -185px;
+  right: -140px;
+}
+.drink__coffee_time {
+  bottom: 145px;
+  right: -170px;
+}
+.drink__list {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.drink__item {
+  position: relative;
+  padding: 20px 20px 40px 20px;
+  background: url("../images/coffe_bg.png");
+}
+.drink__v {
+  left: 10px;
+  top: -112px;
+}
+.drink__desc {
+  margin-top: 35px;
+  font-size: 24px;
+  line-height: 1.4;
+  word-break: keep-all;
+  color: #fff;
+  transform: rotate(0.04deg);
+}
+
+.view {
+  background: url("../images/view_bg.png");
+  background-size: cover;
+  position: relative;
+}
+.view .wrap {
+  width: 1100px;
+}
+.view .title {
+  text-align: center;
+}
+.view__smile {
+  top: -165px;
+  right: -90px;
+}
+.view__pic1 {
+  margin-top: 75px;
+}
+.view__desc {
+  background: #fff;
+  padding: 25px 35px;
+  border-radius: 10px;
+  word-break: keep-all;
+  font-size: 24px;
+  line-height: 1.4;
+}
+.view__desc:first-of-type {
+  margin-top: 10px;
+}
+.view__desc:last-of-type {
+  margin-top: 25px;
+}
+.view__list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}/*# sourceMappingURL=main.css.map */

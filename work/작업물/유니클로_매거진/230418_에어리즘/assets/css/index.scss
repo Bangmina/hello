@@ -1,0 +1,751 @@
+/* font */
+
+/*
+  나눔스퀘어  [NanumSquare]
+  Light 300
+  Regular 400 (default)
+  Bold 700
+  ExtraBold 800
+*/
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+/*
+  [Noto Sans]
+  Thin 100
+  ExtraLight 200
+  Light 300  
+  Regular 400
+  Medium 500 (default)
+  SemiBold 600
+  Bold 700
+  ExtraBold 800
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* 
+  애플 산돌고딕 [Apple SD Gothic Neo]
+  Thin 100
+  UltraLight 200
+  Light 300
+  Medium 400
+  Regular 500 
+  SemiBold 600 (default)
+  Bold 700
+  ExtraBold 800
+  Heavy 900
+*/
+@import url('https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/css/all.css');
+
+/* 강원교육모두 [GangwonEduAll] 300/400 */
+@font-face {
+  font-family: 'GangwonEduAll';
+  font-weight: 300;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff')
+      format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.ttf')
+      format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GangwonEduAll';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff')
+      format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.ttf')
+      format('truetype');
+  font-display: swap;
+}
+
+/* reset */
+.adef_webzine {
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    font-family: 'NanumSquare', 'Noto Sans', '', 'Noto Sans KR', 'Nanum Gothic',
+      'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 3.6vw;
+    line-height: 1.6;
+    letter-spacing: -0.8px;
+    color: #000000;
+    vertical-align: baseline;
+  }
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+  ol,
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  blockquote,
+  q {
+    quotes: none;
+  }
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+/* common */
+.adef_webzine {
+  .wrap {
+    padding: 0 10vw;
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+  .bold {
+    font-weight: 900;
+  }
+  .section {
+    position: relative;
+  }
+  .buy__anchor,
+  .info {
+    position: relative;
+    // font-size: 3.9vw;
+    transform: rotate(0.04deg);
+    -webkit-transform: rotate(0.04deg);
+    -moz-transform: rotate(0.04deg);
+    -ms-transform: rotate(0.04deg);
+    -o-transform: rotate(0.04deg);
+  }
+  .buy__anchor {
+    &--wrap {
+      text-align: center;
+    }
+    // 제품 구매하러가기
+    padding: 1.5vw 0;
+    display: inline-block;
+    text-decoration: underline;
+    color: #000;
+    font-weight: 900;
+  }
+  .info {
+    // 제품에 따라 기능이 상이합니다 스타일
+    margin-top: 14vw;
+  }
+  .section__txt {
+    vertical-align: baseline;
+    text-align: justify;
+    transform: rotate(0.04deg);
+    -webkit-transform: rotate(0.04deg);
+    -moz-transform: rotate(0.04deg);
+    -ms-transform: rotate(0.04deg);
+    -o-transform: rotate(0.04deg);
+
+    p {
+      &:not(:first-child) {
+        margin-top: 4vw;
+      }
+    }
+  }
+}
+
+/* 페이지 */
+.adef_webzine {
+  .lineup__one {
+    .lineup__see {
+      margin-top: 3vw;
+    }
+  }
+  .lineup__two {
+    .gender__img {
+      margin-top: 6.5vw;
+    }
+    .lineup__see {
+      margin-top: 0.5vw;
+    }
+  }
+  .lineup__three {
+    .product__list.three {
+      margin-top: 4vw;
+    }
+  }
+  .lineup__four {
+    .gender__img {
+    }
+    .product__list {
+      margin-top: 5vw;
+    }
+  }
+  .ic_gender {
+    width: 6.13vw;
+  }
+
+  .airism {
+    &__item {
+      width: 50%;
+      box-sizing: border-box;
+    }
+    &__item--img_wrap {
+      display: flex;
+      align-items: center;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+
+      &.one {
+        margin-top: 5.5vw;
+        .airism__item {
+          margin: 3.7vw 0;
+          &:nth-of-type(1),
+          &:nth-of-type(2) {
+            .airism__item--img_wrap {
+              height: 92vw;
+            }
+          }
+          &:nth-of-type(3),
+          &:nth-of-type(4) {
+            .airism__item--img_wrap {
+              height: 92vw;
+            }
+          }
+          &:nth-of-type(1),
+          &:nth-of-type(3) {
+            padding-left: 10vw;
+          }
+          &:nth-of-type(2),
+          &:nth-of-type(4) {
+            padding-left: 4vw;
+          }
+          &:nth-of-type(1) {
+            .airism__item--img_wrap img {
+              width: 25.86vw;
+            }
+          }
+          &:nth-of-type(2) {
+            .airism__item--img_wrap img {
+              width: 28.66vw;
+            }
+            .airism__item--name {
+              padding-left: 2.25vw;
+            }
+          }
+          &:nth-of-type(3) {
+            .airism__item--img_wrap img {
+              width: 36.8vw;
+              margin-left: -6vw;
+            }
+          }
+          &:nth-of-type(4) {
+            .airism__item--img_wrap {
+              padding-left: 3.3vw;
+            }
+            .airism__item--img_wrap img {
+              width: 30.13vw;
+            }
+          }
+        }
+      }
+    }
+    &__item--name {
+      margin-top: 4.5vw;
+      line-height: 1.2;
+      font-weight: 900;
+      .ic_gender {
+        margin-bottom: 1vw;
+      }
+    }
+  }
+  .section1 {
+    padding: 14.65vw 0 0 0;
+  }
+  .section2 {
+    margin-top: 17.5vw;
+  }
+  .lineup__see {
+    margin-top: 3.5vw;
+    text-align: center;
+
+    p {
+      display: inline-block;
+      position: relative;
+      text-align: center;
+
+      span {
+        font-size: 2.9vw;
+        font-weight: 900;
+        position: relative;
+        z-index: 2;
+      }
+      &::before {
+        content: '';
+        display: block;
+        width: 107%;
+        height: 2vw;
+        background: #99d8f3;
+        position: absolute;
+        bottom: 0.5vw;
+        z-index: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  .gender__img {
+    width: 20.26vw;
+    margin: 6vw auto 0;
+  }
+  .lineup__title {
+    font-size: 4vw;
+    font-family: Uniqlo Pro Regular, NanumSquare Regular, Roboto, Droid Sans,
+      Helvetica Neue, HiraKakuProN-W3, sans-serif;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #00aeef;
+  }
+  .product__item {
+    width: 25%;
+    margin: 2vw 0;
+
+    .product__img--wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .product__list {
+    width: 77.33vw;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3vw;
+
+    &.one {
+      li {
+        &:nth-of-type(1),
+        &:nth-of-type(2),
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+          .product__img--wrap {
+            height: 19.06vw;
+          }
+        }
+        &:nth-of-type(5),
+        &:nth-of-type(6),
+        &:nth-of-type(7),
+        &:nth-of-type(8) {
+          .product__img--wrap {
+            height: 24vw;
+          }
+        }
+        &:nth-of-type(1) {
+          .product__img--wrap img {
+            width: 15.06vw;
+          }
+          .product__item--name {
+            padding-left: 3vw;
+          }
+        }
+        &:nth-of-type(2) {
+          .product__img--wrap img {
+            width: 15.46vw;
+          }
+          .product__item--name {
+            padding-left: 3vw;
+          }
+        }
+        &:nth-of-type(3) {
+          .product__img--wrap img {
+            width: 16.4vw;
+          }
+          .product__item--name {
+            padding-left: 3vw;
+          }
+        }
+        &:nth-of-type(4) {
+          .product__img--wrap img {
+            width: 17.2vw;
+          }
+          .product__item--name {
+            padding-left: 3vw;
+          }
+        }
+        &:nth-of-type(5) {
+          .product__img--wrap img {
+            width: 10.8vw;
+          }
+          .product__item--name {
+            padding-left: 3vw;
+          }
+        }
+        &:nth-of-type(6) {
+          .product__img--wrap img {
+            width: 10.4vw;
+          }
+          .product__item--name {
+            padding-left: 3vw;
+          }
+        }
+        &:nth-of-type(7) {
+          .product__img--wrap img {
+            width: 11.33vw;
+          }
+          .product__item--name {
+            padding-left: 3vw;
+          }
+        }
+        &:nth-of-type(8) {
+          .product__img--wrap img {
+            width: 6.26vw;
+          }
+          .product__item--name {
+            padding-left: 3vw;
+          }
+        }
+      }
+    }
+    &.two {
+      li {
+        &:nth-of-type(1),
+        &:nth-of-type(2),
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+          .product__img--wrap {
+            height: 19.06vw;
+          }
+        }
+        &:nth-of-type(5),
+        &:nth-of-type(6),
+        &:nth-of-type(7),
+        &:nth-of-type(8) {
+          .product__img--wrap {
+            height: 17.8vw;
+          }
+        }
+        &:nth-of-type(1) {
+          .product__img--wrap img {
+            width: 14.26vw;
+          }
+          .product__item--name {
+            padding-left: 2.5vw;
+          }
+        }
+        &:nth-of-type(2) {
+          .product__img--wrap img {
+            width: 14.93vw;
+          }
+          .product__item--name {
+            padding-left: 3vw;
+          }
+        }
+        &:nth-of-type(3) {
+          .product__img--wrap img {
+            width: 7.7vw;
+          }
+          .product__item--name {
+            padding-left: 3vw;
+          }
+        }
+        &:nth-of-type(4) {
+          .product__img--wrap img {
+            width: 12.93vw;
+          }
+          .product__item--name {
+            padding-left: 5vw;
+          }
+        }
+        &:nth-of-type(5) {
+          .product__img--wrap img {
+            width: 15.6vw;
+          }
+          .product__item--name {
+            padding-left: 3vw;
+          }
+        }
+        &:nth-of-type(6) {
+          .product__img--wrap img {
+            width: 17.06vw;
+          }
+          .product__item--name {
+            padding-left: 4vw;
+          }
+        }
+        &:nth-of-type(7) {
+          .product__img--wrap img {
+            width: 16.53vw;
+          }
+          .product__item--name {
+            padding-left: 4vw;
+          }
+        }
+        &:nth-of-type(8) {
+          .product__img--wrap img {
+            width: 16.26vw;
+          }
+          .product__item--name {
+            padding-left: 4.5vw;
+          }
+        }
+      }
+    }
+    &.three {
+      li {
+        .product__item--name {
+          padding-left: 4vw;
+        }
+        &:nth-of-type(1),
+        &:nth-of-type(2),
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+          .product__img--wrap {
+            height: 18.13vw;
+          }
+        }
+        &:nth-of-type(5),
+        &:nth-of-type(6),
+        &:nth-of-type(7),
+        &:nth-of-type(8) {
+          .product__img--wrap {
+            height: 17.8vw;
+          }
+        }
+        &:nth-of-type(1) {
+          .product__img--wrap img {
+            width: 10.4vw;
+          }
+        }
+        &:nth-of-type(2) {
+          .product__img--wrap img {
+            width: 10.66vw;
+          }
+        }
+        &:nth-of-type(3) {
+          .product__img--wrap img {
+            width: 10.26vw;
+          }
+        }
+        &:nth-of-type(4) {
+          .product__img--wrap img {
+            width: 15.06vw;
+          }
+        }
+        &:nth-of-type(5) {
+          .product__img--wrap img {
+            width: 10.53vw;
+          }
+        }
+        &:nth-of-type(6) {
+          .product__img--wrap img {
+            width: 11.06vw;
+          }
+        }
+        &:nth-of-type(7) {
+          .product__img--wrap img {
+            width: 11.06vw;
+          }
+        }
+        &:nth-of-type(8) {
+          .product__img--wrap img {
+            width: 15.2vw;
+          }
+        }
+      }
+    }
+    &.four {
+      li {
+        .product__item--name {
+          padding-left: 4vw;
+        }
+        &:nth-of-type(1),
+        &:nth-of-type(2),
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+          .product__img--wrap {
+            height: 19.13vw;
+          }
+        }
+        &:nth-of-type(5),
+        &:nth-of-type(6),
+        &:nth-of-type(7),
+        &:nth-of-type(8) {
+          .product__img--wrap {
+            height: 18.8vw;
+          }
+        }
+        &:nth-of-type(1) {
+          .product__img--wrap img {
+            width: 14.26vw;
+          }
+        }
+        &:nth-of-type(2) {
+          .product__img--wrap img {
+            width: 14.93vw;
+          }
+        }
+        &:nth-of-type(3) {
+          .product__img--wrap img {
+            width: 10.4vw;
+          }
+        }
+        &:nth-of-type(4) {
+          .product__img--wrap img {
+            width: 15.46vw;
+          }
+        }
+        &:nth-of-type(5) {
+          .product__img--wrap img {
+            width: 16vw;
+          }
+        }
+        &:nth-of-type(6) {
+          .product__img--wrap img {
+            width: 16.26vw;
+          }
+        }
+        &:nth-of-type(7) {
+          .product__img--wrap img {
+            width: 13.73vw;
+          }
+        }
+        &:nth-of-type(8) {
+          .product__img--wrap img {
+            width: 12vw;
+          }
+        }
+      }
+    }
+    .product__item--name {
+      font-size: 2.66vw;
+      line-height: 1.2;
+      margin-top: 1.3vw;
+      box-sizing: border-box;
+    }
+  }
+  .airism__img1 {
+    width: 74.13vw;
+    margin: 16vw auto 0;
+  }
+  .airism__img2 {
+    width: 69.6vw;
+    margin: 9.3vw auto 0;
+  }
+  .section3 {
+    margin-top: 14vw;
+  }
+}

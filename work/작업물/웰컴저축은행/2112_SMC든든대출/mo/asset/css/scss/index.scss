@@ -1,0 +1,110 @@
+@charset "UTF-8";
+@import 'reset';
+@import 'fonts';
+@import 'basic';
+.ani_scale {
+  display: inline-block;
+  animation: scaleAni 1s;
+  -webkit-animation: 0.7s scaleAni 0.5s 2;
+}
+.header {
+  background: #0053ba;
+  padding: 18px 0;
+  .wrap {
+  }
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo--img {
+    width: 135px;
+  }
+  &__logo--txt {
+    margin-top: 10px;
+    transform: rotate(0.04deg);
+    font-size: 15px;
+    color: #fff;
+  }
+  &__tel {
+    color: #fff;
+    font-weight: 900;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transform: rotate(0.04deg);
+  }
+  &__tel--img {
+    margin-right: 5px;
+    width: 17px;
+  }
+}
+
+.visual {
+  background: url(../images/visual_bg.png) no-repeat top left;
+  background-size: cover;
+  .wrap {
+    padding: 25px 0 35px;
+  }
+  &__check--list {
+    display: flex;
+    justify-content: center;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  &__check--list li {
+    position: relative;
+    padding-left: 25px;
+    margin-right: 30px;
+    font-size: 16px;
+    font-weight: 800;
+    transform: rotate(0.04deg);
+  }
+
+  &__check--list li::before {
+    content: '';
+    display: block;
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 3px);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    background: url(../images/ic_check.png) no-repeat;
+    background-size: 100%;
+  }
+  &__title {
+    font-size: 40px;
+    text-align: center;
+    color: #0053ba;
+    margin-top: 25px;
+    line-height: 1.5;
+    .txt_point {
+      position: relative;
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: #0053ba;
+        top: -15px;
+        left: 0;
+      }
+      &::before {
+      }
+      &::after {
+      }
+    }
+
+    .bold {
+      font-weight: 900;
+    }
+  }
+}

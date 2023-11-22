@@ -1,0 +1,308 @@
+@charset "UTF-8";
+/* font */
+/*
+  나눔스퀘어  [NanumSquare]
+  Light 300
+  Regular 400
+  Bold 700
+  ExtraBold 800
+*/
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+/*
+  [Noto Sans]
+  Thin 100
+  ExtraLight 200
+  Light 300
+  Regular 400
+  Medium500
+  SemiBold 600
+  Bold 700
+  ExtraBold 800
+*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* 
+  애플 산돌고딕 [Apple SD Gothic Neo]
+  Thin 100
+  UltraLight 200
+  Light 300
+  Medium 400
+  Regular 500
+  SemiBold 600
+  Bold 700
+  ExtraBold 800
+  Heavy 900
+*/
+@import url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/css/all.css");
+/* 강원교육모두 [GangwonEduAll] 300/400 */
+@font-face {
+  font-family: "GangwonEduAll";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "GangwonEduAll";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.ttf") format("truetype");
+  font-display: swap;
+}
+/* reset */
+.adef_webzine div,
+.adef_webzine span,
+.adef_webzine applet,
+.adef_webzine object,
+.adef_webzine iframe,
+.adef_webzine h1,
+.adef_webzine h2,
+.adef_webzine h3,
+.adef_webzine h4,
+.adef_webzine h5,
+.adef_webzine h6,
+.adef_webzine p,
+.adef_webzine blockquote,
+.adef_webzine pre,
+.adef_webzine a,
+.adef_webzine abbr,
+.adef_webzine acronym,
+.adef_webzine address,
+.adef_webzine big,
+.adef_webzine cite,
+.adef_webzine code,
+.adef_webzine del,
+.adef_webzine dfn,
+.adef_webzine em,
+.adef_webzine img,
+.adef_webzine ins,
+.adef_webzine kbd,
+.adef_webzine q,
+.adef_webzine s,
+.adef_webzine samp,
+.adef_webzine small,
+.adef_webzine strike,
+.adef_webzine strong,
+.adef_webzine sub,
+.adef_webzine sup,
+.adef_webzine tt,
+.adef_webzine var,
+.adef_webzine b,
+.adef_webzine u,
+.adef_webzine i,
+.adef_webzine center,
+.adef_webzine dl,
+.adef_webzine dt,
+.adef_webzine dd,
+.adef_webzine ol,
+.adef_webzine ul,
+.adef_webzine li,
+.adef_webzine fieldset,
+.adef_webzine form,
+.adef_webzine label,
+.adef_webzine legend,
+.adef_webzine table,
+.adef_webzine caption,
+.adef_webzine tbody,
+.adef_webzine tfoot,
+.adef_webzine thead,
+.adef_webzine tr,
+.adef_webzine th,
+.adef_webzine td,
+.adef_webzine article,
+.adef_webzine aside,
+.adef_webzine canvas,
+.adef_webzine details,
+.adef_webzine embed,
+.adef_webzine figure,
+.adef_webzine figcaption,
+.adef_webzine footer,
+.adef_webzine header,
+.adef_webzine hgroup,
+.adef_webzine menu,
+.adef_webzine nav,
+.adef_webzine output,
+.adef_webzine ruby,
+.adef_webzine section,
+.adef_webzine summary,
+.adef_webzine time,
+.adef_webzine mark,
+.adef_webzine audio,
+.adef_webzine video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-family: "GangwonEduAll", "Noto Sans", "NanumSquare", "Noto Sans KR", "Nanum Gothic", "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 3.8vw;
+  line-height: 1.6;
+  letter-spacing: -0.5px;
+  color: #2f2f2f;
+  vertical-align: baseline;
+}
+.adef_webzine article,
+.adef_webzine aside,
+.adef_webzine details,
+.adef_webzine figcaption,
+.adef_webzine figure,
+.adef_webzine footer,
+.adef_webzine header,
+.adef_webzine hgroup,
+.adef_webzine menu,
+.adef_webzine nav,
+.adef_webzine section {
+  display: block;
+}
+.adef_webzine ol,
+.adef_webzine ul {
+  list-style: none;
+  padding: 0;
+}
+.adef_webzine blockquote,
+.adef_webzine q {
+  quotes: none;
+}
+.adef_webzine blockquote:before,
+.adef_webzine blockquote:after,
+.adef_webzine q:before,
+.adef_webzine q:after {
+  content: "";
+  content: none;
+}
+.adef_webzine table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.adef_webzine button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.adef_webzine a {
+  text-decoration: none;
+}
+
+/* common */
+.adef_webzine .wrap {
+  padding: 0 4.5vw;
+}
+.adef_webzine img {
+  width: 100%;
+  display: block;
+}
+.adef_webzine .bold {
+  font-weight: 900;
+}
+.adef_webzine .section {
+  position: relative;
+}
+.adef_webzine .info {
+  font-size: 4vw;
+  margin-top: 22vw;
+  transform: rotate(0.04deg);
+  -webkit-transform: rotate(0.04deg);
+  -moz-transform: rotate(0.04deg);
+  -ms-transform: rotate(0.04deg);
+  -o-transform: rotate(0.04deg);
+}
+.adef_webzine .section__txt {
+  vertical-align: baseline;
+  text-align: justify;
+  position: relative;
+  transform: rotate(0.04deg);
+  -webkit-transform: rotate(0.04deg);
+  -moz-transform: rotate(0.04deg);
+  -ms-transform: rotate(0.04deg);
+  -o-transform: rotate(0.04deg);
+  color: #7e5122;
+}
+.adef_webzine .section__txt p {
+  color: #7e5122;
+}
+.adef_webzine .section__txt p:not(:first-child) {
+  margin-top: 4vw;
+}
+
+/* 유니클로_도쿄카페_230324 */
+.adef_webzine .img__wrap {
+  position: relative;
+  display: flex;
+}
+.adef_webzine .section1 {
+  padding: 20vw 0 0;
+}
+.adef_webzine .section1__img1 {
+  width: 39.6vw;
+  position: relative;
+  right: 0;
+}
+.adef_webzine .section1 .img__wrap.one {
+  justify-content: flex-end;
+}
+.adef_webzine .section1 .section__txt.one {
+  padding-top: 5.35vw;
+  width: 81.35vw;
+  margin-top: -5.5vw;
+  background: #fff;
+}
+.adef_webzine .section2 {
+  padding: 10vw 0 0;
+}
+.adef_webzine .section2__img1 {
+  width: 40.65vw;
+}
+.adef_webzine .section2 .section__txt--wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+.adef_webzine .section2 .section__txt.one {
+  padding-top: 8.5vw;
+  margin-top: -9vw;
+  width: 63vw;
+  text-align: right;
+  background: #fff;
+}
+.adef_webzine .section3 {
+  padding: 39vw 0 0;
+}
+.adef_webzine .section3 .wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.adef_webzine .section3__right {
+  width: 17vw;
+  background: url("https://simage-kr.uniqlo.com/display/corner/2161/adef_230327_socks/socks_img3_230324.png") no-repeat -7px center;
+  background-size: cover;
+}
+.adef_webzine .section3__img1 {
+  width: 100%;
+}
+.adef_webzine .section4 {
+  margin: 39vw 0 0;
+  padding: 10.65vw 0;
+  background: url("https://simage-kr.uniqlo.com/display/corner/2161/adef_230327_socks/socks_img4_230324.png") no-repeat center center;
+  background-size: cover;
+}
+.adef_webzine .section4 .section__txt {
+  padding: 10vw 0;
+  background: #fff;
+  text-align: center;
+}
+.adef_webzine .section5 {
+  margin: 40vw 0 16.65vw;
+}
+.adef_webzine .section5 .wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.adef_webzine .section5__left {
+  width: 25vw;
+  background: url("https://simage-kr.uniqlo.com/display/corner/2161/adef_230327_socks/socks_img5_230324.png") no-repeat center center;
+  background-size: cover;
+}
+.adef_webzine .section5 .section__txt {
+  text-align: right;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,68 @@
+@import 'utils';
+
+.inner {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1048px;
+  box-sizing: border-box;
+}
+
+// nav
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 50;
+  &.active {
+    border-bottom: 1px solid rgba(0, 27, 55, 0.1);
+  }
+  .inner {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    a {
+      display: block;
+      width: 65px;
+    }
+  }
+  &__list {
+    display: flex;
+  }
+  &__item {
+  }
+  &__anchor {
+    display: block;
+    padding: 12px 10px;
+    font-size: 15px;
+    color: $default-color;
+  }
+}
+/* font-weight */
+.thin {
+  font-weight: 100;
+}
+.light {
+  font-weight: 300;
+}
+.regular {
+  font-weight: 400;
+}
+.medium {
+  font-weight: 500;
+}
+.bold {
+  font-weight: 700;
+}
+.eb {
+  font-weight: 900;
+}
+
+/* animation */
+@keyframes any {
+}

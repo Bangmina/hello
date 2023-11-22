@@ -1,0 +1,151 @@
+// Colors
+$white: #ffffff;
+$orange: #f0592b;
+
+$grayscale-0: #fafafa;
+$grayscale-1: #f0f0f0;
+$grayscale-2: #bababa; //
+$grayscale-3: #a9a9a9;
+$grayscale-4: #757575;
+$grayscale-5: #4d4d4d;
+$grayscale-6: #333333; //
+$grayscale-7: #121212; //
+
+// Btn
+.btn__purple,
+.btn__orange {
+	border-radius: 5px;
+}
+.btn__purple {
+	background: #644dff;
+	color: #fff;
+}
+.btn__orange {
+	background: #e18336;
+	color: #fff;
+}
+// Transition
+$transition-active: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+//boxshadow
+$box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+
+.bold {
+	font-weight: bold;
+}
+.none {
+	display: none;
+}
+.inner {
+	margin: 0 auto;
+	padding: 0 20px;
+	width: 1320px;
+	box-sizing: border-box;
+}
+
+.note-editor {
+	height: auto !important;
+	width: 100%;
+}
+.m-b-0 {
+	margin-bottom: 0 !important;
+}
+
+// 체크박스
+input[type="checkbox"],
+input[type="radio"] {
+	display: none;
+}
+
+input.form__input--check:disabled + label::before,
+input.form__input--radio:disabled + label::before {
+	cursor: not-allowed;
+	background: #999999;
+}
+input.form__input--check:disabled:checked + label::before,
+input.form__input--radio:disabled:checked + label::before {
+	cursor: not-allowed;
+}
+input.form__input--check:checked + label::before,
+input.form__input--radio:checked + label::before {
+	background: url(../images/ic_check.png) #644dff no-repeat center;
+}
+label.form__label--check,
+label.form__label--radio {
+	position: relative;
+	display: inline-block;
+	padding-left: 25px;
+	color: #a9b1c6;
+	word-break: keep-all;
+}
+label.form__label--radio::before,
+label.form__label--check::before {
+	content: "";
+	display: block;
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	cursor: pointer;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: background-color 0.2s;
+}
+label.form__label--radio::before {
+	border-radius: 100%;
+}
+.view_form__check,
+.view_form__radio {
+	&.only_chk {
+		.form__label--check,
+		.form__label--radio {
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+// input file
+.form__input--file_wrap {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+input[type="file"] {
+	display: block;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+.form__label--file {
+	width: 80px;
+	height: 30px;
+	background: #969db5;
+	border-radius: 3px;
+	color: #2a2f42;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.form__span--file {
+	padding-left: 10px;
+	margin-left: 14px;
+	display: block;
+	width: 100%;
+	height: 30px;
+	background: #2f354a;
+	border: 1px solid #363b53;
+	border-radius: 5px;
+	line-height: 30px;
+	color: #a9b1c6;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.width_100 {
+	width: 100%;
+}

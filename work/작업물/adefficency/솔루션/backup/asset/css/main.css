@@ -1,0 +1,18 @@
+/*-------------------------------------------------
+Style Sheet
+Version : 1.0
+Author :  BMN
+Create date : 2020. 12. 07
+-------------------------------------------------*/
+
+.main {
+	height: calc(100vh - 270px);
+	background: url("../images/bg_main.png") no-repeat center #efefef;
+	background-size: contain;
+}
+@media screen and (max-width: 991px) {
+	.main {
+		height: 100vh;
+		background-size: 130%;
+	}
+}

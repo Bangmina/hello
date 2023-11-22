@@ -1,0 +1,26 @@
+@import url(../fonts/Roboto/font_roboto.css);
+@import url(../fonts/notoSansKr/css/noto-sans-korean.css);
+@import url(../fonts/NanumGothic/NanumGothic.css);
+@import url(../fonts/NanumSquare/nanumsquare.css);
+@font-face {
+  font-family: 'Welcome';
+  font-weight: 700;
+  src: url(../fonts/welcome/welcome_Bold.woff2) format("woff2");
+  src: url(../fonts/welcome/welcome_Bold.woff) format("woff");
+  src: url(../fonts/welcome/welcome_Bold.otf) format("woff"); }
+@font-face {
+  font-family: 'Welcome';
+  font-weight: 400;
+  src: url(../fonts/welcome/welcome_Regular.woff2) format("woff2");
+  src: url(../fonts/welcome/welcome_Regular.woff) format("woff");
+  src: url(../fonts/welcome/welcome_Regular.otf) format("opentype"); }
+.bold {
+  font-weight: 700; }
+
+.regular {
+  font-weight: 400; }
+
+.eb {
+  font-weight: 900; }
+
+/*# sourceMappingURL=font.css.map */

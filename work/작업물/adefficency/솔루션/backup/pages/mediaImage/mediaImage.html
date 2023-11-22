@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매체 이미지 검수</title>
+    <link rel="stylesheet" href="../../asset/css/base.css">
+    <link rel="stylesheet" href="../../asset/css/page.css">
+    <link rel="stylesheet" href="./asset/css/mediaImage.css">
+    <script src="../../asset/js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <!-- 공통 영역 -->
+    <header class="header">
+        <div class="header__left m__none">
+            <form action="" class="solution__form">
+                <select name="" id="" class="solution__select">
+                    <option value="솔루션">솔루션</option>
+                    <option value="솔루션">솔루션</option>
+                    <option value="솔루션">솔루션</option>
+                </select>
+                <button class="solution__select--btn common__btn--orange">이동</button>
+            </form>
+        </div>
+        <h1 class="header__logo">
+            <a href="javascript:void(0);"><img src="../../asset/images/logo_header.png" alt="로고"></a>
+        </h1>
+        <div class="header__right m__none">
+            <p class="header__login--time">김경래 님 (최근 로그인 일시 2020-12-04 09:03:58)</p>
+            <button class="header__logout--btn common__btn--purple">로그아웃</button>
+        </div>
+        <button class="header__menu--btn pc__none open">
+            <span></span>
+        </button>
+    </header>
+    <nav class="nav m__none">
+        <ul class="nav__list clearfix">
+            <li class="nav__item">
+                <a href="javascript:void(0);" class="nav__item--anchor">모니터링</a>
+                <ul class="nav__depth">
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">Daum 검색순위 확인</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">SNS 팔로워 모니터링</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">SIV 전용 팔로워 모니터링</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">ADEF SNS 모니터링</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">여기어때 페이스북 리포트</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">매체 계정잔액 모니터링</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">구글 트렌드 검색</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">왓챠.작품명 크롤링</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">경쟁사-랜딩-모니터링</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">피플펀드.광고비.모니터링</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">네이버-카탈로그-모니터링</a></li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="javascript:void(0);" class="nav__item--anchor">검수</a>
+                <ul class="nav__depth">
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">IKEA 오류 검수</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">SSF 렌딩 검수</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">WADIZ 렌딩 검수</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">Ebates 렌딩 검수</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">SIV 렌딩테스트</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">매체 이미지 검수</a></li></li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="javascript:void(0);" class="nav__item--anchor">업무 효율화</a>
+                <ul class="nav__depth">
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">IKEA 검색어 상품체크</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">IKEA 기획전</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">DB손해보험 RAW</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">DB손해보험 Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">WADIZ RAW</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">WADIZ 구글피드ID 제외처리</a></li></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">URL-Blank파라미터삭제</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">UTM,파라미터삭제<br/>(삼성물산전용)</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">확장 키워드 Pool</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">익스피디아-영문키워드찾기</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">클룩 Feed 비교</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">와디즈 서포터</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">카카오모먼트 대량관리 API</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">네이버 PC/MO 검색 쿼리 리포트</a></li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="javascript:void(0);" class="nav__item--anchor">Report & 분석</a>
+                <ul class="nav__depth">
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">Google budget Estimate(GES)</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">GA 경로분석 Raw</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">랜딧 Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">데일리호텔 Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">와디즈 리워드 지원전환 Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">Sivillage jaju 지원전환 Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">예스폼 DAUM Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">마켓컬리 NATE Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">왓챠 Custom Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">DB손해보험</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">TUMI 상품 비교</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">Naver EP</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">Bizspring(레진)</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">피플펀드CSV</a></li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="javascript:void(0);" class="nav__item--anchor">사원관리</a>
+                <ul class="nav__depth">
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">사원 목록</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <aside class="pc__none side__menu">
+        <section class="side__menu--wrap">
+            <article class="menu_header">
+                    <form action="" class="solution__form">
+                        <select name="" id="" class="solution__select">
+                            <option value="솔루션">솔루션</option>
+                            <option value="솔루션">솔루션</option>
+                            <option value="솔루션">솔루션</option>
+                        </select>
+                        <button class="solution__select--btn common__btn--orange">이동</button>
+                    </form>
+                <button class="header__menu--btn pc__none close active">
+                    <span></span>
+                </button>
+            </article>
+            <article class="side__nav">
+                <!-- 메뉴 타이틀 -->
+                <ul class="snav__title">
+                    <li class="snav__title--item ">
+                        <a class="active" href="javascript:void(0);"><i class="snav__title--icon"></i>모니터링</a>
+                    </li>
+                    <li class="snav__title--item">
+                        <a href="javascript:void(0);"><i class="snav__title--icon"></i>검수</a>
+                    </li>
+                    <li class="snav__title--item">
+                        <a href="javascript:void(0);"><i class="snav__title--icon"></i>업무효율화</a>
+                    </li>
+                    <li class="snav__title--item">
+                        <a href="javascript:void(0);"><i class="snav__title--icon"></i>REPORT & 분석</a>
+                    </li>
+                    <li class="snav__title--item">
+                        <a href="javascript:void(0);"><i class="snav__title--icon"></i>사원관리</a>
+                    </li>
+                    <li class="snav__title--item snav__logout">
+                        <button><img src="../../asset/images/icon_logout.png" alt="">로그아웃</button>
+                    </li>
+
+                    
+                </ul>
+                <!-- 서브메뉴 -->
+                <div class="side__depth--wrap">
+                    <ul class="side__depth--list">
+                        <li class="side__depth--item side__item--title ">
+                            <h3>모니터링</h>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">Daum 검색순위 확인</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">SNS 팔로워 모니터링</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">SIV 전용 팔로워 모니터링</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">ADEF SNS 모니터링</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">여기어때 페이스북 리포트</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">매체 계정잔액 모니터링</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">구글 트랜드 검색</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">왓챠-작품명 크롤링</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">경쟁사-랜딩-모니터링</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">피플펀드-광고비-모니터링</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">네이버-카탈로그-모니터링</a>
+                        </li>
+                    </ul>
+                    <ul class="side__depth--list none">
+                        <li class="side__depth--item side__item--title ">
+                            <h3>검수</h3>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">IKEA 오류 검수</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">SSF 랜딩 검수</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">WADIZ 랜딩 검수</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">Ebates 랜딩 검수</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">SIV 랜딩테스트</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">매체 이미지 검수</a>
+                        </li>
+                    </ul>
+                    <ul class="side__depth--list none">
+                        <li class="side__depth--item side__item--title ">
+                            <h3>업무효율화</h3>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">IKEA 검색어 상품체크</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">IKEA 기획전</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">DB손해보험 RAW</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">DB손해보험 Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">SSF 할인율</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">WADIZ RAW</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">WADIZ 구글피드 ID 제외처리</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">URL-Blank 파라미터 삭제</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">UTM,파라미터 삭제<br/>삼성물산 전용</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">확장 키워드 Pool</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">익스피디아-영문 키워드 찾기</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">클록 Feed 비교</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">와디즈 서포터</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">카카오모먼트 대량관리 API</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">네이버 PC/MO 검색 쿼리 리포트</a>
+                        </li>
+                    </ul>
+                    <ul class="side__depth--list none">
+                        <li class="side__depth--item side__item--title ">
+                            <h3>REPORT & 분석</h3>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">Google budget Estimate(GES)</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">GA 경로분석 Raw</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">랜딧 Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">데일리호텔 Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">와디즈 리워드 지원전환 Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">Sivillage jaju 지원전환 Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">예스폼 DAUM Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">마켓컬리 NATE Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">왓챠 Custom Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">DB손해보험</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">TUMI 상품 비교</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">Naver EP</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">Bizspring(레진)</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">피플펀드 CSV</a>
+                        </li>
+                    </ul>
+                    <ul class="side__depth--list none">
+                        <li class="side__depth--item side__item--title ">
+                            <h3>사원관리</h3>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">사원관리</a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article class="menu__footer">
+                2020, adefficiency all rights reserved.<br/>
+                <a href="javascript:void(0);">인트라넷 바로가기 ></a>
+            </article>
+        </section>
+        
+    </aside>
+    <!-- //공통 영역 -->
+
+    <main class="page__main">
+        <h2 class="page__title">매체 이미지 체크</h2>
+        <section class="page__section check">
+            <table class="page__table">
+                <caption>매체 이미지 체크</caption>
+                <colgroup>
+                    <col width="200px"/>
+                    <col width="*" />
+                </colgroup>
+                <tr>
+                    <th>페이스북/인스타그램</th>
+                    <td>
+                        <div class="checkbox__wrap all"><input id="snsCheckAll" class="check__all" type="checkbox"><label for="snsCheckAll"><span>전체</span></label></div>
+                        <ul class="check__list">
+                            <li class="checkbox__wrap"><input id="snsCheck1" type="checkbox" name="sns"><label for="snsCheck1"><span>이미지</span></label></li>
+                            <li class="checkbox__wrap"><input id="snsCheck2" type="checkbox" name="sns"><label for="snsCheck2"><span>슬라이드</span></label></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>GDN</th>
+                    <td>
+                        <div class="checkbox__wrap all"><input id="gdnCheckAll" class="check__all" type="checkbox"><label for="gdnCheckAll"><span>전체</span></label></div>
+                        <ul class="check__list">
+                            <li class="checkbox__wrap"><input id="gdnCheck1" type="checkbox" name="gdn"><label for="gdnCheck1"><span>정사각형 및 직사각형</span></label></li>
+                            <li class="checkbox__wrap"><input id="gdnCheck2" type="checkbox" name="gdn"><label for="gdnCheck2"><span>스카이 스크래퍼</span></label></li>
+                            <li class="checkbox__wrap"><input id="gdnCheck3" type="checkbox" name="gdn"><label for="gdnCheck3"><span>리더보드</span></label></li>
+                            <li class="checkbox__wrap"><input id="gdnCheck4" type="checkbox" name="gdn"><label for="gdnCheck4"><span>모바일</span></label></li>
+                            <li class="checkbox__wrap"><input id="gdnCheck5" type="checkbox" name="gdn"><label for="gdnCheck5"><span>반응형 디스플레이 광고</span></label></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>카카오</th>
+                    <td>
+                        <div class="checkbox__wrap all"><input id="kakaoCheckAll" class="check__all" type="checkbox"><label for="kakaoCheckAll"><span>전체</span></label></div>
+                        <ul class="check__list">
+                            <li class="checkbox__wrap"><input id="kakaoCheck1" type="checkbox" name="kakao"><label for="kakaoCheck1"><span>모먼트 네이티브</span></label></li>
+                            <li class="checkbox__wrap"><input id="kakaoCheck2" type="checkbox" name="kakao"><label for="kakaoCheck2"><span>모먼트 배너</span></label></li>
+                            <li class="checkbox__wrap"><input id="kakaoCheck3" type="checkbox" name="kakao"><label for="kakaoCheck3"><span>모먼트 카탈로그형</span></label></li>
+                            <li class="checkbox__wrap"><input id="kakaoCheck4" type="checkbox" name="kakao"><label for="kakaoCheck4"><span>비즈보드(오브젝트형)</span></label></li>
+                            <li class="checkbox__wrap"><input id="kakaoCheck5" type="checkbox" name="kakao"><label for="kakaoCheck5"><span>비즈보드(썸네일형)</span></label></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>네이버브랜드</th>
+                    <td>
+                        <div class="checkbox__wrap all"><input id="naverBrandCheckAll" class="check__all" type="checkbox"><label for="naverBrandCheckAll"><span>전체</span></label></div>
+                        <ul class="check__list">
+                            <li class="checkbox__wrap"><input id="naverBrandCheck1" type="checkbox" name="naverBrand"><label for="naverBrandCheck1"><span>M 라이트</span></label></li>
+                            <li class="checkbox__wrap"><input id="naverBrandCheck2" type="checkbox" name="naverBrand"><label for="naverBrandCheck2"><span>M 라이트 브랜드존</span></label></li>
+                            <li class="checkbox__wrap"><input id="naverBrandCheck3" type="checkbox" name="naverBrand"><label for="naverBrandCheck3"><span>M 오토플레이 메뉴</span></label></li>
+                            <li class="checkbox__wrap"><input id="naverBrandCheck4" type="checkbox" name="naverBrand"><label for="naverBrandCheck4"><span>M 오토플레이 썸네일</span></label></li>
+                            <li class="checkbox__wrap"><input id="naverBrandCheck5" type="checkbox" name="naverBrand"><label for="naverBrandCheck5"><span>M 와이드 메뉴</span></label></li>
+                        </ul>
+                        <ul class="check__list">
+                            <li class="checkbox__wrap"><input id="naverBrandCheck6" type="checkbox" name="naverBrand"><label for="naverBrandCheck6"><span>M 와이드 썸네일</span></label></li>
+                            <li class="checkbox__wrap"><input id="naverBrandCheck7" type="checkbox" name="naverBrand"><label for="naverBrandCheck7"><span>M 브랜드존 와이드</span></label></li>
+                            <li class="checkbox__wrap"><input id="naverBrandCheck8" type="checkbox" name="naverBrand"><label for="naverBrandCheck8"><span>M 브랜드존 오토플레이</span></label></li>
+                            <li class="checkbox__wrap"><input id="naverBrandCheck9" type="checkbox" name="naverBrand"><label for="naverBrandCheck9"><span>M 브랜드존 이미지스토리</span></label></li>
+                            <li class="checkbox__wrap"><input id="naverBrandCheck10" type="checkbox" name="naverBrand"><label for="naverBrandCheck10"><span>M 브랜드존</span></label></li>
+                        </ul>
+                        <ul class="check__list">
+                            <li class="checkbox__wrap"><input id="naverBrandCheck11" type="checkbox" name="naverBrand"><label for="naverBrandCheck11"><span>PC 라이트 일반</span></label></li>
+                            <li class="checkbox__wrap"><input id="naverBrandCheck12" type="checkbox" name="naverBrand"><label for="naverBrandCheck12"><span>PC 라이트 썸네일</span></label></li>
+                            <li class="checkbox__wrap"><input id="naverBrandCheck13" type="checkbox" name="naverBrand"><label for="naverBrandCheck13"><span>PC 프리미엄 기본</span></label></li>
+                            <li class="checkbox__wrap"><input id="naverBrandCheck14" type="checkbox" name="naverBrand"><label for="naverBrandCheck14"><span>PC 프리미엄 동영상</span></label></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>네이버 GFA</th>
+                    <td>
+                        <div class="checkbox__wrap all"><input id="naverGfaCheckAll" class="check__all" type="checkbox"><label for="naverGfaCheckAll"><span>전체</span></label></div>
+                        <ul class="check__list">
+                            <li class="checkbox__wrap"><input id="naverGfaCheck1" type="checkbox" name="naverGfa"><label for="naverGfaCheck1"><span>스마트채널</span></label></li>
+                            <li class="checkbox__wrap"><input id="naverGfaCheck2" type="checkbox" name="naverGfa"><label for="naverGfaCheck2"><span>모바일 메인</span></label></li>
+                            <li class="checkbox__wrap"><input id="naverGfaCheck3" type="checkbox" name="naverGfa"><label for="naverGfaCheck3"><span>모바일서브 > 배너</span></label></li>
+                            <li class="checkbox__wrap"><input id="naverGfaCheck4" type="checkbox" name="naverGfa"><label for="naverGfaCheck4"><span>밴드</span></label></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>크리테오</th>
+                    <td>
+                        <div class="checkbox__wrap all"><input id="criteoCheckAll" class="check__all" type="checkbox"><label for="criteoCheckAll"><span>전체</span></label></div>
+                        <ul class="check__list">
+                            <li class="checkbox__wrap"><input id="criteoCheck1" type="checkbox" name="criteo"><label for="criteoCheck1"><span>쿠폰 배너</span></label></li>
+                            <li class="checkbox__wrap"><input id="criteoCheck2" type="checkbox" name="criteo"><label for="criteoCheck2"><span>로고 이미지</span></label></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>모비온</th>
+                    <td>
+                        <div class="checkbox__wrap all"><input id="mobionCheckAll" class="check__all" type="checkbox"><label for="mobionCheckAll"><span>전체</span></label></div>
+                        <ul class="check__list">
+                            <li class="checkbox__wrap"><input id="mobionCheck1" type="checkbox" name="mobion"><label for="mobionCheck1"><span>일반 배너</span></label></li>
+                            <li class="checkbox__wrap"><input id="mobionCheck2" type="checkbox" name="mobion"><label for="mobionCheck2"><span>브랜드 링크</span></label></li>
+                            <li class="checkbox__wrap"><input id="mobionCheck3" type="checkbox" name="mobion"><label for="mobionCheck3"><span>로고 이미지</span></label></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>클릭몬</th>
+                    <td>
+                        <div class="checkbox__wrap all"><input id="clickmonCheckAll" class="check__all" type="checkbox"><label for="clickmonCheckAll"><span>전체</span></label></div>
+                        <ul class="check__list">
+                            <li class="checkbox__wrap"><input id="clickmonCheck1" type="checkbox" name="clickmon"><label for="clickmonCheck1"><span>PC 배너</span></label></li>
+                            <li class="checkbox__wrap"><input id="clickmonCheck2" type="checkbox" name="clickmon"><label for="clickmonCheck2"><span>모바일 링크</span></label></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>TG</th>
+                    <td>
+                        <div class="checkbox__wrap all"><input id="tgCheckAll" class="check__all" type="checkbox"><label for="tgCheckAll"><span>전체</span></label></div>
+                        <ul class="check__list">
+                            <li class="checkbox__wrap"><input id="tgCheck1" type="checkbox" name="tg"><label for="tgCheck1"><span>필수 이미지</span></label></li>
+                            <li class="checkbox__wrap"><input id="tgCheck2" type="checkbox" name="tg"><label for="tgCheck2"><span>필수 로고</span></label></li>
+                            <li class="checkbox__wrap"><input id="tgCheck3" type="checkbox" name="tg"><label for="tgCheck3"><span>권장 소재(PC)</span></label></li>
+                            <li class="checkbox__wrap"><input id="tgCheck4" type="checkbox" name="tg"><label for="tgCheck4"><span>권장 소재(모바일)</span></label></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section class="page__section">
+            <ul class="upload__list">
+                <li>
+                    <div class="upload__box">
+                        <h4 class="upload__title">이미지 파일 업로드</h4>
+                        <div class="upload__file--box">
+                            <input id="upload1"type="file" >
+                            <label for="upload1" class="upload__input--label">파일선택</label>
+                            <span class="upload__name">선택된 파일이 없습니다.</span>
+                        </div>
+                        <button class="common__btn--orange form__btn">등록하기</button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- 공통 영역 -->
+    <footer class="footer m__none">
+        2020, <span class="orange__color">adefficiency</span> all rights reserved. <a href="https://intranet.adef.co.kr/login" class="intranet__anchor" target="_blank">인트라넷 바로가기 ></a>
+    </footer>
+    <button class="top__btn">
+        <span></span>
+        <p>TOP</>
+    </button>
+    <!-- //공통 영역 -->
+    <script src="../../asset/js/common.js"></script>
+    <script src="./asset/js/mediaImage.js"></script>
+</body>
+</html>

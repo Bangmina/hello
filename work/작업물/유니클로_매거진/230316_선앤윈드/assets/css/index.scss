@@ -1,0 +1,315 @@
+/* 
+  font 
+*/
+
+/* 나눔스퀘어 
+Light 300
+Regular 400
+Bold 700
+ExtraBold 800*/
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+/* 
+  애플 산돌고딕
+  Thin 100
+  UltraLight 200
+  Light 300
+  Medium 400
+  Regular 500
+  SemiBold 600
+  Bold 700
+  ExtraBold 800
+  Heavy 900
+*/
+@import url('https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/css/all.css');
+
+/* 강원교육모두 폰트 300/400 */
+@font-face {
+  font-family: 'GangwonEduAll';
+  font-weight: 300;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff')
+      format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.ttf')
+      format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GangwonEduAll';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff')
+      format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.ttf')
+      format('truetype');
+  font-display: swap;
+}
+
+.adef_webzine {
+  /* 
+    reset
+  */
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    font-family: 'NanumSquare', 'Noto Sans KR', 'Nanum Gothic', 'Roboto',
+      sans-serif;
+    font-weight: 400;
+    font-size: 4vw;
+    line-height: 1.6;
+    letter-spacing: -0.5px;
+    color: #2f2f2f;
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+  ol,
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  blockquote,
+  q {
+    quotes: none;
+  }
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+/* 
+  common
+*/
+.adef_webzine {
+  .wrap {
+    padding: 0 10.5vw;
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+  .bold {
+    font-weight: 700;
+  }
+  .section {
+    position: relative;
+  }
+  .info {
+    font-size: 4vw;
+    margin-top: 22vw;
+    transform: rotate(0.04deg);
+    -webkit-transform: rotate(0.04deg);
+    -moz-transform: rotate(0.04deg);
+    -ms-transform: rotate(0.04deg);
+    -o-transform: rotate(0.04deg);
+  }
+  .section__txt {
+    vertical-align: baseline;
+    position: relative;
+    transform: rotate(0.04deg);
+    -webkit-transform: rotate(0.04deg);
+    -moz-transform: rotate(0.04deg);
+    -ms-transform: rotate(0.04deg);
+    -o-transform: rotate(0.04deg);
+    p {
+      &:not(:first-child) {
+        margin-top: 4vw;
+      }
+    }
+  }
+}
+
+.adef_webzine {
+  /* 유니클로_sun&wind_230320 */
+  .adef_webzine {
+    padding-bottom: 6.6vw;
+  }
+  .ic__weather {
+    width: 45.25%;
+    margin: 11.35vw auto 6.65vw;
+  }
+  .ic__gender {
+    &.women {
+      width: 6.13vw;
+    }
+    &.men {
+      width: 6.26vw;
+    }
+  }
+  .img__jacket {
+    margin: 16vw 0 6.65vw;
+  }
+  .img__uv {
+    margin: 16.65vw 0 6vw;
+  }
+  .product {
+    &__list {
+      display: flex;
+      &.one {
+        margin: 8.65vw 0 10.65vw;
+      }
+      &.two {
+        margin: 8vw 0 0 0;
+      }
+    }
+    &__item {
+      width: 50%;
+      &.one {
+        .product__info {
+        }
+      }
+      &.two {
+        .product__info {
+        }
+      }
+    }
+    &__info {
+      padding: 6.4vw 0 0 3.5vw;
+    }
+    &__anchor {
+      display: inline-block;
+      margin-top: 4vw;
+      color: #231816;
+      text-decoration: none;
+      transform: rotate(0.04deg);
+      -webkit-transform: rotate(0.04deg);
+      -moz-transform: rotate(0.04deg);
+      -ms-transform: rotate(0.04deg);
+      -o-transform: rotate(0.04deg);
+    }
+    &__name {
+      font-size: 3.8vw;
+      line-height: 1.4;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+    }
+    &__buy {
+      font-size: 3.8vw;
+      text-decoration: underline;
+      margin-top: 2vw;
+      display: inline-block;
+      font-weight: 800;
+    }
+  }
+}

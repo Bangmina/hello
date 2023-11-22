@@ -1,0 +1,33 @@
+/* 변수만 모아놓은 파일 */
+$default-color: #4e5968;
+$blue-color: #3182f6;
+$--btn-border-radius: 7px;
+
+// 애니메이션
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 반응형 화면 세팅 */
+$mobile: 767px;
+$tablet: 1023px;
+$desktop: 1024px;
+
+/* 반응형 모바일 */
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+/* 반응형 태블릿 */
+@mixin tablet {
+  @media (min-width: ($mobile+1)) and (max-width: $tablet) {
+    @content;
+  }
+}

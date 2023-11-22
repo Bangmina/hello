@@ -1,0 +1,279 @@
+@charset "UTF-8";
+/* 
+  font 
+*/
+/* 나눔스퀘어 
+Light 300
+Regular 400
+Bold 700
+ExtraBold 800*/
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+/* 
+  애플 산돌고딕
+  Thin 100
+  UltraLight 200
+  Light 300
+  Medium 400
+  Regular 500
+  SemiBold 600
+  Bold 700
+  ExtraBold 800
+  Heavy 900
+*/
+@import url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/css/all.css");
+/* 강원교육모두 폰트 300/400 */
+@font-face {
+  font-family: "GangwonEduAll";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "GangwonEduAll";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.ttf") format("truetype");
+  font-display: swap;
+}
+.adef_webzine {
+  /* 
+    reset
+  */
+  /* HTML5 display-role reset for older browsers */
+}
+.adef_webzine div,
+.adef_webzine span,
+.adef_webzine applet,
+.adef_webzine object,
+.adef_webzine iframe,
+.adef_webzine h1,
+.adef_webzine h2,
+.adef_webzine h3,
+.adef_webzine h4,
+.adef_webzine h5,
+.adef_webzine h6,
+.adef_webzine p,
+.adef_webzine blockquote,
+.adef_webzine pre,
+.adef_webzine a,
+.adef_webzine abbr,
+.adef_webzine acronym,
+.adef_webzine address,
+.adef_webzine big,
+.adef_webzine cite,
+.adef_webzine code,
+.adef_webzine del,
+.adef_webzine dfn,
+.adef_webzine em,
+.adef_webzine img,
+.adef_webzine ins,
+.adef_webzine kbd,
+.adef_webzine q,
+.adef_webzine s,
+.adef_webzine samp,
+.adef_webzine small,
+.adef_webzine strike,
+.adef_webzine strong,
+.adef_webzine sub,
+.adef_webzine sup,
+.adef_webzine tt,
+.adef_webzine var,
+.adef_webzine b,
+.adef_webzine u,
+.adef_webzine i,
+.adef_webzine center,
+.adef_webzine dl,
+.adef_webzine dt,
+.adef_webzine dd,
+.adef_webzine ol,
+.adef_webzine ul,
+.adef_webzine li,
+.adef_webzine fieldset,
+.adef_webzine form,
+.adef_webzine label,
+.adef_webzine legend,
+.adef_webzine table,
+.adef_webzine caption,
+.adef_webzine tbody,
+.adef_webzine tfoot,
+.adef_webzine thead,
+.adef_webzine tr,
+.adef_webzine th,
+.adef_webzine td,
+.adef_webzine article,
+.adef_webzine aside,
+.adef_webzine canvas,
+.adef_webzine details,
+.adef_webzine embed,
+.adef_webzine figure,
+.adef_webzine figcaption,
+.adef_webzine footer,
+.adef_webzine header,
+.adef_webzine hgroup,
+.adef_webzine menu,
+.adef_webzine nav,
+.adef_webzine output,
+.adef_webzine ruby,
+.adef_webzine section,
+.adef_webzine summary,
+.adef_webzine time,
+.adef_webzine mark,
+.adef_webzine audio,
+.adef_webzine video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-family: "NanumSquare", "Noto Sans KR", "Nanum Gothic", "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 4vw;
+  line-height: 1.6;
+  letter-spacing: -0.5px;
+  color: #2f2f2f;
+  vertical-align: baseline;
+}
+.adef_webzine article,
+.adef_webzine aside,
+.adef_webzine details,
+.adef_webzine figcaption,
+.adef_webzine figure,
+.adef_webzine footer,
+.adef_webzine header,
+.adef_webzine hgroup,
+.adef_webzine menu,
+.adef_webzine nav,
+.adef_webzine section {
+  display: block;
+}
+.adef_webzine ol,
+.adef_webzine ul {
+  list-style: none;
+  padding: 0;
+}
+.adef_webzine blockquote,
+.adef_webzine q {
+  quotes: none;
+}
+.adef_webzine blockquote:before,
+.adef_webzine blockquote:after,
+.adef_webzine q:before,
+.adef_webzine q:after {
+  content: "";
+  content: none;
+}
+.adef_webzine table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.adef_webzine button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.adef_webzine a {
+  text-decoration: none;
+}
+
+/* 
+  common
+*/
+.adef_webzine .wrap {
+  padding: 0 10.5vw;
+}
+.adef_webzine img {
+  width: 100%;
+  display: block;
+}
+.adef_webzine .bold {
+  font-weight: 700;
+}
+.adef_webzine .section {
+  position: relative;
+}
+.adef_webzine .info {
+  font-size: 4vw;
+  margin-top: 22vw;
+  transform: rotate(0.04deg);
+  -webkit-transform: rotate(0.04deg);
+  -moz-transform: rotate(0.04deg);
+  -ms-transform: rotate(0.04deg);
+  -o-transform: rotate(0.04deg);
+}
+.adef_webzine .section__txt {
+  vertical-align: baseline;
+  position: relative;
+  transform: rotate(0.04deg);
+  -webkit-transform: rotate(0.04deg);
+  -moz-transform: rotate(0.04deg);
+  -ms-transform: rotate(0.04deg);
+  -o-transform: rotate(0.04deg);
+}
+.adef_webzine .section__txt p:not(:first-child) {
+  margin-top: 4vw;
+}
+
+.adef_webzine {
+  /* 유니클로_sun&wind_230320 */
+}
+.adef_webzine .adef_webzine {
+  padding-bottom: 6.6vw;
+}
+.adef_webzine .ic__weather {
+  width: 45.25%;
+  margin: 11.35vw auto 6.65vw;
+}
+.adef_webzine .ic__gender.women {
+  width: 6.13vw;
+}
+.adef_webzine .ic__gender.men {
+  width: 6.26vw;
+}
+.adef_webzine .img__jacket {
+  margin: 16vw 0 6.65vw;
+}
+.adef_webzine .img__uv {
+  margin: 16.65vw 0 6vw;
+}
+.adef_webzine .product__list {
+  display: flex;
+}
+.adef_webzine .product__list.one {
+  margin: 8.65vw 0 10.65vw;
+}
+.adef_webzine .product__list.two {
+  margin: 8vw 0 0 0;
+}
+.adef_webzine .product__item {
+  width: 50%;
+}
+.adef_webzine .product__info {
+  padding: 6.4vw 0 0 3.5vw;
+}
+.adef_webzine .product__anchor {
+  display: inline-block;
+  margin-top: 4vw;
+  color: #231816;
+  text-decoration: none;
+  transform: rotate(0.04deg);
+  -webkit-transform: rotate(0.04deg);
+  -moz-transform: rotate(0.04deg);
+  -ms-transform: rotate(0.04deg);
+  -o-transform: rotate(0.04deg);
+}
+.adef_webzine .product__name {
+  font-size: 3.8vw;
+  line-height: 1.4;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+.adef_webzine .product__buy {
+  font-size: 3.8vw;
+  text-decoration: underline;
+  margin-top: 2vw;
+  display: inline-block;
+  font-weight: 800;
+}/*# sourceMappingURL=index.css.map */

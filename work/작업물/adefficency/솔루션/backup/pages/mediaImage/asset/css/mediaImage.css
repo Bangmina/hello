@@ -1,0 +1,51 @@
+/*-------------------------------------------------
+Style Sheet
+Version : 1.0
+Author :  BMN
+Create date : 2020. 12. 07
+-------------------------------------------------*/
+.page__section.check {
+	padding-bottom: 15px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #000;
+}
+.check__list {
+	display: flex;
+	padding-left: 10px;
+	margin-top: 10px;
+}
+.checkbox__wrap.all {
+	margin-bottom: 5px;
+}
+.check__list li {
+	width: 20%;
+}
+
+@media screen and (max-width: 991px) {
+	.page__section.check .page__table tr {
+		display: inherit;
+	}
+	.page__section.check .page__table tr td {
+		display: table-cell;
+		padding: 15px;
+	}
+	.page__section.check .check__list {
+		flex-wrap: wrap;
+		margin-top: 0;
+	}
+
+	.page__section.check .check__list li {
+		width: 50%;
+		padding-left: 10px;
+		margin-top: 10px;
+	}
+	.page__section.check .page__table tr {
+		border: none !important;
+	}
+}
+
+@media screen and (max-width: 530px) {
+	.page__section.check .check__list li {
+		width: 100%;
+	}
+}

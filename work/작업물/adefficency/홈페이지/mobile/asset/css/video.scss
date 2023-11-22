@@ -1,0 +1,264 @@
+@charset "UTF-8";
+// @import 'common';
+.video {
+  padding: 34.88vw 0 21vw;
+  &_summary {
+    position: relative;
+    padding: 16.27vw 0 0;
+    background: url('../../video_images/video_bg1.png') no-repeat 0 0 / cover;
+    .wrap {
+      padding: 0;
+    }
+    .video_line1 {
+      img {
+        display: block;
+        width: 76.04vw;
+        margin: 0 auto;
+      }
+    }
+    .video_line2 {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .video_summary__box1 {
+      .line {
+        margin: 10px 0 0 30px;
+        width: 1px;
+        height: 52px;
+        background: #fff;
+      }
+    }
+    .video_summary__box3 {
+      position: absolute;
+      z-index: 1;
+      right: 0;
+    }
+    .video_summary__box2 {
+      margin-top: 12.2vw;
+    }
+    .summary_phone__bg {
+      margin: 0 auto;
+      width: 62.2vw;
+      height: 110.69vw;
+      background: url('../../video_images/summary_phone_bg.png') no-repeat 0 0/ 100%
+        auto;
+      position: relative;
+      .white {
+        position: absolute;
+        width: 58.25vw;
+        height: 108.48vw;
+        background: #fff;
+        border-radius: 25px 25px 0 0;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        -webkit-border-radius: 25px 25px 0 0;
+        -moz-border-radius: 25px 25px 0 0;
+        -ms-border-radius: 25px 25px 0 0;
+        -o-border-radius: 25px 25px 0 0;
+        overflow: hidden;
+        iframe {
+          width: 100%;
+        }
+      }
+    }
+    .video_summary__txt {
+      margin: 10px 0 0 10px;
+      color: #fff;
+      font-size: 3.6vw;
+      line-height: 1.4;
+      font-weight: 300;
+      text-align: center;
+    }
+    .summary_anchor {
+      margin: 20px auto 0;
+      display: inline-block;
+      background: #fff;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+      border-radius: 50px;
+      font-weight: 500;
+      font-size: 3.2vw;
+    }
+    .summary_bg_txt {
+      max-width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 20px;
+    }
+  }
+}
+.video_section {
+  &1 {
+    padding: 17.44vw 0 18.6vw;
+    .video_impact_img {
+      width: 52.32vw;
+      display: block;
+      margin: 11.04vw auto 0;
+    }
+  }
+  &2 {
+    padding: 19.18vw 0 15.69vw;
+
+    background: url('../../video_images/video_bg2_txt.png') no-repeat 0 0 #222;
+    background-size: 83.13vw;
+    .video_marketing {
+      margin-top: 5.46vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .video_marketing__dot {
+        margin: 1.7vw auto 2.44vw;
+        width: 0.7vw;
+        display: block;
+      }
+      &__left {
+        .video_marketing_dot {
+          display: block;
+          width: 9px;
+          height: 9px;
+          background: #fff;
+          border: 1px solid #000;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+        }
+      }
+      &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .video_marketing {
+          &__list {
+            display: flex;
+            &.one {
+            }
+            &.two {
+            }
+          }
+          &__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #5dd1eb;
+            font-size: 2.96vw;
+            font-weight: 900;
+            width: 25vw;
+            height: 25vw;
+            background: url('../../video_images/video_marketing_circle3.png')
+              no-repeat 0 0 / cover;
+            &:not(:first-child) {
+              margin-left: -2.32vw;
+            }
+            &.small {
+              font-size: 2.03vw;
+            }
+          }
+        }
+      }
+      .video_marketing_circle {
+        width: 70vw;
+      }
+    }
+  }
+  &3 {
+    padding: 19.18vw 0 16.86vw;
+    background: url('../../video_images/video_bg3.png') no-repeat 0 0 / cover;
+    .video_creative {
+      margin-top: 7.8vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      justify-content: center;
+    }
+    .video_creative .video_creative__ic--plus {
+      display: block;
+      width: 4.06vw;
+      margin: 4.06vw 0 5.81vw;
+    }
+    .video_creative__list {
+      width: 81.4vw;
+      padding: 4.06vw 2vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background: #e8e8e8;
+      border-radius: 100px;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      -ms-border-radius: 100px;
+      -o-border-radius: 100px;
+      box-sizing: border-box;
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+    .video_creative,
+    .video_creative__item {
+      img {
+        width: 22.67vw;
+      }
+    }
+  }
+  &4 {
+    padding: 105px 0 115px;
+  }
+}
+
+// Center Title
+.center {
+  &__title--box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &.white {
+      .center__num {
+        border-bottom: 1px solid #fff;
+      }
+      .center__num,
+      .center__title,
+      .center__txt {
+        color: #fff;
+      }
+    }
+  }
+  &__num {
+    font-size: 3.92vw;
+    border-bottom: 1px solid #000;
+    margin-bottom: 2vw;
+    text-align: center;
+    padding-bottom: 2px;
+  }
+  &__title {
+    font-size: 5.81vw;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.2;
+  }
+  &__txt {
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 4vw;
+    font-size: 3.48vw;
+    font-weight: 400;
+  }
+}
+.video_section4 .partner__list--box {
+  padding-bottom: 0;
+}
+
+.video.partner {
+  background: none;
+  padding: 0 0 14.5vw;
+  margin-top: 0;
+}

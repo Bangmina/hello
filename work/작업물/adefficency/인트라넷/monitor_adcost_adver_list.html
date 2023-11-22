@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>4_board4</title>
+		<!-- 공통  -->
+		<!-- jquery -->
+		<script src="asset/plugIn/jquery-3.6.0.min.js"></script>
+		<!-- plugin simplebar -->
+		<link rel="stylesheet" href="./asset/plugIn/simplebar/simplebar.css" />
+		<script src="./asset/plugIn/simplebar/simplebar.js"></script>
+		<!-- plugin datepicker -->
+		<link
+			rel="stylesheet"
+			href="./asset/plugIn/bootstrap-datepicker/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="./asset/plugIn/bootstrap-datepicker/bootstrap-datepicker.css"
+		/>
+		<script src="./asset/plugIn/bootstrap-datepicker/bootstrap.min.js"></script>
+		<script src="./asset/plugIn/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+		<script src="./asset/plugIn/bootstrap-datepicker/bootstrap-datepicker.ko.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./favicon.png" />
+		<link rel="stylesheet" href="./asset/css/reset.css" />
+		<link rel="stylesheet" href="./asset/css/common.css" />
+		<link rel="stylesheet" href="./asset/css/index.css" />
+	<body>
+		<main class="main">
+			<section class="board board1 content" id="">
+				<h2 class="content__title">광고주 목록 & 담당(팀)자 목록</h2>
+				<section class="board_wrap">
+					<!-- 게시판 상단 폼 -->
+					<form action="">
+						<article class="board_form">
+							<!-- 폼 왼쪽 -->
+							<div class="board_form__box">
+								<div class="mobile_flex_one">
+									<select class="board__select" name="" id="">
+										<option value="전체">전체매체</option>
+										<option value="전체">진행중</option>
+										<option value="전체">너무더워</option>
+									</select>
+								</div>
+								<div class="mobile_flex_one">
+									<input
+										class="board__input"
+										type="text"0
+										placeholder="광고주명 또는 ID 입력"
+									/>
+								</div>
+								<div class="mobile_flex_one">
+									<button class="btn_orange">
+										<img src="./asset/images/ic_search.png" alt="검색아이콘" />
+										검색
+									</button>
+								</div>
+							</div>
+							<!-- 폼 오른쪽 -->
+							<div class="board_form__box mobile_flex_one">
+								<button class="btn_purple">
+									업데이트
+								</button>
+							</div>
+						</article>
+					</form>
+					<!-- 게시판 테이블 -->
+					<section class="board_table__wrap">
+						<table class="board_table">
+							<thead>
+								<tr>
+									<th>전체</th>
+									<th>매체</th>
+									<th>광고주 ID</th>
+									<th>광고주명</th>
+									<th>사용자(팀 또는 담당다명)</th>
+									<th>작성자</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- 
+								* 공지고정
+									- tr "active"
+									- 구분 "color"
+									- 제목 "round" 추가
+
+								* 글씨 연하게
+									- "grey" 
+							-->							
+							<tr>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">전체</div>
+									<div class="board_table__content ">
+										<div class="view_form__check">
+											<input id="chk1" class="form__input--check" type="checkbox">
+											<label for="chk1" class="form__label--check"></label>	
+										</div>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">매체</div>
+									<div class="board_table__content">
+										google
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주 ID</div>
+									<div class="board_table__content">
+										9180994370
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주명</div>
+									<div class="board_table__content">
+										(ADEF)컴투스_스토리픽
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">사용자(팀 또는 담당자명)</div>
+									<div class="board_table__content">
+										<a class="board_table__content--anchor" href="#">
+											<input class="board__input" type="text" 0="" value="1본부2팀">
+										</a>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">작성자</div>
+									<div class="board_table__content">hyunhee.kwon@adef.co.kr</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">전체</div>
+									<div class="board_table__content ">
+										<div class="view_form__check">
+											<input id="chk1" class="form__input--check" type="checkbox">
+											<label for="chk1" class="form__label--check"></label>	
+										</div>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">매체</div>
+									<div class="board_table__content">
+										google
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주 ID</div>
+									<div class="board_table__content">
+										9180994370
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주명</div>
+									<div class="board_table__content">
+										(ADEF)컴투스_스토리픽
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">사용자(팀 또는 담당자명)</div>
+									<div class="board_table__content">
+										<a class="board_table__content--anchor" href="#">
+											<input class="board__input" type="text" 0="" value="1본부2팀">
+										</a>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">작성자</div>
+									<div class="board_table__content">hyunhee.kwon@adef.co.kr</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">전체</div>
+									<div class="board_table__content ">
+										<div class="view_form__check">
+											<input id="chk1" class="form__input--check" type="checkbox">
+											<label for="chk1" class="form__label--check"></label>	
+										</div>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">매체</div>
+									<div class="board_table__content">
+										google
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주 ID</div>
+									<div class="board_table__content">
+										9180994370
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주명</div>
+									<div class="board_table__content">
+										(ADEF)컴투스_스토리픽
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">사용자(팀 또는 담당자명)</div>
+									<div class="board_table__content">
+										<a class="board_table__content--anchor" href="#">
+											<input class="board__input" type="text" 0="" value="1본부2팀">
+										</a>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">작성자</div>
+									<div class="board_table__content">hyunhee.kwon@adef.co.kr</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">전체</div>
+									<div class="board_table__content ">
+										<div class="view_form__check">
+											<input id="chk1" class="form__input--check" type="checkbox">
+											<label for="chk1" class="form__label--check"></label>	
+										</div>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">매체</div>
+									<div class="board_table__content">
+										google
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주 ID</div>
+									<div class="board_table__content">
+										9180994370
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주명</div>
+									<div class="board_table__content">
+										(ADEF)컴투스_스토리픽
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">사용자(팀 또는 담당자명)</div>
+									<div class="board_table__content">
+										<a class="board_table__content--anchor" href="#">
+											<input class="board__input" type="text" 0="" value="1본부2팀">
+										</a>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">작성자</div>
+									<div class="board_table__content">hyunhee.kwon@adef.co.kr</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">전체</div>
+									<div class="board_table__content ">
+										<div class="view_form__check">
+											<input id="chk1" class="form__input--check" type="checkbox">
+											<label for="chk1" class="form__label--check"></label>	
+										</div>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">매체</div>
+									<div class="board_table__content">
+										google
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주 ID</div>
+									<div class="board_table__content">
+										9180994370
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주명</div>
+									<div class="board_table__content">
+										(ADEF)컴투스_스토리픽
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">사용자(팀 또는 담당자명)</div>
+									<div class="board_table__content">
+										<a class="board_table__content--anchor" href="#">
+											<input class="board__input" type="text" 0="" value="1본부2팀">
+										</a>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">작성자</div>
+									<div class="board_table__content">hyunhee.kwon@adef.co.kr</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">전체</div>
+									<div class="board_table__content ">
+										<div class="view_form__check">
+											<input id="chk1" class="form__input--check" type="checkbox">
+											<label for="chk1" class="form__label--check"></label>	
+										</div>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">매체</div>
+									<div class="board_table__content">
+										google
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주 ID</div>
+									<div class="board_table__content">
+										9180994370
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주명</div>
+									<div class="board_table__content">
+										(ADEF)컴투스_스토리픽
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">사용자(팀 또는 담당자명)</div>
+									<div class="board_table__content">
+										<a class="board_table__content--anchor" href="#">
+											<input class="board__input" type="text" 0="" value="1본부2팀">
+										</a>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">작성자</div>
+									<div class="board_table__content">hyunhee.kwon@adef.co.kr</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">전체</div>
+									<div class="board_table__content ">
+										<div class="view_form__check">
+											<input id="chk1" class="form__input--check" type="checkbox">
+											<label for="chk1" class="form__label--check"></label>	
+										</div>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">매체</div>
+									<div class="board_table__content">
+										google
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주 ID</div>
+									<div class="board_table__content">
+										9180994370
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주명</div>
+									<div class="board_table__content">
+										(ADEF)컴투스_스토리픽
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">사용자(팀 또는 담당자명)</div>
+									<div class="board_table__content">
+										<a class="board_table__content--anchor" href="#">
+											<input class="board__input" type="text" 0="" value="1본부2팀">
+										</a>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">작성자</div>
+									<div class="board_table__content">hyunhee.kwon@adef.co.kr</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">전체</div>
+									<div class="board_table__content ">
+										<div class="view_form__check">
+											<input id="chk1" class="form__input--check" type="checkbox">
+											<label for="chk1" class="form__label--check"></label>	
+										</div>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">매체</div>
+									<div class="board_table__content">
+										google
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주 ID</div>
+									<div class="board_table__content">
+										9180994370
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주명</div>
+									<div class="board_table__content">
+										(ADEF)컴투스_스토리픽
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">사용자(팀 또는 담당자명)</div>
+									<div class="board_table__content">
+										<a class="board_table__content--anchor" href="#">
+											<input class="board__input" type="text" 0="" value="1본부2팀">
+										</a>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">작성자</div>
+									<div class="board_table__content">hyunhee.kwon@adef.co.kr</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">전체</div>
+									<div class="board_table__content ">
+										<div class="view_form__check">
+											<input id="chk1" class="form__input--check" type="checkbox">
+											<label for="chk1" class="form__label--check"></label>	
+										</div>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">매체</div>
+									<div class="board_table__content">
+										google
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주 ID</div>
+									<div class="board_table__content">
+										9180994370
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주명</div>
+									<div class="board_table__content">
+										(ADEF)컴투스_스토리픽
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">사용자(팀 또는 담당자명)</div>
+									<div class="board_table__content">
+										<a class="board_table__content--anchor" href="#">
+											<input class="board__input" type="text" 0="" value="1본부2팀">
+										</a>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">작성자</div>
+									<div class="board_table__content">hyunhee.kwon@adef.co.kr</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">전체</div>
+									<div class="board_table__content ">
+										<div class="view_form__check">
+											<input id="chk1" class="form__input--check" type="checkbox">
+											<label for="chk1" class="form__label--check"></label>	
+										</div>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">매체</div>
+									<div class="board_table__content">
+										google
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주 ID</div>
+									<div class="board_table__content">
+										9180994370
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주명</div>
+									<div class="board_table__content">
+										(ADEF)컴투스_스토리픽
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">사용자(팀 또는 담당자명)</div>
+									<div class="board_table__content">
+										<a class="board_table__content--anchor" href="#">
+											<input class="board__input" type="text" 0="" value="1본부2팀">
+										</a>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">작성자</div>
+									<div class="board_table__content">hyunhee.kwon@adef.co.kr</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">전체</div>
+									<div class="board_table__content ">
+										<div class="view_form__check">
+											<input id="chk1" class="form__input--check" type="checkbox">
+											<label for="chk1" class="form__label--check"></label>	
+										</div>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">매체</div>
+									<div class="board_table__content">
+										google
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주 ID</div>
+									<div class="board_table__content">
+										9180994370
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주명</div>
+									<div class="board_table__content">
+										(ADEF)컴투스_스토리픽
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">사용자(팀 또는 담당자명)</div>
+									<div class="board_table__content">
+										<a class="board_table__content--anchor" href="#">
+											<input class="board__input" type="text" 0="" value="1본부2팀">
+										</a>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">작성자</div>
+									<div class="board_table__content">hyunhee.kwon@adef.co.kr</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">전체</div>
+									<div class="board_table__content ">
+										<div class="view_form__check">
+											<input id="chk1" class="form__input--check" type="checkbox">
+											<label for="chk1" class="form__label--check"></label>	
+										</div>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">매체</div>
+									<div class="board_table__content">
+										google
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주 ID</div>
+									<div class="board_table__content">
+										9180994370
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">광고주명</div>
+									<div class="board_table__content">
+										(ADEF)컴투스_스토리픽
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">사용자(팀 또는 담당자명)</div>
+									<div class="board_table__content">
+										<a class="board_table__content--anchor" href="#">
+											<input class="board__input" type="text" 0="" value="1본부2팀">
+										</a>
+									</div>
+								</td>
+								<td class="mobile_flex_two">
+									<div class="board_table__title">작성자</div>
+									<div class="board_table__content">hyunhee.kwon@adef.co.kr</div>
+								</td>
+							</tr>
+							
+								
+								
+							</tbody>
+						</table>
+					</section>
+					
+				</section>
+			</section>
+		</main>
+		<script src="asset/js/common.js"></script>
+	</body>
+</html>

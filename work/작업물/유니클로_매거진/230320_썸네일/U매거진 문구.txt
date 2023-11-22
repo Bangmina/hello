@@ -1,0 +1,31 @@
+작업물 : 캠핑
+딱지 : LIFE STYLE
+타이틀 : 3월, 여기서 시작하는 캠핑
+설명문구 : 캠핑은 봄이 제철,봄이야말로 최소한의 장비로 최대의 효율을 낼 수 있는 계절이니까.
+https://www.uniqlo.com/kr/ko/special/kakao_230320_webzine1
+
+작업물 : 키즈새학기
+딱지 : ESSAY
+타이틀 : Spring Again
+설명문구 : 다가온 봄, 사랑스러운 소년, 소녀들의 하루를 수필처럼 아름답게 만들 6가지 룩
+https://www.uniqlo.com/kr/ko/special/kakao_230317_webzine1
+
+
+작업물 : SHIR-CKET
+딱지 : ESSAY
+타이틀 : SHIR-CKET
+설명문구 : 봄 시즌 가볍게 레이어링 해 아우터로 입기 좋은 셔츠 재킷
+https://www.uniqlo.com/kr/ko/special/kakao_230315_webzine1
+
+
+작업물 : 프린트블라우스
+딱지 : ESSAY
+타이틀 : 꽃의 살결, 꽃무늬의 물결
+설명문구 : 돌아오는 봄, 원피스와 블라우스도 제자리를 찾습니다.
+https://www.uniqlo.com/kr/ko/special/kakao_230314_webzine1
+
+* CMS 
+Name : adef_230315_새학기룩
+Slug : special/kakao_230317_webzine1
+
+

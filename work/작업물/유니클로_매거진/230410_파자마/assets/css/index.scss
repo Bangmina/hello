@@ -1,0 +1,626 @@
+/* font */
+
+/*
+  나눔스퀘어  [NanumSquare]
+  Light 300
+  Regular 400 (default)
+  Bold 700
+  ExtraBold 800
+*/
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+/*
+  [Noto Sans]
+  Thin 100
+  ExtraLight 200
+  Light 300
+  Regular 400
+  Medium 500 (default)
+  SemiBold 600
+  Bold 700
+  ExtraBold 800
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* 
+  애플 산돌고딕 [Apple SD Gothic Neo]
+  Thin 100
+  UltraLight 200
+  Light 300
+  Medium 400
+  Regular 500 
+  SemiBold 600 (default)
+  Bold 700
+  ExtraBold 800
+  Heavy 900
+*/
+@import url('https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/css/all.css');
+
+/* 강원교육모두 [GangwonEduAll] 300/400 */
+@font-face {
+  font-family: 'GangwonEduAll';
+  font-weight: 300;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff')
+      format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.ttf')
+      format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GangwonEduAll';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff')
+      format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.ttf')
+      format('truetype');
+  font-display: swap;
+}
+
+/* reset */
+.adef_webzine {
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    font-family: 'Noto Sans', 'NanumSquare', 'Noto Sans KR', 'Nanum Gothic',
+      'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 3.5vw;
+    line-height: 1.7;
+    letter-spacing: 0px;
+    color: #1c332b;
+    vertical-align: baseline;
+  }
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+  ol,
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  blockquote,
+  q {
+    quotes: none;
+  }
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+/* common */
+.adef_webzine {
+  .wrap {
+    padding: 0 10vw;
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+  .bold {
+    font-weight: 900;
+  }
+  .section {
+    position: relative;
+  }
+  .buy__anchor,
+  .info {
+    position: relative;
+    // font-size: 3.9vw;
+    transform: rotate(0.04deg);
+    -webkit-transform: rotate(0.04deg);
+    -moz-transform: rotate(0.04deg);
+    -ms-transform: rotate(0.04deg);
+    -o-transform: rotate(0.04deg);
+  }
+  .buy__anchor {
+    &--wrap {
+      text-align: center;
+    }
+    // 제품 구매하러가기
+    padding: 1.5vw 0;
+    display: inline-block;
+    text-decoration: underline;
+    color: #000;
+    font-weight: 900;
+  }
+  .info {
+    // 제품에 따라 기능이 상이합니다 스타일
+    margin-top: 20vw;
+  }
+  .section__txt {
+    vertical-align: baseline;
+    text-align: justify;
+    transform: rotate(0.04deg);
+    -webkit-transform: rotate(0.04deg);
+    -moz-transform: rotate(0.04deg);
+    -ms-transform: rotate(0.04deg);
+    -o-transform: rotate(0.04deg);
+
+    p {
+      &:not(:first-child) {
+        margin-top: 4vw;
+      }
+    }
+  }
+}
+
+/* 유니클로_bag_230328 */
+.adef_webzine {
+  .section1 {
+    background: url('https://simage-kr.uniqlo.com/display/corner/2161/adef_230410_pajama/pajama_230410_bg2.png');
+    background-size: 100%;
+    padding: 17vw 0;
+    position: relative;
+    z-index: 5;
+    &::after,
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+    }
+    &::before {
+      height: 17.73vw;
+      background: url('https://simage-kr.uniqlo.com/display/corner/2161/adef_230410_pajama/pajama_230410_bg1.png')
+        no-repeat;
+      background-size: 100%;
+      top: -15vw;
+    }
+    &::after {
+      height: 22.4vw;
+      background: url('https://simage-kr.uniqlo.com/display/corner/2161/adef_230410_pajama/pajama_230410_bg3.png');
+      background-size: 100%;
+      bottom: -17vw;
+    }
+  }
+
+  .howto {
+    .title__num {
+      display: flex;
+    }
+    .title {
+      display: flex;
+      box-sizing: border-box;
+      font-weight: 800;
+      font-size: 3.92vw;
+      line-height: 1.45;
+    }
+    &.one {
+      .title__num {
+        justify-content: center;
+      }
+      .title {
+        width: 88vw;
+        height: 23.2vw;
+        margin-bottom: 2.5vw;
+        padding-left: 19vw;
+        padding-bottom: 1.8vw;
+        background: url('https://simage-kr.uniqlo.com/display/corner/2161/adef_230410_pajama/pajama_230410_title1.png')
+          no-repeat;
+        align-items: flex-end;
+        transform: translateX(-1vw);
+        -webkit-transform: translateX(-1vw);
+        -moz-transform: translateX(-1vw);
+        -ms-transform: translateX(-1vw);
+        -o-transform: translateX(-1vw);
+        background-size: cover;
+      }
+    }
+    &.two {
+      .title__num {
+        margin-top: 17vw;
+        justify-content: flex-start;
+      }
+      .title {
+        width: 92.8vw;
+        height: 27.46vw;
+        margin-bottom: 0vw;
+        padding-right: 17.5vw;
+        padding-bottom: 6vw;
+        background: url('https://simage-kr.uniqlo.com/display/corner/2161/adef_230410_pajama/pajama_230410_title2.png')
+          no-repeat;
+        align-items: flex-end;
+
+        justify-content: flex-end;
+        background-size: cover;
+      }
+      .section__txt {
+        text-align: right;
+        word-break: keep-all;
+        padding-left: 7vw;
+        margin-top: -1.5vw;
+      }
+    }
+    &.three {
+      .title__num {
+        margin-top: 17vw;
+        justify-content: flex-end;
+      }
+      .title {
+        width: 95.2vw;
+        height: 27.2vw;
+        margin-bottom: 0vw;
+        padding-left: 20vw;
+        padding-bottom: 5.8vw;
+        background: url('https://simage-kr.uniqlo.com/display/corner/2161/adef_230410_pajama/pajama_230410_title3.png')
+          no-repeat;
+        align-items: flex-end;
+        justify-content: flex-start;
+        background-size: 100%;
+      }
+      .section__txt {
+        margin-top: -1vw;
+      }
+    }
+    &.four {
+      .title__num {
+        margin-top: 16vw;
+        justify-content: flex-start;
+      }
+      .title {
+        width: 93.5vw;
+        height: 34.13vw;
+        margin-bottom: 0vw;
+        padding-right: 17.5vw;
+        padding-bottom: 10.4vw;
+        background: url('https://simage-kr.uniqlo.com/display/corner/2161/adef_230410_pajama/pajama_230410_title4.png')
+          no-repeat;
+        align-items: flex-end;
+
+        justify-content: flex-end;
+        background-size: cover;
+      }
+      .section__txt {
+        text-align: right;
+        word-break: keep-all;
+        padding-left: 7vw;
+        margin-top: -5vw;
+      }
+    }
+    &.five {
+      .title__num {
+        margin-top: 18.5vw;
+        justify-content: flex-end;
+      }
+      .title {
+        width: 95.2vw;
+        height: 41.33vw;
+        margin-bottom: 0vw;
+        padding-left: 20vw;
+        padding-bottom: 19.8vw;
+        background: url('https://simage-kr.uniqlo.com/display/corner/2161/adef_230410_pajama/pajama_230410_title5.png')
+          no-repeat;
+        align-items: flex-end;
+        justify-content: flex-start;
+        background-size: 100%;
+      }
+      .section__txt {
+        margin-top: -14vw;
+      }
+    }
+  }
+  .pajama {
+    box-sizing: border-box;
+    &__title--box {
+    }
+    &__title {
+      font-size: 4.75vw;
+      font-weight: 800;
+      margin-top: -0.6vw;
+    }
+    &__subtitle {
+      font-weight: 400;
+      color: #1c332b;
+    }
+    &.one {
+      padding: 17vw 0 0;
+      height: 148vw;
+      background: url('https://simage-kr.uniqlo.com/display/corner/2161/adef_230410_pajama/pajama_230410_bg5.png')
+        no-repeat;
+      background-size: 100%;
+      .pajama__title--box {
+        margin-top: 1vw;
+      }
+      .pajama__subtitle,
+      .pajama__title {
+        text-align: center;
+      }
+      .pajama__subtitle {
+      }
+      .pajama__title {
+        color: #5c237d;
+      }
+      .section__txt {
+        margin-top: 3vw;
+        text-align: center;
+      }
+    }
+    &.two {
+      margin-top: -2vw;
+      padding: 24vw 0 0 7vw;
+      height: 126vw;
+      background: url('https://simage-kr.uniqlo.com/display/corner/2161/adef_230410_pajama/pajama_230410_bg6.png')
+        no-repeat;
+      background-size: 100%;
+      .pajama__title--box {
+        margin-top: 1vw;
+      }
+      .pajama__subtitle,
+      .pajama__title {
+      }
+      .pajama__subtitle {
+      }
+      .pajama__title {
+        color: #22438a;
+      }
+      .section__txt {
+        margin-top: 3vw;
+      }
+    }
+  }
+  .section2 {
+    padding: 20vw 0 0;
+    background: url('https://simage-kr.uniqlo.com/display/corner/2161/adef_230410_pajama/pajama_230410_bg4.png');
+    &__title {
+      width: 70.26vw;
+      margin: 11vw auto 0;
+    }
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      background: url('https://simage-kr.uniqlo.com/display/corner/2161/adef_230410_pajama/');
+    }
+  }
+  .section3 {
+    padding: 30vw 0 13.2vw;
+    background: url('https://simage-kr.uniqlo.com/display/corner/2161/adef_230410_pajama/pajama_230410_bg7.png')
+      no-repeat;
+    background-size: cover;
+    &__ic {
+      width: 4.26vw;
+      margin: 0 auto;
+    }
+    .section__txt {
+      &.one {
+        margin: 5.8vw 0 8.5vw;
+        text-align: center;
+        color: #1c332b;
+      }
+    }
+    .pajama {
+      &__info--bg {
+        width: 100%;
+        height: 166vw;
+        background: #fff;
+        position: absolute;
+        opacity: 0.75;
+        z-index: 1;
+        top: 0;
+        left: 0;
+      }
+      &__info {
+        position: relative;
+        z-index: 5;
+      }
+      &__info--wrap {
+        width: 95vw;
+        padding: 12.65vw 0 18vw;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+      }
+      &__info--title {
+        display: flex;
+        justify-content: center;
+        color: #1c332b;
+        &:not(:first-of-type) {
+          margin-top: 14vw;
+        }
+      }
+      &__info--num {
+        color: #1c332b;
+        margin-right: 2vw;
+        margin-top: 0.5vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5vw;
+        height: 5vw;
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+        background: #d4d9dc;
+      }
+      &__info--content {
+        margin-top: 2vw;
+      }
+    }
+  }
+  .section4 {
+    padding-top: 12.65vw;
+    margin-bottom: 14vw;
+    &__title {
+      font-family: Uniqlo Pro Light, NanumSquare Regular, Roboto, Droid Sans,
+        Helvetica Neue, HiraKakuProN-W3, sans-serif;
+      font-size: 6vw;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        margin-top: -1vw;
+        width: 43.73vw;
+      }
+    }
+    .ic_gender {
+      margin: 4.5vw 0 0;
+      width: 10.26vw;
+    }
+    .pajama {
+      &__list {
+        display: flex;
+        width: 95vw;
+        margin: 13vw auto 0;
+      }
+      &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 33.33vw;
+      }
+      &__item--img {
+        height: 37vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.one {
+          img {
+            width: 25.2vw;
+          }
+        }
+        &.two {
+          img {
+            width: 24.5vw;
+          }
+        }
+        &.three {
+          img {
+            width: 26.66vw;
+          }
+        }
+      }
+      &__item--name {
+        font-size: 3.25vw;
+        font-weight: 800;
+        line-height: 1.1;
+        margin-top: 1.3vw;
+      }
+    }
+  }
+}

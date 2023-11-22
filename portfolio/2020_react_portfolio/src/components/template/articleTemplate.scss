@@ -1,0 +1,42 @@
+@import "../../styles/index.scss";
+
+.article {
+  &__template {
+    margin: 0 auto;
+    width: 102.4rem;
+    font-size: 1.6rem;
+    &:not(:last-child) {
+      // margin: 0 0 1.5rem 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+// 1119px
+@media only screen and (max-width: 1119px) {
+  .article {
+    &__template {
+      padding: 0 13rem;
+      width: inherit;
+    }
+  }
+}
+
+// 600px
+@include respond(phone) {
+  .article {
+    &__template {
+      padding: 0 5rem;
+    }
+  }
+}
+
+// 400px
+@media only screen and (max-width: 400px) {
+  .article {
+    &__template {
+      padding: 0 2rem;
+    }
+  }
+}

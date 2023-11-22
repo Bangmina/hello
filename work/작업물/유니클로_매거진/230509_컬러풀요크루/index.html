@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>컬러풀유크루</title>
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <!-- css -->
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body>
+  <div class="adef_webzine">
+    <section class="visual">
+      <img src="https://simage-kr.uniqlo.com/display/corner/2161/adef_230509_colorucrew/colort_230509_visual.png"
+        alt="">
+    </section>
+    <section class="section1">
+      <div class="section__txt wrap">
+        바야흐로 티셔츠가 주인공인 계절, 여름이 돌아왔습니다. 티셔츠 하나만 입어도 설레는 일상은 유니클로의 다채로운 컬러와 함께 배가됩니다. 티셔츠 위에 물든 은은하고 부드 러운 컬러의 변주는 기분이 이끄는
+        대로 골라 꺼내 입기 좋습니다. 여러 가지 컬러 데님부터 카고 팬츠, 한여름의 쇼트 팬츠와도 무리 없이 스타일링이 가능하죠. 정답은 없습니다. 내 마음대로, 가장 나답게 컬러 티셔츠를 입어 보세요.
+      </div>
+    </section>
+    <img class="colort__img1"
+      src="https://simage-kr.uniqlo.com/display/corner/2161/adef_230509_colorucrew/colort_230509_img1.png" alt="">
+    <img class="colort__img2"
+      src="https://simage-kr.uniqlo.com/display/corner/2161/adef_230509_colorucrew/colort_230509_img2.png" alt="">
+    <div class="info wrap">
+      *제품에 따라 기능이 상이합니다.
+    </div>
+  </div>
+
+  <!-- 컴포넌트 공통 버튼 -->
+  <div>
+
+    <!-- 컴포넌트 공통 1 -->
+    <style>
+      .adef_webzine .product_more {
+        background: #fff;
+        display: block;
+        margin: 15vw 0 20vw;
+      }
+
+      .adef_webzine .product_more_btn {
+        color: #000;
+        border: 1px solid #000;
+        text-decoration: none;
+
+        font-size: 3.5vw;
+        letter-spacing: -.5px;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5.65vw 0vw;
+        line-height: 1;
+        font-family: 'NanumSquare', 'Noto Sans KR', 'Nanum Gothic', 'Roboto', sans-serif;
+        font-weight: 500;
+      }
+
+      .adef_webzine .product_more_btn:not(:first-child) {
+        margin-top: 5vw;
+      }
+    </style>
+    <div class="adef_webzine">
+      <article class="product_more ">
+        <div class="wrap">
+          <a class="product_more_btn" href="https://www.uniqlo.com/kr/ko/product/455758">
+            WOMEN Color T 보러가기
+          </a>
+          <a class="product_more_btn" href="https://www.uniqlo.com/kr/ko/product/455360">
+            MEN Color T 보러가기
+          </a>
+        </div>
+      </article>
+    </div>
+    <!-- // 컴포넌트 공통 1 -->
+
+    <!-- 컴포넌트2 공통 -->
+    <style>
+      .more_content {
+        margin-top: 20vw;
+        background: #444;
+        display: flex;
+        padding: 13.5px 0 12.5px;
+        color: #fff;
+        font-size: 4vw;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none
+      }
+
+      .more_content img {
+        margin-right: 10px;
+        width: 6vw;
+      }
+    </style>
+    <a class="more_content" href="https://www.uniqlo.com/kr/ko/special/kakao_u_magazine">
+      <img class="img__item--alone"
+        src="https://simage-kr.uniqlo.com/display/corner/2161/tokyo_230309/ic_touch_230308.png" alt="">
+      더 많은 콘텐츠 보러가기
+    </a>
+    <!-- // 컴포넌트 공통 2 -->
+
+  </div>
+  <!-- 컴포넌트 공통 버튼 -->
+
+  <!-- 스크립트 -->
+  <script>
+    $(function () {
+      const $windowWidth = $(window).width();
+      $('.section3').scrollLeft($windowWidth / 2.7)
+      $('.section5').scrollLeft($windowWidth / 2.6)
+    })
+  </script>
+  <!-- // 스크립트 -->
+
+</body>
+
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>확장 키워드 Pool</title>
+    <link rel="stylesheet" href="../../asset/css/base.css">
+    <link rel="stylesheet" href="../../asset/css/page.css">
+    <link rel="stylesheet" href="./asset/css/utilityKeywordExpansion.css">
+    <script src="../../asset/js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <!-- 공통 영역 -->
+    <header class="header">
+        <div class="header__left m__none">
+            <form action="" class="solution__form">
+                <select name="" id="" class="solution__select">
+                    <option value="솔루션">솔루션</option>
+                    <option value="솔루션">솔루션</option>
+                    <option value="솔루션">솔루션</option>
+                </select>
+                <button class="solution__select--btn common__btn--orange">이동</button>
+            </form>
+        </div>
+        <h1 class="header__logo">
+            <a href="javascript:void(0);"><img src="../../asset/images/logo_header.png" alt="로고"></a>
+        </h1>
+        <div class="header__right m__none">
+            <p class="header__login--time">김경래 님 (최근 로그인 일시 2020-12-04 09:03:58)</p>
+            <button class="header__logout--btn common__btn--purple">로그아웃</button>
+        </div>
+        <button class="header__menu--btn pc__none open">
+            <span></span>
+        </button>
+    </header>
+    <nav class="nav m__none">
+        <ul class="nav__list clearfix">
+            <li class="nav__item">
+                <a href="javascript:void(0);" class="nav__item--anchor">모니터링</a>
+                <ul class="nav__depth">
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">Daum 검색순위 확인</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">SNS 팔로워 모니터링</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">SIV 전용 팔로워 모니터링</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">ADEF SNS 모니터링</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">여기어때 페이스북 리포트</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">매체 계정잔액 모니터링</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">구글 트렌드 검색</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">왓챠.작품명 크롤링</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">경쟁사-랜딩-모니터링</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">피플펀드.광고비.모니터링</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">네이버-카탈로그-모니터링</a></li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="javascript:void(0);" class="nav__item--anchor">검수</a>
+                <ul class="nav__depth">
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">IKEA 오류 검수</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">SSF 렌딩 검수</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">WADIZ 렌딩 검수</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">Ebates 렌딩 검수</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">SIV 렌딩테스트</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">매체 이미지 검수</a></li></li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="javascript:void(0);" class="nav__item--anchor">업무 효율화</a>
+                <ul class="nav__depth">
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">IKEA 검색어 상품체크</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">IKEA 기획전</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">DB손해보험 RAW</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">DB손해보험 Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">WADIZ RAW</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">WADIZ 구글피드ID 제외처리</a></li></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">URL-Blank파라미터삭제</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">UTM,파라미터삭제<br/>(삼성물산전용)</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">확장 키워드 Pool</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">익스피디아-영문키워드찾기</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">클룩 Feed 비교</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">와디즈 서포터</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">카카오모먼트 대량관리 API</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">네이버 PC/MO 검색 쿼리 리포트</a></li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="javascript:void(0);" class="nav__item--anchor">Report & 분석</a>
+                <ul class="nav__depth">
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">Google budget Estimate(GES)</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">GA 경로분석 Raw</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">랜딧 Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">데일리호텔 Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">와디즈 리워드 지원전환 Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">Sivillage jaju 지원전환 Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">예스폼 DAUM Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">마켓컬리 NATE Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">왓챠 Custom Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">DB손해보험</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">TUMI 상품 비교</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">Naver EP</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">Bizspring(레진)</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">피플펀드CSV</a></li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="javascript:void(0);" class="nav__item--anchor">사원관리</a>
+                <ul class="nav__depth">
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">사원 목록</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <aside class="pc__none side__menu">
+        <section class="side__menu--wrap">
+            <article class="menu_header">
+                    <form action="" class="solution__form">
+                        <select name="" id="" class="solution__select">
+                            <option value="솔루션">솔루션</option>
+                            <option value="솔루션">솔루션</option>
+                            <option value="솔루션">솔루션</option>
+                        </select>
+                        <button class="solution__select--btn common__btn--orange">이동</button>
+                    </form>
+                <button class="header__menu--btn pc__none close active">
+                    <span></span>
+                </button>
+            </article>
+            <article class="side__nav">
+                <!-- 메뉴 타이틀 -->
+                <ul class="snav__title">
+                    <li class="snav__title--item ">
+                        <a class="active" href="javascript:void(0);"><i class="snav__title--icon"></i>모니터링</a>
+                    </li>
+                    <li class="snav__title--item">
+                        <a href="javascript:void(0);"><i class="snav__title--icon"></i>검수</a>
+                    </li>
+                    <li class="snav__title--item">
+                        <a href="javascript:void(0);"><i class="snav__title--icon"></i>업무효율화</a>
+                    </li>
+                    <li class="snav__title--item">
+                        <a href="javascript:void(0);"><i class="snav__title--icon"></i>REPORT & 분석</a>
+                    </li>
+                    <li class="snav__title--item">
+                        <a href="javascript:void(0);"><i class="snav__title--icon"></i>사원관리</a>
+                    </li>
+                    <li class="snav__title--item snav__logout">
+                        <button><img src="../../asset/images/icon_logout.png" alt="">로그아웃</button>
+                    </li>
+
+                    
+                </ul>
+                <!-- 서브메뉴 -->
+                <div class="side__depth--wrap">
+                    <ul class="side__depth--list">
+                        <li class="side__depth--item side__item--title ">
+                            <h3>모니터링</h>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">Daum 검색순위 확인</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">SNS 팔로워 모니터링</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">SIV 전용 팔로워 모니터링</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">ADEF SNS 모니터링</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">여기어때 페이스북 리포트</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">매체 계정잔액 모니터링</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">구글 트랜드 검색</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">왓챠-작품명 크롤링</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">경쟁사-랜딩-모니터링</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">피플펀드-광고비-모니터링</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">네이버-카탈로그-모니터링</a>
+                        </li>
+                    </ul>
+                    <ul class="side__depth--list none">
+                        <li class="side__depth--item side__item--title ">
+                            <h3>검수</h3>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">IKEA 오류 검수</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">SSF 랜딩 검수</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">WADIZ 랜딩 검수</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">Ebates 랜딩 검수</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">SIV 랜딩테스트</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">매체 이미지 검수</a>
+                        </li>
+                    </ul>
+                    <ul class="side__depth--list none">
+                        <li class="side__depth--item side__item--title ">
+                            <h3>업무효율화</h3>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">IKEA 검색어 상품체크</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">IKEA 기획전</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">DB손해보험 RAW</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">DB손해보험 Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">SSF 할인율</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">WADIZ RAW</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">WADIZ 구글피드 ID 제외처리</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">URL-Blank 파라미터 삭제</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">UTM,파라미터 삭제<br/>삼성물산 전용</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">확장 키워드 Pool</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">익스피디아-영문 키워드 찾기</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">클록 Feed 비교</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">와디즈 서포터</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">카카오모먼트 대량관리 API</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">네이버 PC/MO 검색 쿼리 리포트</a>
+                        </li>
+                    </ul>
+                    <ul class="side__depth--list none">
+                        <li class="side__depth--item side__item--title ">
+                            <h3>REPORT & 분석</h3>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">Google budget Estimate(GES)</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">GA 경로분석 Raw</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">랜딧 Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">데일리호텔 Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">와디즈 리워드 지원전환 Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">Sivillage jaju 지원전환 Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">예스폼 DAUM Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">마켓컬리 NATE Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">왓챠 Custom Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">DB손해보험</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">TUMI 상품 비교</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">Naver EP</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">Bizspring(레진)</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">피플펀드 CSV</a>
+                        </li>
+                    </ul>
+                    <ul class="side__depth--list none">
+                        <li class="side__depth--item side__item--title ">
+                            <h3>사원관리</h3>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">사원관리</a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article class="menu__footer">
+                2020, adefficiency all rights reserved.<br/>
+                <a href="javascript:void(0);">인트라넷 바로가기 ></a>
+            </article>
+        </section>
+        
+    </aside>
+    <!-- //공통 영역 -->
+
+    <main class="page__main">
+        <h2 class="page__title">확장 키워드 Pool</h2>
+        <section class="page__section input__file--form">
+            <ul class="upload__list">
+                <li>
+                    <div class="upload__box">
+                        <h4 class="upload__title">키워드 풀 추가</h4>
+                        <div class="upload__file--box">
+                            <input id="upload1"type="file" >
+                            <label for="upload1" class="upload__input--label">파일선택</label>
+                            <span class="upload__name">선택된 파일이 없습니다.</span>
+                        </div>
+                        <div class="mobile__flex--three">
+                            <button class="common__btn--orange form__btn">업로드</button>
+                            <button class="common__btn--navy form__btn m-l-10">템플릿 다운로드</button>
+                            <button class="common__btn--navy form__btn m-l-10">풀리스트 다운로드</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="info__list">
+                <li>
+                    키워드 업로드 시 "템플릿 다운로드"를 통해 형식에 알맞도록 업로드 부탁드립니다.
+                </li>
+                <li>
+                    업종구분, 언어구분, 대구분, 중구분, 소구분, 확장위치 가 <span class="red bold">모두 일치하는 확장검색어만 중복 처리</span>됩니다.
+                </li>
+                <li>
+                    풀리스트를 다운로드 받으려면 "풀리스트 다운로드"버튼을 눌러 주세요.
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- 공통 영역 -->
+    <footer class="footer m__none">
+        2020, <span class="orange__color">adefficiency</span> all rights reserved. <a href="https://intranet.adef.co.kr/login" class="intranet__anchor" target="_blank">인트라넷 바로가기 ></a>
+    </footer>
+    <button class="top__btn">
+        <span></span>
+        <p>TOP</>
+    </button>
+    <!-- //공통 영역 -->
+    <script src="../../asset/js/common.js"></script>
+</body>
+</html>

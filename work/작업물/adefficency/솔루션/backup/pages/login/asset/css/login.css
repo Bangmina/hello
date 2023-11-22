@@ -1,0 +1,73 @@
+/*-------------------------------------------------
+Style Sheet
+Version : 1.0
+Author :  BMN
+Create date : 2020. 12. 07
+-------------------------------------------------*/
+
+.login {
+	width: 100vw;
+	height: 100vh;
+	background: #1e1274;
+	position: relative;
+}
+.login__wrap {
+	position: absolute;
+	min-width: 310px;
+	max-width: 460px;
+	background: #ffffff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 5px;
+	padding: 55px 40px;
+}
+
+.login__form {
+	margin-top: 20px;
+}
+.login__form input[class^="login__input"] {
+	padding: 10px;
+	width: 100%;
+	border: 1px solid #e3e3e3;
+	outline: 0;
+	font-size: 1.4rem;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+}
+
+.login__input--id {
+	margin-bottom: 10px;
+}
+.login__btn {
+	display: block;
+	width: calc(50% - 5px);
+	height: 50px;
+	color: #ffffff;
+	font-size: 14px;
+	border-radius: 5px;
+}
+.login__btn--box {
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-between;
+}
+.login__logo {
+	text-align: center;
+	margin-bottom: 15px;
+}
+.login__solution {
+	text-align: center;
+}
+@media screen and (max-width: 991px) {
+	.login__wrap {
+		padding: 40px 20px;
+		height: auto;
+	}
+	.login__solution img {
+		width: 150px;
+	}
+}

@@ -1,0 +1,57 @@
+@import "../../styles/index.scss";
+
+.footer {
+  margin: 0 0 10rem 0;
+  text-align: center;
+  &__title {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  &__contact {
+    margin: 1rem 0 0 0;
+    height: 8rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+    transition: $transition-active;
+    &:hover {
+      color: $orange;
+      font-size: 3rem;
+    }
+  }
+  &__subtitle {
+    color: $grayscale-4;
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+  &__list {
+    margin: 10rem 0 0 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  &__item {
+    width: 30rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  &__nav--gitgub {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: $grayscale-6;
+  }
+  &__nav--copyright {
+    color: $grayscale-2;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .footer {
+    &__nav--copyright {
+      display: none;
+    }
+  }
+}
+@media only screen and (max-width: 400px) {
+  footer {
+    display: none;
+  }
+}

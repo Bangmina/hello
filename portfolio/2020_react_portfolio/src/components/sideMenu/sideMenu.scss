@@ -1,0 +1,348 @@
+@import "../../styles/index.scss";
+//
+.aside {
+  position: fixed;
+  z-index: 9000;
+  width: 10rem;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  &__wrap--left {
+    position: relative;
+    z-index: 9001;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 8rem 0 0 0;
+    height: 100vh;
+  }
+  &__logo--box {
+    margin: 0 auto;
+    width: 4.8rem;
+    flex: 0.5;
+  }
+  &__logo {
+    width: 100%;
+  }
+  &__menu--box {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: $transition-active;
+    color: $white;
+    text-align: center;
+    line-height: 2rem;
+  }
+  &__menu {
+    position: relative;
+    width: 4.5rem;
+    height: 4.5rem;
+    transition: $transition-active;
+    cursor: pointer;
+    // menu-hover
+    &:hover {
+      height: 4.5rem;
+      border: 1px solid $grayscale-5;
+      border-radius: 100rem;
+      .menu-line {
+        background: #333;
+        &.top {
+          top: 1.5rem;
+        }
+        &.center {
+          opacity: 1;
+          top: 50%;
+          transform: translate(-50%, 50%);
+        }
+        &.bottom {
+          bottom: 1.5rem;
+        }
+      }
+      .menu-text {
+        opacity: 0;
+      }
+    }
+  }
+  .menu-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+  }
+  .menu-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: $transition-active;
+    display: block;
+    width: 1.8rem;
+    height: 0.1rem;
+    background: $white;
+    &.top {
+      top: -2.5rem;
+    }
+    &.center {
+      opacity: 0;
+      top: 50%;
+      transform: translate(-50%, 50%);
+    }
+    &.bottom {
+      bottom: -2.5rem;
+    }
+  }
+  // index
+  &__wrap {
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    z-index: 9002;
+    display: flex;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background: $orange;
+    transition: $transition-active;
+  }
+  &__close--content {
+    position: relative;
+    padding: 8rem 0 0 0;
+    width: 10rem;
+    height: 100vh;
+  }
+  &__close--circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 4.5rem;
+    height: 4.5rem;
+    border: 1px solid $white;
+    border-radius: 100rem;
+    transition: $transition-active;
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: $transition-active;
+      display: block;
+      width: 1.8rem;
+      height: 0.1rem;
+      background: $white;
+    }
+    &:after {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &:before {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    &:hover {
+      background: $white;
+      &:after,
+      &:before {
+        background: $grayscale-6;
+      }
+      &:after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+      &:before {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+  }
+  &__nav--content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 10rem 0 10rem;
+  }
+  &__nav--index {
+    li a {
+      position: relative;
+      display: inline-block;
+      font-size: 4rem;
+      line-height: 8rem;
+      font-weight: bold;
+      color: $white;
+      &:before {
+        content: "";
+        display: block;
+        width: 0%;
+        height: 2rem;
+        background: rgba(255, 255, 255, 0.3);
+        position: absolute;
+        top: 50%;
+        transition: $transition-active;
+      }
+      &:hover {
+        color: $grayscale-7;
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__close--text {
+    margin: 1rem 0 0 0;
+    color: #fff;
+  }
+  &__map--box {
+    position: relative;
+  }
+  &__map {
+    position: relative;
+    width: 40rem;
+    height: 40rem;
+    background: $white;
+    border-radius: 100rem;
+    overflow: hidden;
+    box-shadow: $box-shadow;
+    iframe {
+      position: absolute;
+      top: -15rem;
+      left: -10rem;
+    }
+  }
+  &__map--button {
+    position: absolute;
+    display: block;
+    left: 20rem;
+    top: 10rem;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 1);
+    color: $grayscale-5;
+    font-size: 2.4rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    // border: 1px solid $orange;
+    box-shadow: $box-shadow;
+    transition: $transition-active;
+    &:hover {
+      background: $orange;
+      color: $white;
+    }
+  }
+  // side-hover
+  &:hover {
+    .hover--bg {
+      left: 0;
+    }
+    .hover-color {
+      color: $grayscale-6;
+    }
+    .menu-line {
+      background: $grayscale-5;
+    }
+  }
+  &__call--wrap {
+    margin: 3rem 0 0 0;
+    display: flex;
+  }
+  &__call--box {
+    &:not(:last-child) {
+      margin: 0 3rem 0 0;
+    }
+  }
+  &__call--title {
+    margin: 0 0 1rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  &__call--content {
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+  // side-hover-bg
+  .hover--bg {
+    position: absolute;
+    z-index: 9001;
+    left: -10rem;
+    width: 10rem;
+    height: 100%;
+    background: $white;
+    transition: $transition-active;
+  }
+}
+// 768px
+@include respond(tab-port) {
+  .aside {
+    &__nav--info {
+      display: none;
+    }
+    &__nav--content {
+      padding: 0 10rem 0 0rem;
+    }
+  }
+}
+// 600px
+@media only screen and (max-width: 650px) {
+  .aside {
+    width: 100%;
+    height: 6rem;
+    .hover--bg {
+      display: none;
+    }
+    &__wrap {
+      flex-direction: column;
+    }
+    &__wrap--left,
+    &__close--content {
+      padding: 0 3rem;
+      width: 100%;
+      height: 6rem;
+      box-sizing: border-box;
+    }
+    &__close--content {
+      position: fixed;
+    }
+    &__wrap--left {
+      flex-direction: inherit;
+      justify-content: space-between;
+      background: $white;
+    }
+    &__close--circle {
+      left: inherit;
+      right: 0;
+    }
+    &__logo--box {
+      width: 4rem;
+      margin: 0;
+      flex: inherit;
+    }
+    &__logo {
+      width: 4rem;
+    }
+    &__menu--box {
+      position: static;
+      transform: none;
+    }
+    &__menu {
+      border: 1px solid $grayscale-5;
+      border-radius: 100rem;
+      .menu-line {
+        background: #333;
+        &.top {
+          top: 1.5rem;
+        }
+        &.center {
+          opacity: 1;
+          top: 50%;
+          transform: translate(-50%, 50%);
+        }
+        &.bottom {
+          bottom: 1.5rem;
+        }
+      }
+      .menu-text {
+        opacity: 0;
+      }
+    }
+    &__nav--content {
+      padding: 0;
+    }
+  }
+}

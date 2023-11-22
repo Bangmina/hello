@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5/30 도쿄</title>
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+  </head>
+
+  <body>
+    <div class="adef_webzine">
+      <section class="visual">
+        <img src="./assets/images/tokyo_230530_visual.png" alt="" />
+      </section>
+      <section class="section1">
+        <article class="tokyo__slide">
+          <div class="wrap">
+            <img
+              class="tokyo__tit"
+              src="./assets/images/tokyo_230530_tit1.png"
+              alt=""
+            />
+            <!-- <div class="slide__box one">
+              <ul class="slide__list">
+                <li class="slide__item">
+                  <img
+                    src="https://simage-kr.uniqlo.com/display/corner/2161/adef_230502_camping/camping_230502_nacho1.png"
+                    alt=""
+                  />
+                </li>
+                <li class="slide__item">
+                  <img
+                    src="https://simage-kr.uniqlo.com/display/corner/2161/adef_230502_camping/camping_230502_nacho1.png"
+                    alt=""
+                  />
+                </li>
+                <li class="slide__item">
+                  <img
+                    src="https://simage-kr.uniqlo.com/display/corner/2161/adef_230502_camping/camping_230502_nacho1.png"
+                    alt=""
+                  />
+                </li>
+                <li class="slide__item">
+                  <img
+                    src="https://simage-kr.uniqlo.com/display/corner/2161/adef_230502_camping/camping_230502_nacho1.png"
+                    alt=""
+                  />
+                </li>
+              </ul>
+            </div> -->
+            <!-- test -->
+            <style>
+              .adef_webzine .slide__box,
+              .adef_webzine .slide__item {
+                width: 81.33vw;
+              }
+              .adef_webzine .slide__box {
+                overflow: hidden;
+              }
+              .adef_webzine .slide__list {
+                display: flex;
+                width: -moz-fit-content;
+                width: fit-content;
+              }
+              .adef_webzine .pagination {
+                display: flex;
+                justify-content: center;
+                margin-top: 10px;
+              }
+              .adef_webzine .pagination__item {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: gray;
+                margin: 0 5px;
+              }
+              .adef_webzine .pagination__item.active {
+                background-color: red;
+              }
+            </style>
+            <div class="slide__box one">
+              <ul class="slide__list">
+                <li class="slide__item">
+                  <img
+                    src="https://simage-kr.uniqlo.com/display/corner/2161/adef_230502_camping/camping_230502_nacho1.png"
+                    alt=""
+                  />
+                </li>
+                <li class="slide__item">
+                  <img
+                    src="https://simage-kr.uniqlo.com/display/corner/2161/adef_230502_camping/camping_230502_nacho1.png"
+                    alt=""
+                  />
+                </li>
+                <li class="slide__item">
+                  <img
+                    src="https://simage-kr.uniqlo.com/display/corner/2161/adef_230502_camping/camping_230502_nacho1.png"
+                    alt=""
+                  />
+                </li>
+                <li class="slide__item">
+                  <img
+                    src="https://simage-kr.uniqlo.com/display/corner/2161/adef_230502_camping/camping_230502_nacho1.png"
+                    alt=""
+                  />
+                </li>
+              </ul>
+            </div>
+            <div class="pagination">
+              <div class="pagination__item active"></div>
+              <div class="pagination__item"></div>
+              <div class="pagination__item"></div>
+              <div class="pagination__item"></div>
+            </div>
+            <script>
+              setInterval(SliderOne, 1800)
+              function SliderOne() {
+                $('.slide__box.one .slide__list').animate(
+                  { 'margin-left': '-100%' },
+                  1000,
+                  function () {
+                    $('.slide__box.one .slide__list').css({
+                      'margin-left': '0px',
+                    })
+                    $(
+                      '.slide__box.one .slide__list li:first-child',
+                    ).insertAfter('.slide__box.one .slide__list li:last-child')
+                    updatePagination()
+                  },
+                )
+              }
+
+              function updatePagination() {
+                const slideCount = $('.slide__box.one .slide__item').length
+                const activeSlideIndex = $(
+                  '.slide__box.one .slide__item',
+                ).index($('.slide__box.one .slide__item:first-child'))
+
+                $('.pagination__item').removeClass('active')
+                $('.pagination__item').eq(activeSlideIndex).addClass('active')
+              }
+
+              updatePagination() // 추가: 초기 페이지네이션 업데이트
+            </script>
+          </div>
+        </article>
+        <article class="tokyo__info">
+          <div class="wrap">
+            <div class="section__txt">
+              한적한 시로카네다이 역 인근에 위치한 비오톱은 편집숍이라기 보다는
+              ‘치유의 공간’이라는 설명이 더 잘 어울린다. 인적 드문 주택가,
+              초록빛 무성한 식물로 둘러싸인 외관에서 느껴지는 여유가
+              인테리어까지 느긋하게 이어진다. 유럽의 멋진 저택 같은 근사한
+              공간에서 메종 마르지엘라, 르메르, 질샌더, 더 로우 등 정제된
+              디자인이지만 오라가 느껴지는 브랜드의 제품을 주로 만나볼 수 있다.
+              더욱이 날 선 셀렉션으로 세련된 도쿄 로컬들이 정기적으로 찾는
+              곳으로 유명하다. 식물 가게로 운영하는 1층에서는 국내에서 찾아보기
+              힘든 특이한 식물과 세련된 디자인의 가드닝 용품을 구경하는 재미가
+              쏠쏠하다.
+            </div>
+            <img
+              class="tokyo__info--map"
+              src="./assets/images/tokyo_230530_map1.png"
+              alt=""
+            />
+          </div>
+        </article>
+      </section>
+    </div>
+    <!-- 컴포넌트 공통 버튼 -->
+    <div>
+      <!-- 컴포넌트 공통 1 -->
+      <!-- <style>
+      .adef_webzine .product_more {
+        background: #fff;
+        display: block;
+        margin: 10vw 0 15vw;
+      }
+
+      .adef_webzine .product_more_btn {
+        color: #000;
+        border: 1px solid #000;
+        text-decoration: none;
+
+        font-size: 3.5vw;
+        letter-spacing: -.5px;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5.65vw 0vw;
+        line-height: 1;
+        font-family: 'NanumSquare', 'Noto Sans KR', 'Nanum Gothic', 'Roboto', sans-serif;
+        font-weight: 500;
+      }
+
+      .adef_webzine .product_more_btn:not(:first-child) {
+        margin-top: 5vw;
+      }
+    </style>
+    <div class="adef_webzine">
+      <article class="product_more ">
+        <div class="wrap">
+          <a class="product_more_btn" href="https://www.uniqlo.com/kr/ko/product/455758">
+            WOMEN Color T 보러가기
+          </a>
+
+        </div>
+      </article>
+    </div> -->
+      <!-- // 컴포넌트 공통 1 -->
+
+      <!-- 컴포넌트2 공통 -->
+      <style>
+        .more_content {
+          /* margin-top: 15vw; */
+          background: #339955;
+          display: flex;
+          padding: 13.5px 0 12.5px;
+          color: #fff;
+          font-size: 3.42vw;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+        }
+
+        .more_content img {
+          margin-right: 10px;
+          width: 5.86vw;
+        }
+      </style>
+      <a
+        class="more_content"
+        href="https://www.uniqlo.com/kr/ko/special/kakao_u_magazine"
+      >
+        <img
+          class="img__item--alone"
+          src="https://simage-kr.uniqlo.com/display/corner/2161/tokyo_230309/ic_touch_230308.png"
+          alt=""
+        />
+        더 많은 콘텐츠 보러가기
+      </a>
+      <!-- // 컴포넌트 공통 2 -->
+    </div>
+    <!-- 컴포넌트 공통 버튼 -->
+
+    <script>
+      // setInterval(SliderOne, 1800)
+      // function SliderOne() {
+      //   $('.slide__box.one .slide__list').animate(
+      //     { 'margin-left': '-100%' },
+      //     1000,
+      //     function () {
+      //       $('.slide__box.one .slide__list').css({ 'margin-left': '0px' })
+      //       $('.slide__box.one .slide__list li:first-child').insertAfter(
+      //         '.slide__box.one .slide__list li:last-child',
+      //       )
+      //     },
+      //   )
+      // }
+    </script>
+  </body>
+</html>

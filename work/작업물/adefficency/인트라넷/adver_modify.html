@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>광고주 관리</title>
+		<!-- 공통  -->
+		<!-- jquery -->
+		<script src="asset/plugIn/jquery-3.6.0.min.js"></script>
+		<!-- plugin simplebar -->
+		<link rel="stylesheet" href="./asset/plugIn/simplebar/simplebar.css" />
+		<script src="./asset/plugIn/simplebar/simplebar.js"></script>
+		<!-- plugin datepicker -->
+		<link
+			rel="stylesheet"
+			href="./asset/plugIn/bootstrap-datepicker/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="./asset/plugIn/bootstrap-datepicker/bootstrap-datepicker.css"
+		/>
+		<script src="./asset/plugIn/bootstrap-datepicker/bootstrap.min.js"></script>
+		<script src="./asset/plugIn/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+		<script src="./asset/plugIn/bootstrap-datepicker/bootstrap-datepicker.ko.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./favicon.png" />
+		<link rel="stylesheet" href="./asset/css/reset.css" />
+		<link rel="stylesheet" href="./asset/css/common.css" />
+		<link rel="stylesheet" href="./asset/css/index.css" />
+
+		<!-- summernote -->
+		<!-- include summernote css/js -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css"
+			rel="stylesheet"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+		<script src="./asset/plugIn/summernote/summernote-ko-KR.js"></script>
+	</head>
+	<body>
+		<main class="main">
+			<aside class="aside">
+				<div class="aside__top">
+					<h1 class="aside__logo">
+						<img src="./asset/images/logo.png" alt="로고" />
+					</h1>
+					<article class="aside__profile">
+						<div class="aside__profile--picture"></div>
+						<p class="aside__profile--name">김다영</p>
+						<div class="aside__profile--btn_box">
+							<button class="aside__profile--btn_setting">
+								<img src="./asset/images/ic_setting.png" alt="정보관리" />
+							</button>
+							<button class="aside__profile--btn_logout">
+								<img src="./asset/images/ic_logout.png" alt="로그아웃" />
+							</button>
+						</div>
+					</article>
+					<button class="aside__mobile--menu">
+						<span></span>
+					</button>
+				</div>
+				<nav class="nav">
+					<ul class="nav_depth1__list" id="nav">
+						<li class="nav_depth1__item">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon member"></i>
+								사원목록
+							</a>
+						</li>
+						<li class="nav_depth1__item">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon affywiki"></i>
+								애피위키
+							</a>
+						</li>
+						<li class="nav_depth1__item depth">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon list"></i>
+								주요목록
+								<i class="nav_depth1__item--arrow"></i>
+							</a>
+							<ul class="nav_depth2__list">
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">
+										ADEF 주요목록
+									</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#"> 광고주목록 </a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav_depth1__item depth">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon icon__board"></i>
+								게시판
+								<i class="nav_depth1__item--arrow"></i>
+							</a>
+							<ul class="nav_depth2__list">
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">IT 요청</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">BIGData 요청</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#"
+										>CR 업무지원요청</a
+									>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">FB 업무지원</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">FB 공지사항</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">SD 업무지원</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">SD 공지사항</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">APP 업무지원</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav_depth1__item depth">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon reference"></i>
+								레퍼런스
+								<i class="nav_depth1__item--arrow"></i>
+							</a>
+							<ul class="nav_depth2__list">
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#"> CR REF </a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#"> MEDIA REF </a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav_depth1__item depth">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon etc"></i>
+								기타
+								<i class="nav_depth1__item--arrow"></i>
+							</a>
+							<ul class="nav_depth2__list">
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">
+										광고비 모니터링
+									</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#"> CODE 관리 </a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav_depth1__item">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon solution"></i>
+								사내솔루션
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</aside>
+			<section class="board content" id="">
+				<h2 class="content__title">CR 업무 지원 요청</h2>
+				<section class="board_wrap view">
+					<article class="view_form">
+						<div class="view_form__wrap">
+							<div class="view_form__box">
+								<div class="view_form__title">광고주ID</div>
+								<div class="view_form__content">
+									<input class="view_form__content--txt big" value="" />
+									<button class="btn_light_grey bold">중복확인</button>
+								</div>
+							</div>
+							<div class="view_form__box">
+								<div class="view_form__title">상태</div>
+								<div class="view_form__content">
+									<select
+										class="board__select width_100"
+										name=""
+										id="crWorkView"
+									>
+										<option value="진행중">진행중</option>
+										<option value="요청">요청</option>
+										<option value="홀딩">홀딩</option>
+										<option value="수정">수정</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="view_form__wrap">
+							<div class="view_form__box">
+								<div class="view_form__title">광고주명<br />(한글)</div>
+								<div class="view_form__content">
+									<input class="view_form__content--txt" value="" />
+								</div>
+							</div>
+							<div class="view_form__box">
+								<div class="view_form__title">광고주명<br />(영문)</div>
+								<div class="view_form__content">
+									<input class="view_form__content--txt" value="" />
+								</div>
+							</div>
+						</div>
+						<div class="view_form__wrap">
+							<div class="view_form__box">
+								<div class="view_form__title">사업자번호</div>
+								<div class="view_form__content">
+									<input class="view_form__content--txt" value="" />
+								</div>
+							</div>
+							<div class="view_form__box">
+								<div class="view_form__title">상호</div>
+								<div class="view_form__content">
+									<input class="view_form__content--txt" value="" />
+								</div>
+							</div>
+						</div>
+						<div class="view_form__wrap">
+							<div class="view_form__box">
+								<div class="view_form__title">카테고리</div>
+								<div class="view_form__content">
+									<select
+										class="board__select width_100"
+										name=""
+										id="crWorkView"
+									>
+										<option value="진행중">진행중</option>
+										<option value="요청">요청</option>
+										<option value="홀딩">홀딩</option>
+										<option value="수정">수정</option>
+									</select>
+								</div>
+							</div>
+							<div class="view_form__box">
+								<div class="view_form__title">카테고리2</div>
+								<div class="view_form__content">
+									<select
+										class="board__select width_100"
+										name=""
+										id="crWorkView"
+									>
+										<option value="진행중">진행중</option>
+										<option value="요청">요청</option>
+										<option value="홀딩">홀딩</option>
+										<option value="수정">수정</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="view_form__wrap">
+							<div class="view_form__box">
+								<div class="view_form__title">지불구분</div>
+								<div class="view_form__content">
+									<select
+										class="board__select width_100"
+										name=""
+										id="crWorkView"
+									>
+										<option value="진행중">진행중</option>
+										<option value="요청">요청</option>
+										<option value="홀딩">홀딩</option>
+										<option value="수정">수정</option>
+									</select>
+								</div>
+							</div>
+							<div class="view_form__box">
+								<div class="view_form__title">국가</div>
+								<div class="view_form__content">
+									<input class="view_form__content--txt" value="" />
+								</div>
+							</div>
+						</div>
+
+						<div class="view_form__wrap">
+							<div class="view_form__box one flex_start">
+								<div class="view_form__title">주소</div>
+								<div class="view_form__content block">
+									<div class="view_form__content--box">
+										<div class="mobile_flex_two view_form__zipcode--wrap">
+											<button class="btn_light_grey bold btn_zipcode">
+												우편번호 검색
+											</button>
+											<input
+												class="view_form__content--txt input_zipcode"
+												type="text"
+												readonly
+												placeholder="우편번호"
+											/>
+										</div>
+										<p class="view_form__info">
+											*팝업창에서 주소 검색 후 복사 & 붙여넣기 해주세요
+										</p>
+									</div>
+									<input
+										class="view_form__content--txt"
+										type="text"
+										placeholder="주소 - 팝업창에서 복사 & 붙여넣기"
+									/>
+								</div>
+							</div>
+						</div>
+						<div class="view_form__wrap">
+							<div class="view_form__box one">
+								<div class="view_form__title">URL</div>
+								<div class="view_form__content">
+									<input
+										class="view_form__content--txt"
+										type="text"
+										placeholder=""
+									/>
+								</div>
+							</div>
+						</div>
+						+
+						<div class="view_form__wrap">
+							<div class="view_form__box one flex_start">
+								<div class="view_form__title">주요매체</div>
+								<div class="view_form__content">
+									<ul class="view_form__list--check">
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>구글 GDN</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>구글 SA</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>구글 AC</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>구글 디스커버리</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>유튜브</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>구글 쇼핑</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>유튜브 마스트헤드</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>네이버 BS</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>네이버 DA</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>네이버 SA</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>네이버 성과형DA (GFA)</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>네이버 쇼핑검색
+												</label>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>네이버 쇼핑(지식쇼핑)</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>네이버 신제품검색</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>다음 BS
+												</label>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>다음 쇼핑</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>카카오모먼트</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>톡비즈보드</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>카카오 플친</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>크리테오</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>모비온</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>타게팅게이츠</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>버즈빌</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>캐시슬라이드</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>크리테오
+												</label>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>트위터</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>FB&IG</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>카울리</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>타불라</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>페이코</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>트레이딩웍스</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>틱톡
+												</label>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>애플서치애드</label
+												>
+											</div>
+										</li>
+										<li class="view_form__item--check">
+											<div class="view_form__check">
+												<input
+													id="noticeCheck"
+													class="form__input--check"
+													type="checkbox"
+												/>
+												<label for="noticeCheck" class="form__label--check"
+													>애피어</label
+												>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="view_form__wrap">
+							<div class="view_form__box one flex_start">
+								<div class="view_form__title">비고</div>
+								<div class="view_form__content">
+									<textarea
+										class="view_form__remark big"
+										name=""
+										id=""
+										cols="30"
+										rows="10"
+									></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="view_form__btn--wrap_right mobile_flex_three">
+							<button class="btn__purple">
+								<img src="./asset/images/ic_complete.png" alt="아이콘" />
+								완료하기
+							</button>
+							<button class="btn_light_grey">
+								<img src="./asset/images/ic_back.png" alt="아이콘" />
+								목록으로
+							</button>
+						</div>
+					</article>
+				</section>
+
+				<!-- 계약관련 게시판 -->
+				<section class="board_wrap board_section">
+					<div class="board_wrap__title--box">
+						<h3 class="board_wrap__title">계약관련</h3>
+						<p class="board_wrap__title--info">
+							* 파일1 ~ 5의 빈칸을 클릭하시면 계약서 등 첨부하실 파일 등록이
+							가능합니다.
+						</p>
+					</div>
+					<section class="board_table__wrap">
+						<table class="board_table">
+							<thead>
+								<tr>
+									<th>자동연장여부</th>
+									<th>계약 시작일</th>
+									<th>계약 종료일</th>
+									<th>파일1</th>
+									<th>파일2</th>
+									<th>파일3</th>
+									<th>파일4</th>
+									<th>파일5</th>
+									<th>삭제/등록</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="9" class="no_result">
+										등록된 계약 사항이 없습니다.
+									</td>
+								</tr>
+								<tr class="">
+									<td class="mobile_flex_two">
+										<div class="board_table__title">자동연장여부</div>
+										<div class="board_table__content">
+											<select
+												class="board__select width_100"
+												name=""
+												id="crWorkView"
+											>
+												<option value="진행중">진행중</option>
+												<option value="요청">요청</option>
+												<option value="홀딩">홀딩</option>
+												<option value="수정">수정</option>
+											</select>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계약 시작일</div>
+										<div class="board_table__content">
+											<input
+												class="board__datepicker--input"
+												readonly
+												value=""
+											/>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계약 종료일</div>
+										<div class="board_table__content">
+											<input
+												class="board__datepicker--input"
+												readonly
+												value=""
+											/>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">파일1</div>
+										<div class="board_table__content">
+											<div class="form__input--file_wrap">
+												<input
+													class="form__input--file contract"
+													id="upload1"
+													type="file"
+													name="userfile"
+													multiple=""
+												/>
+												<label class="form__label--file contract" for="upload1"
+													>파일선택</label
+												>
+											</div>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">파일2</div>
+										<div class="board_table__content">
+											<div class="form__input--file_wrap">
+												<input
+													class="form__input--file contract"
+													id="upload2"
+													type="file"
+													name="userfile"
+													multiple=""
+												/>
+												<label class="form__label--file contract" for="upload2"
+													>파일선택</label
+												>
+											</div>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">파일3</div>
+										<div class="board_table__content">
+											<div class="form__input--file_wrap">
+												<input
+													class="form__input--file contract"
+													id="upload3"
+													type="file"
+													name="userfile"
+													multiple=""
+												/>
+												<label class="form__label--file contract" for="upload3"
+													>파일선택</label
+												>
+											</div>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">파일4</div>
+										<div class="board_table__content">
+											<div class="form__input--file_wrap">
+												<input
+													class="form__input--file contract"
+													id="upload4"
+													type="file"
+													name="userfile"
+													multiple=""
+												/>
+												<label class="form__label--file contract" for="upload4"
+													>파일선택</label
+												>
+											</div>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">파일5</div>
+										<div class="board_table__content">
+											<div class="form__input--file_wrap">
+												<input
+													class="form__input--file contract"
+													id="upload5"
+													type="file"
+													name="userfile"
+													multiple=""
+												/>
+												<label class="form__label--file contract" for="upload5"
+													>파일선택</label
+												>
+											</div>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">삭제/등록</div>
+										<div class="board_table__content">
+											<div class="board_table__btn--wrap">
+												<button class="board_table__btn--icon pen">
+													<img src="./asset/images/ic_pen.png" alt="수정하기" />
+												</button>
+												<!-- <button class="board_table__btn--icon del">
+													<img
+														src="./asset/images/ic_delete.png"
+														alt="삭제하기"
+													/>
+												</button> -->
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+				</section>
+
+				<!-- 광고주 담당자 게시판 -->
+				<section class="board_wrap board_section">
+					<div class="board_wrap__title--box">
+						<h3 class="board_wrap__title">광고주 담당자</h3>
+					</div>
+					<section class="board_table__wrap">
+						<table class="board_table">
+							<thead>
+								<tr>
+									<th>이름</th>
+									<th>전화번호</th>
+									<th>휴대폰</th>
+									<th>이메일</th>
+									<th>특이사항</th>
+									<th>수정/삭제</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="9" class="no_result">
+										등록된 계약 사항이 없습니다.
+									</td>
+								</tr>
+								<tr class="">
+									<td class="mobile_flex_two">
+										<div class="board_table__title">이름</div>
+										<div class="board_table__content">
+											<input class="view_form__content--txt" value="" />
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">전화번호</div>
+										<div class="board_table__content">
+											<input class="view_form__content--txt" value="" />
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">휴대폰</div>
+										<div class="board_table__content">
+											<input class="view_form__content--txt" value="" />
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">이메일</div>
+										<div class="board_table__content">
+											<input class="view_form__content--txt" value="" />
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">특이사항</div>
+										<div class="board_table__content">
+											<input class="view_form__content--txt" value="" />
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">수정/삭제</div>
+										<div class="board_table__content">
+											<div class="board_table__btn--wrap">
+												<button class="board_table__btn--icon pen">
+													<img src="./asset/images/ic_pen.png" alt="수정하기" />
+												</button>
+												<!-- <button class="board_table__btn--icon del">
+													<img
+														src="./asset/images/ic_delete.png"
+														alt="삭제하기"
+													/>
+												</button> -->
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+				</section>
+
+				<!-- ADEF 담당자 게시판 -->
+				<section class="board_wrap board_section">
+					<div class="board_wrap__title--box between">
+						<h3 class="board_wrap__title">ADEF 담당자</h3>
+						<button class="btn_light_grey board_wrap__title--btn bold add__btn">
+							추가
+						</button>
+					</div>
+					<section class="board_table__wrap">
+						<table class="board_table">
+							<thead>
+								<tr>
+									<th>이름</th>
+									<th>전화번호</th>
+									<th>휴대폰</th>
+									<th>이메일</th>
+									<th>특이사항</th>
+									<th>수정/삭제</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="9" class="no_result">
+										등록된 계약 사항이 없습니다.
+									</td>
+								</tr>
+								<tr class="">
+									<td class="mobile_flex_two">
+										<div class="board_table__title">이름</div>
+										<div class="board_table__content">
+											<input class="view_form__content--txt" value="" />
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">전화번호</div>
+										<div class="board_table__content">
+											<input class="view_form__content--txt" value="" />
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">휴대폰</div>
+										<div class="board_table__content">
+											<input class="view_form__content--txt" value="" />
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">이메일</div>
+										<div class="board_table__content">
+											<input class="view_form__content--txt" value="" />
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">특이사항</div>
+										<div class="board_table__content">
+											<input class="view_form__content--txt" value="" />
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">수정/삭제</div>
+										<div class="board_table__content">
+											<div class="board_table__btn--wrap">
+												<button class="board_table__btn--icon pen">
+													<img src="./asset/images/ic_pen.png" alt="수정하기" />
+												</button>
+												<!-- <button class="board_table__btn--icon del">
+													<img
+														src="./asset/images/ic_delete.png"
+														alt="삭제하기"
+													/>
+												</button> -->
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+				</section>
+			</section>
+		</main>
+		<div class="modal add__modal" style="display: block">
+			<div class="modal__bg"></div>
+			<div class="modal__content">
+				<div class="modal__header">
+					<h4>ADEF 담당자 추가</h4>
+					<button class="modal__btn--close"></button>
+				</div>
+				<div class="modal__box">
+					<ul class="modal__form--list">
+						<li class="modal__form--item">
+							<div class="modal__form--content m-l-0">
+								<input class="view_form__content--txt" type="text" />
+								<!-- <button class="btn__purple">찾기</button> -->
+							</div>
+						</li>
+						<li class="modal__form--item_btn">
+							<button class="btn_grey">
+								<img src="./asset/images/ic_search.png" alt="" />
+								찾기
+							</button>
+							<button class="btn_purple">
+								<img src="./asset/images/ic_complete.png" alt="" />
+								등록
+							</button>
+						</li>
+						<li class="modal__form--item_btn">
+							<table class="board_table">
+								<thead>
+									<tr>
+										<th>체크</th>
+										<th>부서</th>
+										<th>직급</th>
+										<th>이름</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td colspan="9" class="no_result">검색 결과 없음</td>
+									</tr>
+									<tr class="">
+										<td class="mobile_flex_two">
+											<div class="board_table__title">체크</div>
+											<div class="board_table__content">
+												<div class="view_form__check only_chk">
+													<input
+														id="managerCheck"
+														class="form__input--check"
+														type="checkbox"
+													/>
+													<label
+														for="managerCheck"
+														class="form__label--check"
+													></label>
+												</div>
+											</div>
+										</td>
+										<td class="mobile_flex_two">
+											<div class="board_table__title">부서</div>
+											<div class="board_table__content">IT</div>
+										</td>
+										<td class="mobile_flex_two">
+											<div class="board_table__title">직급</div>
+											<div class="board_table__content">대리</div>
+										</td>
+										<td class="mobile_flex_two">
+											<div class="board_table__title">이름</div>
+											<div class="board_table__content">방미나</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="asset/js/common.js"></script>
+		<script>
+			$(function () {
+				// input file 파일명
+				$(".form__input--file.contract").on("change", function () {
+					const files1 = $(this)[0].files;
+					const fileArr1 = [];
+					for (var i = 0; i < files1.length; i++) {
+						fileArr1.push(files1[i].name);
+						$(this).siblings(".form__label--file.contract").text(fileArr1);
+					}
+				});
+
+				// 추가 버튼 모달
+				$(".add__btn").on("click", function () {
+					$(".add__modal").fadeIn(300);
+				});
+			});
+		</script>
+	</body>
+</html>

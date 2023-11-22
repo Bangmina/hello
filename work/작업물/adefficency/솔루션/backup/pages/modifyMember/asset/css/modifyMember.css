@@ -1,0 +1,55 @@
+/*-------------------------------------------------
+Style Sheet
+Version : 1.0
+Author :  BMN
+Create date : 2020. 12. 07
+-------------------------------------------------*/
+.account__modify--table tr th {
+  padding-right: 2rem;
+  text-align: right;
+}
+.account__modify--table tr td {
+  padding-left: 2rem;
+  text-align: left;
+}
+.account__modify--table tr td input,
+.account__modify--table tr td select {
+  width: 100%;
+  max-width: 330px;
+}
+.account__modify--table tr td img {
+  width: 100%;
+  max-width: 100px;
+}
+.account__modify--table .password__txt {
+  margin-top: 5px;
+  font-size: 1.1rem;
+}
+.account__modify--table .position__select--box {
+  display: flex;
+  width: 100%;
+  max-width: 330px;
+  align-items: center;
+}
+.account__modify--table .position__select--box .wave {
+  margin: 0 10px;
+  font-size: 1.4rem;
+}
+@media screen and (max-width: 767px) {
+  .account__modify--table tr th {
+    width: 30%;
+    justify-content: flex-end;
+  }
+  .account__modify--table tr th {
+    padding-right: 1.5rem;
+  }
+  .page__table.account__modify--table tr td {
+    width: 70%;
+    padding-left: 1.5rem;
+  }
+  .account__modify--table tr td input,
+  .account__modify--table tr td select,
+  .position__select--box {
+    max-width: 100%;
+  }
+}

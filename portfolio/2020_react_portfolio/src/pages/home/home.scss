@@ -1,0 +1,63 @@
+@import "../../styles/index.scss";
+//
+.home {
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background: center / cover no-repeat
+		url("http://localhost:3000/images/bg-home.jpg");
+	&:after {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.7);
+	}
+	&__title--wrap {
+		position: absolute;
+		z-index: 1;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 37rem;
+	}
+	&__logo--img {
+		width: 100%;
+	}
+	&__title--sub {
+		margin-bottom: 3.5rem;
+		//typed plug-in
+		input {
+			width: 100%;
+			background: none;
+			font-family: "roboto";
+			color: #fefefe;
+			letter-spacing: 1.1rem;
+			font-size: 3.2rem;
+			font-weight: 300;
+			text-align: center;
+			border: none;
+			&:focus {
+				border: none;
+			}
+		}
+	}
+}
+// 600px
+@include respond(phone) {
+	.home {
+		&__title--wrap {
+			width: 75%;
+		}
+		&__title--logo {
+			margin: 0 auto;
+			width: 70%;
+		}
+		&__title--sub input {
+			font-size: 2.8rem;
+			letter-spacing: 0.5rem;
+		}
+	}
+}

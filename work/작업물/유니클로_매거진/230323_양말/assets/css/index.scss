@@ -1,0 +1,316 @@
+/* font */
+
+/* 나눔스퀘어 
+Light 300
+Regular 400
+Bold 700
+ExtraBold 800*/
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+/* 
+  애플 산돌고딕
+  Thin 100
+  UltraLight 200
+  Light 300
+  Medium 400
+  Regular 500
+  SemiBold 600
+  Bold 700
+  ExtraBold 800
+  Heavy 900
+*/
+@import url('https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/css/all.css');
+
+/* 강원교육모두 폰트 300/400 */
+@font-face {
+  font-family: 'GangwonEduAll';
+  font-weight: 300;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff')
+      format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.ttf')
+      format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GangwonEduAll';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff')
+      format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.ttf')
+      format('truetype');
+  font-display: swap;
+}
+
+/* reset */
+.adef_webzine {
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    font-family: 'Apple SD Gothic Neo', 'NanumSquare', 'Noto Sans KR',
+      'Nanum Gothic', 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 4vw;
+    line-height: 1.6;
+    letter-spacing: -0.5px;
+    color: #2f2f2f;
+    vertical-align: baseline;
+  }
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+  ol,
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  blockquote,
+  q {
+    quotes: none;
+  }
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+/* common */
+.adef_webzine {
+  padding-bottom: 11.35vw;
+  .wrap {
+    padding: 0 7vw;
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+  .bold {
+    font-weight: 700;
+  }
+  .section {
+    position: relative;
+  }
+  .info {
+    font-size: 4vw;
+    margin-top: 22vw;
+    transform: rotate(0.04deg);
+    -webkit-transform: rotate(0.04deg);
+    -moz-transform: rotate(0.04deg);
+    -ms-transform: rotate(0.04deg);
+    -o-transform: rotate(0.04deg);
+  }
+  .section__txt {
+    vertical-align: baseline;
+    text-align: justify;
+    position: relative;
+    transform: rotate(0.04deg);
+    -webkit-transform: rotate(0.04deg);
+    -moz-transform: rotate(0.04deg);
+    -ms-transform: rotate(0.04deg);
+    -o-transform: rotate(0.04deg);
+    p {
+      &:not(:first-child) {
+        margin-top: 3vw;
+      }
+    }
+  }
+}
+
+/* 유니클로_양말_230323 */
+.adef_webzine {
+  .red {
+    color: #950502;
+  }
+  .section1 {
+    padding: 19.35vw 0 0;
+    .socks_img1 {
+      margin: 6.65vw auto;
+      width: 76.8vw;
+    }
+    .bg_white {
+      position: relative;
+      width: 90.65vw;
+      margin: 0 auto;
+      background: #fff;
+      z-index: 2;
+      box-sizing: border-box;
+      .section__txt {
+        position: relative;
+        margin-top: 20vw;
+        box-sizing: border-box;
+        padding: 0 4.34vw 10.95vw;
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: #000;
+          top: -10vw;
+        }
+      }
+    }
+  }
+
+  .section2 {
+    margin-top: -15vw;
+    .box1 {
+      margin-top: 29.35vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      .section__txt {
+        padding-right: 4vw;
+        p {
+          line-height: 1.44;
+          &.red {
+            font-weight: 600;
+          }
+        }
+      }
+      .socks_img1 {
+        width: 40.93vw;
+      }
+    }
+    .section__txt {
+      &.two {
+        margin-top: 5vw;
+      }
+      &.three {
+        margin-top: 10.65vw;
+      }
+    }
+    .socks_img2 {
+      margin: 8.65vw auto 0;
+      width: 91.26vw;
+      transform: translateX(2.6vw);
+      -webkit-transform: translateX(2.6vw);
+      -moz-transform: translateX(2.6vw);
+      -ms-transform: translateX(2.6vw);
+      -o-transform: translateX(2.6vw);
+    }
+    .socks_img3 {
+      margin-top: 11.35vw;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+// Transition
+$transition-active: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+//boxshadow
+$box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+
+//animation
+@keyframes btnScale {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.inner {
+  position: relative;
+  margin: 0 auto;
+  width: 900px;
+  box-sizing: border-box;
+}
+
+.blind {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  text-indent: -9999em;
+}

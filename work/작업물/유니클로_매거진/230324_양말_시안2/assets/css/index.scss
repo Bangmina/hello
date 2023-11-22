@@ -1,0 +1,352 @@
+/* font */
+
+/*
+  나눔스퀘어  [NanumSquare]
+  Light 300
+  Regular 400
+  Bold 700
+  ExtraBold 800
+*/
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+/*
+  [Noto Sans]
+  Thin 100
+  ExtraLight 200
+  Light 300
+  Regular 400
+  Medium500
+  SemiBold 600
+  Bold 700
+  ExtraBold 800
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* 
+  애플 산돌고딕 [Apple SD Gothic Neo]
+  Thin 100
+  UltraLight 200
+  Light 300
+  Medium 400
+  Regular 500
+  SemiBold 600
+  Bold 700
+  ExtraBold 800
+  Heavy 900
+*/
+@import url('https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/css/all.css');
+
+/* 강원교육모두 [GangwonEduAll] 300/400 */
+@font-face {
+  font-family: 'GangwonEduAll';
+  font-weight: 300;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff')
+      format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.ttf')
+      format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GangwonEduAll';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff')
+      format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.ttf')
+      format('truetype');
+  font-display: swap;
+}
+
+/* reset */
+.adef_webzine {
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    font-family: 'GangwonEduAll', 'Noto Sans', 'NanumSquare', 'Noto Sans KR',
+      'Nanum Gothic', 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 3.8vw;
+    line-height: 1.6;
+    letter-spacing: -0.5px;
+    color: #2f2f2f;
+    vertical-align: baseline;
+  }
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+  ol,
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  blockquote,
+  q {
+    quotes: none;
+  }
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+/* common */
+.adef_webzine {
+  .wrap {
+    padding: 0 4.5vw;
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+  .bold {
+    font-weight: 900;
+  }
+  .section {
+    position: relative;
+  }
+  .info {
+    font-size: 4vw;
+    margin-top: 22vw;
+    transform: rotate(0.04deg);
+    -webkit-transform: rotate(0.04deg);
+    -moz-transform: rotate(0.04deg);
+    -ms-transform: rotate(0.04deg);
+    -o-transform: rotate(0.04deg);
+  }
+  .section__txt {
+    vertical-align: baseline;
+    text-align: justify;
+    position: relative;
+    transform: rotate(0.04deg);
+    -webkit-transform: rotate(0.04deg);
+    -moz-transform: rotate(0.04deg);
+    -ms-transform: rotate(0.04deg);
+    -o-transform: rotate(0.04deg);
+    color: #7e5122;
+    p {
+      color: #7e5122;
+      &:not(:first-child) {
+        margin-top: 4vw;
+      }
+    }
+  }
+}
+
+/* 유니클로_도쿄카페_230324 */
+.adef_webzine {
+  .img__wrap {
+    position: relative;
+    display: flex;
+  }
+  .section1 {
+    padding: 20vw 0 0;
+    &__img1 {
+      width: 39.6vw;
+      position: relative;
+      right: 0;
+    }
+    .img__wrap {
+      &.one {
+        justify-content: flex-end;
+      }
+    }
+    .section__txt {
+      &.one {
+        padding-top: 5.35vw;
+        width: 81.35vw;
+        margin-top: -5.5vw;
+        background: #fff;
+      }
+    }
+  }
+
+  .section2 {
+    padding: 10vw 0 0;
+    &__img1 {
+      width: 40.65vw;
+    }
+    .section__txt {
+      &--wrap {
+        display: flex;
+        justify-content: flex-end;
+      }
+      &.one {
+        padding-top: 8.5vw;
+        margin-top: -9vw;
+        width: 63vw;
+        text-align: right;
+        background: #fff;
+      }
+    }
+  }
+
+  .section3 {
+    padding: 39vw 0 0;
+    .wrap {
+      display: flex;
+      justify-content: space-between;
+      // align-items: center;
+    }
+    &__right {
+      width: 17vw;
+      background: url('https://simage-kr.uniqlo.com/display/corner/2161/adef_230327_socks/socks_img3_230324.png')
+        no-repeat -7px center;
+      background-size: cover;
+    }
+    &__img1 {
+      width: 100%;
+    }
+  }
+
+  .section4 {
+    margin: 39vw 0 0;
+    padding: 10.65vw 0;
+    background: url('https://simage-kr.uniqlo.com/display/corner/2161/adef_230327_socks/socks_img4_230324.png')
+      no-repeat center center;
+    background-size: cover;
+    .section__txt {
+      padding: 10vw 0;
+      background: #fff;
+      text-align: center;
+    }
+  }
+
+  .section5 {
+    margin: 40vw 0 16.65vw;
+    .wrap {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    // background: url('https://simage-kr.uniqlo.com/display/corner/2161/adef_230327_socks/socks_img5_230324.png') no-repeat 4.5vw;
+    // background-size: 29.4vw;
+    &__left {
+      width: 25vw;
+      background: url('https://simage-kr.uniqlo.com/display/corner/2161/adef_230327_socks/socks_img5_230324.png')
+        no-repeat center center;
+      background-size: cover;
+    }
+    .section__txt {
+      text-align: right;
+    }
+  }
+}

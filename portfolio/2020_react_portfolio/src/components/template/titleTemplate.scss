@@ -1,0 +1,10 @@
+@import '../../styles/index.scss';
+//
+.section {
+    &__template {
+        position: relative;
+        padding: 10rem 0;
+        left:0;
+        top:0;
+    }
+}

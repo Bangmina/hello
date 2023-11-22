@@ -1,0 +1,231 @@
+@charset "UTF-8";
+/* 폰트 */
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-family: "nanumsquare", "Nanum Gothic", "Roboto", sans-serif;
+  vertical-align: baseline;
+}
+
+/* common */
+.w_100 {
+  width: 100%;
+}
+
+.info {
+  font-size: 4vw;
+  margin-top: 47.5px;
+}
+
+.wrap {
+  padding: 0 40px;
+}
+
+.section:not(:first-child) {
+  margin-top: 50px;
+}
+
+.product__title {
+  margin: 0 auto;
+}
+.product__title.coat {
+  width: 50.26%;
+}
+.product__title img {
+  width: 100%;
+}
+
+.section_h3 {
+  font-size: 4.5vw;
+  line-height: 1.5;
+  font-weight: 900;
+  text-align: center;
+}
+
+.section__txt {
+  padding: 0 38px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.5px;
+  text-align: justify;
+  font-size: 4vw;
+  transform: rotate(0.04deg);
+  -webkit-transform: rotate(0.04deg);
+  -moz-transform: rotate(0.04deg);
+  -ms-transform: rotate(0.04deg);
+  -o-transform: rotate(0.04deg);
+}
+
+.section__product--anchor {
+  position: relative;
+}
+
+.section1 .section__txt.one {
+  margin: 50px 0 65px;
+}
+.section1 .section__txt.two {
+  margin: 40px 0 75px;
+}
+.section1 .section__txt.three {
+  margin: 40px 0 50px;
+}
+.section1 .section__product--anchor.one .section__product {
+  width: 46.8%;
+}
+.section2 .section__txt.one {
+  margin: 50px 0 60px;
+}
+.section2 .section__txt.two {
+  margin: 30px 0 75px;
+}
+.section2 .section__txt.three {
+  margin: 45px 0 47.5px;
+}
+
+.section3 .section_h3 {
+  margin-top: 60px;
+}
+.section3 .section__txt.one {
+  margin: 50px 0 60px;
+}
+.section3 .section__txt.two {
+  margin: 30px 0 75px;
+}
+.section3 .section__txt.three {
+  margin: 45px 0 47.5px;
+}
+.section3 .info {
+  margin-top: 60px;
+}
+
+.section4 {
+  padding-bottom: 32.5px;
+  background: #ebe9e9;
+}
+.section4 .section__txt.one {
+  margin: 50px 0 40px;
+}
+.section4 .info {
+  margin-top: 70px;
+}
+
+.section5 {
+  margin-top: 0 !important;
+}
+.section5 .section__txt.one {
+  margin: 25px 0 60px;
+}
+.section5 .section__txt.two {
+  margin: 25px 0 35px;
+}
+.section5 .section__txt.three {
+  margin: 20px 0 17.5px;
+}
+.section5 .info {
+  margin-top: 60px;
+}
+
+.section6 {
+  padding-bottom: 30px;
+}
+.section6 .section__txt.one {
+  margin: 45px 0 60px;
+}
+.section6 .info {
+  margin-top: 65px;
+}
+
+.product__gender {
+  width: 30px;
+}
+.product__name {
+  margin-top: 3px;
+  font-size: 4vw;
+  font-weight: 900;
+  color: #000;
+  letter-spacing: -0.7px;
+}/*# sourceMappingURL=index.css.map */

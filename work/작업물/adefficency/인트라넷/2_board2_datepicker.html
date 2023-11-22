@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>2_board2_datepicker</title>
+		<!-- 공통  -->
+		<!-- jquery -->
+		<script src="asset/plugIn/jquery-3.6.0.min.js"></script>
+		<!-- plugin simplebar -->
+		<link rel="stylesheet" href="./asset/plugIn/simplebar/simplebar.css" />
+		<script src="./asset/plugIn/simplebar/simplebar.js"></script>
+		<!-- plugin datepicker -->
+		<link
+			rel="stylesheet"
+			href="./asset/plugIn/bootstrap-datepicker/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="./asset/plugIn/bootstrap-datepicker/bootstrap-datepicker.css"
+		/>
+		<script src="./asset/plugIn/bootstrap-datepicker/bootstrap.min.js"></script>
+		<script src="./asset/plugIn/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+		<script src="./asset/plugIn/bootstrap-datepicker/bootstrap-datepicker.ko.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./favicon.png" />
+		<link rel="stylesheet" href="./asset/css/reset.css" />
+		<link rel="stylesheet" href="./asset/css/common.css" />
+		<link rel="stylesheet" href="./asset/css/index.css" />
+	</head>
+	<body>
+		<main class="main">
+			<aside class="aside">
+				<div class="aside__top">
+					<h1 class="aside__logo">
+						<img src="./asset/images/logo.png" alt="로고" />
+					</h1>
+					<article class="aside__profile">
+						<div class="aside__profile--picture"></div>
+						<p class="aside__profile--name">김다영</p>
+						<div class="aside__profile--btn_box">
+							<button class="aside__profile--btn_setting">
+								<img src="./asset/images/ic_setting.png" alt="정보관리" />
+							</button>
+							<button class="aside__profile--btn_logout">
+								<img src="./asset/images/ic_logout.png" alt="로그아웃" />
+							</button>
+						</div>
+					</article>
+					<button class="aside__mobile--menu">
+						<span></span>
+					</button>
+				</div>
+				<nav class="nav">
+					<ul class="nav_depth1__list" id="nav">
+						<li class="nav_depth1__item">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon member"></i>
+								사원목록
+							</a>
+						</li>
+						<li class="nav_depth1__item">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon affywiki"></i>
+								애피위키
+							</a>
+						</li>
+						<li class="nav_depth1__item depth">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon list"></i>
+								주요목록
+								<i class="nav_depth1__item--arrow"></i>
+							</a>
+							<ul class="nav_depth2__list">
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">
+										ADEF 주요목록
+									</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#"> 광고주목록 </a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav_depth1__item depth">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon icon__board"></i>
+								게시판
+								<i class="nav_depth1__item--arrow"></i>
+							</a>
+							<ul class="nav_depth2__list">
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">IT 요청</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">BIGData 요청</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#"
+										>CR 업무지원요청</a
+									>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">FB 업무지원</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">FB 공지사항</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">SD 업무지원</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">SD 공지사항</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">APP 업무지원</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav_depth1__item depth">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon reference"></i>
+								레퍼런스
+								<i class="nav_depth1__item--arrow"></i>
+							</a>
+							<ul class="nav_depth2__list">
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#"> CR REF </a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#"> MEDIA REF </a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav_depth1__item depth">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon etc"></i>
+								기타
+								<i class="nav_depth1__item--arrow"></i>
+							</a>
+							<ul class="nav_depth2__list">
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">
+										광고비 모니터링
+									</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#"> CODE 관리 </a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav_depth1__item">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon solution"></i>
+								사내솔루션
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</aside>
+			<section class="board board2 content" id="addf">
+				<h2 class="content__title">일자/계정/매체별 광고비 모니터링</h2>
+
+				<section class="board_wrap no_pagenation">
+					<!-- 게시판 상단 폼 -->
+					<form action="">
+						<article class="board_form">
+							<!-- 폼 왼쪽 -->
+							<div class="board_form__box">
+								<div class="board__datepicker mobile_flex_two">
+									<label class="board__label">검색기간</label>
+									<div class="board__datepicker--box">
+										<input
+											class="board__datepicker--input"
+											type="text"
+											readonly
+										/>
+									</div>
+									<div class="board__datepicker--box">
+										<input
+											class="board__datepicker--input"
+											type="text"
+											readonly
+										/>
+									</div>
+								</div>
+								<div class="mobile_flex_one">
+									<select class="board__select" name="" id="">
+										<option value="">전체매체</option>
+									</select>
+								</div>
+								<div class="mobile_flex_one">
+									<input
+										class="board__input adcost"
+										type="text"
+										placeholder="※ 광고주명 또는 ID 또는 사용자(부서) 입력"
+									/>
+								</div>
+								<div class="mobile_flex_three">
+									<button class="btn_grey">
+										<img src="./asset/images/ic_search.png" alt="아이콘" />검색
+									</button>
+									<button class="btn_orange">
+										<img src="./asset/images/ic_update.png" alt="아이콘" />
+										담당자업데이트
+									</button>
+									<button class="btn_purple">
+										<img src="./asset/images/ic_download_12.png" alt="아이콘" />
+										Down
+									</button>
+								</div>
+							</div>
+						</article>
+						<article class="board_notice">
+							<ul class="board_notice__list">
+								<li class="board_notice__item orange">
+									검색어를 초기화하려면 "전체" 로 검색하시면 됩니다.
+								</li>
+								<li class="board_notice__item">
+									타이틀 부분을 클릭하면 정렬이 바뀝니다(!!전일대비의 경우
+									"+/-"에 따라 목록 상/하로 표기될 수 있으니 주의 부탁드립니다)
+								</li>
+								<li class="board_notice__item">
+									데이터는 11시에 업데이트 됩니다.
+								</li>
+								<li class="board_notice__item">
+									매체명이나 계정ID가 안보이는경우 담당자 업데이트하시면
+									정상적으로 나옵니다.
+								</li>
+							</ul>
+						</article>
+					</form>
+					<!-- 게시판 테이블 -->
+					<section class="board_table__wrap">
+						<table class="board_table">
+							<thead>
+								<tr>
+									<th>계정</th>
+									<th>매체</th>
+									<th>계정 ID</th>
+									<th>담당자</th>
+									<th class="bold">전일대비</th>
+									<th>07-04</th>
+									<th>07-04</th>
+									<th>07-04</th>
+									<th>07-04</th>
+									<th>07-04</th>
+									<th>07-04</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정</div>
+										<div class="board_table__content">(유)셀파바이오홀딩스</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">매체</div>
+										<div class="board_table__content">naver</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정 ID</div>
+										<div class="board_table__content">zipbanchan</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">담당자</div>
+										<div class="board_table__content">
+											<a href="#">피디/중지</a>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">전일대비</div>
+										<div class="board_table__content">-100.00%</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정</div>
+										<div class="board_table__content">(유)셀파바이오홀딩스</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">매체</div>
+										<div class="board_table__content">naver</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정 ID</div>
+										<div class="board_table__content">zipbanchan</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">담당자</div>
+										<div class="board_table__content">
+											<a href="#">피디/중지</a>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">전일대비</div>
+										<div class="board_table__content day_up">-100.00%</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정</div>
+										<div class="board_table__content">(유)셀파바이오홀딩스</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">매체</div>
+										<div class="board_table__content">naver</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정 ID</div>
+										<div class="board_table__content">zipbanchan</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">담당자</div>
+										<div class="board_table__content">
+											<a href="#">피디/중지</a>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">전일대비</div>
+										<div class="board_table__content">-100.00%</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정</div>
+										<div class="board_table__content">(유)셀파바이오홀딩스</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">매체</div>
+										<div class="board_table__content">naver</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정 ID</div>
+										<div class="board_table__content">zipbanchan</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">담당자</div>
+										<div class="board_table__content">
+											<a href="#">피디/중지</a>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">전일대비</div>
+										<div class="board_table__content">-100.00%</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정</div>
+										<div class="board_table__content">(유)셀파바이오홀딩스</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">매체</div>
+										<div class="board_table__content">naver</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정 ID</div>
+										<div class="board_table__content">zipbanchan</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">담당자</div>
+										<div class="board_table__content">
+											<a href="#">피디/중지</a>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">전일대비</div>
+										<div class="board_table__content">-100.00%</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정</div>
+										<div class="board_table__content">(유)셀파바이오홀딩스</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">매체</div>
+										<div class="board_table__content">naver</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정 ID</div>
+										<div class="board_table__content">zipbanchan</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">담당자</div>
+										<div class="board_table__content">
+											<a href="#">피디/중지</a>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">전일대비</div>
+										<div class="board_table__content">-100.00%</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정</div>
+										<div class="board_table__content">(유)셀파바이오홀딩스</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">매체</div>
+										<div class="board_table__content">naver</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정 ID</div>
+										<div class="board_table__content">zipbanchan</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">담당자</div>
+										<div class="board_table__content">
+											<a href="#">피디/중지</a>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">전일대비</div>
+										<div class="board_table__content">-100.00%</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정</div>
+										<div class="board_table__content">(유)셀파바이오홀딩스</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">매체</div>
+										<div class="board_table__content">naver</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정 ID</div>
+										<div class="board_table__content">zipbanchan</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">담당자</div>
+										<div class="board_table__content">
+											<a href="#">피디/중지</a>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">전일대비</div>
+										<div class="board_table__content">-100.00%</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정</div>
+										<div class="board_table__content">(유)셀파바이오홀딩스</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">매체</div>
+										<div class="board_table__content">naver</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정 ID</div>
+										<div class="board_table__content">zipbanchan</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">담당자</div>
+										<div class="board_table__content">
+											<a href="#">피디/중지</a>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">전일대비</div>
+										<div class="board_table__content">-100.00%</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정</div>
+										<div class="board_table__content">(유)셀파바이오홀딩스</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">매체</div>
+										<div class="board_table__content">naver</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정 ID</div>
+										<div class="board_table__content">zipbanchan</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">담당자</div>
+										<div class="board_table__content">
+											<a href="#">피디/중지</a>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">전일대비</div>
+										<div class="board_table__content">-100.00%</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정</div>
+										<div class="board_table__content">(유)셀파바이오홀딩스</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">매체</div>
+										<div class="board_table__content">naver</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정 ID</div>
+										<div class="board_table__content">zipbanchan</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">담당자</div>
+										<div class="board_table__content">
+											<a href="#">피디/중지</a>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">전일대비</div>
+										<div class="board_table__content">-100.00%</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정</div>
+										<div class="board_table__content">(유)셀파바이오홀딩스</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">매체</div>
+										<div class="board_table__content">naver</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정 ID</div>
+										<div class="board_table__content">zipbanchan</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">담당자</div>
+										<div class="board_table__content">
+											<a href="#">피디/중지</a>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">전일대비</div>
+										<div class="board_table__content">-100.00%</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정</div>
+										<div class="board_table__content">(유)셀파바이오홀딩스</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">매체</div>
+										<div class="board_table__content">naver</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정 ID</div>
+										<div class="board_table__content">zipbanchan</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">담당자</div>
+										<div class="board_table__content">
+											<a href="#">피디/중지</a>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">전일대비</div>
+										<div class="board_table__content">-100.00%</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정</div>
+										<div class="board_table__content">(유)셀파바이오홀딩스</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">매체</div>
+										<div class="board_table__content">naver</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정 ID</div>
+										<div class="board_table__content">zipbanchan</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">담당자</div>
+										<div class="board_table__content">
+											<a href="#">피디/중지</a>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">전일대비</div>
+										<div class="board_table__content">-100.00%</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정</div>
+										<div class="board_table__content">(유)셀파바이오홀딩스</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">매체</div>
+										<div class="board_table__content">naver</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">계정 ID</div>
+										<div class="board_table__content">zipbanchan</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">담당자</div>
+										<div class="board_table__content">
+											<a href="#">피디/중지</a>
+										</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">전일대비</div>
+										<div class="board_table__content">-100.00%</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+									<td class="mobile_flex_two">
+										<div class="board_table__title">07-04</div>
+										<div class="board_table__content">14,014,650</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+				</section>
+			</section>
+		</main>
+		<script src="asset/js/common.js"></script>
+	</body>
+</html>

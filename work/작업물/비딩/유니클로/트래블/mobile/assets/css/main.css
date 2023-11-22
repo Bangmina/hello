@@ -1,0 +1,408 @@
+@charset "UTF-8";
+/*
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+*/
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 300;
+  src: url(NanumSquareL.eot);
+  src: local("☺"), url(NanumSquareL.eot?#iefix) format("embedded-opentype"), url(NanumSquareL.woff) format("woff"), url(NanumSquareL.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 400;
+  src: url(NanumSquareR.eot);
+  src: local("☺"), url(NanumSquareR.eot?#iefix) format("embedded-opentype"), url(NanumSquareR.woff) format("woff"), url(NanumSquareR.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 700;
+  src: url(NanumSquareB.eot);
+  src: local("☺"), url(NanumSquareB.eot?#iefix) format("embedded-opentype"), url(NanumSquareB.woff) format("woff"), url(NanumSquareB.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 800;
+  src: url(NanumSquareEB.eot);
+  src: local("☺"), url(NanumSquareEB.eot?#iefix) format("embedded-opentype"), url(NanumSquareEB.woff) format("woff"), url(NanumSquareEB.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff") format("woff");
+}
+.header {
+  height: 100px;
+  background: blue;
+}
+
+.wrap {
+  width: 100%;
+  padding: 0 10px;
+  position: relative;
+}
+
+.deco {
+  position: absolute;
+}
+
+.visual {
+  background: url("../images/visual_bg.png") no-repeat;
+  background-size: cover;
+  padding: 115px 0 40px;
+}
+.visual__title {
+  width: 96%;
+  margin: 0 auto;
+}
+.visual__title img {
+  width: 100%;
+}
+.visual__box--left {
+  align-items: center;
+}
+.visual__box--right {
+  justify-content: center;
+  flex-direction: column;
+}
+.visual__txt {
+  margin-top: 45px;
+  font-size: 12px;
+}
+.visual__txt p {
+  line-height: 1.4;
+}
+.visual__txt p:not(:first-child) {
+  margin-top: 15px;
+}
+.visual__swiper--wrap {
+  width: 100%;
+  margin: 45px auto 0;
+  background: #fff;
+  padding: 20px 20px 15px;
+  border-radius: 10px;
+  box-shadow: 1px -2px 8px 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px -2px 8px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px -2px 8px 1px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.visual__swiper .swiper-slide {
+  width: 100%;
+}
+.visual__swiper .swiper-slide img {
+  width: 100%;
+}
+.visual__derector--txt {
+  text-align: right;
+  font-size: 10px;
+  margin-top: 7.5px;
+  color: #636363;
+}
+.visual__card--txt, .visual__card--plus {
+  text-align: center;
+}
+.visual__card--txt {
+  margin: 15px auto 0;
+  text-align: center;
+}
+.visual__card--txt img {
+  width: 108px;
+}
+.visual__card--plus {
+  margin-top: 10px;
+  text-align: center;
+}
+.visual__card--plus img {
+  width: 12px;
+}
+.visual__derector {
+  width: 76.75%;
+  margin: 0 auto;
+}
+.visual__img--smile {
+  position: absolute;
+  width: 75px;
+  left: -30px;
+  bottom: -30px;
+}
+
+.section {
+  padding: 55px 0 55px;
+}
+
+.art {
+  background: #f4efeb;
+}
+.art .title {
+  text-align: right;
+}
+.art .title img {
+  width: 218px;
+}
+.art__item00 .art__item--txt {
+  text-align: right;
+  margin-top: -5px;
+}
+.art__item00 .art__item--img img {
+  margin-left: -10px;
+  width: 305px;
+}
+.art__item01 {
+  margin-top: 40px;
+}
+.art__item01 .art__item--txt {
+  text-align: left;
+  margin-top: 20px;
+}
+.art__item01 .art__item--img {
+  text-align: center;
+}
+.art__item01 .art__item--img img {
+  margin-left: -10px;
+  width: 305px;
+}
+.art__item--title {
+  font-size: 24px;
+}
+.art__item--title .green {
+  font-weight: 900;
+  padding: 5px 8px;
+  display: inline-block;
+  background: #85e82d;
+}
+.art__item--title .green:not(:first-of-type) {
+  margin-top: 5px;
+}
+.art__item--title:not(:first-child) {
+  margin-top: 10px;
+}
+.art__item--content {
+  font-size: 12px;
+  margin-top: 20px;
+}
+.art__item--content p {
+  line-height: 1.4;
+  word-break: keep-all;
+}
+.art__item--content p:not(:first-child) {
+  margin-top: 10px;
+}
+
+.eat {
+  background: url("../images/eat_bg.png") no-repeat;
+  background-size: cover;
+}
+.eat .title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.eat .title img {
+  width: 226px;
+}
+.eat__list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.eat__item {
+  position: relative;
+  width: calc(50% - 2.5px);
+}
+.eat__item img {
+  width: 100%;
+}
+.eat__best {
+  width: 75px !important;
+  position: absolute;
+  left: -7px;
+  top: -35px;
+}
+.eat__desc {
+  margin-top: 25px;
+  padding: 8px 0 17px;
+  font-size: 12px;
+  line-height: 1.4;
+  border-top: 1px solid #000;
+  border-bottom: 2px solid #000;
+  word-break: keep-all;
+}
+.eat__desc p {
+  line-height: 1.4;
+}
+.eat__desc p:not(:first-child) {
+  margin-top: 10px;
+}
+.eat__box:not(:first-child) {
+  margin-top: 65px;
+}
+
+.drink {
+  background: url("../images/coffe_place_bg.png") no-repeat;
+  background-size: cover;
+  padding: 140px 0 55px;
+}
+.drink__title {
+  width: 247.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -100px;
+}
+.drink__card {
+  padding: 12px 12px 45px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  background: url("../images/coffe_bg.png") repeat;
+}
+.drink__card--img {
+  width: 100%;
+}
+.drink__card--img img {
+  width: 100%;
+}
+.drink__txt {
+  line-height: 1.4;
+  font-size: 12px;
+  margin-top: 20px;
+  word-break: keep-all;
+  text-align: center;
+}
+.drink__coffee_time {
+  bottom: -45px;
+  right: 35px;
+  width: 99px;
+}
+.drink__list {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.drink__item {
+  position: relative;
+  width: calc(50% - 2.5px);
+  padding: 10px 10px 20px 10px;
+  background: url("../images/coffe_bg.png");
+  margin: 2.5px 0;
+}
+.drink__item img {
+  width: 100%;
+}
+.drink__v {
+  width: 50px !important;
+  left: -21px;
+  bottom: -22px;
+  z-index: 10;
+}
+.drink__desc {
+  margin-top: 20px;
+  font-size: 12px;
+  line-height: 1.4;
+  word-break: keep-all;
+  color: #fff;
+  transform: rotate(0.04deg);
+}
+
+.view {
+  background: url("../images/view_bg.png");
+  background-size: cover;
+  position: relative;
+  padding-top: 0;
+}
+.view .wrap {
+  padding-top: 100px;
+}
+.view .title {
+  text-align: center;
+}
+.view .title img {
+  width: 219px;
+}
+.view__smile {
+  width: 124.5px;
+  top: -30px;
+  right: 20px;
+}
+.view__pic1 {
+  margin-top: 10px;
+  width: 100%;
+}
+.view__desc {
+  background: #fff;
+  padding: 13px 10px;
+  border-radius: 10px;
+  word-break: keep-all;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.view__desc:first-of-type {
+  margin-top: 10px;
+}
+.view__desc:last-of-type {
+  margin-top: 9px;
+}
+.view__list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.view__item {
+  width: calc(50% - 5px);
+}
+.view__item img {
+  width: 100%;
+}/*# sourceMappingURL=main.css.map */

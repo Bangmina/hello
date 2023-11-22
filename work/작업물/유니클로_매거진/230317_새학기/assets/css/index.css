@@ -1,0 +1,192 @@
+@charset "UTF-8";
+/* font 컴포넌트 추가 */
+/* 나눔스퀘어 
+Light 300
+Regular 400
+Bold 700
+ExtraBold 800*/
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+/* 
+  애플 산돌고딕
+  Thin 100
+  UltraLight 200
+  Light 300
+  Medium 400
+  Regular 500
+  SemiBold 600
+  Bold 700
+  ExtraBold 800
+  Heavy 900
+*/
+@import url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/css/all.css");
+/* 강원교육모두 폰트 300/400 */
+@font-face {
+  font-family: "GangwonEduAll";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "GangwonEduAll";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.ttf") format("truetype");
+  font-display: swap;
+}
+/* common 컴포넌트 추가 */
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.section__txt {
+  font-family: "NanumSquare", "Nanum Gothic", "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 4vw;
+  line-height: 1.6;
+  letter-spacing: -0.5px;
+  color: #322d27;
+  vertical-align: baseline;
+  position: relative;
+  transform: rotate(0.04deg);
+  -webkit-transform: rotate(0.04deg);
+  -moz-transform: rotate(0.04deg);
+  -ms-transform: rotate(0.04deg);
+  -o-transform: rotate(0.04deg);
+}
+.section__txt p:not(:first-child) {
+  margin-top: 4vw;
+}
+.section__txt * {
+  font-family: "NanumSquare", "Nanum Gothic", "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 4vw;
+  line-height: 1.6;
+  letter-spacing: -0.5px;
+}
+
+.wrap {
+  padding: 0 8.5vw;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.w_100 {
+  width: 100%;
+}
+
+.block {
+  display: block;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.section {
+  position: relative;
+}
+
+.info {
+  font-size: 4vw;
+  margin-top: 22vw;
+}
+
+/* index 컴포넌트 추가 */
+/* 유니클로_새학기_230317 */
+.section__txt {
+  font-size: 3.8vw;
+}
+.section__txt * {
+  font-size: 3.8vw;
+}
+
+.clip {
+  position: absolute;
+}
+
+.visual {
+  padding: 93vw 0 11vw;
+  background: url("https://simage-kr.uniqlo.com/display/corner/2161/adef_kids_230317/kids_visual_230317.png") no-repeat left top;
+  background-size: 100%;
+}
+.visual .wrap {
+  padding: 0 5vw;
+}
+.visual .section__txt {
+  color: #1c332b;
+  text-align: center;
+  font-weight: 700;
+}
+.visual .author {
+  margin: 2vw auto 0;
+}
+.visual .author p {
+  position: relative;
+  margin-top: 0vw;
+}
+.visual .author p span {
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+.visual .author p span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  left: -5px;
+  bottom: 0;
+  width: calc(100% + 10px);
+  height: 1.5vw;
+  background: #faf4ac;
+}
+
+.section1 {
+  background: #fdfafa;
+}
+.section1 .clip {
+  width: 23.73vw;
+  left: 4.1vw;
+  top: -3.06vw;
+}
+
+.section2 {
+  background: #f0f6ef;
+}
+.section2 .section__txt {
+  text-align: right;
+}
+
+.section3 {
+  background: #fdfbfa;
+}
+
+.section4 {
+  background: #f6f9f4;
+}
+.section4 .section__txt {
+  text-align: right;
+}
+.section4 .clip {
+  width: 22.8vw;
+  right: 4.13vw;
+  top: -2.53vw;
+}
+
+.section5 {
+  background: #fefbfb;
+}
+
+.section6 {
+  background: #f6f9f4;
+}
+.section6 .section__txt {
+  text-align: right;
+}/*# sourceMappingURL=index.css.map */

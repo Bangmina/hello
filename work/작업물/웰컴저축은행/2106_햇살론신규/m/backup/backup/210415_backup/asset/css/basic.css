@@ -1,0 +1,44 @@
+@keyframes highlight {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+@keyframes btnScale {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1); }
+  50% {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05); }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1); } }
+.bold {
+  font-weight: bold; }
+
+.inner {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 1320px;
+  box-sizing: border-box; }
+
+.blind {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  text-indent: -9999em; }
+
+/*# sourceMappingURL=basic.css.map */

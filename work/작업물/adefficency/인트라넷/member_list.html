@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>인트라넷 - memberlist</title>
+		<!-- 공통  -->
+		<!-- jquery -->
+		<script src="asset/plugIn/jquery-3.6.0.min.js"></script>
+		<!-- plugin simplebar -->
+		<link rel="stylesheet" href="./asset/plugIn/simplebar/simplebar.css" />
+		<script src="./asset/plugIn/simplebar/simplebar.js"></script>
+		<!-- plugin datepicker -->
+		<link
+			rel="stylesheet"
+			href="./asset/plugIn/bootstrap-datepicker/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="./asset/plugIn/bootstrap-datepicker/bootstrap-datepicker.css"
+		/>
+		<script src="./asset/plugIn/bootstrap-datepicker/bootstrap.min.js"></script>
+		<script src="./asset/plugIn/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+		<script src="./asset/plugIn/bootstrap-datepicker/bootstrap-datepicker.ko.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./favicon.png" />
+		<link rel="stylesheet" href="./asset/css/reset.css" />
+		<link rel="stylesheet" href="./asset/css/common.css" />
+		<link rel="stylesheet" href="./asset/css/index.css" />
+	<body>
+		<main class="main">
+			<aside class="aside">
+				<div class="aside__top">
+					<h1 class="aside__logo">
+						<img src="./asset/images/logo.png" alt="로고" />
+					</h1>
+					<article class="aside__profile">
+						<div class="aside__profile--picture"></div>
+						<p class="aside__profile--name">김다영</p>
+						<div class="aside__profile--btn_box">
+							<button class="aside__profile--btn_setting">
+								<img src="./asset/images/ic_setting.png" alt="정보관리" />
+							</button>
+							<button class="aside__profile--btn_logout">
+								<img src="./asset/images/ic_logout.png" alt="로그아웃" />
+							</button>
+						</div>
+					</article>
+					<button class="aside__mobile--menu">
+						<span></span>
+					</button>
+				</div>
+				<nav class="nav">
+					<ul class="nav_depth1__list" id="nav">
+						<li class="nav_depth1__item">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon member"></i>
+								사원목록
+							</a>
+						</li>
+						<li class="nav_depth1__item">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon affywiki"></i>
+								애피위키
+							</a>
+						</li>
+						<li class="nav_depth1__item depth">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon list"></i>
+								주요목록
+								<i class="nav_depth1__item--arrow"></i>
+							</a>
+							<ul class="nav_depth2__list">
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">
+										ADEF 주요목록
+									</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#"> 광고주목록 </a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav_depth1__item depth">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon icon__board"></i>
+								게시판
+								<i class="nav_depth1__item--arrow"></i>
+							</a>
+							<ul class="nav_depth2__list">
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">IT 요청</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">BIGData 요청</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#"
+										>CR 업무지원요청</a
+									>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">FB 업무지원</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">FB 공지사항</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">SD 업무지원</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">SD 공지사항</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">APP 업무지원</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav_depth1__item depth">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon reference"></i>
+								레퍼런스
+								<i class="nav_depth1__item--arrow"></i>
+							</a>
+							<ul class="nav_depth2__list">
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#"> CR REF </a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#"> MEDIA REF </a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav_depth1__item depth">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon etc"></i>
+								기타
+								<i class="nav_depth1__item--arrow"></i>
+							</a>
+							<ul class="nav_depth2__list">
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">
+										광고비 모니터링
+									</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#"> CODE 관리 </a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav_depth1__item">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon solution"></i>
+								사내솔루션
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</aside>
+			<section class="board board1 content" id="">
+				<h2 class="content__title">사원 목록</h2>
+				<!-- 상단폼 -->
+				<section class="form">
+					
+					<form action="">
+						<div class="board_form m-b-0">
+							<!-- 왼쪽 폼 -->
+							<div class="board_form__box">
+								<div class="mobile_flex_one">
+									<select class="board__select" name="" id="">
+										<option value="전체">전체</option>
+										<option value="전체">진행중</option>
+										<option value="전체">너무더워</option>
+									</select>
+								</div>
+								<div class="board_form__box mobile_flex_one">
+									<input class="board__input" type="text" placeholder="">
+								</div>
+								<div class="board_form__box mobile_flex_one">
+									<button class="btn_orange">
+										<img src="./asset/images/ic_search.png" alt="검색아이콘">
+										검색
+									</button>
+								</div>
+								<div class="mobile_flex_one">
+									<p class="board__info grey">
+										검색어는 포함검색입니다
+									</p>
+								</div>
+							</div>
+							<!-- 오른쪽 폼 -->
+							<div class="board_form__box mobile_flex_two">
+								<button class="btn_orange">
+									<img src="./asset/images/ic_download_12.png" alt="검색아이콘">
+									연락처 Down
+								</button>
+								<button class="btn_purple">
+									<img src="./asset/images/ic_about.png" alt="검색아이콘">
+									Outlook 연락처 추가 방법
+								</button>
+							</div>
+						</div c>
+					</form>
+				</section>
+				<!-- 게시판 탭 -->
+				<article class="content_tab m-b-10 flex">
+					<ul class="content_tab__list">
+						<li class="content_tab__item active">
+							<a class="content_tab__item--anchor" href="./member_modify.html"
+								>전체</a
+							>
+						</li>
+						<li class="content_tab__item">
+							<a class="content_tab__item--anchor" href="#"
+								>CEO</a
+							>
+						</li>
+						<li class="content_tab__item">
+							<a class="content_tab__item--anchor" href="#"
+								>PM1본부</a
+							>
+						</li>
+						<li class="content_tab__item">
+							<a class="content_tab__item--anchor" href="#"
+								>PM2본부</a
+							>
+						</li>
+						<li class="content_tab__item">
+							<a class="content_tab__item--anchor" href="#"
+								>PM3본부</a
+							>
+						</li>
+					</ul>
+					<ul class="content_tab__list">
+						<li class="content_tab__item">
+							<a class="content_tab__item--anchor" href="#"
+								>PD</a
+							>
+						</li>
+						<li class="content_tab__item">
+							<a class="content_tab__item--anchor" href="#"
+								>경영지원팀</a
+							>
+						</li>
+						<li class="content_tab__item">
+							<a class="content_tab__item--anchor" href="#"
+								>Sales Dev</a
+							>
+						</li>
+						<li class="content_tab__item">
+							<a class="content_tab__item--anchor" href="#"
+								>CR본부</a
+							>
+						</li>
+						<li class="content_tab__item">
+							<a class="content_tab__item--anchor" href="#"
+								>IT</a
+							>
+						</li>
+					</ul>
+				</article>
+				<p class="board__info grey">
+					※ 장기휴가나 휴직으로인해 권한(대리)상 사원목록 순서에 변경이 있을수 있습니다.
+				</p>
+				<section class="member_wrap">
+					<ul class="member__list">
+							<li class="member__item">
+								<a class="member__item--anchor" href="./member_modify.html">
+									<div class="member__item--box1">
+										<div class="member__item--name">
+											박소현 대표이사
+											<p class="member__item--position">CEO</p>
+										</div>
+										<div class="member__item--picture" style="background: url('https://intranet.adef.co.kr/upload/member/72.png') top
+										center;
+									background-size: 120%;"></div>
+									</div>
+									<div class="member__item--box2">
+										<ul class="member_info__list">
+											<li class="member_info__item">
+												<img class="member_info__item--icon" src="./asset/images/ic_message.png" alt="아이콘">
+												sohyun.park@adef.co.kr
+											</li>
+											<li class="member_info__item">
+												<img class="member_info__item--icon" src="./asset/images/ic_call.png" alt="아이콘">
+												2286
+											</li>
+											<li class="member_info__item">
+												<img class="member_info__item--icon" src="./asset/images/ic_read_mode.png" alt="아이콘">
+												01037025836
+											</li>
+										</ul>
+									</div>
+								</a>
+							</li>
+							<li class="member__item">
+								<a class="member__item--anchor" href="#">
+									<div class="member__item--box1">
+										<div class="member__item--name">
+											한유진 대표이사
+											<p class="member__item--position">CEO</p>
+										</div>
+										<div class="member__item--picture" style="background: url('https://intranet.adef.co.kr/upload/member/73.png') top
+										center;
+									background-size: 120%;"></div>
+									</div>
+									<div class="member__item--box2">
+										<ul class="member_info__list">
+											<li class="member_info__item">
+												<img class="member_info__item--icon" src="./asset/images/ic_message.png" alt="아이콘">
+												youjin.han@adef.co.kr
+											</li>
+											<li class="member_info__item">
+												<img class="member_info__item--icon" src="./asset/images/ic_call.png" alt="아이콘">
+												2287
+											</li>
+											<li class="member_info__item">
+												<img class="member_info__item--icon" src="./asset/images/ic_read_mode.png" alt="아이콘">
+												01089158729
+											</li>
+										</ul>
+									</div>
+								</a>
+							</li>
+							<li class="member__item">
+								<a class="member__item--anchor" href="#">
+									<div class="member__item--box1">
+										<div class="member__item--name">
+											아무개 대리
+											<p class="member__item--position">PM0-0팀</p>
+										</div>
+										<div class="member__item--picture" style="background: url('https://intranet.adef.co.kr/resource/img/com/pic_basic.jpg') top
+										center;
+									background-size: 120%;"></div>
+									</div>
+									<div class="member__item--box2">
+										<ul class="member_info__list">
+											<li class="member_info__item">
+												<img class="member_info__item--icon" src="./asset/images/ic_message.png" alt="아이콘">
+												amugae@adef.co.kr
+											</li>
+											<li class="member_info__item">
+												<img class="member_info__item--icon" src="./asset/images/ic_call.png" alt="아이콘">
+												2222
+											</li>
+											<li class="member_info__item">
+												<img class="member_info__item--icon" src="./asset/images/ic_read_mode.png" alt="아이콘">
+												010123456789
+											</li>
+										</ul>
+									</div>
+								</a>
+							</li>
+							<li class="member__item">
+								<a class="member__item--anchor" href="#">
+									<div class="member__item--box1">
+										<div class="member__item--name">
+											아무개 대리
+											<p class="member__item--position">PM0-0팀</p>
+										</div>
+										<div class="member__item--picture" style="background: url('https://intranet.adef.co.kr/resource/img/com/pic_basic.jpg') top
+										center;
+									background-size: 120%;"></div>
+									</div>
+									<div class="member__item--box2">
+										<ul class="member_info__list">
+											<li class="member_info__item">
+												<img class="member_info__item--icon" src="./asset/images/ic_message.png" alt="아이콘">
+												amugae@adef.co.kr
+											</li>
+											<li class="member_info__item">
+												<img class="member_info__item--icon" src="./asset/images/ic_call.png" alt="아이콘">
+												2222
+											</li>
+											<li class="member_info__item">
+												<img class="member_info__item--icon" src="./asset/images/ic_read_mode.png" alt="아이콘">
+												010123456789
+											</li>
+										</ul>
+									</div>
+								</a>
+							</li>
+					</ul>
+					<ul class="member__list">
+						<li class="member__item">
+							<a class="member__item--anchor" href="#">
+								<div class="member__item--box1">
+									<div class="member__item--name">
+										아무개 대리
+										<p class="member__item--position">PM0-0팀</p>
+									</div>
+									<div class="member__item--picture" style="background: url('https://intranet.adef.co.kr/resource/img/com/pic_basic.jpg') top
+									center;
+								background-size: 120%;"></div>
+								</div>
+								<div class="member__item--box2">
+									<ul class="member_info__list">
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_message.png" alt="아이콘">
+											amugae@adef.co.kr
+										</li>
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_call.png" alt="아이콘">
+											2222
+										</li>
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_read_mode.png" alt="아이콘">
+											010123456789
+										</li>
+									</ul>
+								</div>
+							</a>
+						</li>
+						<li class="member__item">
+							<a class="member__item--anchor" href="#">
+								<div class="member__item--box1">
+									<div class="member__item--name">
+										아무개 대리
+										<p class="member__item--position">PM0-0팀</p>
+									</div>
+									<div class="member__item--picture" style="background: url('https://intranet.adef.co.kr/resource/img/com/pic_basic.jpg') top
+									center;
+								background-size: 120%;"></div>
+								</div>
+								<div class="member__item--box2">
+									<ul class="member_info__list">
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_message.png" alt="아이콘">
+											amugae@adef.co.kr
+										</li>
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_call.png" alt="아이콘">
+											2222
+										</li>
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_read_mode.png" alt="아이콘">
+											010123456789
+										</li>
+									</ul>
+								</div>
+							</a>
+						</li>
+						<li class="member__item">
+							<a class="member__item--anchor" href="#">
+								<div class="member__item--box1">
+									<div class="member__item--name">
+										아무개 대리
+										<p class="member__item--position">PM0-0팀</p>
+									</div>
+									<div class="member__item--picture" style="background: url('https://intranet.adef.co.kr/resource/img/com/pic_basic.jpg') top
+									center;
+								background-size: 120%;"></div>
+								</div>
+								<div class="member__item--box2">
+									<ul class="member_info__list">
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_message.png" alt="아이콘">
+											amugae@adef.co.kr
+										</li>
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_call.png" alt="아이콘">
+											2222
+										</li>
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_read_mode.png" alt="아이콘">
+											010123456789
+										</li>
+									</ul>
+								</div>
+							</a>
+						</li>
+						<li class="member__item">
+							<a class="member__item--anchor" href="#">
+								<div class="member__item--box1">
+									<div class="member__item--name">
+										아무개 대리
+										<p class="member__item--position">PM0-0팀</p>
+									</div>
+									<div class="member__item--picture" style="background: url('https://intranet.adef.co.kr/resource/img/com/pic_basic.jpg') top
+									center;
+								background-size: 120%;"></div>
+								</div>
+								<div class="member__item--box2">
+									<ul class="member_info__list">
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_message.png" alt="아이콘">
+											amugae@adef.co.kr
+										</li>
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_call.png" alt="아이콘">
+											2222
+										</li>
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_read_mode.png" alt="아이콘">
+											010123456789
+										</li>
+									</ul>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<ul class="member__list">
+						<li class="member__item">
+							<a class="member__item--anchor" href="#">
+								<div class="member__item--box1">
+									<div class="member__item--name">
+										아무개 대리
+										<p class="member__item--position">PM0-0팀</p>
+									</div>
+									<div class="member__item--picture" style="background: url('https://intranet.adef.co.kr/resource/img/com/pic_basic.jpg') top
+									center;
+								background-size: 120%;"></div>
+								</div>
+								<div class="member__item--box2">
+									<ul class="member_info__list">
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_message.png" alt="아이콘">
+											amugae@adef.co.kr
+										</li>
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_call.png" alt="아이콘">
+											2222
+										</li>
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_read_mode.png" alt="아이콘">
+											010123456789
+										</li>
+									</ul>
+								</div>
+							</a>
+						</li>
+						<li class="member__item">
+							<a class="member__item--anchor" href="#">
+								<div class="member__item--box1">
+									<div class="member__item--name">
+										아무개 대리
+										<p class="member__item--position">PM0-0팀</p>
+									</div>
+									<div class="member__item--picture" style="background: url('https://intranet.adef.co.kr/resource/img/com/pic_basic.jpg') top
+									center;
+								background-size: 120%;"></div>
+								</div>
+								<div class="member__item--box2">
+									<ul class="member_info__list">
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_message.png" alt="아이콘">
+											amugae@adef.co.kr
+										</li>
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_call.png" alt="아이콘">
+											2222
+										</li>
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_read_mode.png" alt="아이콘">
+											010123456789
+										</li>
+									</ul>
+								</div>
+							</a>
+						</li>
+						<li class="member__item">
+							<a class="member__item--anchor" href="#">
+								<div class="member__item--box1">
+									<div class="member__item--name">
+										아무개 대리
+										<p class="member__item--position">PM0-0팀</p>
+									</div>
+									<div class="member__item--picture" style="background: url('https://intranet.adef.co.kr/resource/img/com/pic_basic.jpg') top
+									center;
+								background-size: 120%;"></div>
+								</div>
+								<div class="member__item--box2">
+									<ul class="member_info__list">
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_message.png" alt="아이콘">
+											amugae@adef.co.kr
+										</li>
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_call.png" alt="아이콘">
+											2222
+										</li>
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_read_mode.png" alt="아이콘">
+											010123456789
+										</li>
+									</ul>
+								</div>
+							</a>
+						</li>
+						<li class="member__item">
+							<a class="member__item--anchor" href="#">
+								<div class="member__item--box1">
+									<div class="member__item--name">
+										아무개 대리
+										<p class="member__item--position">PM0-0팀</p>
+									</div>
+									<div class="member__item--picture" style="background: url('https://intranet.adef.co.kr/resource/img/com/pic_basic.jpg') top
+									center;
+								background-size: 120%;"></div>
+								</div>
+								<div class="member__item--box2">
+									<ul class="member_info__list">
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_message.png" alt="아이콘">
+											amugae@adef.co.kr
+										</li>
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_call.png" alt="아이콘">
+											2222
+										</li>
+										<li class="member_info__item">
+											<img class="member_info__item--icon" src="./asset/images/ic_read_mode.png" alt="아이콘">
+											010123456789
+										</li>
+									</ul>
+								</div>
+							</a>
+						</li>
+					</ul>
+					
+				</section>
+			</section>
+		</main>
+		<script src="asset/js/common.js"></script>
+	</body>
+</html>

@@ -1,0 +1,129 @@
+@charset "UTF-8";
+@import 'common';
+
+.portfolio {
+  &__title {
+    padding: 155px 0 48.5px;
+  }
+  &:not(:first-child) {
+    margin-top: 40px;
+  }
+}
+.portfolio_best {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+  }
+
+  &__item--img {
+    width: 100%;
+  }
+  &__item {
+    margin: 6.5px 0;
+    width: calc(50% - 5.5px);
+    position: relative;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__item--title {
+    font-weight: 800;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__item--sub_title {
+    position: absolute;
+    top: 10.5px;
+    left: 10.5px;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+}
+.portfolio__box {
+  margin-top: 18.5px;
+}
+.portfolio {
+  &.banner {
+    padding-bottom: 81px;
+  }
+  .content__title {
+    font-size: 30px;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &:not(:first-child) {
+      margin-top: 18px;
+    }
+  }
+  &__item {
+    margin: 5px 0;
+    width: calc(50% - 5.5px);
+    position: relative;
+    color: #fff;
+  }
+  &__item--img {
+    width: 100%;
+  }
+  &__item--title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+  }
+  .swiper-pagination {
+    margin-top: 3px;
+  }
+}
+
+.portfolio_modal {
+  display: none;
+  .modal__bg {
+    background: rgba(0, 0, 0, 0.89);
+  }
+
+  .modal__close {
+    position: absolute;
+    right: 165px;
+    top: 60px;
+    &::before,
+    &::after {
+      width: 32px;
+      height: 2px;
+      background: #fff;
+    }
+  }
+  &__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    &.prev {
+      left: -120px;
+    }
+    &.next {
+      right: -120px;
+    }
+  }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>인트라넷-메인</title>
+		<!-- 공통  -->
+		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./favicon.png" />
+		<link rel="stylesheet" href="./asset/css/reset.css" />
+		<link rel="stylesheet" href="./asset/css/common.css" />
+		<link rel="stylesheet" href="./asset/css/index.css" />
+		<script src="asset/plugIn/jquery-3.6.0.min.js"></script>
+		<link rel="stylesheet" href="./asset/plugIn/simplebar/simplebar.css" />
+		<script src="./asset/plugIn/simplebar/simplebar.js"></script>
+	</head>
+	<body>
+		<main class="main">
+			<aside class="aside">
+				<div class="aside__top">
+					<h1 class="aside__logo">
+						<img src="./asset/images/logo.png" alt="로고" />
+					</h1>
+					<article class="aside__profile">
+						<div class="aside__profile--picture"></div>
+						<p class="aside__profile--name">김다영</p>
+						<div class="aside__profile--btn_box">
+							<button class="aside__profile--btn_setting">
+								<img src="./asset/images/ic_setting.png" alt="정보관리" />
+							</button>
+							<button class="aside__profile--btn_logout">
+								<img src="./asset/images/ic_logout.png" alt="로그아웃" />
+							</button>
+						</div>
+					</article>
+				</div>
+				<nav class="nav">
+					<ul class="nav_depth1__list" id="nav">
+						<li class="nav_depth1__item">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon member"></i>
+								사원목록
+							</a>
+						</li>
+						<li class="nav_depth1__item">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon affywiki"></i>
+								애피위키
+							</a>
+						</li>
+						<li class="nav_depth1__item depth">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon list"></i>
+								주요목록
+								<i class="nav_depth1__item--arrow"></i>
+							</a>
+							<ul class="nav_depth2__list">
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">
+										ADEF 주요목록
+									</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#"> 광고주목록 </a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav_depth1__item depth">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon icon__board"></i>
+								게시판
+								<i class="nav_depth1__item--arrow"></i>
+							</a>
+							<ul class="nav_depth2__list">
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">IT 요청</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">BIGData 요청</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#"
+										>CR 업무지원요청</a
+									>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">FB 업무지원</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">FB 공지사항</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">SD 업무지원</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">SD 공지사항</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">APP 업무지원</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav_depth1__item depth">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon reference"></i>
+								레퍼런스
+								<i class="nav_depth1__item--arrow"></i>
+							</a>
+							<ul class="nav_depth2__list">
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#"> CR REF </a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#"> MEDIA REF </a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav_depth1__item depth">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon etc"></i>
+								기타
+								<i class="nav_depth1__item--arrow"></i>
+							</a>
+							<ul class="nav_depth2__list">
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#">
+										광고비 모니터링
+									</a>
+								</li>
+								<li class="nav_depth2__item">
+									<a class="nav_depth2__item--anchor" href="#"> CODE 관리 </a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav_depth1__item">
+							<a class="nav_depth1__item--anchor" href="#">
+								<i class="nav_depth1__item--icon solution"></i>
+								사내솔루션
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</aside>
+			<section class="content main__bg"></section>
+		</main>
+		<script src="asset/js/common.js"></script>
+	</body>
+</html>

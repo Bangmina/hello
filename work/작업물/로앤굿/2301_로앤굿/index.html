@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 타이틀 -->
+  <title>로앤굿</title>
+  <!-- 파비콘 -->
+  <link rel="shortcut icon" type="image/x-icon" href="">
+  <!-- og 태그 -->
+  <meta name="keywords" content="로앤굿">
+  <meta name="description" content="로앤굿 비딩페이지">
+  <meta property="og:title" content="로앤굿">
+  <meta property="og:description" content="로앤굿 비딩페이지">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <!-- jquety -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- css -->
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <!-- js -->
+  <script src="./assets/js/common.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="wrap">
+      <div class="header__left">
+        <h1 class="header__logo">
+          <img src="./assets/image/logo.png" alt="">
+        </h1>
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="">상담사례</a>
+          </li>
+          <li class="header__item">
+            <a href="">변호사 찾기</a>
+          </li>
+        </ul>
+      </div>
+      <div class="header__right">
+        <div class="header__search">
+          <img src="./assets/image/search.png" alt="">
+          <input type="text" placeholder="어떤 문제를 겪고 계시나요?">
+        </div>
+        <button class="header__menu--btn">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="visual">
+      <div class="wrap">
+        <div class="visual__left">
+          <div class="visual__txt">
+            <p class="visual__txt--p one">
+              위자료/양육권 등<br />
+              <span class="bold">이혼소송 막막하신가요?</span>
+            </p>
+            <h2 class="visual__txt--h2">
+              <span class="green">이혼 전문 변호사</span>에게<br />
+              맞춤형 제안서 받으세요
+            </h2>
+            <p class="visual__txt--p two">
+              한 번의 의뢰로 여러 변호사의 해결책을
+            </p>
+          </div>
+          <div class="visual__btn--wrap">
+            <div class="visual__btn--box one">
+              <a href="https://www.lawandgood.com/lawyers/list/?specialty=%EC%9D%B4%ED%98%BC&keyword=&name="
+                class="visual__btn one white">
+                전문 변호사 찾기
+              </a>
+              <a href="https://www.lawandgood.com/posts/quotation-content/list?query=%EC%9D%B4%ED%98%BC&from=%EA%B2%80%EC%83%89"
+                class="visual__btn two white">
+                상담 사례 보기
+              </a>
+            </div>
+            <div class="visual__btn--box two ">
+              <a href="https://www.lawandgood.com/quotation/question/400?breadcrumbs=%EC%9D%B4%ED%98%BC"
+                class="visual__btn three green">
+                로앤굿 사건 의뢰하기
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="visual_right consult">
+          <div class="consult__bg">
+            <a href="https://www.lawandgood.com/accounts/basic/signup/client/" class="join__anchor">
+              <div class="consult__box1">
+                <img src="./assets/image/ic.png" alt="">
+                <div class="consult__box1--txt">
+                  <p>누구나 전화상담 50% 지원 쿠폰 즉시 발급!</p>
+                  <span>회원가입하기 <img src="./assets/image/arrow_join.png" alt=""></span>
+                </div>
+              </div>
+            </a>
+            <div class="consult__box2">
+              <h3 class="consult__box2--title">
+                빠른 상담 가능한 <span class="green">이혼 전문</span> 변호사
+                <img src="./assets/image/triangle.png" alt="">
+              </h3>
+              <div #swiperRef="" class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="https://www.lawandgood.com/lawyers/430-%EB%B0%95%ED%98%84%EC%9A%B0/"
+                      class="swiper__anchor">
+                      <div class="slide__face">
+                        <img src="./assets/image/img1.png" alt="">
+                      </div>
+                      <p class="slide__name">박현우 변호사</p>
+                      <p class="slide__company">법률사무소 산성 </p>
+                      <p class="slide__proposition">4,018 제안 </p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="https://www.lawandgood.com/lawyers/620-%EC%A3%BC%EB%AA%85%ED%98%B8/"
+                      class="swiper__anchor">
+                      <div class="slide__face">
+                        <img src="./assets/image/img2.png" alt="">
+                      </div>
+                      <p class="slide__name">주명호 변호사</p>
+                      <p class="slide__company">법무법인 선린 강남 분사무소 </p>
+                      <p class="slide__proposition">1,524 제안 </p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="https://www.lawandgood.com/lawyers/417-%EB%B0%95%EC%88%98%EC%A7%84/"
+                      class="swiper__anchor">
+                      <div class="slide__face">
+                        <img src="./assets/image/img3.png" alt="">
+                      </div>
+                      <p class="slide__name">박수진 변호사</p>
+                      <p class="slide__company">수앤인 합동법률사무소 </p>
+                      <p class="slide__proposition">1,481 제안 </p>
+                    </a>
+                  </div>
+
+
+
+                </div>
+                <div class="swiper-button-next">
+                  <img src="./assets/image/swipe_right.png" alt="">
+
+                </div>
+                <div class="swiper-button-prev">
+                  <img src="./assets/image/swipe_left.png" alt="">
+
+                </div>
+              </div>
+            </div>
+            <div class="consult__box3">
+              <a class="consult__anchor"
+                href="https://www.lawandgood.com/quotation/question/400?breadcrumbs=%EC%9D%B4%ED%98%BC">이혼</a>
+              <a class="consult__anchor"
+                href="https://www.lawandgood.com/quotation/question/403?breadcrumbs=%EC%83%81%EA%B0%84%EC%9E%90+%EC%86%8C%EC%86%A1">상간자
+                소송</a>
+              <a class="consult__anchor"
+                href="https://www.lawandgood.com/quotation/question/406?breadcrumbs=%EC%96%91%EC%9C%A1%EB%B9%84">양육비</a>
+              <a class="consult__anchor"
+                href="https://www.lawandgood.com/quotation/question/411?breadcrumbs=%EC%82%AC%EC%8B%A4%ED%98%BC+%ED%95%B4%EC%86%8C">사실혼
+                해소</a>
+              <a class="consult__anchor"
+                href="https://www.lawandgood.com/quotation/question/414?breadcrumbs=%EA%B8%B0%ED%83%80+%EC%9D%B4%ED%98%BC">기타
+                이혼</a>
+            </div>
+            <div class="consult__box4">
+              <a class="consult__serviece" href="https://funding.lawandgood.com/">
+                <p>
+                  로앤굿 변호사비 지원 서비스<br />
+                  <span>부담스러운 소송비용을 지원해 드려요</spa>
+                </p>
+                <img src="./assets/image/arrow.png" alt="">
+              </a>
+              <a class="consult__serviece" href="https://www.lawandgood.com/quotation/bridge/%EC%9D%B4%ED%98%BC/203">
+                <p>
+                  자주 묻는 질문
+                </p>
+                <img src="./assets/image/arrow.png" alt="">
+
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    $(function () {
+      $('.header__menu--btn').on('click', function () {
+        $(this).toggleClass('active')
+      })
+    })
+
+    // 스와이프
+    var swiper = new Swiper('.mySwiper', {
+      slidesPerView: 3,
+      spaceBetween: 15,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    var appendNumber = 4;
+    var prependNumber = 1;
+    document
+      .querySelector('.prepend-2-slides')
+      .addEventListener('click', function (e) {
+        e.preventDefault();
+        swiper.prependSlide([
+          '<div class="swiper-slide">Slide ' + --prependNumber + '</div>',
+          '<div class="swiper-slide">Slide ' + --prependNumber + '</div>',
+        ]);
+      });
+    document
+      .querySelector('.prepend-slide')
+      .addEventListener('click', function (e) {
+        e.preventDefault();
+        swiper.prependSlide(
+          '<div class="swiper-slide">Slide ' + --prependNumber + '</div>'
+        );
+      });
+    document
+      .querySelector('.append-slide')
+      .addEventListener('click', function (e) {
+        e.preventDefault();
+        swiper.appendSlide(
+          '<div class="swiper-slide">Slide ' + ++appendNumber + '</div>'
+        );
+      });
+    document
+      .querySelector('.append-2-slides')
+      .addEventListener('click', function (e) {
+        e.preventDefault();
+        swiper.appendSlide([
+          '<div class="swiper-slide">Slide ' + ++appendNumber + '</div>',
+          '<div class="swiper-slide">Slide ' + ++appendNumber + '</div>',
+        ]);
+      });
+  </script>
+</body>
+
+</html>

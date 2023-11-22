@@ -1,0 +1,344 @@
+@import 'base/animation';
+@import 'base/font.scss';
+@import 'components/button';
+@import 'components/popup';
+@import 'layout/header';
+@import 'layout/nav';
+@import 'layout/footer';
+@import 'pages/home';
+.wrap {
+  width: 100%;
+  padding: 0 10px;
+  position: relative;
+}
+.deco {
+  position: absolute;
+}
+.visual {
+  background: url('../images/visual_bg.png') no-repeat;
+  background-size: cover;
+  padding: 115px 0 40px;
+  .wrap {
+  }
+  &__box {
+  }
+  &__title {
+    width: 96%;
+    margin: 0 auto;
+    img {
+      width: 100%;
+    }
+  }
+  &__box--left,
+  &__box--right {
+  }
+  &__box--left {
+    align-items: center;
+  }
+
+  &__box--right {
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__txt {
+    margin-top: 45px;
+    font-size: 12px;
+    p {
+      line-height: 1.4;
+      &:not(:first-child) {
+        margin-top: 15px;
+      }
+    }
+  }
+  &__swiper--wrap {
+    width: 100%;
+    margin: 45px auto 0;
+    background: #fff;
+    padding: 20px 20px 15px;
+    border-radius: 10px;
+    box-shadow: 1px -2px 8px 1px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 1px -2px 8px 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px -2px 8px 1px rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+  &__swiper {
+    .swiper-wrapper {
+    }
+    .swiper-slide {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__derector--txt {
+    text-align: right;
+    font-size: 10px;
+    margin-top: 7.5px;
+    color: #636363;
+  }
+  &__card--txt,
+  &__card--plus {
+    text-align: center;
+  }
+  &__card--txt {
+    margin: 15px auto 0;
+    text-align: center;
+    img {
+      width: 108px;
+    }
+  }
+  &__card--plus {
+    margin-top: 10px;
+    text-align: center;
+    img {
+      width: 12px;
+    }
+  }
+  &__derector {
+    width: 76.75%;
+    margin: 0 auto;
+  }
+  &__img--smile {
+    position: absolute;
+    width: 75px;
+    left: -30px;
+    bottom: -30px;
+  }
+}
+.section {
+  padding: 55px 0 55px;
+}
+.art {
+  background: #f4efeb;
+  .title {
+    text-align: right;
+    img {
+      width: 218px;
+    }
+  }
+  &__item {
+  }
+  &__item00 {
+    .art__item--txt {
+      text-align: right;
+      margin-top: -5px;
+    }
+    .art__item--img {
+      img {
+        margin-left: -10px;
+        width: 305px;
+      }
+    }
+  }
+  &__item01 {
+    margin-top: 40px;
+    .art__item--txt {
+      text-align: left;
+      margin-top: 20px;
+    }
+    .art__item--img {
+      text-align: center;
+      img {
+        margin-left: -10px;
+        width: 305px;
+      }
+    }
+  }
+  &__item--title {
+    font-size: 24px;
+    .green {
+      font-weight: 900;
+      padding: 5px 8px;
+      display: inline-block;
+      background: #85e82d;
+      &:not(:first-of-type) {
+        margin-top: 5px;
+      }
+    }
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+  &__item--content {
+    font-size: 12px;
+    margin-top: 20px;
+    p {
+      line-height: 1.4;
+      word-break: keep-all;
+    }
+    p:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+}
+
+.eat {
+  background: url('../images/eat_bg.png') no-repeat;
+  background-size: cover;
+  .title {
+    text-align: center;
+    margin-bottom: 40px;
+    img {
+      width: 226px;
+    }
+  }
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    position: relative;
+    width: calc(50% - 2.5px);
+    img {
+      width: 100%;
+    }
+  }
+  &__best {
+    width: 75px !important;
+    position: absolute;
+    left: -7px;
+    top: -35px;
+  }
+  &__desc {
+    margin-top: 25px;
+    padding: 8px 0 17px;
+    font-size: 12px;
+    line-height: 1.4;
+    border-top: 1px solid #000;
+    border-bottom: 2px solid #000;
+    word-break: keep-all;
+    p {
+      line-height: 1.4;
+    }
+    p:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+  &__box {
+    &:not(:first-child) {
+      margin-top: 65px;
+    }
+  }
+}
+
+.drink {
+  background: url('../images/coffe_place_bg.png') no-repeat;
+  background-size: cover;
+  padding: 140px 0 55px;
+  .wrap {
+  }
+  &__title {
+    width: 247.5px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -100px;
+  }
+  &__card {
+    padding: 12px 12px 45px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background: url('../images/coffe_bg.png') repeat;
+  }
+  &__card--img {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  &__txt {
+    line-height: 1.4;
+    font-size: 12px;
+    margin-top: 20px;
+    word-break: keep-all;
+    text-align: center;
+  }
+
+  &__coffee_time {
+    bottom: -45px;
+    right: 35px;
+    width: 99px;
+  }
+  &__list {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item {
+    position: relative;
+    width: calc(50% - 2.5px);
+    padding: 10px 10px 20px 10px;
+    background: url('../images/coffe_bg.png');
+    img {
+      width: 100%;
+    }
+    margin: 2.5px 0;
+  }
+  &__v {
+    width: 50px !important;
+    left: -21px;
+    bottom: -22px;
+    z-index: 10;
+  }
+  &__desc {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 1.4;
+    word-break: keep-all;
+    color: #fff;
+    transform: rotate(0.04deg);
+  }
+}
+
+.view {
+  background: url('../images/view_bg.png');
+  background-size: cover;
+  position: relative;
+  padding-top: 0;
+  .wrap {
+    padding-top: 100px;
+  }
+  .title {
+    text-align: center;
+    img {
+      width: 219px;
+    }
+  }
+  &__smile {
+    width: 124.5px;
+    top: -30px;
+    right: 20px;
+  }
+  &__pic1 {
+    margin-top: 10px;
+    width: 100%;
+  }
+  &__desc {
+    background: #fff;
+    padding: 13px 10px;
+    border-radius: 10px;
+    word-break: keep-all;
+    font-size: 12px;
+    line-height: 1.4;
+    &:first-of-type {
+      margin-top: 10px;
+    }
+    &:last-of-type {
+      margin-top: 9px;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  &__item {
+    width: calc(50% - 5px);
+    img {
+      width: 100%;
+    }
+  }
+}

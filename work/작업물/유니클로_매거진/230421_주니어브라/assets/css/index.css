@@ -1,0 +1,425 @@
+@charset "UTF-8";
+/* font */
+/*
+  나눔스퀘어  [NanumSquare]
+  Light 300
+  Regular 400 (default)
+  Bold 700
+  ExtraBold 800
+*/
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+/*
+  [Noto Sans]
+  Thin 100
+  ExtraLight 200
+  Light 300  
+  Regular 400
+  Medium 500 (default)
+  SemiBold 600
+  Bold 700
+  ExtraBold 800
+*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* 
+  애플 산돌고딕 [Apple SD Gothic Neo]
+  Thin 100
+  UltraLight 200
+  Light 300
+  Medium 400
+  Regular 500 
+  SemiBold 600 (default)
+  Bold 700
+  ExtraBold 800
+  Heavy 900
+*/
+@import url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/css/all.css");
+/* 강원교육모두 [GangwonEduAll] 300/400 */
+@font-face {
+  font-family: "GangwonEduAll";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "GangwonEduAll";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.ttf") format("truetype");
+  font-display: swap;
+}
+/* reset */
+.adef_webzine div,
+.adef_webzine span,
+.adef_webzine applet,
+.adef_webzine object,
+.adef_webzine iframe,
+.adef_webzine h1,
+.adef_webzine h2,
+.adef_webzine h3,
+.adef_webzine h4,
+.adef_webzine h5,
+.adef_webzine h6,
+.adef_webzine p,
+.adef_webzine blockquote,
+.adef_webzine pre,
+.adef_webzine a,
+.adef_webzine abbr,
+.adef_webzine acronym,
+.adef_webzine address,
+.adef_webzine big,
+.adef_webzine cite,
+.adef_webzine code,
+.adef_webzine del,
+.adef_webzine dfn,
+.adef_webzine em,
+.adef_webzine img,
+.adef_webzine ins,
+.adef_webzine kbd,
+.adef_webzine q,
+.adef_webzine s,
+.adef_webzine samp,
+.adef_webzine small,
+.adef_webzine strike,
+.adef_webzine strong,
+.adef_webzine sub,
+.adef_webzine sup,
+.adef_webzine tt,
+.adef_webzine var,
+.adef_webzine b,
+.adef_webzine u,
+.adef_webzine i,
+.adef_webzine center,
+.adef_webzine dl,
+.adef_webzine dt,
+.adef_webzine dd,
+.adef_webzine ol,
+.adef_webzine ul,
+.adef_webzine li,
+.adef_webzine fieldset,
+.adef_webzine form,
+.adef_webzine label,
+.adef_webzine legend,
+.adef_webzine table,
+.adef_webzine caption,
+.adef_webzine tbody,
+.adef_webzine tfoot,
+.adef_webzine thead,
+.adef_webzine tr,
+.adef_webzine th,
+.adef_webzine td,
+.adef_webzine article,
+.adef_webzine aside,
+.adef_webzine canvas,
+.adef_webzine details,
+.adef_webzine embed,
+.adef_webzine figure,
+.adef_webzine figcaption,
+.adef_webzine footer,
+.adef_webzine header,
+.adef_webzine hgroup,
+.adef_webzine menu,
+.adef_webzine nav,
+.adef_webzine output,
+.adef_webzine ruby,
+.adef_webzine section,
+.adef_webzine summary,
+.adef_webzine time,
+.adef_webzine mark,
+.adef_webzine audio,
+.adef_webzine video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-family: "NanumSquare", "Noto Sans", "", "Noto Sans KR", "Nanum Gothic", "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 3.2vw;
+  line-height: 1.65;
+  letter-spacing: -0.8px;
+  color: #000000;
+  vertical-align: baseline;
+}
+.adef_webzine article,
+.adef_webzine aside,
+.adef_webzine details,
+.adef_webzine figcaption,
+.adef_webzine figure,
+.adef_webzine footer,
+.adef_webzine header,
+.adef_webzine hgroup,
+.adef_webzine menu,
+.adef_webzine nav,
+.adef_webzine section {
+  display: block;
+}
+.adef_webzine ol,
+.adef_webzine ul {
+  list-style: none;
+  padding: 0;
+}
+.adef_webzine blockquote,
+.adef_webzine q {
+  quotes: none;
+}
+.adef_webzine blockquote:before,
+.adef_webzine blockquote:after,
+.adef_webzine q:before,
+.adef_webzine q:after {
+  content: "";
+  content: none;
+}
+.adef_webzine table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.adef_webzine button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.adef_webzine a {
+  text-decoration: none;
+}
+
+/* common */
+.adef_webzine .wrap {
+  padding: 0 12vw;
+}
+.adef_webzine img {
+  width: 100%;
+  display: block;
+}
+.adef_webzine .bold {
+  font-weight: 900;
+}
+.adef_webzine .section {
+  position: relative;
+}
+.adef_webzine .buy__anchor,
+.adef_webzine .info {
+  position: relative;
+  transform: rotate(0.04deg);
+  -webkit-transform: rotate(0.04deg);
+  -moz-transform: rotate(0.04deg);
+  -ms-transform: rotate(0.04deg);
+  -o-transform: rotate(0.04deg);
+}
+.adef_webzine .buy__anchor {
+  padding: 1.5vw 0;
+  display: inline-block;
+  text-decoration: underline;
+  color: #000;
+  font-weight: 900;
+}
+.adef_webzine .buy__anchor--wrap {
+  text-align: center;
+}
+.adef_webzine .section__txt {
+  vertical-align: baseline;
+  text-align: justify;
+  transform: rotate(0.04deg);
+  -webkit-transform: rotate(0.04deg);
+  -moz-transform: rotate(0.04deg);
+  -ms-transform: rotate(0.04deg);
+  -o-transform: rotate(0.04deg);
+}
+.adef_webzine .section__txt p:not(:first-child) {
+  margin-top: 4vw;
+}
+
+/* 페이지 */
+.adef_webzine .ic_star {
+  width: 2.26vw;
+  margin: 0 auto;
+}
+.adef_webzine .ic_dot {
+  width: 0.7vw;
+  margin: 0 auto;
+}
+.adef_webzine .ic_dot.one {
+  margin-top: 9.5vw;
+}
+.adef_webzine .ic_dot.two {
+  margin-top: 10.65vw;
+}
+.adef_webzine .ic_dot.three {
+  margin-top: 11.33vw;
+}
+.adef_webzine .section1 {
+  padding: 16.4vw 0 11.6vw 6vw;
+  box-sizing: border-box;
+  background: url("https://simage-kr.uniqlo.com/display/corner/2161/adef_230421_juniorbra/juniorbra_230421_bg1.png") no-repeat center center;
+  background-size: cover;
+}
+.adef_webzine .section1__box {
+  width: 60vw;
+  position: relative;
+  padding: 6.66vw 5.33vw 7.5vw;
+  box-sizing: border-box;
+}
+.adef_webzine .section1__box::before {
+  content: "";
+  display: block;
+  width: 100%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 70vw;
+  opacity: 0.4;
+}
+.adef_webzine .section1__box .ic_star {
+  margin-bottom: 6.66vw;
+}
+.adef_webzine .section1__box--content {
+  position: relative;
+  z-index: 2;
+  text-align: justify;
+  font-size: 3.2vw;
+}
+.adef_webzine .section2 .article__title span {
+  font-size: 3.8vw;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  line-height: 1.8;
+}
+.adef_webzine .section2 .article__title span::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  bottom: 0.5vw;
+}
+.adef_webzine .section2 .article1 {
+  margin-top: 20.66vw;
+  padding-top: 50vw;
+  background: url("https://simage-kr.uniqlo.com/display/corner/2161/adef_230421_juniorbra/juniorbra_230421_article1.png") no-repeat left top;
+  background-size: 100vw;
+}
+.adef_webzine .section2 .article1 .article__title {
+  padding-left: 14vw;
+}
+.adef_webzine .section2 .article2 {
+  margin-top: 11.73vw;
+  padding-top: 48.26vw;
+  background: url("https://simage-kr.uniqlo.com/display/corner/2161/adef_230421_juniorbra/juniorbra_230421_article2.png") no-repeat left top;
+  background-size: 100vw;
+}
+.adef_webzine .section2 .article2 .article__title {
+  padding-left: 14vw;
+}
+.adef_webzine .section2 .article3 {
+  margin-top: 13.06vw;
+  padding-top: 49.33vw;
+  background: url("https://simage-kr.uniqlo.com/display/corner/2161/adef_230421_juniorbra/juniorbra_230421_article3.png") no-repeat left top;
+  background-size: 100vw;
+}
+.adef_webzine .section2 .article3 .article__title {
+  padding-left: 14vw;
+}
+.adef_webzine .section2 .article4 {
+  margin-top: 10.13vw;
+  padding-top: 50vw;
+  background: url("https://simage-kr.uniqlo.com/display/corner/2161/adef_230421_juniorbra/juniorbra_230421_article4.png") no-repeat left top;
+  background-size: 100vw;
+}
+.adef_webzine .section3 {
+  margin-top: 10vw;
+  padding: 20vw 0 20.5vw;
+  background: url("https://simage-kr.uniqlo.com/display/corner/2161/adef_230421_juniorbra/juniorbra_230421_pattern.png") repeat-y;
+  background-size: 100%;
+}
+.adef_webzine .section3 .info {
+  font-weight: 700;
+  padding: 0 9.3vw;
+}
+.adef_webzine .section3 .info.one {
+  margin-top: 9.3vw;
+}
+.adef_webzine .section3 .info.two {
+  margin-top: 18.66vw;
+}
+.adef_webzine .section3 .step__content--box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.adef_webzine .section3 .step__list {
+  width: 88.4vw;
+  margin: 9.8vw auto 0;
+}
+.adef_webzine .section3 .step__item {
+  background: #fff;
+  border: 1.5px solid #a2cbb8;
+  padding: 10.65vw 4.4vw 14vw;
+  position: relative;
+}
+.adef_webzine .section3 .step__item:not(:first-child) {
+  margin-top: 16.26vw;
+}
+.adef_webzine .section3 .step__item .green {
+  font-weight: 900;
+  color: #298772;
+}
+.adef_webzine .section3 .step__item .section__txt.two {
+  flex-basis: 45.5vw;
+}
+.adef_webzine .section3 .step__item .step__title {
+  font-size: 3.89vw;
+  font-weight: 900;
+  text-align: center;
+  color: #298772;
+  margin-bottom: 7vw;
+}
+.adef_webzine .section3 .step__item .handwriting {
+  margin: 0 auto 0.8vw;
+}
+.adef_webzine .section3 .step__item .step__img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.adef_webzine .section3 .step__item .step__img.one {
+  width: 32.46vw;
+  right: -3vw;
+}
+.adef_webzine .section3 .step__item .step__img.two {
+  width: 32.46vw;
+  right: -3vw;
+}
+.adef_webzine .section3 .step__item .step__img.three {
+  width: 35vw;
+  right: -3.5vw;
+}
+.adef_webzine .section3 .step__item:nth-of-type(1) .handwriting {
+  width: 40.26vw;
+}
+.adef_webzine .section3 .step__item:nth-of-type(1) .step__content--box {
+  margin-top: 13vw;
+}
+.adef_webzine .section3 .step__item:nth-of-type(1) .section__txt.two {
+  padding-right: 2.4vw;
+}
+.adef_webzine .section3 .step__item:nth-of-type(2) .handwriting {
+  width: 64.53vw;
+}
+.adef_webzine .section3 .step__item:nth-of-type(2) .step__content--box {
+  margin-top: 13vw;
+}
+.adef_webzine .section3 .step__item:nth-of-type(2) .section__txt.two {
+  padding-right: 2.4vw;
+}
+.adef_webzine .section3 .step__item .ic_step {
+  position: absolute;
+  left: 2.6vw;
+  top: -2.13vw;
+  width: 16.13vw;
+}/*# sourceMappingURL=index.css.map */

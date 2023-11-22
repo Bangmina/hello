@@ -1,0 +1,682 @@
+/* font */
+
+/*
+  나눔스퀘어  [NanumSquare]
+  Light 300
+  Regular 400 (default)
+  Bold 700
+  ExtraBold 800
+*/
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+/*
+  [Noto Sans]
+  Thin 100
+  ExtraLight 200
+  Light 300
+  Regular 400
+  Medium 500 (default)
+  SemiBold 600
+  Bold 700
+  ExtraBold 800
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* 
+  애플 산돌고딕 [Apple SD Gothic Neo]
+  Thin 100
+  UltraLight 200
+  Light 300
+  Medium 400
+  Regular 500 
+  SemiBold 600 (default)
+  Bold 700
+  ExtraBold 800
+  Heavy 900
+*/
+@import url('https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/css/all.css');
+
+/* 강원교육모두 [GangwonEduAll] 300/400 */
+@font-face {
+  font-family: 'GangwonEduAll';
+  font-weight: 300;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff')
+      format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.ttf')
+      format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GangwonEduAll';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff')
+      format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.ttf')
+      format('truetype');
+  font-display: swap;
+}
+
+/* reset */
+.adef_webzine {
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    font-family: 'NanumSquare', 'Noto Sans KR', 'Nanum Gothic', 'Roboto',
+      sans-serif;
+    font-weight: 400;
+    font-size: 3.8vw;
+    line-height: 1.6;
+    letter-spacing: -0.5px;
+    color: #000000;
+    vertical-align: baseline;
+  }
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+  ol,
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  blockquote,
+  q {
+    quotes: none;
+  }
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+/* common */
+.adef_webzine {
+  .wrap {
+    padding: 0 9.3vw;
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+  .bold {
+    font-weight: 700;
+  }
+  .section {
+    position: relative;
+  }
+  .buy__anchor,
+  .info {
+    position: relative;
+    // font-size: 3.9vw;
+    transform: rotate(0.04deg);
+    -webkit-transform: rotate(0.04deg);
+    -moz-transform: rotate(0.04deg);
+    -ms-transform: rotate(0.04deg);
+    -o-transform: rotate(0.04deg);
+  }
+  .buy__anchor {
+    &--wrap {
+      text-align: center;
+    }
+    // 제품 구매하러가기
+    padding: 1.5vw 0;
+    display: inline-block;
+    text-decoration: underline;
+    color: #000;
+    font-weight: 900;
+  }
+  .info {
+    // 제품에 따라 기능이 상이합니다 스타일
+    margin-top: 11vw;
+    font-size: 2.8vw;
+  }
+  .section__txt {
+    vertical-align: baseline;
+    text-align: justify;
+    transform: rotate(0.04deg);
+    -webkit-transform: rotate(0.04deg);
+    -moz-transform: rotate(0.04deg);
+    -ms-transform: rotate(0.04deg);
+    -o-transform: rotate(0.04deg);
+    color: #322d27;
+
+    p {
+      &:not(:first-child) {
+        margin-top: 6vw;
+      }
+    }
+  }
+  .read {
+    &__hide--box {
+      height: 12vw;
+      position: relative;
+      overflow: hidden;
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), #fff);
+        opacity: 1;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        z-index: 10;
+      }
+      &.open {
+        &::after {
+          opacity: 0;
+        }
+        & + .read__continue--btn .read__continue--btn_ic {
+          background-image: url(https://simage-kr.uniqlo.com/display/corner/2161/img/23_SPss_pants_utility/23_SP_icon_close.png);
+        }
+      }
+    }
+    &__continue--btn {
+      margin: 3vw auto 0;
+      text-align: center;
+      font-size: 1.14em;
+      display: block;
+      span {
+        text-decoration: underline;
+        font-size: 4vw;
+      }
+    }
+    &__continue--btn_ic {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: url(https://simage-kr.uniqlo.com/display/corner/2161/img/23_SPss_pants_utility/23_SP_icon_plus.png)
+        no-repeat 0 0 / 100% auto;
+    }
+  }
+  .product__anchor {
+    border: 1px solid #21849a;
+    color: #21849a;
+    padding: 1.5vw 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 3.5vw;
+    font-weight: 700;
+    border-radius: 10vw;
+    -webkit-border-radius: 10vw;
+    -moz-border-radius: 10vw;
+    -ms-border-radius: 10vw;
+    -o-border-radius: 10vw;
+    letter-spacing: -0.8px;
+  }
+  .section__bold {
+    font-weight: 900;
+  }
+  .product {
+    &__title {
+      font-size: 4.22vw;
+      font-family: 'Uniqlo Pro Bold', 'NanumSquare Regular', 'Roboto',
+        'Droid Sans', 'HiraKakuProN-W3', sans-serif;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+    }
+    &__item {
+      // width: 25%;
+      margin: 2.33vw 0;
+      &:nth-of-type(1) {
+        .product__img {
+        }
+      }
+      &:nth-of-type(2) {
+        .product__img {
+        }
+      }
+    }
+    &__link {
+    }
+    &__img--wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__img {
+    }
+    &__item--info {
+    }
+    &__ic--gender {
+      width: 6.13vw;
+      margin-bottom: 1vw;
+    }
+    &__item--name {
+      font-size: 3.65vw;
+      font-weight: 900;
+      line-height: 1.25;
+      letter-spacing: -1px;
+    }
+  }
+}
+/* 위에는 font 설정만 하시구 스타일적용은 아래에 작업해주시면 됩니다*/
+/* 페이지 */
+.adef_webzine {
+  .section1 {
+    padding: 11.33vw 0 9.5vw;
+    .section__bold {
+      text-align: center;
+      font-size: 3.94vw;
+    }
+    .section__txt {
+      margin-top: 4vw;
+    }
+  }
+  .section2 {
+    background: #eae8ef;
+    padding: 8vw 0 14vw;
+    // padding-bottom: 12vw;
+    // .section__txt {
+    //   font-size: 3.51vw;
+    //   color: #595757;
+    //   line-height: 1.4;
+    // }
+    .slide__tee {
+      &:not(:first-of-type) {
+        margin-top: 8.5vw;
+      }
+      &.white {
+        .slide__tee--wrap img {
+          width: 131.5vw;
+        }
+      }
+      &.black {
+        .slide__tee--wrap img {
+          width: 135.5vw;
+        }
+      }
+      &--wrap {
+        padding: 0 9.3vw 6vw;
+        overflow-x: auto;
+      }
+      &--box {
+        width: 144.8vw;
+      }
+      &--txt {
+        color: #595757;
+        font-size: 3.38vw;
+        padding: 0 9.3vw;
+        letter-spacing: -0.8px;
+        p {
+          color: #595757;
+          letter-spacing: -0.8px;
+          font-size: 3.38vw;
+        }
+      }
+    }
+  }
+
+  .section3 {
+    padding-top: 14.5vw;
+    &__tee {
+      text-align: center;
+      p {
+        position: relative;
+        display: inline-block;
+        &::after {
+          content: '';
+          display: block;
+          width: 105%;
+          left: -2.5%;
+          height: 2.1vw;
+          background: #eae8ef;
+          position: absolute;
+          bottom: 0;
+        }
+      }
+      span {
+        position: relative;
+        font-size: 3.87vw;
+        z-index: 2;
+        color: #595757;
+        letter-spacing: -0.8px;
+      }
+    }
+    article {
+      &.black {
+        margin-top: 15vw;
+      }
+    }
+    .product__title {
+      margin-top: 12vw;
+    }
+    .product__list {
+      margin-top: 3vw;
+      width: 84vw;
+      &.white {
+        .product__item {
+          &:nth-of-type(1),
+          &:nth-of-type(5) {
+            .product__item--info {
+              margin-left: 3.5vw;
+            }
+          }
+          &:nth-of-type(2),
+          &:nth-of-type(6) {
+            .product__item--info {
+              margin-left: 4.5vw;
+            }
+          }
+          &:nth-of-type(3),
+          &:nth-of-type(7) {
+            .product__item--info {
+              margin-left: 3.8vw;
+            }
+          }
+          &:nth-of-type(4),
+          &:nth-of-type(8) {
+            .product__item--info {
+              margin-left: 2.8vw;
+            }
+          }
+          &:nth-of-type(1),
+          &:nth-of-type(2),
+          &:nth-of-type(3),
+          &:nth-of-type(4) {
+            .product__img--wrap {
+              height: 19vw;
+            }
+            .product__item--info {
+              margin-top: 3.73vw;
+            }
+          }
+          &:nth-of-type(5),
+          &:nth-of-type(6),
+          &:nth-of-type(7),
+          &:nth-of-type(8) {
+            .product__img--wrap {
+              height: 19vw;
+            }
+            .product__item--info {
+              margin-top: 3.73vw;
+            }
+          }
+          &:nth-of-type(1) {
+            .product__img {
+              width: 17.4vw;
+            }
+          }
+          &:nth-of-type(2) {
+            .product__img {
+              width: 18.86vw;
+            }
+          }
+          &:nth-of-type(3) {
+            .product__img {
+              width: 18.06vw;
+            }
+          }
+          &:nth-of-type(4) {
+            .product__img {
+              width: 21.26vw;
+            }
+          }
+          &:nth-of-type(5) {
+            .product__img {
+              width: 18.46vw;
+            }
+          }
+          &:nth-of-type(6) {
+            .product__img {
+              width: 18.86vw;
+            }
+          }
+          &:nth-of-type(7) {
+            .product__img {
+              width: 19vw;
+            }
+          }
+          &:nth-of-type(8) {
+            .product__img {
+              width: 20.06vw;
+            }
+          }
+        }
+      }
+      &.black {
+        .product__item {
+          &:nth-of-type(1),
+          &:nth-of-type(5) {
+            .product__item--info {
+              margin-left: 1.5vw;
+            }
+          }
+          &:nth-of-type(2),
+          &:nth-of-type(6) {
+            .product__item--info {
+              margin-left: 4.5vw;
+            }
+          }
+          &:nth-of-type(3),
+          &:nth-of-type(7) {
+            .product__item--info {
+              margin-left: 3.8vw;
+            }
+          }
+          &:nth-of-type(4),
+          &:nth-of-type(8) {
+            .product__item--info {
+              margin-left: 2.8vw;
+            }
+          }
+          &:nth-of-type(1),
+          &:nth-of-type(2),
+          &:nth-of-type(3),
+          &:nth-of-type(4) {
+            .product__img--wrap {
+              height: 19vw;
+            }
+            .product__item--info {
+              margin-top: 3vw;
+            }
+          }
+          &:nth-of-type(5),
+          &:nth-of-type(6),
+          &:nth-of-type(7),
+          &:nth-of-type(8) {
+            .product__img--wrap {
+              height: 18vw;
+            }
+            .product__item--info {
+              margin-top: 3.73vw;
+            }
+          }
+          &:nth-of-type(1) {
+            .product__img {
+              width: 19.8vw;
+            }
+          }
+          &:nth-of-type(2) {
+            .product__img {
+              width: 18.73vw;
+            }
+          }
+          &:nth-of-type(3) {
+            .product__img {
+              width: 16.6vw;
+            }
+          }
+          &:nth-of-type(4) {
+            .product__img {
+              width: 19.13vw;
+            }
+          }
+          &:nth-of-type(5) {
+            .product__img {
+              width: 18.6vw;
+            }
+          }
+          &:nth-of-type(6) {
+            .product__img {
+              width: 19.66vw;
+            }
+          }
+          &:nth-of-type(7) {
+            .product__img {
+              width: 18.86vw;
+            }
+          }
+          &:nth-of-type(8) {
+            .product__img {
+              width: 18.86vw;
+            }
+          }
+        }
+      }
+    }
+    .product__item {
+      width: 25%;
+    }
+    .bnw__anchor {
+      display: block;
+      text-align: center;
+      width: 47.6vw;
+      margin: 8.5vw auto 0;
+      font-size: 3.55vw;
+      font-weight: 900;
+      color: #fff;
+      background: #9fa0a0;
+      padding: 1.3vw 0;
+      border-radius: 6px;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      -o-border-radius: 6px;
+    }
+  }
+}

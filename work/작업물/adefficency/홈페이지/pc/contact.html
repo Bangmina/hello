@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="애드이피션시, 광고대행, 홍보기획, 소프트웨어 개발, 공급, 웹사이트 구축" />
+  <meta name="description" content="Performance를 디자인하다" />
+  <meta property="og:title" content="애드이피션시" />
+  <meta property="og:description" content="Performance를 디자인하다" />
+  <!-- <meta property="og:image" content="https://welcomedirect.co.kr/banner_follow_sunshine.jpg?v=2022 07:03:45"> -->
+  <!-- <meta property="og:url" content="https://www.welcomedirect.co.kr/sunshineloan3/"> -->
+  <meta property="og:type" content="website" />
+  <title>애드이피션시_contact</title>
+  <!-- jquery  -->
+  <script src="./asset/plugIn/jquery-3.6.0.min.js"></script>
+  <!-- AOS  -->
+  <link rel="stylesheet" href="./asset/plugIn/aos/aos.css" />
+  <script src="./asset/plugIn/aos/aos.js"></script>
+  <!-- simplyscroll -->
+  <script src="./asset/plugIn/simplyscroll/jquery.simplyscroll.js"></script>
+  <link rel="stylesheet" href="./asset/plugIn/simplyscroll/jquery.simplyscroll.css" />
+  <!-- slick -->
+  <link rel="stylesheet" href="./asset/plugIn/slick/slick.css" />
+  <script src="./asset/plugIn/slick/slick.min.js"></script>
+  <!-- waypoint -->
+  <script src="./asset/plugIn/CounterUp/jquery.waypoints.min.js"></script>
+  <!-- countup -->
+  <script src="./asset/plugIn/CounterUp/jquery.counterup.min.js"></script>
+  <!-- css -->
+  <link rel="stylesheet" href="./asset/css/index.css?ver=20220502" />
+  <!-- 데이트픽커 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+    integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+    integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header class="header gnb bg_white border">
+    <div class="wrap">
+      <a href="index.html" class="header__logo--anchor">
+        <h1 class="header__logo"></h1>
+      </a>
+      <button class="menu__btn">
+        <span></span>
+      </button>
+    </div>
+  </header>
+  <main>
+    <section class="contact_title">
+      <div class="wrap">
+        <div class="content__title--box">
+          <h3 class="content__title">
+            애드이피션시와 함께
+            <br />
+            귀사의 디지털 마케팅을 완벽하게 완성시켜 보세요.
+          </h3>
+          <p class="content__description">
+            보다 정교화 된 데이터를 분석하여,
+            <br />
+            고객 타겟팅과 끊임 없는 테스트로 퍼포먼스광고의 최적화를 이루고
+            있습니다.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="contact" data-aos="fade-up">
+      <div class="wrap">
+        <article class="contact_tab contact_article">
+          <h4 class="contact__title">광고 분야</h4>
+          <ul class="contact_tab__list">
+            <li class="contact_tab__item">
+              <button class="contact_tab__item--btn active domestic" type="button">
+                국내
+              </button>
+            </li>
+            <li class="contact_tab__item">
+              <button class="contact_tab__item--btn" type="button">
+                해외
+              </button>
+            </li>
+            <li class="contact_tab__item">
+              <button class="contact_tab__item--btn" type="button">
+                재대행
+              </button>
+            </li>
+            <li class="contact_tab__item">
+              <button class="contact_tab__item--btn" type="button">
+                매체&제휴
+              </button>
+            </li>
+          </ul>
+          <p class="contact_tab__info active">
+            월평균 2천만원 이상 규모 캠페인에 대하여 상담 및 대행 가능한 점
+            사전 양해 부탁 드립니다.
+          </p>
+        </article>
+        <div class="contact_form__box">
+          <article class="contact_form contact_article">
+            <h4 class="contact__title">기본 정보</h4>
+            <div class="contact_form__wrap">
+              <ul class="contact_form__list">
+                <li class="contact_form__item">
+                  <input class="input_txt enterprise" type="text" placeholder="기관 또는 기업" />
+                </li>
+                <li class="contact_form__item">
+                  <input class="input_txt position" type="text" placeholder="이름 / 직책" />
+                </li>
+                <li class="contact_form__item">
+                  <input class="input_txt contact_number" type="text" placeholder="연락처" numberOnly
+                    onKeyUp="removeChar(event);" />
+                </li>
+                <li class="contact_form__item">
+                  <input class="input_txt contact_email" type="text" placeholder="이메일" />
+                </li>
+                <li class="contact_form__item">
+                  <input class="input_txt" type="text" placeholder="사이드 URL (선택)" />
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="contact_form contact_article">
+            <h4 class="contact__title">광고 정보</h4>
+            <div class="contact_form__wrap">
+              <ul class="contact_form__list">
+                <li class="contact_form__item">
+                  <input class="input_txt budget" type="text" placeholder="광고 예산 (월 기준)" numberOnly
+                    onKeyUp="removeChar(event);inputNumberFormat(this);" onKeyDown="inputNumberFormat(this);" />
+                </li>
+                <li class="contact_form__item">
+                  <input class="input_txt period datepicker" type="text" placeholder="집행 기간" readonly />
+                </li>
+                <li class="contact_form__item width_100">
+                  <textarea class="input_txtarea summary" name="" id="" placeholder="프로젝트 개요 (1000자 이내)" cols="30"
+                    rows="10"></textarea>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <!-- <div class="contact_private">
+            <div class="wrap">
+              <input class="" type="checkbox" id="privacyCheck" name="" />
+              <label for="privacyCheck">
+                <span
+                  ><button class="contact_private__view">
+                    개인정보보호정책</button
+                  >에 동의합니다.
+                </span>
+              </label>
+            </div>
+          </div> -->
+        <div class="contact_private">
+          <div class="wrap">
+            <div class="private">
+              <input class="" type="checkbox" id="privacyCheck" name="" />
+              <label for="privacyCheck">
+                <span>
+                  <i class="private__view">
+                    개인정보보호정책
+                  </i>
+                  에 동의합니다.
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <button class="contact__btn" type="button" onClick="contactSubmit()">
+          광고 캠페인 문의하기
+        </button>
+      </div>
+    </section>
+    <section class="contact_map">
+      <div class="wrap">
+        <div class="contact_map__box">
+          <!-- * 카카오맵 - 지도퍼가기 -->
+          <!-- 1. 지도 노드 -->
+          <div id="daumRoughmapContainer1653888728318" class="root_daum_roughmap root_daum_roughmap_landing"
+            style="width: 100%;"></div>
+
+          <!--
+              2. 설치 스크립트
+              * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+            -->
+          <script charset="UTF-8" class="daum_roughmap_loader_script"
+            src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+          <!-- 3. 실행 스크립트 -->
+          <script charset="UTF-8">
+            new daum.roughmap.Lander({
+              timestamp: '1653888728318',
+              key: '2af9x',
+              // mapWidth: '100',
+              // mapHeight: '100',
+            }).render()
+          </script>
+        </div>
+        <div class="contact_map__box2">
+          <div class="contact_map__address">
+            <div class="big">
+              서울특별시 서초구 효령로77길 28 동오빌딩 4, 5, 6층
+            </div>
+            <div class="small">
+              4F, 5F, 6F, 28, Hyoryeong-ro 77-gil, Seocho-gu, Seoul, Korea
+            </div>
+          </div>
+          <div class="contact_map__tel">
+            <div class="big">
+              <span>T. +82 70 4651 0032</span>
+              <span>F. 02 532 0806</span>
+            </div>
+            <div class="small">contact@adef.co.kr</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__box1">
+      <div class="wrap">
+        <div class="footer__logo">
+          <img src="./asset/images/logo_white.png" alt="애드이피션시 로고" />
+        </div>
+        <div class="footer__inquiry">
+          <h6 class="footer__title">신규 광고 문의</h6>
+          <ul class="footer__inquiry_list">
+            <li class="footer__inquiry_item">
+              [ 국내 캠페인 ] (070) 4651-0032 / contact@adef.co.kr
+            </li>
+            <li class="footer__inquiry_item">
+              [글로벌 캠페인] (070) 4651-1313 / global@adef.co.kr
+            </li>
+            <li class="footer__inquiry_item">
+              [재대행 캠페인] (02) 2038-3673 / 3pm-ns@adef.co.kr
+            </li>
+          </ul>
+        </div>
+        <div class="footer__info">
+          <div class="footer__info--address">
+            <h6 class="footer__title">Address</h6>
+            <p class="footer__info--content">
+              서울특별시 강남구 효령로 77길 28, 4,5,6층
+            </p>
+          </div>
+          <div class="footer__info--contact">
+            <h6 class="footer__title">Contact</h6>
+            <div class="footer__info--content">
+              <ul class="footer__contact_list">
+                <li class="footer__contact_item">T. 070-4651-0032</li>
+                <li class="footer__contact_item">F. 02-532-0806</li>
+                <li class="footer__contact_item">E. admin1@adef.co.kr</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#" class="footer__download--company_introduce">
+            회사소개서 다운로드
+            <img src="./asset/images/ic_download.png" alt="다운로드 아이콘" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__box2">
+      <div class="wrap">
+        <div class="footer__copy">
+          ⓒ2019 애드이피션시 All rights reserved.
+        </div>
+        <div class="footer__sns">
+          <a href="https://blog.naver.com/PostList.naver?blogId=adefblog&parentCategoryNo=25"
+            class="footer__sns--anchor" target="_blank">
+            <img src="./asset/images/footer_blog.png" alt="블로그" />
+          </a>
+          <a href="https://vimeo.com/user24816466" class="footer__sns--anchor" target="_blank">
+            <img src="./asset/images/footer_v.png" alt="vimoe" />
+          </a>
+          <a href="https://www.instagram.com/adefficiency/" class="footer__sns--anchor" target="_blank">
+            <img src="./asset/images/footer_insta.png" alt="인스타그램" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <button class="btn__top"></button>
+  <nav class="nav">
+    <div class="wrap">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__item--title_anchor" href="./index.html">
+            <h3 class="nav__item--title">MAIN</h3>
+          </a>
+        </li>
+        <li class="nav__item">
+          <h3 class="nav__item--title">ABOUT</h3>
+          <ul class="nav__list_depth">
+            <li class="nav__list_depth--item">
+              <a class="nav__list_depth--anchor" href="./about.html">
+                HOW WE WORK
+              </a>
+            </li>
+            <li class="nav__list_depth--item">
+              <a class="nav__list_depth--anchor" href="./about.html">
+                LEADERSHIP
+              </a>
+            </li>
+            <li class="nav__list_depth--item">
+              <a class="nav__list_depth--anchor" href="./about.html">
+                OUR TEAM
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav__item">
+          <h3 class="nav__item--title">WORK</h3>
+          <ul class="nav__list_depth">
+            <li class="nav__list_depth--item">
+              <a class="nav__list_depth--anchor" href="./work.html">KOREA</a>
+            </li>
+            <li class="nav__list_depth--item">
+              <a class="nav__list_depth--anchor" href="./work.html">GLOBAL</a>
+            </li>
+            <li class="nav__list_depth--item">
+              <a class="nav__list_depth--anchor" href="./meta.html">META</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav__item">
+          <a class="nav__item--title_anchor" href="./portfolio.html">
+            <h3 class="nav__item--title">PORTFOLIO</h3>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__item--title_anchor" href="./contact.html">
+            <h3 class="nav__item--title">CONTACT</h3>
+          </a>
+        </li>
+        <li class="nav__item">
+          <h3 class="nav__item--title">CAREERS</h3>
+          <ul class="nav__list_depth">
+            <li class="nav__list_depth--item">
+              <a class="nav__list_depth--anchor" href="./careers_inside.html">
+                Inside
+              </a>
+            </li>
+            <li class="nav__list_depth--item">
+              <a class="nav__list_depth--anchor" href="./careers_recruit.html">
+                Recruit
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</body>
+<script src="./asset/js/common.js"></script>
+<script>
+  // 문의하기 유효성 검사
+  function contactSubmit() {
+    const contactPhone = $('.input_txt.contact_number').val()
+    const contactEmail = $('.input_txt.contact_email').val()
+    // 유효성검사 정규식(연락처/이메일)
+    const regPhone = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/
+    const regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/
+
+    // 기관 입력 여부
+    if ($('.input_txt.enterprise').val() == '') {
+      alert('기관 또는 기업명을 입력해주세요.')
+      $('.input_txt.enterprise').focus()
+      return false
+    }
+    // 이름/직책 입력 여부
+    if ($('.input_txt.position').val() == '') {
+      alert('이름/직책을 입력해주세요.')
+      $('.input_txt.position').focus()
+      return false
+    }
+    // 연락처 입력 여부
+    if ($('.input_txt.contact_number').val() == '') {
+      alert('연락처를 입력해주세요.')
+      $('.input_txt.contact_number').focus()
+      return false
+    }
+    //연락처 유효성
+    if (!regPhone.test(contactPhone)) {
+      alert('잘못된 연락처 입니다. 다시 입력해주세요.')
+      $('.input_txt.contact_number').focus()
+      return false
+    }
+    // 이메일 입력 여부
+    if ($('.input_txt.contact_email').val() == '') {
+      alert('이메일을 입력해주세요.')
+      $('.input_txt.contact_email').focus()
+      return false
+    }
+    // 이메일 유효성
+    if (!regEmail.test(contactEmail)) {
+      alert('잘못된 이메일 입니다. 다시 입력해주세요.')
+      $('.input_txt.contact_email').focus()
+      return false
+    }
+    // 광고예산 입력 여부
+    if ($('.input_txt.budget').val() == '') {
+      alert('광고예산을 입력해주세요.')
+      $('.input_txt.budget').focus()
+      return false
+    }
+    // 집행기간 입력 여부
+    if ($('.input_txt.period').val() == '') {
+      alert('집행기간을 입력해주세요.')
+      $('.input_txt.period').focus()
+      return false
+    }
+    // 프로젝트 개요 입력 여부
+    if ($('.input_txtarea.summary').val() == '') {
+      alert('프로젝트개요를 입력해주세요.')
+      $('.input_txtarea.summary').focus()
+      return false
+    }
+    // 개인정보 체크 alert
+    if (!$('#privacyCheck').is(':checked')) {
+      alert('개인정보 보호 정책에 동의해주세요.')
+      return false
+    } else {
+      // 문의완료
+      alert('문의완료 되었습니다.')
+      location.reload()
+    }
+  }
+
+  $(function () {
+    // tab 버튼 활성화
+    $('.contact_tab__item--btn').on('click', function () {
+      $('.contact_tab__item--btn').removeClass('active')
+      $(this).addClass('active')
+      // 국내일뗴 안내문자 노출
+      if ($(this).hasClass('domestic')) {
+        $('.contact_tab__info').stop().fadeIn()
+      } else {
+        $('.contact_tab__info').stop().fadeOut()
+      }
+    })
+  })
+
+    // 유효성 검사
+</script>
+
+</html>

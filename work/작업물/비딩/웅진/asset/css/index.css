@@ -1,0 +1,110 @@
+@charset "utf-8";
+.section__img {
+	width: 100%;
+}
+.nav__list {
+	position: fixed;
+	z-index: 10;
+	top: 50%;
+	left: 10%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	border: 1px solid #555555;
+}
+.banner__side {
+	position: absolute;
+	top: 250px;
+	right: 3.8%;
+}
+/* .banner__side {
+    position: fixed;
+    z-index: 10;
+    top:50%;
+    right: 3.8%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+} */
+.nav__item--anchor {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 103px;
+	height: 69px;
+	background: #fff;
+	cursor: pointer;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s;
+}
+.nav__item:not(:last-child) {
+	border-bottom: 1px solid #555555;
+}
+.nav__item--icon1 {
+	width: 39px;
+	height: 28px;
+	background: url("../images/icon_off_1.png") no-repeat;
+}
+.nav__item--icon2 {
+	width: 23px;
+	height: 27px;
+	background: url("../images/icon_off_2.png") no-repeat;
+}
+.nav__item--icon3 {
+	width: 29px;
+	height: 29px;
+	background: url("../images/icon_off_3.png") no-repeat;
+}
+.nav__item--icon4 {
+	width: 27px;
+	height: 28px;
+	background: url("../images/icon_off_4.png") no-repeat;
+}
+.nav__item--icon5 {
+	width: 32px;
+	height: 25px;
+	background: url("../images/icon_off_5.png") no-repeat;
+}
+.nav__item--icon6 {
+	width: 31px;
+	height: 27px;
+	background: url("../images/icon_off_6.png") no-repeat;
+}
+.nav__item--anchor.active {
+	background: #fb6a01;
+}
+.nav__item--anchor.active .nav__item--txt {
+	color: #ffffff;
+}
+.nav__item--anchor.active .nav__item--icon1 {
+	background: url("../images/icon_on_1.png") no-repeat;
+}
+.nav__item--anchor.active .nav__item--icon2 {
+	background: url("../images/icon_on_2.png") no-repeat;
+}
+.nav__item--anchor.active .nav__item--icon3 {
+	background: url("../images/icon_on_3.png") no-repeat;
+}
+.nav__item--anchor.active .nav__item--icon4 {
+	background: url("../images/icon_on_4.png") no-repeat;
+}
+.nav__item--anchor.active .nav__item--icon5 {
+	background: url("../images/icon_on_5.png") no-repeat;
+}
+.nav__item--anchor.active .nav__item--icon6 {
+	background: url("../images/icon_on_6.png") no-repeat;
+}
+.nav__item--txt {
+	margin-top: 7px;
+	font-size: 10px;
+	color: #555555;
+	font-weight: 700;
+}

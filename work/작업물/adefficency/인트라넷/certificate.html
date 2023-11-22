@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>certificate</title>
+	<!-- 공통  -->
+	<!-- jquery -->
+	<script src="asset/plugIn/jquery-3.6.0.min.js"></script>
+	<!-- plugin simplebar -->
+	<link rel="stylesheet" href="./asset/plugIn/simplebar/simplebar.css" />
+	<script src="./asset/plugIn/simplebar/simplebar.js"></script>
+	<!-- plugin datepicker -->
+	<link rel="stylesheet" href="./asset/plugIn/bootstrap-datepicker/bootstrap.min.css" />
+	<link rel="stylesheet" href="./asset/plugIn/bootstrap-datepicker/bootstrap-datepicker.css" />
+	<script src="./asset/plugIn/bootstrap-datepicker/bootstrap.min.js"></script>
+	<script src="./asset/plugIn/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+	<script src="./asset/plugIn/bootstrap-datepicker/bootstrap-datepicker.ko.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+	<link rel="apple-touch-icon" sizes="76x76" href="./favicon.png" />
+	<link rel="stylesheet" href="./asset/css/reset.css" />
+	<link rel="stylesheet" href="./asset/css/common.css" />
+	<link rel="stylesheet" href="./asset/css/index.css" />
+
+	<link rel="stylesheet" href="./asset/css/certificate.css">
+
+<body>
+	<aside class="aside">
+		<div class="aside__top">
+			<h1 class="aside__logo">
+				<img src="./asset/images/logo.png" alt="로고" />
+			</h1>
+			<article class="aside__profile">
+				<div class="aside__profile--picture"></div>
+				<p class="aside__profile--name">김다영</p>
+				<div class="aside__profile--btn_box">
+					<button class="aside__profile--btn_setting">
+						<img src="./asset/images/ic_setting.png" alt="정보관리" />
+					</button>
+					<button class="aside__profile--btn_logout">
+						<img src="./asset/images/ic_logout.png" alt="로그아웃" />
+					</button>
+				</div>
+			</article>
+			<button class="aside__mobile--menu">
+				<span></span>
+			</button>
+		</div>
+		<nav class="nav">
+			<ul class="nav_depth1__list" id="nav">
+				<li class="nav_depth1__item">
+					<a class="nav_depth1__item--anchor" href="#">
+						<i class="nav_depth1__item--icon member"></i>
+						사원목록
+					</a>
+				</li>
+				<li class="nav_depth1__item">
+					<a class="nav_depth1__item--anchor" href="#">
+						<i class="nav_depth1__item--icon affywiki"></i>
+						애피위키
+					</a>
+				</li>
+				<li class="nav_depth1__item depth">
+					<a class="nav_depth1__item--anchor" href="#">
+						<i class="nav_depth1__item--icon list"></i>
+						주요목록
+						<i class="nav_depth1__item--arrow"></i>
+					</a>
+					<ul class="nav_depth2__list">
+						<li class="nav_depth2__item">
+							<a class="nav_depth2__item--anchor" href="#">
+								ADEF 주요목록
+							</a>
+						</li>
+						<li class="nav_depth2__item">
+							<a class="nav_depth2__item--anchor" href="#"> 광고주목록 </a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav_depth1__item depth">
+					<a class="nav_depth1__item--anchor" href="#">
+						<i class="nav_depth1__item--icon icon__board"></i>
+						게시판
+						<i class="nav_depth1__item--arrow"></i>
+					</a>
+					<ul class="nav_depth2__list">
+						<li class="nav_depth2__item">
+							<a class="nav_depth2__item--anchor" href="#">IT 요청</a>
+						</li>
+						<li class="nav_depth2__item">
+							<a class="nav_depth2__item--anchor" href="#">BIGData 요청</a>
+						</li>
+						<li class="nav_depth2__item">
+							<a class="nav_depth2__item--anchor" href="#">CR 업무지원요청</a>
+						</li>
+						<li class="nav_depth2__item">
+							<a class="nav_depth2__item--anchor" href="#">FB 업무지원</a>
+						</li>
+						<li class="nav_depth2__item">
+							<a class="nav_depth2__item--anchor" href="#">FB 공지사항</a>
+						</li>
+						<li class="nav_depth2__item">
+							<a class="nav_depth2__item--anchor" href="#">SD 업무지원</a>
+						</li>
+						<li class="nav_depth2__item">
+							<a class="nav_depth2__item--anchor" href="#">SD 공지사항</a>
+						</li>
+						<li class="nav_depth2__item">
+							<a class="nav_depth2__item--anchor" href="#">APP 업무지원</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav_depth1__item depth">
+					<a class="nav_depth1__item--anchor" href="#">
+						<i class="nav_depth1__item--icon reference"></i>
+						레퍼런스
+						<i class="nav_depth1__item--arrow"></i>
+					</a>
+					<ul class="nav_depth2__list">
+						<li class="nav_depth2__item">
+							<a class="nav_depth2__item--anchor" href="#"> CR REF </a>
+						</li>
+						<li class="nav_depth2__item">
+							<a class="nav_depth2__item--anchor" href="#"> MEDIA REF </a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav_depth1__item depth">
+					<a class="nav_depth1__item--anchor" href="#">
+						<i class="nav_depth1__item--icon etc"></i>
+						기타
+						<i class="nav_depth1__item--arrow"></i>
+					</a>
+					<ul class="nav_depth2__list">
+						<li class="nav_depth2__item">
+							<a class="nav_depth2__item--anchor" href="#">
+								광고비 모니터링
+							</a>
+						</li>
+						<li class="nav_depth2__item">
+							<a class="nav_depth2__item--anchor" href="#"> CODE 관리 </a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav_depth1__item">
+					<a class="nav_depth1__item--anchor" href="#">
+						<i class="nav_depth1__item--icon solution"></i>
+						사내솔루션
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</aside>
+	<main class="main certificate">
+
+		<section class="board content" id="">
+			<h2 class="content__title">자격증관리</h2>
+			<!-- 상단폼 -->
+			<section class="form">
+				<div>
+					<ul class="form_chk__list">
+						<li>
+							<div class="view_form__check">
+								<input id="certificateChk1" class="form__input--check" type="checkbox">
+								<label for="certificateChk1" class="form__label--check">GCP_GCP_GCP_GCP_GCP_GCP_</label>
+							</div>
+						</li>
+						<li>
+							<div class="view_form__check">
+								<input id="certificateChk2" class="form__input--check" type="checkbox">
+								<label for="certificateChk2" class="form__label--check">GCP_</label>
+							</div>
+						</li>
+						<li>
+							<div class="view_form__check">
+								<input id="certificateChk3" class="form__input--check" type="checkbox">
+								<label for="certificateChk3" class="form__label--check">GCP_</label>
+							</div>
+						</li>
+						<li>
+							<div class="view_form__check">
+								<input id="certificateChk4" class="form__input--check" type="checkbox">
+								<label for="certificateChk4" class="form__label--check">GCP_</label>
+							</div>
+						</li>
+						<li>
+							<div class="view_form__check">
+								<input id="certificateChk5" class="form__input--check" type="checkbox">
+								<label for="certificateChk5" class="form__label--check">GCP_</label>
+							</div>
+						</li>
+						<li>
+							<div class="view_form__check">
+								<input id="certificateChk6" class="form__input--check" type="checkbox">
+								<label for="certificateChk6" class="form__label--check">GCP_</label>
+							</div>
+						</li>
+						<li>
+							<div class="view_form__check">
+								<input id="certificateChk1" class="form__input--check" type="checkbox">
+								<label for="certificateChk1" class="form__label--check">구글 앱</label>
+							</div>
+						</li>
+						<li>
+							<div class="view_form__check">
+								<input id="certificateChk2" class="form__input--check" type="checkbox">
+								<label for="certificateChk2" class="form__label--check">구글 디지털 그룹</label>
+							</div>
+						</li>
+						<li>
+							<div class="view_form__check">
+								<input id="certificateChk3" class="form__input--check" type="checkbox">
+								<label for="certificateChk3" class="form__label--check">메타 블루프린트</label>
+							</div>
+						</li>
+						<li>
+							<div class="view_form__check">
+								<input id="certificateChk4" class="form__input--check" type="checkbox">
+								<label for="certificateChk4" class="form__label--check">등등</label>
+							</div>
+						</li>
+						<li>
+							<div class="view_form__check">
+								<input id="certificateChk5" class="form__input--check" type="checkbox">
+								<label for="certificateChk5" class="form__label--check">GCP_</label>
+							</div>
+						</li>
+						<li>
+							<div class="view_form__check">
+								<input id="certificateChk6" class="form__input--check" type="checkbox">
+								<label for="certificateChk6" class="form__label--check">GCP_</label>
+							</div>
+						</li>
+					</ul>
+
+				</div>
+				<form action="">
+					<div class="board_form ">
+						<!-- 왼쪽 폼 -->
+						<div class="board_form__box">
+						</div>
+						<!-- 오른쪽 폼 -->
+						<div class="board_form__box mobile_flex_two">
+							<button class="btn_purple">
+								<img src="./asset/images/ic_search.png" alt="검색아이콘">
+								조회하기
+							</button>
+							<a href="#" class="btn_orange">
+								관리자 페이지
+							</a>
+						</div>
+					</div>
+				</form>
+			</section>
+			<section class="board_wrap">
+				<div class="fixTable_wrap" style="height: 70.3vh;">
+					<!-- 헤더 영역 -->
+					<div class="fixTable_header">
+						<div class="th_row">
+							<!-- 헤더 / 좌 영역 -->
+							<div class="fixTable_th type_fix">
+								<p class="text">본부</p>
+								<p class="text">팀</p>
+								<p class="text">이름</p>
+								<p class="text">총 취득 수</p>
+							</div>
+							<!-- //헤더 / 좌 영역 -->
+
+							<!-- 헤더 / 우 영역 -->
+							<div class="fixTable_th type_move">
+								<div class="col">
+									<p class="day">GCP_디스플레이</p>
+								</div>
+								<div class="col">
+									<p class="day">GCP_동영상</p>
+								</div>
+								<div class="col">
+									<p class="day">GCP_앱</p>
+								</div>
+								<div class="col">
+									<p class="day sat">GCP_검색</p>
+								</div>
+								<div class="col">
+									<p class="day sun">GCP_GA</p>
+								</div>
+								<div class="col">
+									<p class="day">GCP_쇼핑</p>
+								</div>
+								<div class="col">
+									<p class="day">구글 앱</p>
+								</div>
+								<div class="col">
+									<p class="day">구글 디지털 구루</p>
+								</div>
+								<div class="col">
+									<p class="day">메타 블루프린트</p>
+								</div>
+								<div class="col">
+									<p class="day">카카오 기초</p>
+								</div>
+								<div class="col">
+									<p class="day">카카오 심화</p>
+								</div>
+								<div class="col">
+									<p class="day">카카오 메시지</p>
+								</div>
+								<div class="col">
+									<p class="day">애플 서치</p>
+								</div>
+								<div class="col">
+									<p class="day">크리테오</p>
+								</div>
+								<div class="col">
+									<p class="day">틱톡</p>
+								</div>
+								<div class="col">
+									<p class="day">트위터</p>
+								</div>
+								<div class="col">
+									<p class="day">앱스플라이어</p>
+								</div>
+								<div class="col">
+									<p class="day">검색광고 마케터</p>
+								</div>
+							</div>
+							<!-- //헤더 / 우 영역 -->
+						</div>
+
+					</div>
+					<!-- //헤더 영역 -->
+
+					<!-- 바디 영역 -->
+					<div class="fixTable_body">
+						<div class="row">
+							<div class="fixTable_td type_fix ">
+								<div class=" fix_table__content--fixed">
+									1본부
+								</div>
+								<div class=" fix_table__content--fixed">
+									8팀
+								</div>
+								<div class=" fix_table__content--fixed">
+									홍길동
+								</div>
+								<div class=" fix_table__content--fixed">
+									5
+								</div>
+							</div>
+							<div class="fixTable_td type_move">
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="fixTable_td type_fix ">
+								<div class=" fix_table__content--fixed">
+									1본부
+								</div>
+								<div class=" fix_table__content--fixed">
+									8팀
+								</div>
+								<div class=" fix_table__content--fixed">
+									홍길동
+								</div>
+								<div class=" fix_table__content--fixed">
+									5
+								</div>
+							</div>
+							<div class="fixTable_td type_move">
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="fixTable_td type_fix ">
+								<div class=" fix_table__content--fixed">
+									1본부
+								</div>
+								<div class=" fix_table__content--fixed">
+									8팀
+								</div>
+								<div class=" fix_table__content--fixed">
+									홍길동
+								</div>
+								<div class=" fix_table__content--fixed">
+									5
+								</div>
+							</div>
+							<div class="fixTable_td type_move">
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="fixTable_td type_fix ">
+								<div class=" fix_table__content--fixed">
+									1본부
+								</div>
+								<div class=" fix_table__content--fixed">
+									8팀
+								</div>
+								<div class=" fix_table__content--fixed">
+									홍길동
+								</div>
+								<div class=" fix_table__content--fixed">
+									5
+								</div>
+							</div>
+							<div class="fixTable_td type_move">
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="fixTable_td type_fix ">
+								<div class=" fix_table__content--fixed">
+									1본부
+								</div>
+								<div class=" fix_table__content--fixed">
+									8팀
+								</div>
+								<div class=" fix_table__content--fixed">
+									홍길동
+								</div>
+								<div class=" fix_table__content--fixed">
+									5
+								</div>
+							</div>
+							<div class="fixTable_td type_move">
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="fixTable_td type_fix ">
+								<div class=" fix_table__content--fixed">
+									1본부
+								</div>
+								<div class=" fix_table__content--fixed">
+									8팀
+								</div>
+								<div class=" fix_table__content--fixed">
+									홍길동
+								</div>
+								<div class=" fix_table__content--fixed">
+									5
+								</div>
+							</div>
+							<div class="fixTable_td type_move">
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="fixTable_td type_fix ">
+								<div class=" fix_table__content--fixed">
+									1본부
+								</div>
+								<div class=" fix_table__content--fixed">
+									8팀
+								</div>
+								<div class=" fix_table__content--fixed">
+									홍길동
+								</div>
+								<div class=" fix_table__content--fixed">
+									5
+								</div>
+							</div>
+							<div class="fixTable_td type_move">
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="fixTable_td type_fix ">
+								<div class=" fix_table__content--fixed">
+									1본부
+								</div>
+								<div class=" fix_table__content--fixed">
+									8팀
+								</div>
+								<div class=" fix_table__content--fixed">
+									홍길동
+								</div>
+								<div class=" fix_table__content--fixed">
+									5
+								</div>
+							</div>
+							<div class="fixTable_td type_move">
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="fixTable_td type_fix ">
+								<div class=" fix_table__content--fixed">
+									1본부
+								</div>
+								<div class=" fix_table__content--fixed">
+									8팀
+								</div>
+								<div class=" fix_table__content--fixed">
+									홍길동
+								</div>
+								<div class=" fix_table__content--fixed">
+									5
+								</div>
+							</div>
+							<div class="fixTable_td type_move">
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="fixTable_td type_fix ">
+								<div class=" fix_table__content--fixed">
+									1본부
+								</div>
+								<div class=" fix_table__content--fixed">
+									8팀
+								</div>
+								<div class=" fix_table__content--fixed">
+									홍길동
+								</div>
+								<div class=" fix_table__content--fixed">
+									5
+								</div>
+							</div>
+							<div class="fixTable_td type_move">
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="fixTable_td type_fix ">
+								<div class=" fix_table__content--fixed">
+									1본부
+								</div>
+								<div class=" fix_table__content--fixed">
+									8팀
+								</div>
+								<div class=" fix_table__content--fixed">
+									홍길동
+								</div>
+								<div class=" fix_table__content--fixed">
+									5
+								</div>
+							</div>
+							<div class="fixTable_td type_move">
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="fixTable_td type_fix ">
+								<div class=" fix_table__content--fixed">
+									1본부
+								</div>
+								<div class=" fix_table__content--fixed">
+									8팀
+								</div>
+								<div class=" fix_table__content--fixed">
+									홍길동
+								</div>
+								<div class=" fix_table__content--fixed">
+									5
+								</div>
+							</div>
+							<div class="fixTable_td type_move">
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="fixTable_td type_fix ">
+								<div class=" fix_table__content--fixed">
+									1본부
+								</div>
+								<div class=" fix_table__content--fixed">
+									8팀
+								</div>
+								<div class=" fix_table__content--fixed">
+									홍길동
+								</div>
+								<div class=" fix_table__content--fixed">
+									5
+								</div>
+							</div>
+							<div class="fixTable_td type_move">
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="fixTable_td type_fix ">
+								<div class=" fix_table__content--fixed">
+									1본부
+								</div>
+								<div class=" fix_table__content--fixed">
+									8팀
+								</div>
+								<div class=" fix_table__content--fixed">
+									홍길동
+								</div>
+								<div class=" fix_table__content--fixed">
+									5
+								</div>
+							</div>
+							<div class="fixTable_td type_move">
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="fixTable_td type_fix ">
+								<div class=" fix_table__content--fixed">
+									1본부
+								</div>
+								<div class=" fix_table__content--fixed">
+									8팀
+								</div>
+								<div class=" fix_table__content--fixed">
+									홍길동
+								</div>
+								<div class=" fix_table__content--fixed">
+									5
+								</div>
+							</div>
+							<div class="fixTable_td type_move">
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									12/1/2023
+								</div>
+								<div class="col">
+									-
+								</div>
+								<div class="col">
+									-
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<!-- //바디 영역 -->
+				</div>
+			</section>
+		</section>
+	</main>
+	<script src="asset/js/common.js"></script>
+	<script>
+		var myElement = document.getElementById('nav');
+		new SimpleBar(myElement, { autoHide: true });
+
+		// 틀고정 좌우 스크롤 너비값 계산 식
+		$(document).ready(function () {
+			function fixTableWidth() {
+				var th_boxWidth = $(".fixTable_header .type_fix").outerWidth();
+				var td_boxWidth = $(".fixTable_body .type_move").outerWidth();
+				$('.fixTable_body .row').width(th_boxWidth + td_boxWidth + 'px');
+				$('.fixTable_header .th_row').width(th_boxWidth + td_boxWidth + 'px');
+			}
+			fixTableWidth();
+			$(window).resize(function () {
+				fixTableWidth();
+			})
+		});
+
+		// ie 대응 스크롤
+		// var agent = navigator.userAgent.toLowerCase();
+
+		// ie 브라우저 타겟팅
+		// if (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1 || (agent.indexOf("msie") != -1)) {
+		// 	$('.fixTable_wrap').addClass('ie');
+		// }
+
+		// const container = document.querySelector('.fixTable_body'); //부모 박스
+		// const fixBox = document.querySelector('.type_fix'); // 고정 박스
+
+		// container.addEventListener('scroll', function () {
+		// 	console.log(container.scrollLeft)
+		// 	var scrollnum = container.scrollLeft + 'px'; //스크롤 위치값 px값으로 가져오기
+
+		// 	if (container.scrollLeft != 0) {
+		// 		$('.fixTable_body .type_fix').css({ "transform": 'translateX' + '(' + scrollnum + ')' }); // 스크롤이 위치값이 0이 아닐때 transform 값 변경
+		// 		$('.fixTable_th.type_move').css({ "transform": 'translateX' + '(-' + scrollnum + ')' });
+		// 	} else {
+		// 		$('.fixTable_body .type_fix').css("transform", "translateX(0)");
+		// 		$('.fixTable_th.type_move').css("transform", "translateX(0)");
+		// 	}
+		// })
+	</script>
+</body>
+
+</html>

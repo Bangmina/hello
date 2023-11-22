@@ -1,0 +1,125 @@
+/* 나눔스퀘어 */
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+/* 강원교육모두 폰트 */
+@font-face {
+  font-family: 'GangwonEduAll';
+  font-weight: 300;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff')
+      format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.ttf')
+      format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GangwonEduAll';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff')
+      format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.ttf')
+      format('truetype');
+  font-display: swap;
+}
+
+/* common */
+ul {
+  padding: 0;
+  list-style: none;
+}
+.section__txt {
+  /*
+    font-size
+    나눔스퀘어 4vw
+    강원교육모두체 4.4vw
+  */
+  font-size: 4vw;
+  /* 
+    line-height 
+    나눔스퀘어 1.6
+    강원교육모두체 1.4
+  */
+  line-height: 1.6;
+  font-family: 'nanumsquare', 'Nanum Gothic', 'Roboto', sans-serif;
+  vertical-align: baseline;
+  letter-spacing: -0.5px;
+  color: #272727;
+  font-weight: 400;
+  transform: rotate(0.04deg);
+  -webkit-transform: rotate(0.04deg);
+  -moz-transform: rotate(0.04deg);
+  -ms-transform: rotate(0.04deg);
+  -o-transform: rotate(0.04deg);
+  p {
+    &:not(:first-child) {
+      margin-top: 4vw;
+    }
+  }
+}
+.wrap {
+  padding: 0 9.8vw;
+}
+img {
+  width: 100%;
+  display: block;
+}
+.w_100 {
+  width: 100%;
+}
+.block {
+  display: block;
+}
+
+.bold {
+  font-weight: 700;
+}
+.section {
+  position: relative;
+}
+.info {
+  font-size: 4vw;
+  margin-top: 22vw;
+}
+.section2 {
+  padding: 12.66vw 0 13.33vw;
+}
+.shircket {
+  &__item {
+    &:not(:first-child) {
+      margin-top: 8vw;
+    }
+  }
+  &__item--p {
+    text-align: center;
+    margin-top: 5vw;
+  }
+  &__item--anchor {
+    position: relative;
+    padding: 1.5vw 0;
+    display: inline-block;
+    text-decoration: underline;
+    color: #000;
+    &::after {
+      // content: '';
+      // display: block;
+      // width: 100%;
+      // height: 1px;
+      // background: #000;
+      // position: absolute;
+      // bottom: 0;
+      // left: 0;
+    }
+  }
+}
+/* 230315 셔켓 */

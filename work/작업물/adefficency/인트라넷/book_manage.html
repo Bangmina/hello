@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>인트라넷-게시판_datepicker</title>
+    <!-- 공통  -->
+    <!-- jquery -->
+    <script src="asset/plugIn/jquery-3.6.0.min.js"></script>
+    <!-- plugin simplebar -->
+    <link rel="stylesheet" href="./asset/plugIn/simplebar/simplebar.css" />
+    <script src="./asset/plugIn/simplebar/simplebar.js"></script>
+    <!-- plugin datepicker -->
+    <link
+      rel="stylesheet"
+      href="./asset/plugIn/bootstrap-datepicker/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./asset/plugIn/bootstrap-datepicker/bootstrap-datepicker.css"
+    />
+    <script src="./asset/plugIn/bootstrap-datepicker/bootstrap.min.js"></script>
+    <script src="./asset/plugIn/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="./asset/plugIn/bootstrap-datepicker/bootstrap-datepicker.ko.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon.png" />
+    <link rel="stylesheet" href="./asset/css/reset.css" />
+    <link rel="stylesheet" href="./asset/css/common.css" />
+    <link rel="stylesheet" href="./asset/css/index.css" />
+  </head>
+  <body>
+    <main class="main">
+      <aside class="aside">
+        <div class="aside__top">
+          <h1 class="aside__logo">
+            <img src="./asset/images/logo.png" alt="로고" />
+          </h1>
+          <article class="aside__profile">
+            <div class="aside__profile--picture"></div>
+            <p class="aside__profile--name">김다영</p>
+            <div class="aside__profile--btn_box">
+              <button class="aside__profile--btn_setting">
+                <img src="./asset/images/ic_setting.png" alt="정보관리" />
+              </button>
+              <button class="aside__profile--btn_logout">
+                <img src="./asset/images/ic_logout.png" alt="로그아웃" />
+              </button>
+            </div>
+          </article>
+          <button class="aside__mobile--menu">
+            <span></span>
+          </button>
+        </div>
+        <nav class="nav">
+          <ul class="nav_depth1__list" id="nav">
+            <li class="nav_depth1__item">
+              <a class="nav_depth1__item--anchor" href="#">
+                <i class="nav_depth1__item--icon member"></i>
+                사원목록
+              </a>
+            </li>
+            <li class="nav_depth1__item">
+              <a class="nav_depth1__item--anchor" href="#">
+                <i class="nav_depth1__item--icon affywiki"></i>
+                애피위키
+              </a>
+            </li>
+            <li class="nav_depth1__item depth">
+              <a class="nav_depth1__item--anchor" href="#">
+                <i class="nav_depth1__item--icon list"></i>
+                주요목록
+                <i class="nav_depth1__item--arrow"></i>
+              </a>
+              <ul class="nav_depth2__list">
+                <li class="nav_depth2__item">
+                  <a class="nav_depth2__item--anchor" href="#">
+                    ADEF 주요목록
+                  </a>
+                </li>
+                <li class="nav_depth2__item">
+                  <a class="nav_depth2__item--anchor" href="#"> 광고주목록 </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav_depth1__item depth">
+              <a class="nav_depth1__item--anchor" href="#">
+                <i class="nav_depth1__item--icon icon__board"></i>
+                게시판
+                <i class="nav_depth1__item--arrow"></i>
+              </a>
+              <ul class="nav_depth2__list">
+                <li class="nav_depth2__item">
+                  <a class="nav_depth2__item--anchor" href="#">IT 요청</a>
+                </li>
+                <li class="nav_depth2__item">
+                  <a class="nav_depth2__item--anchor" href="#">BIGData 요청</a>
+                </li>
+                <li class="nav_depth2__item">
+                  <a class="nav_depth2__item--anchor" href="#"
+                    >CR 업무지원요청</a
+                  >
+                </li>
+                <li class="nav_depth2__item">
+                  <a class="nav_depth2__item--anchor" href="#">FB 업무지원</a>
+                </li>
+                <li class="nav_depth2__item">
+                  <a class="nav_depth2__item--anchor" href="#">FB 공지사항</a>
+                </li>
+                <li class="nav_depth2__item">
+                  <a class="nav_depth2__item--anchor" href="#">SD 업무지원</a>
+                </li>
+                <li class="nav_depth2__item">
+                  <a class="nav_depth2__item--anchor" href="#">SD 공지사항</a>
+                </li>
+                <li class="nav_depth2__item">
+                  <a class="nav_depth2__item--anchor" href="#">APP 업무지원</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav_depth1__item depth">
+              <a class="nav_depth1__item--anchor" href="#">
+                <i class="nav_depth1__item--icon reference"></i>
+                레퍼런스
+                <i class="nav_depth1__item--arrow"></i>
+              </a>
+              <ul class="nav_depth2__list">
+                <li class="nav_depth2__item">
+                  <a class="nav_depth2__item--anchor" href="#"> CR REF </a>
+                </li>
+                <li class="nav_depth2__item">
+                  <a class="nav_depth2__item--anchor" href="#"> MEDIA REF </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav_depth1__item depth">
+              <a class="nav_depth1__item--anchor" href="#">
+                <i class="nav_depth1__item--icon etc"></i>
+                기타
+                <i class="nav_depth1__item--arrow"></i>
+              </a>
+              <ul class="nav_depth2__list">
+                <li class="nav_depth2__item">
+                  <a class="nav_depth2__item--anchor" href="#">
+                    광고비 모니터링
+                  </a>
+                </li>
+                <li class="nav_depth2__item">
+                  <a class="nav_depth2__item--anchor" href="#"> CODE 관리 </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav_depth1__item">
+              <a class="nav_depth1__item--anchor" href="#">
+                <i class="nav_depth1__item--icon solution"></i>
+                사내솔루션
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <section class="board board2 content" id="addf">
+        <h2 class="content__title">Affy Library</h2>
+        <!-- 게시판 탭 -->
+        <article class="content_tab m-b-10 flex">
+          <ul class="content_tab__list">
+            <li class="content_tab__item active">
+              <a class="content_tab__item--anchor" href="#">관리자 목록</a>
+            </li>
+            <li class="content_tab__item">
+              <a class="content_tab__item--anchor" href="#">통계</a>
+            </li>
+            <li class="content_tab__item">
+              <a class="content_tab__item--anchor" href="#">도서리스트</a>
+            </li>
+          </ul>
+        </article>
+        <section class="board_wrap">
+          <!-- 게시판 상단 폼 -->
+          <form action="">
+            <article class="board_form">
+              <!-- 폼 왼쪽 -->
+              <div class="board_form__box">
+                <div class="mobile_flex_one">
+                  <select class="board__select" name="" id="">
+                    <option value="">카테고리</option>
+                  </select>
+                </div>
+                <div class="mobile_flex_one">
+                  <select class="board__select" name="" id="">
+                    <option value="">대여상태</option>
+                  </select>
+                </div>
+                <div class="mobile_flex_one">
+                  <input
+                    class="board__input adcost"
+                    type="text"
+                    placeholder="※ 도서명 및 저자 검색"
+                  />
+                </div>
+                <div class="mobile_flex_one">
+                  <button class="btn_grey">
+                    <img src="./asset/images/ic_search.png" alt="아이콘" />검색
+                  </button>
+                </div>
+              </div>
+              <!-- 폼 오른쪽 -->
+              <div class="board_form__box mobile_flex_one">
+                <button class="btn_grey">일괄 반납</button>
+                <button class="btn_purple">신규등록</button>
+              </div>
+            </article>
+          </form>
+          <!-- 게시판 테이블 -->
+          <section class="board_table__wrap adcost">
+            <table class="board_table">
+              <thead>
+                <tr>
+                  <th>전체</th>
+                  <th>대여일</th>
+                  <th>반납예정일</th>
+                  <th>실 반납일</th>
+                  <th>반납 Y/N</th>
+                  <th>대여자</th>
+                  <th>제목</th>
+                  <th>반납처리자</th>
+                  <th>반납처리</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="mobile_flex_two">
+                    <div class="board_table__title">전체</div>
+                    <div class="board_table__content">
+                      <div class="view_form__check board__check">
+                        <input
+                          id="isritual"
+                          class="form__input--check"
+                          type="checkbox"
+                          name="isritual"
+                        />
+                        <label
+                          for="isritual"
+                          class="form__label--check"
+                        ></label>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="mobile_flex_two">
+                    <div class="board_table__title">대여일</div>
+                    <div class="board_table__content">2021-09-27</div>
+                  </td>
+                  <td class="mobile_flex_two">
+                    <div class="board_table__title">반납예정일</div>
+                    <div class="board_table__content mobile_column">
+                      2021-09-27
+                    </div>
+                  </td>
+                  <td class="mobile_flex_two">
+                    <div class="board_table__title">실 반납일</div>
+                    <div class="board_table__content">
+                      <a href="#">2021-09-27</a>
+                    </div>
+                  </td>
+                  <td class="mobile_flex_two">
+                    <div class="board_table__title">반납 Y/N</div>
+                    <div class="board_table__content">Y</div>
+                  </td>
+                  <td class="mobile_flex_two">
+                    <div class="board_table__title">대여자</div>
+                    <div class="board_table__content">박정이</div>
+                  </td>
+                  <td class="mobile_flex_two">
+                    <div class="board_table__title">제목</div>
+                    <div class="board_table__content">
+                      <span class="recommendation">추천도서</span>
+                      끌리는 말투 호감 가는 말투
+                    </div>
+                  </td>
+                  <td class="mobile_flex_two">
+                    <div class="board_table__title">반납처리자</div>
+                    <div class="board_table__content">김미림</div>
+                  </td>
+                  <td class="mobile_flex_two">
+                    <div class="board_table__title">반납처리</div>
+                    <div class="board_table__content"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="mobile_flex_two">
+                    <div class="board_table__title">전체</div>
+                    <div class="board_table__content">
+                      <div class="view_form__check board__check">
+                        <input
+                          id="isritual"
+                          class="form__input--check"
+                          type="checkbox"
+                          name="isritual"
+                        />
+                        <label
+                          for="isritual"
+                          class="form__label--check"
+                        ></label>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="mobile_flex_two">
+                    <div class="board_table__title">대여일</div>
+                    <div class="board_table__content">2021-09-27</div>
+                  </td>
+                  <td class="mobile_flex_two">
+                    <div class="board_table__title">반납예정일</div>
+                    <div class="board_table__content mobile_column">
+                      2021-09-27
+                    </div>
+                  </td>
+                  <td class="mobile_flex_two">
+                    <div class="board_table__title">실 반납일</div>
+                    <div class="board_table__content">
+                      <a href="#">-</a>
+                    </div>
+                  </td>
+                  <td class="mobile_flex_two">
+                    <div class="board_table__title">반납 Y/N</div>
+                    <div class="board_table__content">N</div>
+                  </td>
+                  <td class="mobile_flex_two">
+                    <div class="board_table__title">대여자</div>
+                    <div class="board_table__content">박정이</div>
+                  </td>
+                  <td class="mobile_flex_two">
+                    <div class="board_table__title">제목</div>
+                    <div class="board_table__content">
+                      <span class="newbook">신간도서</span>
+                      끌리는 말투 호감 가는 말투
+                    </div>
+                  </td>
+                  <td class="mobile_flex_two">
+                    <div class="board_table__title">반납처리자</div>
+                    <div class="board_table__content">김미림</div>
+                  </td>
+                  <td class="mobile_flex_two">
+                    <div class="board_table__title">반납처리</div>
+                    <div class="board_table__content">
+                      <button class="btn_light_grey bold">반납</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <!-- 페이지네이션 -->
+          <article class="pagenation">
+            <ul class="pagenation__list">
+              <li class="pagenation__item">
+                <a class="pagenation__anchor pre arrow" href="#">&lt;</a>
+              </li>
+              <li class="pagenation__item">
+                <a class="pagenation__anchor num active" href="#">1</a>
+              </li>
+              <li class="pagenation__item">
+                <a class="pagenation__anchor num" href="#">2</a>
+              </li>
+              <li class="pagenation__item">
+                <a class="pagenation__anchor num" href="#">3</a>
+              </li>
+              <li class="pagenation__item">
+                <a class="pagenation__anchor num" href="#">4</a>
+              </li>
+              <li class="pagenation__item">
+                <a class="pagenation__anchor num" href="#">5</a>
+              </li>
+              <li class="pagenation__item">
+                <a class="pagenation__anchor next arrow" href="#">&gt;</a>
+              </li>
+            </ul>
+          </article>
+        </section>
+      </section>
+    </main>
+    <script src="asset/js/common.js"></script>
+  </body>
+</html>

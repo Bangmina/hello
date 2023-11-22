@@ -1,0 +1,124 @@
+@import "../../styles/index.scss";
+//
+.container {
+	&__template {
+		position: relative;
+		width: 100%;
+		background: $grayscale-7;
+		overflow-y: auto;
+		color: #fff;
+	}
+	&__bg--line--box {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+	&__line {
+		display: block;
+		position: absolute;
+		width: 1px;
+		height: 100%;
+		background: rgba(255, 255, 255, 0.05);
+		&:nth-of-type(1) {
+			left: 16.66%;
+		}
+		&:nth-of-type(2) {
+			left: 33.32%;
+		}
+		&:nth-of-type(3) {
+			left: 50%;
+		}
+		&:nth-of-type(4) {
+			left: 66.66%;
+		}
+		&:nth-of-type(5) {
+			left: 83.33%;
+		}
+	}
+}
+//
+.section {
+	&__template {
+		position: relative;
+		padding: 10rem 0;
+		left: 0;
+		top: 0;
+	}
+}
+//
+
+.common {
+	&__title--box {
+		text-align: center;
+	}
+	&__title {
+		font-size: 4.5rem;
+	}
+	&__subtitle {
+		margin: 1rem 0 0 0;
+		font-size: 1.6rem;
+		font-weight: 300;
+	}
+}
+//
+.profile {
+	&__title {
+		color: $orange;
+		font-size: 1.8rem;
+		font-weight: bold;
+		margin: 5rem 0 2rem 0;
+	}
+	&__subtitle {
+		margin: 0 0 1.5rem 0;
+		font-size: 1.6rem;
+	}
+	&__info--wrap {
+		display: flex;
+	}
+	&__info--title--box {
+		margin: 0 4rem 0 0;
+	}
+	&__info--content,
+	&__info--title {
+		&:not(:last-child) {
+			margin: 0 0 1.5rem 0;
+		}
+	}
+	&__info--date--wrap {
+		display: flex;
+		flex-direction: column;
+		margin: 0 0 3rem 0;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__info--date--box {
+		font-size: 1.8rem;
+	}
+	&__info--date--title {
+		font-weight: bold;
+		.date {
+			font-size: 1.4rem;
+			margin: 0 0 0 1rem;
+			color: $grayscale-5;
+		}
+	}
+	&__info--date--content {
+		margin: 1rem 0 0 0;
+		font-size: 1.4rem;
+	}
+	&__info--list--wrap {
+		padding: 0 0 0 1rem;
+		list-style: disc;
+		li {
+			padding: 0 0 0 1rem;
+			margin: 0 0 1rem 0;
+		}
+	}
+}
+///
+.color-orange {
+	color: $orange;
+}

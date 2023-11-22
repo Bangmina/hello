@@ -1,0 +1,173 @@
+@import "../../../styles/index.scss";
+
+.ci {
+  &__logo--box,
+  &__font--box {
+    position: relative;
+  }
+  &__logo--box {
+    margin-bottom: 3rem;
+  }
+  &__logo--img,
+  &__font--img {
+    position: absolute;
+    left: -5rem;
+    width: 3rem;
+    opacity: 0.5;
+  }
+  &__logo1-box {
+    display: flex;
+    margin: 0 auto;
+  }
+  &__content--wrap {
+    display: flex;
+    justify-content: space-between;
+    > li {
+      display: flex;
+      padding: 5rem;
+      width: calc(50% - 1rem);
+      min-height: 17.5rem;
+      border: 1px solid $orange;
+      background: $grayscale-7;
+    }
+  }
+  &__content--logo1 {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo2-box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    li {
+      width: 23%;
+      &:not(:last-child) {
+        margin-right: 2.66%;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__logo1--img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 5rem 0 0;
+    img {
+      width: 10rem;
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 1px;
+      background: $grayscale-6;
+      height: 100%;
+      top: 0;
+      right: -2.5rem;
+    }
+  }
+  &__logo1--point {
+    display: flex;
+    align-items: center;
+  }
+  &__font--txt {
+    font-size: 5rem;
+    margin: 0 0 0 3rem;
+  }
+  &__font {
+    background: $orange;
+    padding: 2rem 0;
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+  }
+  &__content--font {
+    display: flex;
+  }
+  &__font--wrap {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+}
+
+// 1099px
+@media only screen and (max-width: 1099px) {
+  .ci {
+    &__logo--box {
+      margin: 0;
+    }
+    &__content--wrap {
+      padding-bottom: 0;
+      flex-direction: column;
+      align-items: center;
+      > li {
+        width: 90%;
+        &:first-child {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+    &__logo2-box {
+      li {
+        width: 18%;
+        max-width: 100px;
+      }
+    }
+    &logo1--img {
+      margin: 0;
+    }
+    &__content--wrap {
+      padding: 3rem 3rem 0 3rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 763px) {
+  .ci {
+    &__content--wrap {
+      & > li {
+        padding: 0 2rem;
+      }
+    }
+
+    &__font--txt {
+      font-size: 4rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .ci {
+    &__logo--img,
+    &__font--img {
+      display: none;
+    }
+    &__content--wrap {
+      > li {
+        width: 135%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .ci {
+    &__content--wrap {
+      > li {
+        width: 100%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 350px) {
+  .ci {
+    &__font--txt {
+      font-size: 3rem;
+    }
+  }
+}

@@ -1,0 +1,287 @@
+@charset "UTF-8";
+/* font */
+/* 나눔스퀘어 
+Light 300
+Regular 400
+Bold 700
+ExtraBold 800*/
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+/* 
+  애플 산돌고딕
+  Thin 100
+  UltraLight 200
+  Light 300
+  Medium 400
+  Regular 500
+  SemiBold 600
+  Bold 700
+  ExtraBold 800
+  Heavy 900
+*/
+@import url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/css/all.css");
+/* 강원교육모두 폰트 300/400 */
+@font-face {
+  font-family: "GangwonEduAll";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "GangwonEduAll";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.ttf") format("truetype");
+  font-display: swap;
+}
+/* reset */
+.adef_webzine div,
+.adef_webzine span,
+.adef_webzine applet,
+.adef_webzine object,
+.adef_webzine iframe,
+.adef_webzine h1,
+.adef_webzine h2,
+.adef_webzine h3,
+.adef_webzine h4,
+.adef_webzine h5,
+.adef_webzine h6,
+.adef_webzine p,
+.adef_webzine blockquote,
+.adef_webzine pre,
+.adef_webzine a,
+.adef_webzine abbr,
+.adef_webzine acronym,
+.adef_webzine address,
+.adef_webzine big,
+.adef_webzine cite,
+.adef_webzine code,
+.adef_webzine del,
+.adef_webzine dfn,
+.adef_webzine em,
+.adef_webzine img,
+.adef_webzine ins,
+.adef_webzine kbd,
+.adef_webzine q,
+.adef_webzine s,
+.adef_webzine samp,
+.adef_webzine small,
+.adef_webzine strike,
+.adef_webzine strong,
+.adef_webzine sub,
+.adef_webzine sup,
+.adef_webzine tt,
+.adef_webzine var,
+.adef_webzine b,
+.adef_webzine u,
+.adef_webzine i,
+.adef_webzine center,
+.adef_webzine dl,
+.adef_webzine dt,
+.adef_webzine dd,
+.adef_webzine ol,
+.adef_webzine ul,
+.adef_webzine li,
+.adef_webzine fieldset,
+.adef_webzine form,
+.adef_webzine label,
+.adef_webzine legend,
+.adef_webzine table,
+.adef_webzine caption,
+.adef_webzine tbody,
+.adef_webzine tfoot,
+.adef_webzine thead,
+.adef_webzine tr,
+.adef_webzine th,
+.adef_webzine td,
+.adef_webzine article,
+.adef_webzine aside,
+.adef_webzine canvas,
+.adef_webzine details,
+.adef_webzine embed,
+.adef_webzine figure,
+.adef_webzine figcaption,
+.adef_webzine footer,
+.adef_webzine header,
+.adef_webzine hgroup,
+.adef_webzine menu,
+.adef_webzine nav,
+.adef_webzine output,
+.adef_webzine ruby,
+.adef_webzine section,
+.adef_webzine summary,
+.adef_webzine time,
+.adef_webzine mark,
+.adef_webzine audio,
+.adef_webzine video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-family: "Apple SD Gothic Neo", "NanumSquare", "Noto Sans KR", "Nanum Gothic", "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 4vw;
+  line-height: 1.6;
+  letter-spacing: -0.5px;
+  color: #2f2f2f;
+  vertical-align: baseline;
+}
+.adef_webzine article,
+.adef_webzine aside,
+.adef_webzine details,
+.adef_webzine figcaption,
+.adef_webzine figure,
+.adef_webzine footer,
+.adef_webzine header,
+.adef_webzine hgroup,
+.adef_webzine menu,
+.adef_webzine nav,
+.adef_webzine section {
+  display: block;
+}
+.adef_webzine ol,
+.adef_webzine ul {
+  list-style: none;
+  padding: 0;
+}
+.adef_webzine blockquote,
+.adef_webzine q {
+  quotes: none;
+}
+.adef_webzine blockquote:before,
+.adef_webzine blockquote:after,
+.adef_webzine q:before,
+.adef_webzine q:after {
+  content: "";
+  content: none;
+}
+.adef_webzine table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.adef_webzine button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.adef_webzine a {
+  text-decoration: none;
+}
+
+/* common */
+.adef_webzine {
+  padding-bottom: 11.35vw;
+}
+.adef_webzine .wrap {
+  padding: 0 7vw;
+}
+.adef_webzine img {
+  width: 100%;
+  display: block;
+}
+.adef_webzine .bold {
+  font-weight: 700;
+}
+.adef_webzine .section {
+  position: relative;
+}
+.adef_webzine .info {
+  font-size: 4vw;
+  margin-top: 22vw;
+  transform: rotate(0.04deg);
+  -webkit-transform: rotate(0.04deg);
+  -moz-transform: rotate(0.04deg);
+  -ms-transform: rotate(0.04deg);
+  -o-transform: rotate(0.04deg);
+}
+.adef_webzine .section__txt {
+  vertical-align: baseline;
+  text-align: justify;
+  position: relative;
+  transform: rotate(0.04deg);
+  -webkit-transform: rotate(0.04deg);
+  -moz-transform: rotate(0.04deg);
+  -ms-transform: rotate(0.04deg);
+  -o-transform: rotate(0.04deg);
+}
+.adef_webzine .section__txt p:not(:first-child) {
+  margin-top: 3vw;
+}
+
+/* 유니클로_양말_230323 */
+.adef_webzine .red {
+  color: #950502;
+}
+.adef_webzine .section1 {
+  padding: 19.35vw 0 0;
+}
+.adef_webzine .section1 .socks_img1 {
+  margin: 6.65vw auto;
+  width: 76.8vw;
+}
+.adef_webzine .section1 .bg_white {
+  position: relative;
+  width: 90.65vw;
+  margin: 0 auto;
+  background: #fff;
+  z-index: 2;
+  box-sizing: border-box;
+}
+.adef_webzine .section1 .bg_white .section__txt {
+  position: relative;
+  margin-top: 20vw;
+  box-sizing: border-box;
+  padding: 0 4.34vw 10.95vw;
+}
+.adef_webzine .section1 .bg_white .section__txt::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  top: -10vw;
+}
+.adef_webzine .section2 {
+  margin-top: -15vw;
+}
+.adef_webzine .section2 .box1 {
+  margin-top: 29.35vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.adef_webzine .section2 .box1 .section__txt {
+  padding-right: 4vw;
+}
+.adef_webzine .section2 .box1 .section__txt p {
+  line-height: 1.44;
+}
+.adef_webzine .section2 .box1 .section__txt p.red {
+  font-weight: 600;
+}
+.adef_webzine .section2 .box1 .socks_img1 {
+  width: 40.93vw;
+}
+.adef_webzine .section2 .section__txt.two {
+  margin-top: 5vw;
+}
+.adef_webzine .section2 .section__txt.three {
+  margin-top: 10.65vw;
+}
+.adef_webzine .section2 .socks_img2 {
+  margin: 8.65vw auto 0;
+  width: 91.26vw;
+  transform: translateX(2.6vw);
+  -webkit-transform: translateX(2.6vw);
+  -moz-transform: translateX(2.6vw);
+  -ms-transform: translateX(2.6vw);
+  -o-transform: translateX(2.6vw);
+}
+.adef_webzine .section2 .socks_img3 {
+  margin-top: 11.35vw;
+}/*# sourceMappingURL=index.css.map */

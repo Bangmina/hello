@@ -1,0 +1,41 @@
+// 'Roboto'
+// thin 100 / light 300 / regular 400 / medium 500 / bold 700 / black 900
+@import '../fonts/Roboto/font_roboto.css';
+
+// 'Noto Sans KR'
+// thin 100 / light 300 / regular 400 / medium 500 / bold 700 / black 900
+@import '../fonts/notoSansKr/css/noto-sans-korean.css';
+
+// 'Nanum Gothic'
+// regular 400 / bold 700 / Extra-bold 800
+@import '../fonts/NanumGothic/NanumGothic.css';
+
+// 'NanumSquare'
+// light 300 / normal 400 / bold 700 / bolder 800
+@import '../fonts/NanumSquare/nanumsquare.css';
+
+// 'Welcome'
+@font-face {
+  font-family: 'Welcome';
+  font-weight: 700;
+  src: url(../fonts/welcome/welcome_Bold.woff2) format('woff2');
+  src: url(../fonts/welcome/welcome_Bold.woff) format('woff');
+  src: url(../fonts/welcome/welcome_Bold.otf) format('woff');
+}
+@font-face {
+  font-family: 'Welcome';
+  font-weight: 400;
+  src: url(../fonts/welcome/welcome_Regular.woff2) format('woff2');
+  src: url(../fonts/welcome/welcome_Regular.woff) format('woff');
+  src: url(../fonts/welcome/welcome_Regular.otf) format('opentype');
+}
+
+.bold {
+  font-weight: 700;
+}
+.regular {
+  font-weight: 400;
+}
+.eb {
+  font-weight: 900;
+}

@@ -1,0 +1,563 @@
+@charset "UTF-8";
+/* font */
+/*
+  나눔스퀘어  [NanumSquare]
+  Light 300
+  Regular 400 (default)
+  Bold 700
+  ExtraBold 800
+*/
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+/*
+  [Noto Sans]
+  Thin 100
+  ExtraLight 200
+  Light 300  
+  Regular 400
+  Medium 500 (default)
+  SemiBold 600
+  Bold 700
+  ExtraBold 800
+*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* 
+  애플 산돌고딕 [Apple SD Gothic Neo]
+  Thin 100
+  UltraLight 200
+  Light 300
+  Medium 400
+  Regular 500 
+  SemiBold 600 (default)
+  Bold 700
+  ExtraBold 800
+  Heavy 900
+*/
+@import url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/css/all.css");
+/* 강원교육모두 [GangwonEduAll] 300/400 */
+@font-face {
+  font-family: "GangwonEduAll";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "GangwonEduAll";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.ttf") format("truetype");
+  font-display: swap;
+}
+/* reset */
+.adef_webzine div,
+.adef_webzine span,
+.adef_webzine applet,
+.adef_webzine object,
+.adef_webzine iframe,
+.adef_webzine h1,
+.adef_webzine h2,
+.adef_webzine h3,
+.adef_webzine h4,
+.adef_webzine h5,
+.adef_webzine h6,
+.adef_webzine p,
+.adef_webzine blockquote,
+.adef_webzine pre,
+.adef_webzine a,
+.adef_webzine abbr,
+.adef_webzine acronym,
+.adef_webzine address,
+.adef_webzine big,
+.adef_webzine cite,
+.adef_webzine code,
+.adef_webzine del,
+.adef_webzine dfn,
+.adef_webzine em,
+.adef_webzine img,
+.adef_webzine ins,
+.adef_webzine kbd,
+.adef_webzine q,
+.adef_webzine s,
+.adef_webzine samp,
+.adef_webzine small,
+.adef_webzine strike,
+.adef_webzine strong,
+.adef_webzine sub,
+.adef_webzine sup,
+.adef_webzine tt,
+.adef_webzine var,
+.adef_webzine b,
+.adef_webzine u,
+.adef_webzine i,
+.adef_webzine center,
+.adef_webzine dl,
+.adef_webzine dt,
+.adef_webzine dd,
+.adef_webzine ol,
+.adef_webzine ul,
+.adef_webzine li,
+.adef_webzine fieldset,
+.adef_webzine form,
+.adef_webzine label,
+.adef_webzine legend,
+.adef_webzine table,
+.adef_webzine caption,
+.adef_webzine tbody,
+.adef_webzine tfoot,
+.adef_webzine thead,
+.adef_webzine tr,
+.adef_webzine th,
+.adef_webzine td,
+.adef_webzine article,
+.adef_webzine aside,
+.adef_webzine canvas,
+.adef_webzine details,
+.adef_webzine embed,
+.adef_webzine figure,
+.adef_webzine figcaption,
+.adef_webzine footer,
+.adef_webzine header,
+.adef_webzine hgroup,
+.adef_webzine menu,
+.adef_webzine nav,
+.adef_webzine output,
+.adef_webzine ruby,
+.adef_webzine section,
+.adef_webzine summary,
+.adef_webzine time,
+.adef_webzine mark,
+.adef_webzine audio,
+.adef_webzine video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-family: "NanumSquare", "Noto Sans", "", "Noto Sans KR", "Nanum Gothic", "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 3.6vw;
+  line-height: 1.6;
+  letter-spacing: -0.8px;
+  color: #000000;
+  vertical-align: baseline;
+}
+.adef_webzine article,
+.adef_webzine aside,
+.adef_webzine details,
+.adef_webzine figcaption,
+.adef_webzine figure,
+.adef_webzine footer,
+.adef_webzine header,
+.adef_webzine hgroup,
+.adef_webzine menu,
+.adef_webzine nav,
+.adef_webzine section {
+  display: block;
+}
+.adef_webzine ol,
+.adef_webzine ul {
+  list-style: none;
+  padding: 0;
+}
+.adef_webzine blockquote,
+.adef_webzine q {
+  quotes: none;
+}
+.adef_webzine blockquote:before,
+.adef_webzine blockquote:after,
+.adef_webzine q:before,
+.adef_webzine q:after {
+  content: "";
+  content: none;
+}
+.adef_webzine table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.adef_webzine button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.adef_webzine a {
+  text-decoration: none;
+}
+
+/* common */
+.adef_webzine .wrap {
+  padding: 0 10vw;
+}
+.adef_webzine img {
+  width: 100%;
+  display: block;
+}
+.adef_webzine .bold {
+  font-weight: 900;
+}
+.adef_webzine .section {
+  position: relative;
+}
+.adef_webzine .buy__anchor,
+.adef_webzine .info {
+  position: relative;
+  transform: rotate(0.04deg);
+  -webkit-transform: rotate(0.04deg);
+  -moz-transform: rotate(0.04deg);
+  -ms-transform: rotate(0.04deg);
+  -o-transform: rotate(0.04deg);
+}
+.adef_webzine .buy__anchor {
+  padding: 1.5vw 0;
+  display: inline-block;
+  text-decoration: underline;
+  color: #000;
+  font-weight: 900;
+}
+.adef_webzine .buy__anchor--wrap {
+  text-align: center;
+}
+.adef_webzine .info {
+  margin-top: 14vw;
+}
+.adef_webzine .section__txt {
+  vertical-align: baseline;
+  text-align: justify;
+  transform: rotate(0.04deg);
+  -webkit-transform: rotate(0.04deg);
+  -moz-transform: rotate(0.04deg);
+  -ms-transform: rotate(0.04deg);
+  -o-transform: rotate(0.04deg);
+}
+.adef_webzine .section__txt p:not(:first-child) {
+  margin-top: 4vw;
+}
+
+/* 페이지 */
+.adef_webzine .lineup__one .lineup__see {
+  margin-top: 3vw;
+}
+.adef_webzine .lineup__two .gender__img {
+  margin-top: 6.5vw;
+}
+.adef_webzine .lineup__two .lineup__see {
+  margin-top: 0.5vw;
+}
+.adef_webzine .lineup__three .product__list.three {
+  margin-top: 4vw;
+}
+.adef_webzine .lineup__four .product__list {
+  margin-top: 5vw;
+}
+.adef_webzine .ic_gender {
+  width: 6.13vw;
+}
+.adef_webzine .airism__item {
+  width: 50%;
+  box-sizing: border-box;
+}
+.adef_webzine .airism__item--img_wrap {
+  display: flex;
+  align-items: center;
+}
+.adef_webzine .airism__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.adef_webzine .airism__list.one {
+  margin-top: 5.5vw;
+}
+.adef_webzine .airism__list.one .airism__item {
+  margin: 3.7vw 0;
+}
+.adef_webzine .airism__list.one .airism__item:nth-of-type(1) .airism__item--img_wrap, .adef_webzine .airism__list.one .airism__item:nth-of-type(2) .airism__item--img_wrap {
+  height: 92vw;
+}
+.adef_webzine .airism__list.one .airism__item:nth-of-type(3) .airism__item--img_wrap, .adef_webzine .airism__list.one .airism__item:nth-of-type(4) .airism__item--img_wrap {
+  height: 92vw;
+}
+.adef_webzine .airism__list.one .airism__item:nth-of-type(1), .adef_webzine .airism__list.one .airism__item:nth-of-type(3) {
+  padding-left: 10vw;
+}
+.adef_webzine .airism__list.one .airism__item:nth-of-type(2), .adef_webzine .airism__list.one .airism__item:nth-of-type(4) {
+  padding-left: 4vw;
+}
+.adef_webzine .airism__list.one .airism__item:nth-of-type(1) .airism__item--img_wrap img {
+  width: 25.86vw;
+}
+.adef_webzine .airism__list.one .airism__item:nth-of-type(2) .airism__item--img_wrap img {
+  width: 28.66vw;
+}
+.adef_webzine .airism__list.one .airism__item:nth-of-type(2) .airism__item--name {
+  padding-left: 2.25vw;
+}
+.adef_webzine .airism__list.one .airism__item:nth-of-type(3) .airism__item--img_wrap img {
+  width: 36.8vw;
+  margin-left: -6vw;
+}
+.adef_webzine .airism__list.one .airism__item:nth-of-type(4) .airism__item--img_wrap {
+  padding-left: 3.3vw;
+}
+.adef_webzine .airism__list.one .airism__item:nth-of-type(4) .airism__item--img_wrap img {
+  width: 30.13vw;
+}
+.adef_webzine .airism__item--name {
+  margin-top: 4.5vw;
+  line-height: 1.2;
+  font-weight: 900;
+}
+.adef_webzine .airism__item--name .ic_gender {
+  margin-bottom: 1vw;
+}
+.adef_webzine .section1 {
+  padding: 14.65vw 0 0 0;
+}
+.adef_webzine .section2 {
+  margin-top: 17.5vw;
+}
+.adef_webzine .lineup__see {
+  margin-top: 3.5vw;
+  text-align: center;
+}
+.adef_webzine .lineup__see p {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+.adef_webzine .lineup__see p span {
+  font-size: 2.9vw;
+  font-weight: 900;
+  position: relative;
+  z-index: 2;
+}
+.adef_webzine .lineup__see p::before {
+  content: "";
+  display: block;
+  width: 107%;
+  height: 2vw;
+  background: #99d8f3;
+  position: absolute;
+  bottom: 0.5vw;
+  z-index: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.adef_webzine .gender__img {
+  width: 20.26vw;
+  margin: 6vw auto 0;
+}
+.adef_webzine .lineup__title {
+  font-size: 4vw;
+  font-family: Uniqlo Pro Regular, NanumSquare Regular, Roboto, Droid Sans, Helvetica Neue, HiraKakuProN-W3, sans-serif;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #00aeef;
+}
+.adef_webzine .product__item {
+  width: 25%;
+  margin: 2vw 0;
+}
+.adef_webzine .product__item .product__img--wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.adef_webzine .product__list {
+  width: 77.33vw;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3vw;
+}
+.adef_webzine .product__list.one li:nth-of-type(1) .product__img--wrap, .adef_webzine .product__list.one li:nth-of-type(2) .product__img--wrap, .adef_webzine .product__list.one li:nth-of-type(3) .product__img--wrap, .adef_webzine .product__list.one li:nth-of-type(4) .product__img--wrap {
+  height: 19.06vw;
+}
+.adef_webzine .product__list.one li:nth-of-type(5) .product__img--wrap, .adef_webzine .product__list.one li:nth-of-type(6) .product__img--wrap, .adef_webzine .product__list.one li:nth-of-type(7) .product__img--wrap, .adef_webzine .product__list.one li:nth-of-type(8) .product__img--wrap {
+  height: 24vw;
+}
+.adef_webzine .product__list.one li:nth-of-type(1) .product__img--wrap img {
+  width: 15.06vw;
+}
+.adef_webzine .product__list.one li:nth-of-type(1) .product__item--name {
+  padding-left: 3vw;
+}
+.adef_webzine .product__list.one li:nth-of-type(2) .product__img--wrap img {
+  width: 15.46vw;
+}
+.adef_webzine .product__list.one li:nth-of-type(2) .product__item--name {
+  padding-left: 3vw;
+}
+.adef_webzine .product__list.one li:nth-of-type(3) .product__img--wrap img {
+  width: 16.4vw;
+}
+.adef_webzine .product__list.one li:nth-of-type(3) .product__item--name {
+  padding-left: 3vw;
+}
+.adef_webzine .product__list.one li:nth-of-type(4) .product__img--wrap img {
+  width: 17.2vw;
+}
+.adef_webzine .product__list.one li:nth-of-type(4) .product__item--name {
+  padding-left: 3vw;
+}
+.adef_webzine .product__list.one li:nth-of-type(5) .product__img--wrap img {
+  width: 10.8vw;
+}
+.adef_webzine .product__list.one li:nth-of-type(5) .product__item--name {
+  padding-left: 3vw;
+}
+.adef_webzine .product__list.one li:nth-of-type(6) .product__img--wrap img {
+  width: 10.4vw;
+}
+.adef_webzine .product__list.one li:nth-of-type(6) .product__item--name {
+  padding-left: 3vw;
+}
+.adef_webzine .product__list.one li:nth-of-type(7) .product__img--wrap img {
+  width: 11.33vw;
+}
+.adef_webzine .product__list.one li:nth-of-type(7) .product__item--name {
+  padding-left: 3vw;
+}
+.adef_webzine .product__list.one li:nth-of-type(8) .product__img--wrap img {
+  width: 6.26vw;
+}
+.adef_webzine .product__list.one li:nth-of-type(8) .product__item--name {
+  padding-left: 3vw;
+}
+.adef_webzine .product__list.two li:nth-of-type(1) .product__img--wrap, .adef_webzine .product__list.two li:nth-of-type(2) .product__img--wrap, .adef_webzine .product__list.two li:nth-of-type(3) .product__img--wrap, .adef_webzine .product__list.two li:nth-of-type(4) .product__img--wrap {
+  height: 19.06vw;
+}
+.adef_webzine .product__list.two li:nth-of-type(5) .product__img--wrap, .adef_webzine .product__list.two li:nth-of-type(6) .product__img--wrap, .adef_webzine .product__list.two li:nth-of-type(7) .product__img--wrap, .adef_webzine .product__list.two li:nth-of-type(8) .product__img--wrap {
+  height: 17.8vw;
+}
+.adef_webzine .product__list.two li:nth-of-type(1) .product__img--wrap img {
+  width: 14.26vw;
+}
+.adef_webzine .product__list.two li:nth-of-type(1) .product__item--name {
+  padding-left: 2.5vw;
+}
+.adef_webzine .product__list.two li:nth-of-type(2) .product__img--wrap img {
+  width: 14.93vw;
+}
+.adef_webzine .product__list.two li:nth-of-type(2) .product__item--name {
+  padding-left: 3vw;
+}
+.adef_webzine .product__list.two li:nth-of-type(3) .product__img--wrap img {
+  width: 7.7vw;
+}
+.adef_webzine .product__list.two li:nth-of-type(3) .product__item--name {
+  padding-left: 3vw;
+}
+.adef_webzine .product__list.two li:nth-of-type(4) .product__img--wrap img {
+  width: 12.93vw;
+}
+.adef_webzine .product__list.two li:nth-of-type(4) .product__item--name {
+  padding-left: 5vw;
+}
+.adef_webzine .product__list.two li:nth-of-type(5) .product__img--wrap img {
+  width: 15.6vw;
+}
+.adef_webzine .product__list.two li:nth-of-type(5) .product__item--name {
+  padding-left: 3vw;
+}
+.adef_webzine .product__list.two li:nth-of-type(6) .product__img--wrap img {
+  width: 17.06vw;
+}
+.adef_webzine .product__list.two li:nth-of-type(6) .product__item--name {
+  padding-left: 4vw;
+}
+.adef_webzine .product__list.two li:nth-of-type(7) .product__img--wrap img {
+  width: 16.53vw;
+}
+.adef_webzine .product__list.two li:nth-of-type(7) .product__item--name {
+  padding-left: 4vw;
+}
+.adef_webzine .product__list.two li:nth-of-type(8) .product__img--wrap img {
+  width: 16.26vw;
+}
+.adef_webzine .product__list.two li:nth-of-type(8) .product__item--name {
+  padding-left: 4.5vw;
+}
+.adef_webzine .product__list.three li .product__item--name {
+  padding-left: 4vw;
+}
+.adef_webzine .product__list.three li:nth-of-type(1) .product__img--wrap, .adef_webzine .product__list.three li:nth-of-type(2) .product__img--wrap, .adef_webzine .product__list.three li:nth-of-type(3) .product__img--wrap, .adef_webzine .product__list.three li:nth-of-type(4) .product__img--wrap {
+  height: 18.13vw;
+}
+.adef_webzine .product__list.three li:nth-of-type(5) .product__img--wrap, .adef_webzine .product__list.three li:nth-of-type(6) .product__img--wrap, .adef_webzine .product__list.three li:nth-of-type(7) .product__img--wrap, .adef_webzine .product__list.three li:nth-of-type(8) .product__img--wrap {
+  height: 17.8vw;
+}
+.adef_webzine .product__list.three li:nth-of-type(1) .product__img--wrap img {
+  width: 10.4vw;
+}
+.adef_webzine .product__list.three li:nth-of-type(2) .product__img--wrap img {
+  width: 10.66vw;
+}
+.adef_webzine .product__list.three li:nth-of-type(3) .product__img--wrap img {
+  width: 10.26vw;
+}
+.adef_webzine .product__list.three li:nth-of-type(4) .product__img--wrap img {
+  width: 15.06vw;
+}
+.adef_webzine .product__list.three li:nth-of-type(5) .product__img--wrap img {
+  width: 10.53vw;
+}
+.adef_webzine .product__list.three li:nth-of-type(6) .product__img--wrap img {
+  width: 11.06vw;
+}
+.adef_webzine .product__list.three li:nth-of-type(7) .product__img--wrap img {
+  width: 11.06vw;
+}
+.adef_webzine .product__list.three li:nth-of-type(8) .product__img--wrap img {
+  width: 15.2vw;
+}
+.adef_webzine .product__list.four li .product__item--name {
+  padding-left: 4vw;
+}
+.adef_webzine .product__list.four li:nth-of-type(1) .product__img--wrap, .adef_webzine .product__list.four li:nth-of-type(2) .product__img--wrap, .adef_webzine .product__list.four li:nth-of-type(3) .product__img--wrap, .adef_webzine .product__list.four li:nth-of-type(4) .product__img--wrap {
+  height: 19.13vw;
+}
+.adef_webzine .product__list.four li:nth-of-type(5) .product__img--wrap, .adef_webzine .product__list.four li:nth-of-type(6) .product__img--wrap, .adef_webzine .product__list.four li:nth-of-type(7) .product__img--wrap, .adef_webzine .product__list.four li:nth-of-type(8) .product__img--wrap {
+  height: 18.8vw;
+}
+.adef_webzine .product__list.four li:nth-of-type(1) .product__img--wrap img {
+  width: 14.26vw;
+}
+.adef_webzine .product__list.four li:nth-of-type(2) .product__img--wrap img {
+  width: 14.93vw;
+}
+.adef_webzine .product__list.four li:nth-of-type(3) .product__img--wrap img {
+  width: 10.4vw;
+}
+.adef_webzine .product__list.four li:nth-of-type(4) .product__img--wrap img {
+  width: 15.46vw;
+}
+.adef_webzine .product__list.four li:nth-of-type(5) .product__img--wrap img {
+  width: 16vw;
+}
+.adef_webzine .product__list.four li:nth-of-type(6) .product__img--wrap img {
+  width: 16.26vw;
+}
+.adef_webzine .product__list.four li:nth-of-type(7) .product__img--wrap img {
+  width: 13.73vw;
+}
+.adef_webzine .product__list.four li:nth-of-type(8) .product__img--wrap img {
+  width: 12vw;
+}
+.adef_webzine .product__list .product__item--name {
+  font-size: 2.66vw;
+  line-height: 1.2;
+  margin-top: 1.3vw;
+  box-sizing: border-box;
+}
+.adef_webzine .airism__img1 {
+  width: 74.13vw;
+  margin: 16vw auto 0;
+}
+.adef_webzine .airism__img2 {
+  width: 69.6vw;
+  margin: 9.3vw auto 0;
+}
+.adef_webzine .section3 {
+  margin-top: 14vw;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,56 @@
+.wrap {
+  position: relative;
+  margin: 0 auto;
+  width: 1750px;
+  box-sizing: border-box; }
+
+.thin {
+  font-weight: 100; }
+
+.light {
+  font-weight: 300; }
+
+.regular {
+  font-weight: 400; }
+
+.medium {
+  font-weight: 500; }
+
+.bold {
+  font-weight: 700; }
+
+.eb {
+  font-weight: 900; }
+
+@keyframes highlight {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+@keyframes btnScale {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1); }
+  50% {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05); }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1); } }
+@keyframes arrowMove {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    transform: translateY(3px); } }
+
+/*# sourceMappingURL=basic.css.map */

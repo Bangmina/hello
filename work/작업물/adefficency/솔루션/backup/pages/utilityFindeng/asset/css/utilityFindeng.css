@@ -1,0 +1,25 @@
+/*-------------------------------------------------
+Style Sheet
+Version : 1.0
+Author :  BMN
+Create date : 2020. 12. 07
+-------------------------------------------------*/
+.page__section.line {
+	padding-top: 30px;
+	padding-bottom: 50px;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+}
+.page__section.line .upload__list > li {
+	border-bottom: 1px solid #999999;
+}
+@media screen and (max-width: 520px) {
+	.info__table tr {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.info__table td {
+		display: block;
+		width: 50%;
+	}
+}

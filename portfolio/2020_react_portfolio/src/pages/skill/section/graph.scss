@@ -1,0 +1,46 @@
+@import "../../../styles/index.scss";
+
+.graph {
+  &__box {
+  }
+  &__list {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__item {
+    padding: 0 2rem 0;
+    width: 20%;
+  }
+  &__item--title {
+    margin: 2rem;
+    text-align: center;
+    font-weight: normal;
+  }
+}
+.CircularProgressbar .CircularProgressbar-text {
+  fill: $orange;
+  opacity: 0.7;
+  font-weight: 300;
+}
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: $orange;
+  opacity: 0.1;
+}
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: $orange;
+}
+
+@media only screen and (max-width: 991px) {
+  .graph {
+    &__list {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__item {
+      width: 20rem;
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}

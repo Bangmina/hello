@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi"
+		/>
+
+		<meta
+			name="keywords"
+			content="디지털뱅크, 저축은행, 대출, 직장인대출, 웰뱅중금리대출, 중금리대출, 신용대출, 24시간대출, 모바일대출, 저축은행예금, 자동대출, 직장인우대대출"
+		/>
+		<meta
+			name="description"
+			content="직장인 대출 최대 한도 1억, 실시간 대출한도 간편조회"
+		/>
+
+		<meta property="og:title" content="웰컴저축은행 | 사업자신용대출" />
+		<meta
+			property="og:description"
+			content="사업자 대출 최대 한도 1억, 실시간 대출한도 간편조회"
+		/>
+		<meta
+			property="og:image"
+			content="https://m.welcomedirect.co.kr/banner_follow1.jpg"
+		/>
+		<meta property="og:url" content="https://m.welcomedirect.co.kr/premium3" />
+		<meta property="og:type" content="website" />
+
+		<title>웰컴저축은행 | 사업자신용대출</title>
+
+		<link rel="shortcut icon" type="image/x-icon" href="../wsb_icon.ico" />
+		<link rel="apple-touch-icon" sizes="76x76" href="../wsb_icon_apple.png" />
+		<link rel="stylesheet" type="text/css" href="./asset/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="./asset/css/fonts.css" />
+		<link rel="stylesheet" type="text/css" href="./asset/css/basic.css" />
+		<link rel="stylesheet" type="text/css" href="./asset/css/index.css" />
+		<script src="./asset/plugIn/jquery-1.11.3.min.js"></script>
+		<script src="../libs/js/base.js"></script>
+
+		<script type="text/javascript">
+			var dataLayer = [{ cd200: "Mobile_WEB" }];
+			var strQueryString = window.location.search.substring(1);
+			var gCode = getUrlParameter("gCode");
+			if (!gCode) {
+				// param 대소문자
+				gCode = getUrlParameter("gcode");
+			}
+
+			function routeCheckAvailability() {
+				location.href =
+					"https://m.welcomebank.co.kr/ib20/mnu/MOWLCTLAD070?" + strQueryString;
+			}
+
+			function checkInflow() {
+				var isSet = false;
+
+				// 1661-0001 // 기본값
+				var gcode_arr_1 = new Array(
+					"ad000127",
+					"ad000126",
+					"ad000640",
+					"ad000606",
+					"ad000639",
+					"ad000638"
+				);
+				// 1670-1110
+				var gcode_arr_2 = new Array(
+					"ad000120",
+					"ad000552",
+					"ad000122",
+					"ad000553"
+				);
+
+				var elem_call_top = document.getElementById("call_top");
+				var elem_call_contents = document.getElementById("call_contents");
+
+				for (var i = 0; i < gcode_arr_1.length; i++) {
+					if (gcode_arr_1[i] == gCode) {
+						isSet = true;
+						elem_call_top.href = "tel:1661-0001";
+						elem_call_contents.href = "tel:1661-0001";
+						break;
+					}
+				}
+
+				if (!isSet) {
+					for (var i = 0; i < gcode_arr_2.length; i++) {
+						if (gcode_arr_2[i] == gCode) {
+							isSet = true;
+							$("#call_top_span").text("1670-1110");
+							elem_call_top.href = "tel:1670-1110";
+							elem_call_contents.href = "tel:1670-1110";
+							break;
+						}
+					}
+				}
+			}
+
+			$(document).ready(function () {
+				checkInflow();
+			});
+		</script>
+	</head>
+
+	<body>
+		<!-- Google Tag Manager -->
+		<script>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != "dataLayer" ? "&l=" + l : "";
+				j.async = true;
+				j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, "script", "dataLayer", "GTM-WGSN2G");
+		</script>
+		<!-- End Google Tag Manager -->
+
+		<main>
+			<section class="visual section">
+				<header class="visual__header">
+					<h1 class="visual__header--logo">
+						<img src="./asset/images/logo.png" alt="웰컴디지털뱅크 로고" />
+					</h1>
+					<div class="visual__header--tel">
+						<a
+							id="call_top"
+							href="tel:1661-0001"
+							class="visual__header--tel_wrap"
+						>
+							<img
+								class="visual__header--tel_img"
+								src="./asset/images/tel.png"
+								alt="전화 : 1661-0001"
+							/>
+							<!-- gcode 분기처리 해주시면됩니다 -->
+							<span class="visual__header--num" id="call_top_span"
+								>1661-0001</span
+							>
+						</a>
+					</div>
+				</header>
+				<div class="visual__img">
+					<img
+						src="./asset/images/visual_img.png"
+						alt="웰컴저축은행 공식 홈페이지, 직장인중금리, 한도 2배 UP! 당일 대출가능 (심사 후 당일대출여부 및 한도결과는 달라질 수 있습니다)"
+					/>
+				</div>
+				<button class="visual__btn" onclick="routeCheckAvailability();">
+					<img
+						src="./asset/images/visual_btn_txt.png"
+						alt="신용평점 영향없는 간편대출조회"
+						class="visual__btn_apply"
+					/>
+				</button>
+			</section>
+			<section class="advantage section">
+				<h3 class="advantage__title">
+					<img src="./asset/images/title_01.png" alt="직장인 중금리 장점" />
+				</h3>
+				<div class="advantage__content">
+					<img
+						src="./asset/images/content_advantage.png"
+						alt="
+          1. 소득, 직업, 자산 등에 따라 최대 2배까지 한도 증액가능, 
+          2. 최저 연 5.9%로 최대 1억까지 당일대출 가능,
+          3. 최대 7년까지 여유있게 상환 가능"
+					/>
+				</div>
+				<div class="advantage__info">
+					<img
+						src="./asset/images/content_Advantage_info.png"
+						alt="
+					심사결과에 따라 한도 2배 및 당일 대출 혜택은 적용되지 않을 수 있습니다."
+					/>
+				</div>
+			</section>
+			<section class="info section">
+				<h3 class="info__title">사업자 신용대출 상품 상세 안내</h3>
+				<div class="info__content">
+					<table class="info__table">
+						<caption>
+							사업자 신용대출 상품 상세 안내
+						</caption>
+						<colgroup></colgroup>
+						<tbody class="info__table--body">
+							<tr class="info__table--tr">
+								<td class="info__table--content column1">
+									<h4 class="info__table--thead">대출대상</h4>
+									<p class="info__table--tbody">
+										만 20세 이상 소득증빙 가능한 일반인<br />
+										신용점수 300점 이상 (NICE 기준)
+									</p>
+								</td>
+								<td class="info__table--content column2">
+									<h4 class="info__table--thead">대출기간</h4>
+									<p class="info__table--tbody">최대 7년 (6개월 ~ 84개월)</p>
+								</td>
+							</tr>
+							<tr class="info__table--tr">
+								<td class="info__table--content column1">
+									<h4 class="info__table--thead">상환방법</h4>
+									<p class="info__table--tbody">만기일시 / 원리금균등분할</p>
+								</td>
+								<td class="info__table--content column2">
+									<h4 class="info__table--thead">중도상환수수료</h4>
+									<p class="info__table--tbody">
+										1.7%이내(대출취급일로부터 3년 이상 거래시 면제)
+									</p>
+								</td>
+							</tr>
+							<tr class="info__table--tr">
+								<td class="info__table--content column1">
+									<h4 class="info__table--thead">인지세</h4>
+									<p class="info__table--tbody">5천만원 초과시 3만 5천원</p>
+								</td>
+								<td class="info__table--content column2">
+									<h4 class="info__table--thead">이자납입방법</h4>
+									<p class="info__table--tbody">매월후취</p>
+								</td>
+							</tr>
+							<tr class="info__table--tr">
+								<td class="info__table--content column1">
+									<h4 class="info__table--thead">연체금리</h4>
+									<p class="info__table--tbody">
+										대출금리 + 연 3%이내(최대 19.9%)
+									</p>
+								</td>
+								<td class="info__table--content column2">
+									<h4 class="info__table--thead">구비서류</h4>
+									<p class="info__table--tbody">소득증빙서류, 신분증</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<section class="notice">
+				<h3 class="notice__title">유의사항</h3>
+				<ul class="notice__list">
+					<li class="notice__item">
+						웰컴저축은행 직장인 신용대출에는 여러 상품이 있으며 상품별로 한도,
+						금리 등의 거래조건이 달라집니다.
+					</li>
+					<li class="notice__item">
+						대출신청은 신용 평점 영향 없이 대출 가능 여부 확인이 가능합니다.
+					</li>
+					<li class="notice__item">
+						심사 후 타 금융사 채무통합 및 추가대출 가능여부가 확인됩니다.
+					</li>
+					<li class="notice__item">
+						일반금융소비자는 금융판매사업자로부터 충분히 설명 받을 권리가
+						있으며, 설명내용을 이해하신 후 거래하시기 바랍니다.
+					</li>
+					<li class="notice__item">
+						금융상품 계약체결 전 상품설명서 및 약관을 확인하시기 바랍니다.
+					</li>
+					<li class="notice__item">
+						과도한 대출은 개인신용 평점 하락의 원인이 될 수 있으며, 개인신용
+						평점 하락으로 금융거래가 제약될 수 있습니다.
+					</li>
+					<li class="notice__item">
+						일정 기간 납부해야 할 원리금이 연체될 경우 계약기한만료 전 원리금
+						변제의무가 발생할 수 있습니다.
+					</li>
+					<li class="notice__item">
+						대출신청 최종결과는 상담을 통해 확인 가능하며, 내부심사 기준에 따라
+						대출이 거절될 수 있습니다.
+					</li>
+					<li class="notice__item">당일 신청 시 선택에 따라 오후 입금 가능</li>
+					<li class="notice__item">
+						대출 예시 비용 (신청일별 변동 가능) <br />
+						예시) 1,000만 원을 연 5.9%로 12개월 대출 시 월 상환금 (원금+이자)
+						860,204원 / 원리금균등분할상환 시
+					</li>
+				</ul>
+			</section>
+		</main>
+		<footer class="footer">
+			<p class="footer_detail">
+				<span>웰컴저축은행(주) 대표이사 : 김대웅</span> |
+				<sapn>사업자등록번호 : 120-87-93876 </sapn>
+			</p>
+			<p class="footer_detail">
+				<span>서울 구로구 디지털로 300 지밸리비즈플라자 5층</span> |
+				<span>대표번호 : 1661-0001</span>
+			</p>
+			<p class="footer_detail">저축은행중앙회 심의필 2021-00808호 (21.06.14)</p>
+			<p class="footer_detail">
+				웰컴저축은행 준법감시인 심의필 제2812-B호(21.06.07)
+			</p>
+		</footer>
+		<section class="floating">
+			<a href="tel:1661-0001" class="floating__connect--btn" id="call_contents">
+				<img src="./asset/images/txt_connection.png" alt="" />
+			</a>
+			<button class="floating__apply--btn" onclick="routeCheckAvailability();">
+				<img
+					src="./asset/images/txt_apply.png"
+					alt=""
+					class="floating__apply--btn_img"
+				/>
+			</button>
+		</section>
+	</body>
+	<script src="asset/js/common.js"></script>
+</html>

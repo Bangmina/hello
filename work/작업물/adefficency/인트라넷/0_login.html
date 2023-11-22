@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>인트라넷-로그인</title>
+		<!-- 공통  -->
+		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./favicon.png" />
+		<link rel="stylesheet" href="./asset/css/reset.css" />
+		<link rel="stylesheet" href="./asset/css/common.css" />
+		<link rel="stylesheet" href="./asset/css/index.css" />
+		<script src="asset/plugIn/jquery-3.6.0.min.js"></script>
+		<link rel="stylesheet" href="./asset/plugIn/simplebar/simplebar.css" />
+		<script src="./asset/plugIn/simplebar/simplebar.js"></script>
+	</head>
+	<body>
+		<main class="login">
+			<article class="login__box">
+				<h1 class="login__box--logo">
+					<img src="./asset/images/logo_login.png" alt="로고" />
+				</h1>
+				<div class="login__form">
+					<div class="login__form--bg"></div>
+					<form action="">
+						<legend class="login__form--legend">Sign in</legend>
+						<div class="login__form--info">
+							<img
+								class="login__form--img"
+								src="./asset/images/ic_username.png"
+								alt="로그인 아이콘"
+							/>
+							<input
+								type="text"
+								class="login__form--input login__form--email"
+								placeholder="e-mail"
+							/>
+						</div>
+						<div class="login__form--info login__form--password">
+							<img
+								class="login__form--img"
+								src="./asset/images/ic_password.png"
+								alt="로그인 아이콘"
+							/>
+							<input
+								class="login__form--input"
+								type="password"
+								placeholder="password"
+							/>
+						</div>
+						<div class="login__btn_box">
+							<button class="login__btn_box--btn btn__purple" type="button">
+								사원등록
+							</button>
+							<button class="login__btn_box--btn btn__orange" type="button">
+								로그인
+							</button>
+							<button class="login__btn_box--timeinout" type="button">
+								<img src="./asset/images/ic_timeinout.png" alt="타임인아웃" />
+							</button>
+						</div>
+					</form>
+				</div>
+			</article>
+		</main>
+		<script>
+			$(function () {
+				// 페이지 로딩시 포커스 주기
+				if (!$(".login__form--email").val()) {
+					$(".login__form--email").focus();
+				} else if (!$(".login__form--password").val()) {
+					$(".login__form--password").focus();
+				}
+			});
+		</script>
+	</body>
+</html>

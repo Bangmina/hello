@@ -1,0 +1,484 @@
+/* font */
+
+/*
+  나눔스퀘어  [NanumSquare]
+  Light 300
+  Regular 400 (default)
+  Bold 700
+  ExtraBold 800
+*/
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+/*
+  [Noto Sans]
+  Thin 100
+  ExtraLight 200
+  Light 300
+  Regular 400
+  Medium 500 (default)
+  SemiBold 600
+  Bold 700
+  ExtraBold 800
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* 
+  애플 산돌고딕 [Apple SD Gothic Neo]
+  Thin 100
+  UltraLight 200
+  Light 300
+  Medium 400
+  Regular 500 
+  SemiBold 600 (default)
+  Bold 700
+  ExtraBold 800
+  Heavy 900
+*/
+@import url('https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/css/all.css');
+
+/* 강원교육모두 [GangwonEduAll] 300/400 */
+@font-face {
+  font-family: 'GangwonEduAll';
+  font-weight: 300;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff')
+      format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.ttf')
+      format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GangwonEduAll';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff')
+      format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.ttf')
+      format('truetype');
+  font-display: swap;
+}
+
+/* reset */
+.adef_webzine {
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    font-family: 'NanumSquare', 'Noto Sans', 'Noto Sans KR', 'Nanum Gothic',
+      'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 3.2vw;
+    line-height: 1.55;
+    letter-spacing: -0.8px;
+    color: #000000;
+    vertical-align: baseline;
+  }
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+  ol,
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  blockquote,
+  q {
+    quotes: none;
+  }
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+/* common */
+.adef_webzine {
+  .wrap {
+    padding: 0 9.33vw;
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+  .bold {
+    font-weight: 700;
+  }
+  .section {
+    position: relative;
+  }
+  .buy__anchor,
+  .info {
+    position: relative;
+    // font-size: 3.9vw;
+    transform: rotate(0.04deg);
+    -webkit-transform: rotate(0.04deg);
+    -moz-transform: rotate(0.04deg);
+    -ms-transform: rotate(0.04deg);
+    -o-transform: rotate(0.04deg);
+  }
+  .gray_info {
+    font-size: 3.33vw;
+    color: #595757;
+  }
+  .buy__anchor {
+    &--wrap {
+      text-align: center;
+    }
+    // 제품 구매하러가기
+    padding: 1.5vw 0;
+    display: inline-block;
+    text-decoration: underline;
+    color: #000;
+    font-weight: 900;
+  }
+  .info {
+    // 제품에 따라 기능이 상이합니다 스타일
+    margin-top: 16vw;
+    font-size: 3.24vw;
+  }
+  .section__txt {
+    vertical-align: baseline;
+    text-align: justify;
+    transform: rotate(0.04deg);
+    -webkit-transform: rotate(0.04deg);
+    -moz-transform: rotate(0.04deg);
+    -ms-transform: rotate(0.04deg);
+    -o-transform: rotate(0.04deg);
+    color: #322d27;
+
+    p {
+      &:not(:first-child) {
+        margin-top: 6vw;
+      }
+    }
+  }
+  .read {
+    &__hide--box {
+      height: 12vw;
+      position: relative;
+      overflow: hidden;
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), #fff);
+        opacity: 1;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        z-index: 10;
+      }
+      &.open {
+        &::after {
+          opacity: 0;
+        }
+        & + .read__continue--btn .read__continue--btn_ic {
+          background-image: url(https://simage-kr.uniqlo.com/display/corner/2161/img/23_SPss_pants_utility/23_SP_icon_close.png);
+        }
+      }
+    }
+    &__continue--btn {
+      margin: 3vw auto 0;
+      text-align: center;
+      font-size: 1.14em;
+      display: block;
+      span {
+        text-decoration: underline;
+        font-size: 4vw;
+      }
+    }
+    &__continue--btn_ic {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: url(https://simage-kr.uniqlo.com/display/corner/2161/img/23_SPss_pants_utility/23_SP_icon_plus.png)
+        no-repeat 0 0 / 100% auto;
+    }
+  }
+  // .product__anchor {
+  //   border: 1px solid #21849a;
+  //   color: #21849a;
+  //   padding: 1.5vw 0;
+  //   display: block;
+  //   width: 100%;
+  //   text-align: center;
+  //   font-size: 3.5vw;
+  //   font-weight: 700;
+  //   border-radius: 10vw;
+  //   -webkit-border-radius: 10vw;
+  //   -moz-border-radius: 10vw;
+  //   -ms-border-radius: 10vw;
+  //   -o-border-radius: 10vw;
+  //   letter-spacing: -0.8px;
+  // }
+  .slide {
+    &__box,
+    &__item {
+      width: 42vw;
+    }
+    &__box {
+      overflow: hidden;
+    }
+    &__list {
+      display: flex;
+      width: fit-content;
+    }
+    &__item {
+    }
+  }
+  .uniqlo {
+    font-family: Uniqlo Pro Regular, NanumSquare Regular, Roboto, Droid Sans,
+      Helvetica Neue, HiraKakuProN-W3, sans-serif;
+  }
+  .uniqlo_bold {
+    font-family: Uniqlo Pro Bold, NanumSquare Regular, Roboto, Droid Sans,
+      Helvetica Neue, HiraKakuProN-W3, sans-serif;
+  }
+}
+/* 위에는 font 설정만 하시구 스타일적용은 아래에 작업해주시면 됩니다*/
+/* 페이지 */
+
+.adef_webzine {
+  .slide__bottom {
+    padding-top: 13.33vw;
+  }
+  .ic_plus {
+    width: 4.4vw;
+    margin-right: 2.26vw;
+  }
+  .item__title {
+    font-size: 4.53vw;
+    margin-bottom: 4.5vw;
+    font-weight: 900;
+    transform: rotate(0.04deg);
+    -webkit-transform: rotate(0.04deg);
+    -moz-transform: rotate(0.04deg);
+    -ms-transform: rotate(0.04deg);
+    -o-transform: rotate(0.04deg);
+    text-align: center;
+  }
+  .ic_bg {
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    padding: 6.66vw 0 8.4vw;
+
+    &.green {
+      background: #f2f9f8;
+    }
+    &.one {
+      img {
+        width: 22.4vw;
+      }
+    }
+    &.two {
+      img {
+        width: 18.4vw;
+      }
+    }
+    &.three {
+      img {
+        width: 18.4vw;
+      }
+    }
+    &.four {
+      img {
+        width: 18.4vw;
+      }
+    }
+  }
+  .section1 {
+    padding-bottom: 6.66vw;
+    .shorts {
+      margin-top: 10vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .item__title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2.5vw;
+      }
+      .shorts_img {
+        width: 38.93vw;
+      }
+      .shorts__info {
+        margin-left: 2.6vw;
+      }
+    }
+  }
+  .section2 {
+    padding-bottom: 6.66vw;
+    background: #f2f9f8;
+  }
+  .section3 {
+    padding-bottom: 6.66vw;
+  }
+  .section4 {
+    padding-bottom: 6.66vw;
+    background: #f2f9f8;
+  }
+  .section5 {
+    padding-bottom: 20.66vw;
+  }
+  .camping__look {
+    margin-top: 5vw;
+    padding: 5vw 0 5vw;
+    text-align: center;
+    display: block;
+    font-size: 3.2vw;
+    text-decoration: underline;
+    font-weight: 700;
+  }
+  .shorts__box {
+    margin-top: 10vw;
+    p {
+      font-size: 2.94vw;
+      color: #7f7f7f;
+      margin-top: 3vw !important;
+    }
+  }
+  .shorts__list {
+    margin-top: 3vw;
+  }
+  .shorts__item {
+    position: relative;
+    padding-left: 4vw;
+    font-size: 2.94vw;
+    color: #7f7f7f;
+    &:not(:first-child) {
+      margin-top: 1.5vw;
+    }
+    &::before {
+      content: '※';
+      position: absolute;
+      left: 0;
+    }
+  }
+}

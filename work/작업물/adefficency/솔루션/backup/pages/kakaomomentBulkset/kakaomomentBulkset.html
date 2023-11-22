@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카카오모먼트 대량관리 API</title>
+    <link rel="stylesheet" href="../../asset/css/base.css">
+    <link rel="stylesheet" href="../../asset/css/page.css">
+    <link rel="stylesheet" href="./asset/css/kakaomomentBulkset.css">
+    <script src="../../asset/js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <!-- 공통 영역 -->
+    <header class="header">
+        <div class="header__left m__none">
+            <form action="" class="solution__form">
+                <select name="" id="" class="solution__select">
+                    <option value="솔루션">솔루션</option>
+                    <option value="솔루션">솔루션</option>
+                    <option value="솔루션">솔루션</option>
+                </select>
+                <button class="solution__select--btn common__btn--orange">이동</button>
+            </form>
+        </div>
+        <h1 class="header__logo">
+            <a href="javascript:void(0);"><img src="../../asset/images/logo_header.png" alt="로고"></a>
+        </h1>
+        <div class="header__right m__none">
+            <p class="header__login--time">김경래 님 (최근 로그인 일시 2020-12-04 09:03:58)</p>
+            <button class="header__logout--btn common__btn--purple">로그아웃</button>
+        </div>
+        <button class="header__menu--btn pc__none open">
+            <span></span>
+        </button>
+    </header>
+    <nav class="nav m__none">
+        <ul class="nav__list clearfix">
+            <li class="nav__item">
+                <a href="javascript:void(0);" class="nav__item--anchor">모니터링</a>
+                <ul class="nav__depth">
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">Daum 검색순위 확인</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">SNS 팔로워 모니터링</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">SIV 전용 팔로워 모니터링</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">ADEF SNS 모니터링</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">여기어때 페이스북 리포트</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">매체 계정잔액 모니터링</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">구글 트렌드 검색</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">왓챠.작품명 크롤링</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">경쟁사-랜딩-모니터링</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">피플펀드.광고비.모니터링</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">네이버-카탈로그-모니터링</a></li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="javascript:void(0);" class="nav__item--anchor">검수</a>
+                <ul class="nav__depth">
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">IKEA 오류 검수</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">SSF 렌딩 검수</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">WADIZ 렌딩 검수</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">Ebates 렌딩 검수</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">SIV 렌딩테스트</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">매체 이미지 검수</a></li></li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="javascript:void(0);" class="nav__item--anchor">업무 효율화</a>
+                <ul class="nav__depth">
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">IKEA 검색어 상품체크</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">IKEA 기획전</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">DB손해보험 RAW</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">DB손해보험 Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">WADIZ RAW</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">WADIZ 구글피드ID 제외처리</a></li></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">URL-Blank파라미터삭제</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">UTM,파라미터삭제<br/>(삼성물산전용)</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">확장 키워드 Pool</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">익스피디아-영문키워드찾기</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">클룩 Feed 비교</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">와디즈 서포터</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">카카오모먼트 대량관리 API</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">네이버 PC/MO 검색 쿼리 리포트</a></li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="javascript:void(0);" class="nav__item--anchor">Report & 분석</a>
+                <ul class="nav__depth">
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">Google budget Estimate(GES)</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">GA 경로분석 Raw</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">랜딧 Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">데일리호텔 Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">와디즈 리워드 지원전환 Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">Sivillage jaju 지원전환 Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">예스폼 DAUM Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">마켓컬리 NATE Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">왓챠 Custom Report</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">DB손해보험</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">TUMI 상품 비교</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">Naver EP</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">Bizspring(레진)</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">피플펀드CSV</a></li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="javascript:void(0);" class="nav__item--anchor">사원관리</a>
+                <ul class="nav__depth">
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="javascript:void(0);">사원 목록</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <aside class="pc__none side__menu">
+        <section class="side__menu--wrap">
+            <article class="menu_header">
+                    <form action="" class="solution__form">
+                        <select name="" id="" class="solution__select">
+                            <option value="솔루션">솔루션</option>
+                            <option value="솔루션">솔루션</option>
+                            <option value="솔루션">솔루션</option>
+                        </select>
+                        <button class="solution__select--btn common__btn--orange">이동</button>
+                    </form>
+                <button class="header__menu--btn pc__none close active">
+                    <span></span>
+                </button>
+            </article>
+            <article class="side__nav">
+                <!-- 메뉴 타이틀 -->
+                <ul class="snav__title">
+                    <li class="snav__title--item ">
+                        <a class="active" href="javascript:void(0);"><i class="snav__title--icon"></i>모니터링</a>
+                    </li>
+                    <li class="snav__title--item">
+                        <a href="javascript:void(0);"><i class="snav__title--icon"></i>검수</a>
+                    </li>
+                    <li class="snav__title--item">
+                        <a href="javascript:void(0);"><i class="snav__title--icon"></i>업무효율화</a>
+                    </li>
+                    <li class="snav__title--item">
+                        <a href="javascript:void(0);"><i class="snav__title--icon"></i>REPORT & 분석</a>
+                    </li>
+                    <li class="snav__title--item">
+                        <a href="javascript:void(0);"><i class="snav__title--icon"></i>사원관리</a>
+                    </li>
+                    <li class="snav__title--item snav__logout">
+                        <button><img src="../../asset/images/icon_logout.png" alt="">로그아웃</button>
+                    </li>
+
+                    
+                </ul>
+                <!-- 서브메뉴 -->
+                <div class="side__depth--wrap">
+                    <ul class="side__depth--list">
+                        <li class="side__depth--item side__item--title ">
+                            <h3>모니터링</h>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">Daum 검색순위 확인</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">SNS 팔로워 모니터링</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">SIV 전용 팔로워 모니터링</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">ADEF SNS 모니터링</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">여기어때 페이스북 리포트</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">매체 계정잔액 모니터링</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">구글 트랜드 검색</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">왓챠-작품명 크롤링</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">경쟁사-랜딩-모니터링</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">피플펀드-광고비-모니터링</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">네이버-카탈로그-모니터링</a>
+                        </li>
+                    </ul>
+                    <ul class="side__depth--list none">
+                        <li class="side__depth--item side__item--title ">
+                            <h3>검수</h3>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">IKEA 오류 검수</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">SSF 랜딩 검수</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">WADIZ 랜딩 검수</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">Ebates 랜딩 검수</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">SIV 랜딩테스트</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">매체 이미지 검수</a>
+                        </li>
+                    </ul>
+                    <ul class="side__depth--list none">
+                        <li class="side__depth--item side__item--title ">
+                            <h3>업무효율화</h3>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">IKEA 검색어 상품체크</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">IKEA 기획전</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">DB손해보험 RAW</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">DB손해보험 Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">SSF 할인율</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">WADIZ RAW</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">WADIZ 구글피드 ID 제외처리</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">URL-Blank 파라미터 삭제</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">UTM,파라미터 삭제<br/>삼성물산 전용</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">확장 키워드 Pool</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">익스피디아-영문 키워드 찾기</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">클록 Feed 비교</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">와디즈 서포터</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">카카오모먼트 대량관리 API</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">네이버 PC/MO 검색 쿼리 리포트</a>
+                        </li>
+                    </ul>
+                    <ul class="side__depth--list none">
+                        <li class="side__depth--item side__item--title ">
+                            <h3>REPORT & 분석</h3>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">Google budget Estimate(GES)</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">GA 경로분석 Raw</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">랜딧 Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">데일리호텔 Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">와디즈 리워드 지원전환 Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">Sivillage jaju 지원전환 Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">예스폼 DAUM Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">마켓컬리 NATE Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">왓챠 Custom Report</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">DB손해보험</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">TUMI 상품 비교</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">Naver EP</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">Bizspring(레진)</a>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">피플펀드 CSV</a>
+                        </li>
+                    </ul>
+                    <ul class="side__depth--list none">
+                        <li class="side__depth--item side__item--title ">
+                            <h3>사원관리</h3>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="javascript:void(0);">사원관리</a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article class="menu__footer">
+                2020, adefficiency all rights reserved.<br/>
+                <a href="javascript:void(0);">인트라넷 바로가기 ></a>
+            </article>
+        </section>
+        
+    </aside>
+    <!-- //공통 영역 -->
+
+    <main class="page__main"> 
+        <h2 class="page__title"><p class="title__txt">카카오모먼트 대량 관리 </p>
+            <!-- 버튼 class="none" 추가시 안보임-->
+            <div class="mobile__flex--three">
+                <button class="common__btn--navy date__view--bt ">V4 로 이동</button>
+                <button class="common__btn--navy date__view--btn">계정 재설정</button>
+                <button class="common__btn--navy date__view--btn">카카오모먼트 소재 등록</button>
+            </div>
+        </h2>
+        <!-- 계정선택 화면 -->
+        <section class="page__section kakao">
+            <article>
+                <form action="" class="page__form--wrap form__input--layout">
+                    <div class="mobile__flex--one">
+                        <select name="" id="" class="form__select w_250 authority">
+                            <option value="">카카오 계정 권한이 필요합니다.</option>
+                            <option value="계정 선택">계정 선택</option>
+                            <option value="새 계정 등록">새 계정 등록</option>
+                        </select>
+                    </div>
+                </form>
+            </article>
+            <!-- 계정선택 -->
+            <article class="account__form hidden__form" >
+                <form action="" class="page__form--wrap form__input--layout">
+                        <div class="mobile__flex--one">
+                                <select name="" id="" class="form__select w_250">
+                                        <option value="계정 선택">계정 선택</option>
+                                        <option value="계정 선택">계정 선택</option>
+                                        <option value="계정 선택">sdfdf</option>
+                                </select>
+                                <button class="common__btn--orange form__btn m-l-20" ">확인</button>
+                        </div>
+                </form>
+            </article>
+            <!-- 새 계정등록 -->
+            <article class="new_account__form hidden__form">
+                <form action="" class="page__form--wrap form__input--layout">
+                        <input type="text" class="form__input m-l-0" placeholder="광고주명">
+                        <input type="text" class="form__input" placeholder="계정ID">
+                        <button class="common__btn--orange form__btn m-l-20" ">등록</button>
+                </form>
+            </article>
+            <div class="img__wrap"><img src="resource/image/guide_1.png" alt=""></div>
+        </section>
+        
+        <!-- 계정 선택 후 화면 -->
+        <section class="page__section campain ">
+            <!-- 캠페인 및 그룹 선택 -->
+            <div class="campain__inner">
+                <h5 class="form_box__title">캠페인 및 그룹 선택</h5>
+                <article class="campain__wrap border">
+                    <form class="">
+                            <div class="page__form--wrap campain__box1">
+                                <div class="campain__select--box">
+                                    <select name="" id="" class="form__select campain__select">
+                                        <option value="계정 선택">계정 선택</option>
+                                        <option value="계정 선택">계정 선택</option>
+                                        <option value="계정 선택">sdfdf</option>
+                                    </select>
+                                    <div class="checkbox__wrap m-l-10">
+                                        <input type="checkbox" id="campainFinish" class="table__checkbox" value="293">
+                                        <label for="campainFinish">종료 캠페인 노출        
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="campain__renewal--box">
+                                    <p>마지막 업데이트 시간</p>
+                                    <p class="m-l-10 bold">2020-11-30 18:27:03</p>
+                                    <button class="common__btn--orange form__btn m-l-10">캠페인 갱신</button>
+                                </div>
+                            </div>
+                            <ul class="info__list">
+                                <li class="info__item">그룹, 소재에 변경은 캠페인 선택 후 작업이 가능합니다.</li>
+                            </ul>
+                    </form>
+                    <form class="m-t-20">
+                        <div class="mobile__flex--two campain__box2">
+                            <button class="common__btn--orange form__btn">그룹 불러오기</button>
+                            <div class="campain__select--box m-l-20">
+                                <select name="" id="" class="form__select campain__select">
+                                    <option value="계정 선택">계정 선택</option>
+                                    <option value="계정 선택">계정 선택</option>
+                                    <option value="계정 선택">sdfdf</option>
+                                </select>
+                                
+                            </div>
+                        </div>
+                        <ul class="info__list">
+                            <li class="info__item">그룹, 소재에 변경은 캠페인 선택 후 작업이 가능합니다.</li>
+                        </ul>
+                    </form>
+                </article>
+            </div>
+            <!-- 캠페인 변경 -->
+            <div class="campain__inner">
+                <h5 class="form_box__title">캠페인 변경</h5>
+                <article class="campain__wrap">
+                    <div class="upload__box upload__list ">								
+                        <h4 class="upload__title">엑셀 업로드</h4>
+                        <div class="upload__file--box">
+                        <form enctype="multipart/form-data" method="post" name="frm1" id="frm1" action="landing_process">
+                                <input id="upload1" type="file" name="userfile">
+                                <label for="upload1" class="upload__input--label">파일선택</label>
+                                <span class="upload__name">선택된 파일이 없습니다.</span>
+                        </form>
+                        </div>
+                        <div class="mobile__flex--two">
+                            <button class="common__btn--orange form__btn" >업로드</button>
+                            <button class="common__btn--navy form__btn m-l-10" >캠페인 템플릿 다운로드</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <!-- 그룹 변경 -->
+            <div class="campain__inner">
+                <h5 class="form_box__title">그룹 변경</h5>
+                <article class="campain__wrap">
+                    <div class="upload__box upload__list ">								
+                        <h4 class="upload__title">엑셀 업로드</h4>
+                        <div class="upload__file--box">
+                        <form enctype="multipart/form-data" method="post" name="frm1" id="frm1" action="landing_process">
+                                <input id="upload1" type="file" name="userfile">
+                                <label for="upload1" class="upload__input--label">파일선택</label>
+                                <span class="upload__name">선택된 파일이 없습니다.</span>
+                        </form>
+                        </div>
+                        <div class="mobile__flex--two">
+                            <button class="common__btn--orange form__btn" >업로드</button>
+                            <button class="common__btn--navy form__btn m-l-10" >캠페인 템플릿 다운로드</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <!-- 소재 변경 -->
+            <div class="campain__inner">
+                <h5 class="form_box__title">소재 변경</h5>
+                <article class="campain__wrap">
+                    <div class="upload__box upload__list ">								
+                        <h4 class="upload__title">엑셀 업로드</h4>
+                        <div class="upload__file--box">
+                        <form enctype="multipart/form-data" method="post" name="frm1" id="frm1" action="landing_process">
+                                <input id="upload1" type="file" name="userfile">
+                                <label for="upload1" class="upload__input--label">파일선택</label>
+                                <span class="upload__name">선택된 파일이 없습니다.</span>
+                        </form>
+                        </div>
+                        <div class="mobile__flex--two">
+                            <button class="common__btn--orange form__btn" >업로드</button>
+                            <button class="common__btn--navy form__btn m-l-10" >소재 템플릿 다운로드</button>
+                        </div>
+                    </div>
+                    <div class="mobile__flex--three material__btn--box">
+                        <button class="common__btn--orange form__btn m-l-10" >V2 업로드</button>
+                        <button class="common__btn--navy form__btn m-l-10" >소재 템플릿V2 템플릿 다운로드</button>
+                        <button class="common__btn--navy form__btn m-l-10" >그룹 & 소재 템플릿 다운로드 (조회용)</button>
+                    </div>
+                    <ul class="info__list">
+                        <li class="info__item">소재변경 가능 항목이 추가되었습니다. V2 템플릿으로 변경이 가능합니다. 변경 가능한 항목은 다음과 같습니다. (기존 ON/OFF, 입찰가 템플릿도 사용가능합니다.)</li>
+                        <li class="info__item">소재명, 배너소재텍스트, 타입 별 랜딩URL, 입찰가, 네이티브_타이틀, 네이티브_프로필이름, 네이티브_설명, 네이티브_액션버튼</li>
+                        <li class="info__item">비즈보드 캠페인은 모바일 랜딩으로만 설정가능합니다.</li>
+                    </ul>
+                </article>
+            </div>
+            <!-- 그룹 예약 변경 -->
+            <div class="campain__inner">
+                <h5 class="form_box__title">그룹 변경</h5>
+                <article class="campain__wrap">
+                    <div class="upload__box upload__list ">								
+                        <h4 class="upload__title">예약 일자</h4>
+                        <form enctype="" method="post" name="" id="" action="" class="reservation__form ">
+                            <div class="mobile__flex--two">
+                                <!-- <label for="" class="form__label m__none">일자 : </label> -->
+                                <input type="text" class="form-control form__input--date m-l-5" name="report_sdate" id="report_sdate" value="2021-04-01"><span class="form__wave">~</span>
+                                <input type="text" class="form-control form__input--date m-l-5" name="report_edate" id="report_edate" value="2021-04-02">
+                            </div>
+
+                                <div class="mobile__flex--one">
+                                    <select name="" id="" class="form__select m-l-20">
+                                        <option value="">10분</option>
+                                        <option value="">10분</option>
+                                        <option value="">10분</option>
+                                    </select>
+                                </div>
+                        </form>
+                    </div>
+                    <div class="upload__box upload__list m-t-10">								
+                        <h4 class="upload__title">엑셀 업로드</h4>
+                        <div class="upload__file--box">
+                        <form enctype="multipart/form-data" method="post" name="frm1" id="frm1" action="landing_process">
+                                <input id="upload1" type="file" name="userfile">
+                                <label for="upload1" class="upload__input--label">파일선택</label>
+                                <span class="upload__name">선택된 파일이 없습니다.</span>
+                        </form>
+                        </div>
+                        <div class="mobile__flex--one">
+                            <button class="common__btn--orange form__btn">업로드</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <!-- 소재 예약 변경 -->
+            <div class="campain__inner">
+                <h5 class="form_box__title">그룹 변경</h5>
+                <article class="campain__wrap ">
+                    <div class="upload__box upload__list ">								
+                        <h4 class="upload__title">예약 일자</h4>
+                        <form enctype="" method="post" name="" id="" action="" class="reservation__form ">
+                            <div class="mobile__flex--two">
+                                <!-- <label for="" class="form__label m__none">일자 : </label> -->
+                                <input type="text" class="form-control form__input--date m-l-5" name="report_sdate" id="report_sdate" value="2021-04-01"><span class="form__wave">~</span>
+                                <input type="text" class="form-control form__input--date m-l-5" name="report_edate" id="report_edate" value="2021-04-02">
+                            </div>
+
+                                <div class="mobile__flex--one">
+                                    <select name="" id="" class="form__select m-l-20">
+                                        <option value="">10분</option>
+                                        <option value="">10분</option>
+                                        <option value="">10분</option>
+                                    </select>
+                                </div>
+                        </form>
+                    </div>
+                    <div class="upload__box upload__list m-t-10">								
+                        <h4 class="upload__title">엑셀 업로드</h4>
+                        <div class="upload__file--box">
+                        <form enctype="multipart/form-data" method="post" name="frm1" id="frm1" action="landing_process">
+                                <input id="upload1" type="file" name="userfile">
+                                <label for="upload1" class="upload__input--label">파일선택</label>
+                                <span class="upload__name">선택된 파일이 없습니다.</span>
+                        </form>
+                        </div>
+                        <div class="mobile__flex--two">
+                            <button class="common__btn--orange form__btn">업로드</button>
+                            <button class="common__btn--orange form__btn m-l-10">v2 업로드</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <!-- 예약작업 리스트 -->
+            <div class="campain__inner">
+                <article class="campain__wrap reservation__table--wrap">
+                    <h5 class="form_box__title">예약작업 List</h5>
+                    <table class="page__table">
+                        <caption>예약작업 List</caption>
+                        <colgroup></colgroup>
+                        <thead>
+                            <tr>
+                                <th>예약일시</th>
+                                <th>등록자</th>
+                                <th>구분</th>
+                                <th>업로드파일</th>
+                                <th>완료일시</th>
+                                <th>상태</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><div class="m__table--title">예약일시</div><div class="m__table--content">2020-10-29 18:00:00</div></td>
+                                <td><span class="m__table--title">등록자</span><div class="m__table--content">정주현</div></td>
+                                <td><span class="m__table--title">구분</span><div class="m__table--content">그룹</div></td>
+                                <td><span class="m__table--title">업로드파일</span><div class="m__table--content"><a href="javascript:void(0);" >다운로드</a></div></td>
+                                <td><span class="m__table--title">완료일시</span><div class="m__table--content">2020-10-29 18:03:18</div></td>
+                                <td><span class="m__table--title">상태</span><div class="m__table--content">2020-10-29 18:03:22</div></td>
+                                <td><span class="m__table--title">비고</span><div class="m__table--content"><button class="common__btn--grey form__btn">삭제</button></div></td>
+                            </tr>
+                            <!-- 정보 없을 때 -->
+                            <tr class="table__info--empty">
+                                <td colspan="7">정보가 없습니다.</td>
+                            </tr>
+                                            </tbody>
+                    </table>
+                </article>
+            </div>
+        </section>
+        <!-- 캠페인 리스트 -->
+        <section class="page__section campain none">
+        </section>
+    
+    </main>
+
+    <!-- 공통 영역 -->
+    <footer class="footer m__none">
+        2020, <span class="orange__color">adefficiency</span> all rights reserved. <a href="https://intranet.adef.co.kr/login" class="intranet__anchor" target="_blank">인트라넷 바로가기 ></a>
+    </footer>
+    <button class="top__btn">
+        <span></span>
+        <p>TOP</>
+    </button>
+    <!-- //공통 영역 -->
+    <script src="../../asset/js/common.js"></script>
+    <script>
+        // 계정선택 select 
+        $('.authority').on('change', function() {
+        
+            if($(this).val() === '계정 선택') {
+            $('.hidden__form').hide();
+            $('.account__form').show();
+            } 
+            else if ($(this).val() === '새 계정 등록') {
+            $('.hidden__form').hide();
+            $('.new_account__form').show();
+            } 
+            else {
+            $('.hidden__form').hide();
+        
+            }
+        });
+    </script>
+</body>
+</html>

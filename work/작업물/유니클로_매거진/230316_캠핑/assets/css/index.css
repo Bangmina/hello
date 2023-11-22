@@ -1,0 +1,362 @@
+@charset "UTF-8";
+/* font 컴포넌트 추가 */
+/* 나눔스퀘어 
+Light 300
+Regular 400
+Bold 700
+ExtraBold 800*/
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+/* 
+  애플 산돌고딕
+  Thin 100
+  UltraLight 200
+  Light 300
+  Medium 400
+  Regular 500
+  SemiBold 600
+  Bold 700
+  ExtraBold 800
+  Heavy 900
+*/
+@import url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/css/all.css");
+/* 강원교육모두 폰트 300/400 */
+@font-face {
+  font-family: "GangwonEduAll";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "GangwonEduAll";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.ttf") format("truetype");
+  font-display: swap;
+}
+/* common 컴포넌트 추가 */
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.section__txt {
+  font-family: "NanumSquare", "Nanum Gothic", "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 3.6vw;
+  line-height: 1.65;
+  letter-spacing: -0.5px;
+  color: #2f2f2f;
+  vertical-align: baseline;
+  position: relative;
+  transform: rotate(0.04deg);
+  -webkit-transform: rotate(0.04deg);
+  -moz-transform: rotate(0.04deg);
+  -ms-transform: rotate(0.04deg);
+  -o-transform: rotate(0.04deg);
+}
+.section__txt p:not(:first-child) {
+  margin-top: 4vw;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.w_100 {
+  width: 100%;
+}
+
+.block {
+  display: block;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.section {
+  position: relative;
+}
+
+.info {
+  font-size: 4vw;
+  margin-top: 22vw;
+}
+
+/* index 컴포넌트 추가 */
+/* 유니클로_캠핑_230316 */
+.adef_webzine {
+  padding-bottom: 6.6vw;
+}
+.adef_webzine .wrap {
+  padding: 0 5vw;
+}
+
+.section__subtxt {
+  font-family: "Apple SD Gothic Neo", "Nanum Gothic", "Roboto", sans-serif;
+  font-size: 4.4vw;
+  line-height: 1.45;
+  font-weight: 800;
+  color: #5f5c58;
+  transform: rotate(0.04deg);
+  -webkit-transform: rotate(0.04deg);
+  -moz-transform: rotate(0.04deg);
+  -ms-transform: rotate(0.04deg);
+  -o-transform: rotate(0.04deg);
+}
+
+.section__txt {
+  font-family: "Apple SD Gothic Neo", "Nanum Gothic", "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+.grey .section__txt {
+  color: #5f5c58 !important;
+}
+
+.green {
+  font-family: "Apple SD Gothic Neo", "Nanum Gothic", "Roboto", sans-serif;
+  color: #068300 !important;
+}
+
+.tip_box {
+  position: relative;
+  padding: 6vw 3.5vw;
+  width: 96.5vw;
+  border: 1px solid red;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #878685;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.tip_box__icon {
+  position: absolute;
+  z-index: 1;
+  padding: 2.3vw 3.5vw;
+  background: #fff;
+  top: -8vw;
+  left: -1px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: 1px solid #878685;
+  font-weight: 900;
+  font-size: 4.9vw;
+}
+.tip_box .section__txt {
+  position: relative;
+  color: #4b4844 !important;
+}
+.tip_box::after {
+  content: "Tip";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  background: #fff;
+  padding: 2.3vw 0;
+  width: 15vw;
+  text-align: center;
+  top: -7vw;
+  left: -1px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-top: 1px solid #878685;
+  border-left: 1px solid #878685;
+  border-right: 1px solid #878685;
+  font-weight: 900;
+  font-size: 4.4vw;
+}
+.tip_box::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16vw;
+  background: #fff;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  height: 4vw;
+}
+
+.section0 {
+  padding-bottom: 20vw;
+}
+.section1 {
+  width: 100%;
+  padding: 103.5vw 0 10vw;
+  background: url("https://simage-kr.uniqlo.com/display/corner/2161/adef_camping_230315/camping_section_bg0_230316.png") no-repeat;
+  background-size: 100%;
+}
+.section1 .section__subtxt {
+  margin-top: 4vw;
+}
+.section1__box {
+  margin-top: 8vw;
+  background: url("https://simage-kr.uniqlo.com/display/corner/2161/adef_camping_230315/camping_img0_230316.png") no-repeat right bottom;
+  background-size: 28vw;
+}
+.section1 .section__txt.two {
+  width: 65vw;
+  margin-top: 10.5vw;
+}
+.section1 .section__txt.two::before {
+  content: "";
+  display: block;
+  width: 70vw;
+  height: 1px;
+  background: #5f5c58;
+  position: absolute;
+  left: -5vw;
+  top: -5.25vw;
+}
+
+.section2 {
+  padding: 64vw 0 20vw;
+  background: url("https://simage-kr.uniqlo.com/display/corner/2161/adef_camping_230315/camping_img1_230316.png") no-repeat center top;
+  background-size: 100%;
+}
+
+.section3 {
+  padding: 104vw 0 18.5vw;
+  background: url("https://simage-kr.uniqlo.com/display/corner/2161/adef_camping_230315/camping_section_bg1_230316.png") no-repeat center top;
+  background-size: 100%;
+}
+.section3 .section__subtxt {
+  margin-top: 3.5vw;
+  text-align: center;
+}
+.section3 .section_txt__box {
+  margin-top: 9vw;
+}
+.section3 .section_txt__box .section__txt:not(:first-child) {
+  position: relative;
+  margin-top: 10vw;
+}
+.section3 .section_txt__box .section__txt:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  top: -5vw;
+  background: #afadab;
+}
+.section3 .section__img0 {
+  margin-top: 10vw;
+  padding-top: 62vw;
+  background: url("https://simage-kr.uniqlo.com/display/corner/2161/adef_camping_230315/camping_img2_230316.png") no-repeat;
+  background-size: 100%;
+}
+
+.section4 {
+  padding: 104.5vw 0 0;
+  background: url("https://simage-kr.uniqlo.com/display/corner/2161/adef_camping_230315/camping_section_bg2_230316.png") no-repeat center top;
+  background-size: 100%;
+}
+.section4 .section__txt.one {
+  padding-bottom: 4.5vw;
+  margin: 4vw 0 4.5vw;
+  border-bottom: 1px solid #d2d0ce;
+}
+.section4 .section__img0 {
+  margin-top: 10vw;
+  padding-top: 61vw;
+  background: url("https://simage-kr.uniqlo.com/display/corner/2161/adef_camping_230315/camping_img4_230316.png") no-repeat;
+  background-size: 100%;
+}
+.section4 .section__img0 .tip_box {
+  margin-top: -5.5vw;
+}
+
+.section5 .campsite__title {
+  margin-top: 20vw;
+  padding-top: 169vw;
+  background: url("https://simage-kr.uniqlo.com/display/corner/2161/adef_camping_230315/camping_section_bg3_230316.png") no-repeat;
+  background-size: 100%;
+}
+.section5 .campsite__title .section__subtxt {
+  color: #fff;
+  margin-top: -25vw;
+  text-align: center;
+}
+.section5 .campsite__info {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #2f2f2f;
+}
+.section5 .campsite__num {
+  position: relative;
+  font-family: "Apple SD Gothic Neo", "Nanum Gothic", "Roboto", sans-serif;
+  letter-spacing: -4px;
+  font-size: 29.35vw;
+  font-weight: 800;
+  color: #f29696;
+}
+.section5 .campsite__place, .section5 .campsite__location, .section5 .campsite__item {
+  font-family: "Apple SD Gothic Neo", "Nanum Gothic", "Roboto", sans-serif;
+}
+.section5 .campsite__article {
+  color: #2f2f2f;
+}
+.section5 .campsite__article:first-of-type {
+  padding: 38vw 0 0;
+}
+.section5 .campsite__article:not(:first-of-type) {
+  padding-top: 28vw;
+}
+.section5 .campsite__article.one .campsite__ic--map {
+  left: 12vw;
+}
+.section5 .campsite__article.two .campsite__ic--map {
+  left: 13vw;
+}
+.section5 .campsite__article .section__txt {
+  padding-top: 5.3vw;
+  color: #2f2f2f;
+}
+.section5 .campsite__place {
+  margin-left: 7vw;
+}
+.section5 .campsite__location {
+  margin-top: -6vw;
+  font-size: 4.3vw;
+  font-weight: 800;
+}
+.section5 .campsite__list {
+  margin-top: 5vw;
+}
+.section5 .campsite__item {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 3.3vw;
+}
+.section5 .campsite__item:not(:first-child) {
+  margin-top: 2.3vw;
+}
+.section5 .campsite__item img {
+  width: 3vw;
+  margin-right: 1vw;
+}
+.section5 .campsite__ic--map {
+  position: absolute;
+  width: 7.6vw;
+  top: -13vw;
+}
+.section5 .campsite__picture {
+  margin-top: 10.25vw;
+}/*# sourceMappingURL=index.css.map */
