@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    // 1
+    // function solution(num_list) {
+
+    //   var answer = [];
+    //   const evenArr = [];
+    //   const oddArr = [];
+    //   for (var i = 0; i < num_list.length; i++) {
+
+    //     if (num_list[i] % 2 === 0) {
+    //       evenArr.push(num_list[i]);
+    //     } else {
+    //       oddArr.push(num_list[i]);
+    //     }
+    //   }
+    //   answer = [evenArr.length, oddArr.length]
+    //   console.log(answer)
+    //   return answer
+    // }
+
+    //2 
+    // function solution(num_list) {
+    //   var answer = [0, 0];
+    //   for (let a of num_list) {
+    //     // if (a % 2 === 0) {
+    //     //   answer[0]++
+    //     // }
+    //     // else {
+    //     //   answer[1]++
+    //     // }
+    //     answer[a % 2]++
+    //   }
+
+    //   console.log(answer)
+    // }
+    // solution([1, 2, 3, 4, 5])
+
+
+    // 배열원소 길이
+    //1 
+    function solution(strlist) {
+      var answer = [];
+      for (let str of strlist) {
+        answer.push(str.length)
+      }
+      console.log(answer)
+    }
+    //2
+    // function solution(strlist) {
+    //   var answer = [];
+
+    //   answer = strlist.map(str => str.length)
+    //   console.log(answer)
+    // }
+    solution(["I", "Love", "Programmers."])
+  </script>
+</body>
+
+</html>
