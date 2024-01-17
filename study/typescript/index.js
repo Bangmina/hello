@@ -13,3 +13,11 @@ var 회원정보 = {
 // 콜백함수 개념
 function 함수1() { }
 function 함수2() { }
+// filter
+function solution(array, height) {
+    var answer = 0;
+    answer = array.filter(function (val) { return val > height; });
+    console.log(answer.length);
+    return answer;
+}
+solution([149, 180, 192, 170], 167);
