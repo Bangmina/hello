@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>basic :: JavaScript example</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #f1f1f1;
+	color: #555;
+}
+button {
+	padding: 5px 15px;
+	background-color: #ccc;
+	color: #000;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: all 0.5s;
+}
+button:hover {
+	background-color: #888;
+}
+.title {
+	margin: 0;
+	margin-bottom: 35px;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #555;
+}
+.container {
+	margin-top: 35px;
+}
+img[alt=lion] {
+	display: block;
+	margin-top: 50px;
+	width: 240px;
+	height: 240px;
+	transition: all 0.4s;
+}
+.lion.moving {
+	animation: moving 4s linear infinite;
+}
+
+@keyframes moving {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(1000px);
+	}
+}
+</style>
+<script>
+window.addEventListener("load", function(){
+	var addBtn=document.getElementById("add");
+	var removeBtn=document.getElementById("remove");
+	var container=document.getElementsByClassName("container")[0];
+
+	for(var i=0; i<container.children.length; i++){
+		if(container.children[i].className == "lion"){
+			var lion=container.children[i];
+		}
+	}
+
+	addBtn.addEventListener("click", function(){
+		lion.classList.add("moving");
+	});
+	removeBtn.addEventListener("click", function(){
+		lion.classList.remove("moving");
+	});
+});
+</script>
+</head>
+
+<body>
+<h1 class="title">basic :: JavaScript example</h1>
+<div class="container">
+	<button id="add">add</button>
+	<button id="remove">remove</button>
+	<img src="images/lion.gif" alt="lion" class="lion">
+</div>
+</body>
+</html>

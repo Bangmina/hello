@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>basic :: JavaScript event</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #555;
+	color: #000;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.container {
+	margin-top: 35px;
+}
+.ball {
+	position: absolute;
+	left: 40px;
+	top: 120px;
+	width: 30px;
+	height: 30px;
+	background-color: #8ac007;
+	cursor: pointer;
+	border-radius: 50%;
+	transition: all 0.2s ease-in-out;
+}
+.effect {
+	transform: scale(2);
+}
+.status {
+	margin-top: 110px;
+}
+</style>
+<script>
+window.addEventListener("load", function(){
+	var body=document.body;
+	var container=document.getElementsByClassName("container")[0];
+	var ball=container.children[0];
+
+	// 노드의 속성
+	// offsetLeft : Return Value A Number
+	var x=ball.offsetLeft;
+	// console.log("x : "+x);
+
+	// offsetTop : Return Value A Number
+	var y=ball.offsetTop;
+	// console.log("y : "+y);
+
+	// offsetWidth : Return Value A Number
+	var w=ball.offsetWidth;
+	// console.log("w : "+w);
+
+	// offsetHeight : Return Value A Number
+	var h=ball.offsetHeight;
+	// console.log("h : "+h);
+
+	body.addEventListener("keydown", function(e){
+		// console.log("e.keyCode : "+e.keyCode);
+
+		/*
+		if(e.keyCode == 39){ // right keyboard
+			x+=20;
+		}
+		else if(e.keyCode == 37){ // left keyboard
+			x-=20;
+		}
+		else if(e.keyCode == 38){ // up keyboard
+			y-=20;
+		}
+		else if(e.keyCode == 40){ // down keyboard
+			y+=20;
+		}
+		*/
+
+		switch(e.keyCode){
+			case 39 :
+				x+=20;
+				break;
+			case 37 :
+				x-=20;
+				break;
+			case 38 :
+				y-=20;
+				break;
+			case 40 :
+				y+=20;
+				break;
+			default :
+				break;
+		}
+
+		ball.style.left=x+"px";
+		ball.style.top=y+"px";
+	});
+});
+</script>
+</head>
+
+<body>
+<h1 class="title">basic :: JavaScript event</h1>
+<div class="container">
+	<div class="ball"></div>
+</div>
+</body>
+</html>

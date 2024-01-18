@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>basic :: JavaScript event</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #555;
+	color: #000;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.container {
+	margin-top: 35px;
+}
+.wrapper {
+	padding: 20px;
+	width: 50px;
+	height: 50px;
+	background-color: #666;
+	cursor: pointer;
+}
+.wrapper > a {
+	display: block;
+	width: 50px;
+	height: 50px;
+	background-color: #8ac007;
+	cursor: pointer;
+}
+.active {
+	background-color: rgba(255,255,0,.2);
+}
+</style>
+<script>
+window.addEventListener("load", function(){
+	var container=document.getElementsByClassName("container")[0];
+	var wrapper=container.children[0];
+
+	// Bubbling 이벤트 발생은 하위 노드에서 상위 노드로 진행됩니다.
+	wrapper.addEventListener("click", function(e){
+		// e.target.classList.add("active");
+		e.currentTarget.classList.add("active");
+		// console.log("wrapper click event!!");
+	});
+	wrapper.children[0].addEventListener("click", function(e){
+		e.currentTarget.classList.add("active");
+		// stopPropagation() 이벤트 명령어로 위의 노드로 이벤트가 진행되는 것을 막습니다.
+		e.stopPropagation();
+		// console.log("a click event!!");
+	});
+});
+</script>
+</head>
+
+<body>
+<h1 class="title">basic :: JavaScript event</h1>
+<div class="container">
+	<div class="wrapper">
+		<a href="#"></a>
+	</div>
+</div>
+</body>
+</html>

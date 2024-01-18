@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>basic :: JavaScript example</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	/* overflow: hidden; */
+	scroll-behavior: smooth;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+}
+ul, ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+#GNB {
+	position: fixed;
+	right: 50px;
+	top: 50%;
+	margin-top: -88px;
+	width: 16px;
+	height: 176px;
+}
+#GNB li {
+	margin-top: 16px;
+	width: 16px;
+	height: 16px;
+	background-color: transparent;
+	border: 2px solid #000;
+	border-radius: 8px;
+}
+#GNB li:first-child {
+	margin-top: 0;
+}
+#GNB li.active {
+	background-color: #000;
+}
+#GNB li a {
+	display: block;
+	width: 16px;
+	height: 16px;
+	text-indent: -9999px;
+}
+section {
+	padding: 20px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+	<header id="GNB">
+		<ul>
+			<li><a href="">menu1</a></li>
+			<li><a href="">menu2</a></li>
+			<li><a href="">menu3</a></li>
+			<li><a href="">menu4</a></li>
+			<li><a href="">menu5</a></li>
+			<li><a href="">menu6</a></li>
+		</ul>
+	</header>
+	<section id="index" class="page">index</section>
+	<section id="page1" class="page">page1</section>
+	<section id="page2" class="page">page2</section>
+	<section id="page3" class="page">page3</section>
+	<section id="page4" class="page">page4</section>
+	<section id="page5" class="page">page5</section>
+</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>basic :: JavaScript event</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #555;
+	color: #000;
+}
+button {
+	padding: 5px 15px;
+	background-color: #666;
+	color: #000;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: all 0.5s;
+}
+button:hover {
+	background-color: #888;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.container {
+	margin-top: 35px;
+}
+.ball {
+	position: absolute;
+	left: 40px;
+	top: 184px;
+	width: 30px;
+	height: 30px;
+	background-color: #8ac007;
+	border-radius: 50%;
+	transition: all 0.3s;
+}
+</style>
+<script>
+window.addEventListener("load", function(){
+	var container=document.getElementsByClassName("container")[0];
+	var buttonList=[];
+
+	for(var i=0; i<container.children.length; i++){
+		if(container.children[i].tagName == "BUTTON"){
+			buttonList.push(container.children[i]);
+		}
+		else if(container.children[i].tagName == "DIV"){
+			var ball=container.children[i];
+		}
+	}
+	// console.log(buttonList);
+	// console.log(ball);
+
+	var idName="";
+	var x=40;
+	var y=184;
+
+	for(i=0; i<buttonList.length; i++){
+		buttonList[i].addEventListener("click", function(e){
+			idName=e.target.id;
+			// console.log("id : "+idName);
+
+			/*
+			if(idName == "left"){
+				x=x-20;
+			}
+			else if(idName == "right"){
+				x=x+20;
+			}
+			else if(idName == "top"){
+				y=y-20;
+			}
+			else if(idName == "bottom"){
+				y=y+20;
+			}
+			// console.log("x : "+x+", y : "+y);
+			ball.style.left=x+"px";
+			ball.style.top=y+"px";
+			*/
+
+			switch(idName){
+				case "left" :
+					x=x-20;
+					break;
+				case "right" :
+					x=x+20;
+					break;
+				case "top" :
+					y=y-20;
+					break;
+				case "bottom" :
+					y=y+20;
+					break;
+				default :
+					break;
+			}
+			ball.style.left=x+"px";
+			ball.style.top=y+"px";
+		});
+	}
+});
+</script>
+</head>
+
+<body>
+<h1 class="title">basic :: JavaScript event</h1>
+<div class="container">
+	<button id="left">left</button>
+	<button id="right">right</button>
+	<button id="top">top</button>
+	<button id="bottom">bottom</button><br>
+	<div class="ball"></div>
+</div>
+</body>
+</html>

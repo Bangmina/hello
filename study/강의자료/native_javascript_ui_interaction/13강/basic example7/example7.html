@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>basic :: JavaScript example</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #f1f1f1;
+	color: #555;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.title {
+	margin: 0;
+	margin-bottom: 35px;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #555;
+}
+.container {
+	margin-top: 35px;
+}
+nav {
+	display: inline-block;
+}
+nav > ul {
+	height: 40px;
+	overflow: hidden;
+	background-color: #fff;
+	transition: height 0.4s ease-out;
+}
+nav > ul.over {
+	height: 200px;
+}
+nav > ul > li {
+	position: relative;
+	float: left;
+	width: 140px;
+	height: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 0.813em;
+	box-sizing: border-box;
+}
+nav > ul > li > a {
+	display: block;
+	width: 100%;
+	line-height: 40px;
+	text-decoration: none;
+	background-color: #eaeaea;
+	color: #666;
+	transition: background 0.4s, color 0.4s;
+}
+nav > ul > li:hover > a,
+nav > ul > li:focus > a,
+nav > ul > li > a.over {
+	font-weight: 600;
+	background-color: #8ac007;
+	color: #fff;
+}
+nav .sub {
+	position: absolute;
+	left: 0;
+	top: 40px;
+	padding-top: 6px;
+	width: 100%;
+	border-left: 1px solid #f4f4f4;
+}
+nav > ul > li:first-child .sub {
+	border-left: none;
+}
+nav .sub li a {
+	display: block;
+	padding: 11px;
+	text-decoration: none;
+	color: #666;
+	background-color: #fff;
+}
+nav .sub li a:hover,
+nav .sub li a:focus {
+	background-color: #f8f8f8;
+}
+</style>
+<script>
+window.addEventListener("load", function(){
+	var nav=document.getElementById("nav");
+	// console.log(nav);
+
+	var depth1Ul=nav.children[0]; // nav > ul
+	var depth1Li=depth1Ul.children; // nav > ul > li
+
+	for(var i=0; i<depth1Li.length; i++){
+		depth1Li[i].index=i;
+
+		depth1Li[i].addEventListener("mouseenter", function(){
+			depth1Ul.classList.add("over");
+		});
+		depth1Li[i].addEventListener("mouseleave", function(){
+			depth1Ul.classList.remove("over");
+		});
+
+		var depth1A=depth1Li[i].children[0]; // nav > ul > li > a
+		// console.log(depth1A);
+
+		var depth2Ul=depth1Li[i].children[1]; // nav ul ul
+		// console.log(depth2Ul);
+
+		var depth2Li=depth2Ul.children; // nav ul ul li
+		// console.log(depth2Li);
+
+		depth1A.addEventListener("focusin", function(e){
+			// console.log("focusin event!!");
+			e.target.classList.add("over");
+
+			if(e.target.parentElement.index == 0){
+				depth1Ul.classList.add("over");
+			}
+		});
+
+		for(var j=0; j<depth2Li.length; j++){
+			if(j == (depth2Li.length-1)){
+				depth2Li[j].children[0].addEventListener("focusout", function(e){
+					// console.log("focusout event!!");
+					var link=e.target.parentElement.parentElement.previousElementSibling;
+					// console.log(link);
+					link.classList.remove("over");
+
+					var linkLi=e.target.parentElement.parentElement.parentElement;
+					// console.log(linkLi);
+
+					var index=linkLi.index;
+					// console.log("index : "+index);
+
+					if(index == (depth1Li.length-1)){
+						depth1Ul.classList.remove("over");
+					}
+				});
+			}
+		}
+	}
+});
+</script>
+</head>
+
+<body>
+<h1 class="title">basic :: JavaScript example</h1>
+<div class="container">
+	<nav id="nav">
+		<ul>
+			<li>
+				<a href="">main1</a>
+				<ul class="sub">
+					<li><a href="">sub11</a></li>
+					<li><a href="">sub12</a></li>
+					<li><a href="">sub13</a></li>
+					<li><a href="">sub14</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">main2</a>
+				<ul class="sub">
+					<li><a href="">sub21</a></li>
+					<li><a href="">sub22</a></li>
+					<li><a href="">sub23</a></li>
+					<li><a href="">sub24</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">main3</a>
+				<ul class="sub">
+					<li><a href="">sub31</a></li>
+					<li><a href="">sub32</a></li>
+					<li><a href="">sub33</a></li>
+					<li><a href="">sub34</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">main4</a>
+				<ul class="sub">
+					<li><a href="">sub41</a></li>
+					<li><a href="">sub42</a></li>
+					<li><a href="">sub43</a></li>
+					<li><a href="">sub44</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</div>
+</body>
+</html>

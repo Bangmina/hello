@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>basic :: JavaScript example</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<!-- 100 / 300 / 400 / 500 / 700 / 900 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+<link rel="stylesheet" href="css/reset.css">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	font-family: "Open Sans", "Noto Sans KR", sans-serif;
+	font-size: 1em;
+	font-weight: 400;
+	background-color: #f1f1f1;
+}
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: block;
+}
+.clearfix:after {
+	clear: both;
+}
+.title {
+	margin: 0;
+	margin-bottom: 35px;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #555;
+}
+.container {
+	margin-top: 35px;
+}
+.container .pop {
+	display: inline-block;
+	line-height: 24px;
+	text-decoration: none;
+	font-size: 1em;
+	font-weight: 400;
+	color: #555;
+}
+.container .pop:focus {
+	outline: 2px solid #09f;
+}
+.container .pop:hover {
+	text-decoration: underline;
+}
+.layer_pop {
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 101;
+	margin-left: -300px;
+	margin-top: -250px;
+	width: 600px;
+	font-size: 16px;
+	background-color: #fff;
+	color: #494949;
+}
+.layer_pop .pop_title {
+	position: relative;
+	height: 39px;
+	line-height: 39px;
+	text-indent: 16px;
+	font-size: 1em;
+	font-weight: bold;
+	background-color: #ff640b;
+	color: #fff;
+}
+.layer_pop .close {
+	position: absolute;
+	right: 9px;
+	top: 7px;
+	width: 24px;
+	height: 24px;
+	text-indent: 0;
+}
+.layer_pop .close:focus {
+	outline: 2px solid #09f;
+}
+.layer_pop .close img {
+	vertical-align: top;
+}
+.layer_pop .pop_contents {
+	padding: 25px;
+	max-height: 410px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.layer_pop .pop_contents .content_info {
+	padding: 0;
+	text-align: center;
+}
+.layer_pop .pop_contents .pop_sub_title {
+	margin-bottom: 20px;
+	height: 17px;
+}
+.layer_pop .pop_contents .pop_sub_title .entitle {
+	float: left;
+}
+.layer_pop .pop_contents .pop_info {
+	padding: 0 0 26px 12px;
+	line-height: 18px;
+	text-align: left;
+	font-size: 14px;
+}
+.join_step {
+	margin-bottom: 30px;
+	border: 1px solid #cecece;
+}
+.join_step li {
+	float: left;
+	width: 25%;
+	height: 55px;
+	line-height: 55px;
+	border-left: 1px solid #cecece;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.join_step li:first-child {
+	border-left: none;
+}
+.join_step li a {
+	display: block;
+	text-indent: -9999px;
+	font-size: 0;
+}
+.join_step li.step1 {
+	background: #fcfcfe url("images/member_join_step_1_off.png") no-repeat 50% 50%;
+}
+.join_step li.step2 {
+	background: #fcfcfe url("images/member_join_step_2_off.png") no-repeat 50% 50%;
+}
+.join_step li.step3 {
+	background: #fcfcfe url("images/member_join_step_3_off.png") no-repeat 50% 50%;
+}
+.join_step li.step4 {
+	background: #fcfcfe url("images/member_join_step_4_off.png") no-repeat 50% 50%;
+}
+.join_step li.step1.on {
+	background: #eb7836 url("images/member_join_step_1_on.png") no-repeat 50% 50%;
+}
+.join_step li.step2.on {
+	background: #eb7836 url("images/member_join_step_2_on.png") no-repeat 50% 50%;
+}
+.join_step li.step3.on {
+	background: #eb7836 url("images/member_join_step_3_on.png") no-repeat 50% 50%;
+}
+.join_step li.step4.on {
+	background: #eb7836 url("images/member_join_step_4_on.png") no-repeat 50% 50%;
+}
+.table_info {
+	margin-bottom: 5px;
+	font-size: 14px;
+}
+.data_table {
+	border-top: 1px solid #8d8d8d;
+}
+.data_table table {
+	width: 100%;
+	border-bottom: 1px solid #dbdbdb;
+}
+.data_table th {
+	padding: 10px 5px 10px 10px;
+	text-align: left;
+	font-size: 13px;
+	font-weight: 400;
+	background-color: #e8e8e8;
+	color: #666;
+	border: 1px solid #dbdbdb;
+	border-bottom: none;
+}
+.data_table tr:first-child th, .data_table tr:first-child td {
+	border-top: none;
+}
+.data_table th:first-child {
+	width: 28%;
+	border-left: none;
+}
+.data_table th .essential {
+	font-weight: normal;
+	color: #ff640b;
+}
+.data_table td {
+	padding: 11px 10px;
+	text-align: left;
+	color: #666;
+	border-top: 1px solid #dbdbdb;
+}
+.data_table input {
+	padding: 3px;
+	font-family: "Roboto", "Noto Sans KR", sans-serif;
+	font-size: 13px;
+}
+.data_table select {
+	height: 22px;
+	font-family: "Roboto", "Noto Sans KR", sans-serif;
+	font-size: 13px;
+}
+.data_table p.sub_txt {
+	margin-top: 5px;
+	font-size: 13px;
+	color: #666;
+}
+.data_table span.sub_txt {
+	margin-left: 10px;
+	font-size: 14px;
+	color: #666;
+}
+.data_table td .vline {
+	margin-top: 5px;
+}
+.data_table td .vline:first-child {
+	margin-top: 0;
+}
+.data_table td .vline .identify {
+	display: block;
+	float: left;
+}
+.data_table td label {
+	margin-right: 10px;
+	font-size: 13px;
+}
+.confirm {
+	margin: 20px 0;
+	text-align: center;
+}
+.transparent {
+	display: none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 100;
+	background-color: rgba(0,0,0,.5);
+}
+</style>
+</head>
+
+<body>
+<h1 class="title">basic :: JavaScript example</h1>
+<div class="container">
+	<a href="" class="pop">popup open</a>
+	<br><br>
+	<a href="">test link</a>
+
+	<div class="layer_pop">
+		<div class="pop_title">
+			컨텐츠 회원가입
+			<a href="" class="close"><img src="images/btn_close.gif" alt="close"></a>
+		</div>
+		<div class="pop_contents">
+			<div class="content_info">
+				<div class="pop_sub_title">
+					<p class="entitle"><img src="images/tit_self_certification.gif" alt="본인인증"></p>
+				</div>
+				<div class="pop_info">
+					회원가입을 위해서 아래 본인인증을 거쳐 주십시오.
+				</div>
+			</div>
+			<ol class="join_step clearfix">
+				<li class="step1"><a href="">step1 약관동의</a></li>
+				<li class="step2"><a href="">step2 본인인증</a></li>
+				<li class="step3 on"><a href="">step3 정보입력</a></li>
+				<li class="step4"><a href="">step3 가입완료</a></li>
+			</ol>
+			<p class="table_info">* 는 필수 입력 항목입니다.</p>
+			<div class="data_table">
+				<table>
+					<caption>관리자 정보수정</caption>
+					<tbody>
+						<tr>
+							<th><span class="essential">*</span> 이름</th>
+							<td>
+								<input type="text" class="input" style="width:110px;">
+							</td>
+						</tr>
+						<tr>
+							<th><span class="essential">*</span> 회원 아이디(이메일)</th>
+							<td>
+								<input type="text" class="placeholder" style="width:110px;" value="T스마트러닝 ID">
+								<input type="image" alt="중복확인" src="images/btn_double_check.gif">
+								<p class="sub_txt">* 이용 중이신 이메일 주소를 입력해주세요</p>
+							</td>
+						</tr>
+						<tr>
+							<th><span class="essential">*</span> 비밀번호</th>
+							<td>
+								<input type="text" class="input" style="width:110px;">
+								<span class="sub_txt">영문 또는 영문/숫자의 조합 (6~12자)</span>
+							</td>
+						</tr>
+						<tr>
+							<th><span class="essential">*</span> 비밀번호확인</th>
+							<td>
+								<input type="text" class="input" style="width:110px;">
+								<span class="sub_txt">비밀번호 확인을 위해 다시 한번 입력</span>
+							</td>
+						</tr>
+						<tr>
+							<th><span class="essential">*</span> 이동통신사</th>
+							<td>
+								<select title="이동통신사 선택" style="width:60px;">
+									<option>SKT</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th><span class="essential">*</span> 휴대전화번호</th>
+							<td>
+								<p class="vline">
+									<select style="width:60px;">
+										<option>010</option>
+									</select> - 
+									<input type="text" class="input" style="width:60px;"> - 
+									<input type="text" class="input" style="width:60px;">
+									<input type="image" alt="인증번호 받기" src="images/btn_pin_num.gif">
+								</p>
+								<p class="vline">
+									<span class="identify">
+										<input type="text" class="input placeholder" style="width:160px;" value="인증번호">
+										<input type="image" src="images/btn_certification.gif" alt="확인">
+									</span>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<th><span class="essential">*</span> 성별</th>
+							<td>
+								<label>
+									<input type="radio" class="radio" name="sex"> 남
+								</label>
+								<label>
+									<input type="radio" class="radio" name="sex"> 여
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th><span class="essential">*</span> 생년월일</th>
+							<td>
+								<select title="년도" style="width:80px;">
+									<option>전체</option>
+								</select> 년
+								&nbsp;
+								<select title="월" style="width:80px;">
+									<option>전체</option>
+								</select> 월
+								&nbsp;
+								<select title="일" style="width:80px;">
+									<option>전체</option>
+								</select> 일
+							</td>
+						</tr>
+						<tr>
+							<th><span class="essential">*</span> 학습구분</th>
+							<td>
+								<label>
+									<input type="radio" class="radio" name="studyClass"> 유아
+								</label>
+								<label>
+									<input type="radio" class="radio" name="studyClass"> 초등
+								</label>
+								<label>
+									<input type="radio" class="radio" name="studyClass"> 중등
+								</label>
+								<label>
+									<input type="radio" class="radio" name="studyClass"> 고등
+								</label>
+								<label>
+									<input type="radio" class="radio" name="studyClass"> 대학
+								</label>
+								<label>
+									<input type="radio" class="radio" name="studyClass"> 성인
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th>회원구분</th>
+							<td>
+								<select title="회원구분 선택" style="width:80px;">
+									<option>선택</option>
+									<option>학부모</option>
+									<option>학습자</option>
+									<option>교사</option>
+								</select> 
+							</td>
+						</tr>
+						<tr>
+							<th><span class="essential">*</span> 이메일 수신동의</th>
+							<td>
+								<label>
+									<input type="radio" class="radio" name="email"> 수신함
+								</label>
+								<label>
+									<input type="radio" class="radio" name="email"> 수신안함
+								</label>
+								<p class="sub_txt">* 가입하신 Email로 학습정보 등 정보성 메일이 발송됩니다.</p>
+							</td>
+						</tr>
+						<tr>
+							<th><span class="essential">*</span> SMS 수신동의</th>
+							<td>
+								<label>
+									<input type="radio" class="radio" name="sms"> 수신함
+								</label>
+								<label>
+									<input type="radio" class="radio" name="sms"> 수신안함
+								</label>
+							</td>
+						</tr>
+					</tbody> 
+				</table>
+			</div>
+			<div class="confirm">
+				<input type="image" alt="회원가입" src="images/btn_member_join.gif">
+			</div>
+		</div>
+	</div>
+	<div class="transparent"></div>
+</div>
+</body>
+</html>

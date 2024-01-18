@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>basic :: JavaScript example</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	background-color: #f1f1f1;
+}
+.title {
+	margin: 0;
+	margin-bottom: 35px;
+	padding: 0;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: #555;
+}
+.container {
+	margin-top: 35px;
+	height: 500px;
+}
+.ball {
+	width: 50px;
+	height: 50px;
+	background-color: #8ac007;
+	border-radius: 50%;
+}
+</style>
+<script>
+window.addEventListener("load", function(){
+	var num=0; // 위치 이동에 관련된 변수입니다.
+	var currentx=0; // 현재 위치에 관련된 변수입니다.
+	var targetx=0; // 목표 위치에 관련된 변수입니다.
+	var moving=false; // 현재 움직임에 관련된 변수입니다.
+	var body=document.body;
+	var ball=document.getElementById("ball");
+
+	body.addEventListener("wheel", function(e){
+		// console.log("mousewheel event!!");
+		// console.log(e);
+
+		if(moving) return;
+
+		var delta=e.wheelDeltaY;
+		// console.log("delta : "+delta);
+
+		if(delta > 0){
+			// console.log("up");
+			if(num > 0){
+				num-=1;
+			}
+		}else{
+			// console.log("down");
+			if(num < 20){
+				num+=1;
+			}
+		}
+		moving=true;
+		targetx=100*num;
+		// console.log("num : "+num+", currentx : "+currentx+", targetx : "+targetx);
+
+		var aniTimer=setInterval(function(){
+			if(targetx > currentx){
+				if(Math.abs(targetx-currentx) > 5){
+					currentx+=5;
+				}
+				else{
+					currentx=targetx;
+					clearInterval(aniTimer);
+					moving=false;
+				}
+			}
+			else{
+				if(Math.abs(targetx-currentx) > 5){
+					currentx-=5;
+				}
+				else{
+					currentx=targetx;
+					clearInterval(aniTimer);
+					moving=false;
+				}
+			}
+			ball.style.marginLeft=currentx+"px";
+		}, 5);
+	});
+	body.addEventListener("keydown", function(e){
+		// console.log("e.keyCode : "+e.keyCode);
+		if(moving) return;
+
+		if(e.keyCode == 38){
+			// console.log("up");
+			if(num > 0){
+				num-=1;
+			}
+		}
+		else if(e.keyCode == 40){
+			// console.log("down");
+			if(num < 20){
+				num+=1;
+			}
+		}
+
+		// console.log("num : "+num);
+		moving=true;
+		targetx=100*num;
+
+		var aniTimer=setInterval(function(){
+			if(targetx > currentx){
+				if(Math.abs(targetx-currentx) > 5){
+					currentx+=5;
+				}
+				else{
+					currentx=targetx;
+					clearInterval(aniTimer);
+					moving=false;
+				}
+			}
+			else{
+				if(Math.abs(targetx-currentx) > 5){
+					currentx-=5;
+				}
+				else{
+					currentx=targetx;
+					clearInterval(aniTimer);
+					moving=false;
+				}
+			}
+			ball.style.marginLeft=currentx+"px";
+		}, 5);
+	});
+});
+</script>
+</head>
+
+<body>
+<h1 class="title">basic :: JavaScript example</h1>
+<div class="container">
+	<div class="ball" id="ball"></div>
+</div>
+</body>
+</html>

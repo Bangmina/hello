@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>basic :: JavaScript event</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	height: 2000px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #555;
+	color: #000;
+}
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+li {
+	margin-top: 20px;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.container {
+	margin-top: 35px;
+}
+</style>
+<script>
+window.addEventListener("load", function(){
+	var container=document.getElementsByClassName("container")[0];
+
+	window.addEventListener("resize", function(){
+		// console.log("resize event!!");
+		var info="";
+		info+="inner width : "+window.innerWidth+"<br><br>";
+		info+="inner height : "+window.innerHeight+"<br><br>";
+		info+="outer width : "+window.outerWidth+"<br><br>";
+		info+="outer height : "+window.outerHeight+"<br><br>";
+		info+="page xoffset : "+window.pageXOffset+"<br><br>";
+		info+="page yoffset : "+window.pageYOffset;
+		container.innerHTML=info;
+	});
+});
+</script>
+</head>
+
+<body>
+<h1 class="title">basic :: JavaScript event</h1>
+<div class="container">
+</div>
+</body>
+</html>

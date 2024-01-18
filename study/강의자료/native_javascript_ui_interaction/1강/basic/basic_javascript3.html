@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>basic :: JavaScript node access</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #555;
+	color: #000;
+}
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+li {
+	margin-top: 20px;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.container {
+	margin-top: 35px;
+}
+</style>
+</head>
+
+<body>
+<h1 class="title">basic :: JavaScript node access</h1>
+<div class="container">
+	<p>pre study</p>
+	<ul id="tutorial">
+		<li class="html">HTML</li>
+		<li class="css">CSS</li>
+		<li class="css3">CSS3</li>
+		<li class="javascript">JavaScript</li>
+		<li class="jquery">jQuery</li>
+		<li class="blank"></li>
+	</ul>
+	<p id="portfolio">portfolio</p>
+</div>
+<script>
+/*
+// 노드의 태그 이름 속성
+// element.tagName
+// Return Value : A String
+var html=document.querySelector(".html");
+var tagName=html.tagName;
+// console.log("tagName : "+tagName);
+*/
+
+// 노드의 id 속성
+// element.id
+// Return Value : A String
+var ul=document.querySelector("#tutorial");
+var idName=ul.id;
+// console.log("idName : "+idName);
+
+/*
+// 노드의 클래스 이름 속성
+// element.className
+// Return Value : A String
+var li=document.querySelectorAll("#tutorial li");
+
+for(var i=0; i<li.length; i++){
+	// 노드의 클래스 이름
+	// element.className
+	// Return : A String
+	if(li[i].className == "html"){
+		li[i].style.backgroundColor="#666";
+	}
+}
+*/
+
+/*
+var li=document.querySelectorAll("#tutorial li");
+
+for(var i=0; i<li.length; i++){
+	// 문자열 자르기
+	// string.slice(start, end)
+	// Return Value : A String
+	// ex) var str="bus";
+	//      console.log("string : "+str.slice(1, 2)); // str : u
+	var name=li[i].className;
+	// console.log("string : "+name.slice(0, 3));
+
+	if(name.slice(0, 3) == "css"){
+		li[i].style.backgroundColor="#666";
+	}
+}
+*/
+
+/*
+var li=document.querySelectorAll("#tutorial li");
+
+for(var i=0; i<li.length; i++){
+	// 마지막 문자열 자르기
+	var name=li[i].className;
+	var length=li[i].className.length;
+	// console.log("name : "+name+", length : "+length);
+
+	var lastword=name.slice((length-1), length);
+	// console.log("lastword : "+lastword);
+
+	if(lastword == "3"){
+		li[i].style.backgroundColor="#666";
+	}
+}
+*/
+
+/*
+var li=document.querySelectorAll("#tutorial li");
+
+for(var i=0; i<li.length; i++){
+	// 포함 문자
+	// string.indexOf(searchvalue, start)
+	// Return Value : A Number
+	var name=li[i].className;
+
+	if(name.indexOf("as") != -1){
+		li[i].style.backgroundColor="#666";
+	}
+}
+*/
+
+/*
+// 노드의 속성 읽기
+// element.getAttribute(attributename)
+// Return Value : A String
+var li=document.querySelectorAll("#tutorial li");
+
+for(var i=0; i<li.length; i++){
+	var className=li[i].getAttribute("class");
+	// console.log("className : "+className);
+}
+*/
+
+/*
+// 노드의 속성 변경
+// element.setAttribute(attributename, attributevalue)
+// Return Value : No return value
+var p=document.querySelectorAll("p");
+
+for(var i=0; i<p.length; i++){
+	if(p[i].textContent == "portfolio"){
+		p[i].setAttribute("id", "portfolio_study");
+	}
+}
+*/
+
+/*
+// 노드의 속성 제거
+// element.removeAttribute(attributename)
+// Return Value : No return value
+var p=document.querySelectorAll("p");
+
+for(var i=0; i<p.length; i++){
+	if(p[i].textContent == "portfolio"){
+		p[i].removeAttribute("id");
+	}
+}
+*/
+
+// 노드의 속성이 있는지 점검
+// element.hasAttribute(attributename)
+// Return Value : A Boolean
+var p=document.querySelectorAll("p");
+
+for(var i=0; i<p.length; i++){
+	if(p[i].hasAttribute("id")){
+		p[i].style.backgroundColor="#666";
+	}
+}
+</script>
+</body>
+</html>
