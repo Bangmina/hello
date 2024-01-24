@@ -8,7 +8,44 @@
 </head>
 
 <body>
+  <h4 id="title">하이룽</h4>
+  <a class="link" href="naver.com">링크</a>
+  <button id="button">버튼</button>
   <script src="./index.js"></script>
+  <script src="./typescript.js"></script>
+
+  <script>
+    // 비슷한 object 많이 만들일 있으면 class 사용
+    // 클레스는 object 뽑는 기계일뿐
+
+
+    function 기계(x, y) {
+      this.q = x; // 새로 생성되는 object에 {q: 'consume'} 추가해주셈
+      this.w = y;
+      // this는 기계로부터 새로 생성되는 object들 (어려운말로 instance) 
+
+    }
+
+    class Hero {
+      constructor(x, y) {
+        this.q = x;
+        this.w = y
+      }
+    }
+
+    var hero1 = new Hero('consume', 'snowball');
+    var hero2 = new Hero('strike', 'courage');
+
+    var hero1 = {
+      q: 'consume',
+      w: 'snowball'
+    }
+    var hero2 = {
+      q: 'strike',
+      w: 'courage'
+    }
+
+  </script>
 </body>
 
 </html>
