@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function solution(array) {
+      var answer = 0;
+      // 배열 오름차순 정렬
+      amswer = array.sort(function (a, b) { return a - b })[Math.floor(array.length / 2)]
+      console.log(amswer)
+      // // 가운데 index값 구하기
+      // var arr_idx = Math.floor(arr.length / 2)
+      // // 배열 가운데 요소 값 가져오기
+      // answer = arr[arr_idx];
+      return amswer;
+    }
+    solution([1, 2, 7, 10, 11])
+  </script>
+</body>
+
+</html>
