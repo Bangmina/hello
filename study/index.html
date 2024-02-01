@@ -9,18 +9,15 @@
 
 <body>
   <script>
-    function solution(array) {
+
+    function solution(n) {
       var answer = 0;
-      // 배열 오름차순 정렬
-      amswer = array.sort(function (a, b) { return a - b })[Math.floor(array.length / 2)]
-      console.log(amswer)
-      // // 가운데 index값 구하기
-      // var arr_idx = Math.floor(arr.length / 2)
-      // // 배열 가운데 요소 값 가져오기
-      // answer = arr[arr_idx];
-      return amswer;
+      answer = Math.sqrt(n) % 1 === 0 ? 1 : 2;
+      console.log(answer)
+      return answer;
     }
-    solution([1, 2, 7, 10, 11])
+
+    solution(10)
   </script>
 </body>
 
