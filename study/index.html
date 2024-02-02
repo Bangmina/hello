@@ -10,14 +10,19 @@
 <body>
   <script>
 
-    function solution(n) {
-      var answer = 0;
-      answer = Math.sqrt(n) % 1 === 0 ? 1 : 2;
-      console.log(answer)
+    function solution(arr) {
+      var answer = [];
+      const arr1 = arr.entries()
+      for (const [idx, item] of arr1) {
+        if (item >= 50 || item % 2 === 0) {
+          console.log(item)
+          console.log(index)
+        }
+      }
       return answer;
     }
 
-    solution(10)
+    solution([1, 2, 3, 100, 99, 98])
   </script>
 </body>
 
