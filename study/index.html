@@ -9,44 +9,20 @@
 
 <body>
   <script>
-    function solution(n, control) {
-      var controlArr = [...control];
-      var answer = 0;
-      for (let item of controlArr) {
-        // console.log(item)
-        if (item == 'w') {
-          answer += 1;
-        } else if (item == 's') {
-          answer -= 1;
-        } else if (item == 'd') {
-          answer += 10;
-        } else if (item == 'a') {
-          answer -= 10;
+    function solution(rsp) {
+      var answer = '';
+      answer = rsp.split('').map((el) => {
+        if (el === '2') {
+          return '0'
+        } else if (el === '0') {
+          return '5'
+        } else {
+          return '2'
         }
-      }
-      console.log(answer)
+      }).join('')
       return answer;
     }
-
-    solution(0, "wsdawsdassw")
-
-    // function solution(n, control) {
-    //   const strArr = [...control];
-    //   var answer = 0;
-    //   for (let item of strArr) {
-    //     if (item == 'w') {
-    //       answer += 1;
-    //     } else if (item == 's') {
-    //       answer -= 1;
-    //     } else if (item == 'd') {
-    //       answer += 10;
-    //     } else if (item == 'a') {
-    //       answer -= 10;
-    //     }
-    //   }
-
-    //   return answer;
-    // }
+    solution('205')
   </script>
 </body>
 
