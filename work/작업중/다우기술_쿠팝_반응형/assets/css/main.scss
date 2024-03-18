@@ -736,6 +736,55 @@
           }
         }
       }
+      
+      &__list {
+        margin-top: 5vw;
+        display: flex;
+        justify-content: space-between;
+      }
+      &__item {
+        width: 49%;
+
+        text-align: center;
+      }
+      &__anchor {
+        display: block;
+        padding: 4.375vw 0;
+        background: url('../image/mobile/whatsgood_bg.png') no-repeat 0 0/100%;
+      }
+      &__img--box {
+        height: 23vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &__img {
+        &.coin {
+          width: 242px;
+        }
+        &.npay {
+          width: 224px;
+        }
+      }
+      &__txt {
+        font-size: 4.06vw;
+        margin-top: 3.9vw;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+      &__detail {
+        font-size: 3.125vw;
+        color: #2b2a2c;
+        margin-top: 3.9vw;
+      }
+      &__btn--anchor {
+        margin-top: 1.5vw;
+        display: block;
+        img {
+          width: 100%;
+        }
+      }
+    }
     }
   }
 }
