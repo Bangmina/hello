@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- 타이틀 -->
-  <title>Document</title>
+  <title>쿠팝 - 오늘이 특별해지는 모든 선물</title>
   <!-- 파비콘 -->
-  <link rel="shortcut icon" type="image/x-icon" href="">
+  <link href="https://www.coupop.co.kr/images/common/favicon.ico" rel="shortcut icon" type="image/ico">
   <!-- og 태그 -->
   <meta name="keywords" content="다우기술|쿠팝1">
   <meta name="description" content="다우기술|쿠팝2">
@@ -25,6 +25,18 @@
   <!-- aos -->
   <link rel="stylesheet" href="./assets/js/aos/aos.css">
   <script src="./assets/js/aos/aos.js"></script>
+  <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.0/kakao.min.js"
+    integrity="sha384-l+xbElFSnPZ2rOaPrU//2FF5B4LB8FiX5q4fXYTlfcG4PGpMkE1vcL7kNXI6Cci0"
+    crossorigin="anonymous"></script>
+  <script>
+    Kakao.init('0603ffa4073a088adeed2ccfe964b66f');
+    function shareMessage() {
+      Kakao.Share.sendCustom({
+        templateId: 105170
+      });
+
+    }	
+  </script>
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/main.css">
 </head>
@@ -88,9 +100,10 @@
           </p>
         </div>
       </div>
+      <img class="visual__obj mobile_block" src="./assets/image/mobile/visual_obj.png" alt="캐릭터">
+      <img class="visual__obj pc_block" src="./assets/image/pc/visual_obj.png" alt="캐릭터">
       <a class="visual__anchor " href="https://www.coupop.co.kr/user/joinStep1.do">
-        <img class="  mobile_block" src="./assets/image/mobile/visual_button.png" alt="">
-        <img class="  pc_block" src="./assets/image/pc/visual_button.png" alt="">
+        <img class="" src="./assets/image/visual_button.png" alt="">
       </a>
     </section>
     <!-- //section1 -->
@@ -152,7 +165,7 @@
           <h5 class="event__share--title">이벤트 공유하기</h5>
           <ul class="event__share--list">
             <li class="event__share--item">
-              <button class="event__share--btn kakao" onClick="location.href='https://www.naver.com/'"></button>
+              <button class="event__share--btn kakao" onClick="javascript:shareMessage()"></button>
             </li>
             <li class="event__share--item">
               <button class="event__share--btn url" onclick="clip();">
@@ -185,7 +198,7 @@
                 <h5 class="event__share--title">동료에게 공유하기</h5>
                 <ul class="event__share--list">
                   <li class="event__share--item">
-                    <button class="event__share--btn kakao" onClick="location.href='https://www.naver.com/'"></button>
+                    <button class="event__share--btn kakao" onClick="javascript:shareMessage()"></button>
                   </li>
                   <li class="event__share--item">
                     <button class="event__share--btn url" onclick="clip();">
@@ -232,8 +245,8 @@
     <section class="section four">
       <div class="wrap">
         <div class="section__title">
-          <img class="section__title--num" src="./assets/image/mobile/whatsgood.png" alt="what's good">
-          <img class="section__title--txt" src="./assets/image/mobile/whtsgood_title.png" alt="쿠팝 비즈회원 뭐가 좋아?">
+          <img class="section__title--num" src="./assets/image/whatsgood.png" alt="what's good">
+          <img class="section__title--txt" src="./assets/image/whtsgood_title.png" alt="쿠팝 비즈회원 뭐가 좋아?">
         </div>
         <div class="whatsgood__subtxt">
           <span class="color_pink">업계 최대 15% 적립</span> 회사에서도 일상에서도<br />
@@ -278,7 +291,7 @@
               </p>
             </a>
             <a class="whatsgood_benefit__btn--anchor" href="https://www.coupop.co.kr/user/joinStep1.do">
-              <img src="./assets/image/mobile/button_join.png" alt="지금 쿠팝 가입하기">
+              <img class="" src="./assets/image/button_join.png" alt="지금 쿠팝 가입하기">
             </a>
           </li>
           <li class="whatsgood_benefit__item">
@@ -295,7 +308,7 @@
               </p>
             </a>
             <a class="whatsgood_benefit__btn--anchor" href="https://www.coupop.co.kr/contents/eventList.do">
-              <img src="./assets/image/mobile/button_special_price.png" alt="진행 중인 특가 보기">
+              <img src="./assets/image/button_special_price.png" alt="진행 중인 특가 보기">
             </a>
           </li>
         </ul>
@@ -307,8 +320,8 @@
     <section class="section five">
       <div class="wrap">
         <div class="section__title">
-          <img class="section__title--num " src="./assets/image/mobile/important.png" alt="important">
-          <img class="section__title--txt " src="./assets/image/mobile/important_title.png" alt="유의사항 확인필수">
+          <img class="section__title--num " src="./assets/image/important.png" alt="important">
+          <img class="section__title--txt " src="./assets/image/important_title.png" alt="유의사항 확인필수">
         </div>
       </div>
       <div class="notice__wrap">
@@ -318,10 +331,10 @@
           </h5>
           <ul class="notice__list">
             <li class="notice__item">
-              가입한 동료가 7일 이내에 1만원 이상 첫 구매를 완료해야 포인트가 적립됩니다.
+              <p>가입한 동료가 7일 이내에 1만원 이상 첫 구매를 완료해야 포인트가 적립됩니다.</p>
             </li>
             <li class="notice__item">
-              적립된 포인트의 유효기간은 30일입니다
+              <p>적립된 포인트의 유효기간은 30일입니다</p>
             </li>
           </ul>
         </div>
@@ -331,13 +344,13 @@
           </h5>
           <ul class="notice__list">
             <li class="notice__item">
-              경품지급일(4/5) 기준 가입한 동료가 1만원 이상 첫 구매를 완료하고
+              <p>경품지급일(4/5) 기준 가입한 동료가 1만원 이상 첫 구매를 완료하고</p>
             </li>
             <li class="notice__item">
-              나와 동료 모두 마케팅 수신동의가 유지된 경우만 발송됩니다.
+              <p>나와 동료 모두 마케팅 수신동의가 유지된 경우만 발송됩니다.</p>
             </li>
             <li class="notice__item">
-              경품은 계정 정보에 입력된 휴대폰번호로 쿠팝 모바일쿠폰 형태로 발송됩니다.
+              <p>경품은 계정 정보에 입력된 휴대폰번호로 쿠팝 모바일쿠폰 형태로 발송됩니다.</p>
             </li>
           </ul>
         </div>
@@ -348,22 +361,22 @@
           <ul class="notice__list">
 
             <li class="notice__item">
-              ‘첫 구매 금액’은 최초 1회의 상품 구매 금액을 의미합니다.
+              <p>‘첫 구매 금액’은 최초 1회의 상품 구매 금액을 의미합니다.</p>
             </li>
             <li class="notice__item">
-              포인트 사용 금액은 첫 구매 금액에 포함되지 않습니다.
+              <p>포인트 사용 금액은 첫 구매 금액에 포함되지 않습니다.</p>
             </li>
             <li class="notice__item">
-              상품 구매 없이 충전금만 충전한 경우는 포함되지 않습니다.
+              <p>상품 구매 없이 충전금만 충전한 경우는 포함되지 않습니다.</p>
             </li>
             <li class="notice__item">
-              예약발송의 경우 ‘발송완료’ 시점에 포인트가 적립됩니다.
+              <p>예약발송의 경우 ‘발송완료’ 시점에 포인트가 적립됩니다.</p>
             </li>
             <li class="notice__item">
-              1개의 휴대폰번호는 최대 5회까지 추천인으로 입력될 수 있습니다.
+              <p>1개의 휴대폰번호는 최대 5회까지 추천인으로 입력될 수 있습니다.</p>
             </li>
             <li class="notice__item">
-              가입한 친구가 첫 구매 후 환불 및 취소할 경우 지급된 포인트는 취소될 수 있습니다.
+              <p>가입한 친구가 첫 구매 후 환불 및 취소할 경우 지급된 포인트는 취소될 수 있습니다.</p>
             </li>
           </ul>
         </div>
@@ -373,7 +386,7 @@
           </h5>
           <ul class="notice__list">
             <li class="notice__item">
-              쿠팝 마케팅팀 070-8707 1542
+              <p>쿠팝 마케팅팀 070-8707 1542</p>
             </li>
           </ul>
         </div>
