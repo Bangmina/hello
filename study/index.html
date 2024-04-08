@@ -8,18 +8,32 @@
 
   <body>
     <script>
-      function solution(num_list, n) {
-        var answer = []
-        answer = num_list.filter((el, idx) => {
-          if (idx == 0 || idx % n == 0) {
-            return answer.push(el)
+      function solution(arr) {
+        var answer1 = []
+
+        answer = arr.map((item, index) => {
+          const arr = []
+          if (item >= 50 && item % 2 === 0) {
+            console.log(`index${index} : ${item}`)
+            arr.push(item / 2)
+            console.log(arr)
+          } else if (item < 50 && item % 2 === 1) {
+            console.log(`index${index} : ${item}`)
+            arr.push(item * 2)
+            console.log(arr)
+          } else {
+            console.log(`index${index} : ${item}`)
+            arr.push(item)
+            console.log(arr)
           }
         })
-        console.log(answer)
+
+        console.log(arr)
+
         return answer
       }
 
-      solution([4, 2, 6, 1, 7, 6], 2)
+      solution([1, 2, 3, 100, 99, 98])
     </script>
   </body>
 </html>

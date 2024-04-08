@@ -1,0 +1,10 @@
+@import 'index';
+
+.section {
+  &0 {
+    background: palegoldenrod;
+  }
+  &1 {
+    background: palegreen;
+  }
+}

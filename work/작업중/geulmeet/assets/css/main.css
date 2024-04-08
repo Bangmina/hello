@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/* 변수만 모아놓은 파일 */
+/* 반응형 화면 세팅 */
+/* 반응형 모바일 */
+/* 반응형 태블릿 */
+.search {
+  margin-top: 5vw; }
+
+.main {
+  padding-bottom: 10vw; }
+
+.book {
+  margin-top: 3vw; }
+  .book__list {
+    display: flex;
+    flex-wrap: wrap; }
+  .book__item {
+    padding: 1.5vw 1.5vw 3vw 1.5vw;
+    border: 1px solid #ddd;
+    width: 49%;
+    margin: 1vw 0;
+    background: #fdfdfd; }
+    .book__item:nth-child(odd) {
+      margin-right: 2%; }
+  .book__item--anchor {
+    color: inherit; }
+  .book__item--img_box {
+    width: 100%;
+    height: 55.6vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .book__item--img {
+    width: 100%; }
+  .book__item--dl {
+    margin-top: 3vw;
+    line-height: 1.2; }
+    .book__item--dl > *:not(:first-child) {
+      margin-top: 1vw; }
+  .book__item--dt {
+    margin-bottom: 2vw;
+    color: #333;
+    font-size: 3.6vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: box;
+    margin-top: 1px;
+    max-height: 80px;
+    overflow: hidden;
+    vertical-align: top;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-weight: 700; }
+  .book__item--dd {
+    color: #989898;
+    display: flex;
+    justify-content: space-between; }
+    .book__item--dd.star i {
+      font-size: 3vw;
+      color: #ddd; }
+      .book__item--dd.star i.active {
+        color: #ffd425; }
+      .book__item--dd.star i:not(:first-child) {
+        margin-left: -0.5vw; }
+    .book__item--dd p {
+      font-size: 3.2vw; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,36 @@
+/* 변수만 모아놓은 파일 */
+$red: #fa5252;
+
+// /* 테블릿 (해상도 768px ~ 1199px)*/
+// @media all and (min-width:768px) and (max-width:1199px) {}
+
+// /* 모바일 (해상도 360px ~ 767px)*/
+// @media all and (min-width:360px) and (max-width:767px) {}
+
+/* 반응형 화면 세팅 */
+// $mobile: 767px;
+// $tablet: 1023px;
+// $desktop: 1024px;
+
+/* 반응형 모바일 */
+// @mixin mobile {
+//   @media (max-width: $mobile) {
+//     @content;
+//   }
+// }
+
+// /* 반응형 태블릿 */
+// @mixin tablet {
+//   @media (min-width: ($mobile+1)) and (max-width: $tablet) {
+//     @content;
+//   }
+// }
+
+// 반응형 태블릿/pc
+$pc: 768px;
+
+@mixin pc {
+  @media (min-width: $pc) {
+    @content;
+  }
+}

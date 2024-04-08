@@ -1,0 +1,21 @@
+/* 변수만 모아놓은 파일 */
+$red: #fa5252;
+
+/* 반응형 화면 세팅 */
+$mobile: 767px;
+$tablet: 1023px;
+$desktop: 1024px;
+
+/* 반응형 모바일 */
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+/* 반응형 태블릿 */
+@mixin tablet {
+  @media (min-width: ($mobile+1)) and (max-width: $tablet) {
+    @content;
+  }
+}
