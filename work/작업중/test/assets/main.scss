@@ -1,0 +1,22 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'components/button';
+@import 'components/carousel';
+
+@import 'layout/footer';
+@import 'layout/forms';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/sidebar';
+
+@import 'pages/contact';
+@import 'pages/home';
+
+.box {
+  background: $color-red;
+}

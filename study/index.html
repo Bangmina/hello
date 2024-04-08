@@ -9,20 +9,21 @@
 
 <body>
   <script>
-    function solution(rsp) {
-      var answer = '';
-      answer = rsp.split('').map((el) => {
-        if (el === '2') {
-          return '0'
-        } else if (el === '0') {
-          return '5'
-        } else {
-          return '2'
+
+    function solution(num_list, n) {
+
+      var answer = [];
+      answer = num_list.filter((el, idx) => {
+        if (idx == 0 || idx % n == 0) {
+          return answer.push(el)
         }
-      }).join('')
+      })
+      console.log(answer)
       return answer;
     }
-    solution('205')
+
+    solution([4, 2, 6, 1, 7, 6], 2);
+
   </script>
 </body>
 
