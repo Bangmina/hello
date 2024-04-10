@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AAGA,KAAM;EACJ,WAAW,EAAE,GAAG;;AAElB,MAAO;EACL,WAAW,EAAE,GAAG",
-"sources": ["font.scss"],
-"names": [],
-"file": "font.css"
-}
+{"version":3,"sources":["font.scss","font.css"],"names":[],"mappings":"AAGA;EACE,gBAAA;ACFF;;ADIA;EACE,gBAAA;ACDF","file":"font.css"}

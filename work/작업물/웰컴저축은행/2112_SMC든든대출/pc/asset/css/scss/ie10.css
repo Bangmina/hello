@@ -1,0 +1,64 @@
+.clearfix:before,
+.clearfix:after {
+  display: block;
+  content: "";
+  line-height: 0;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.visual__check {
+  text-align: center;
+}
+
+.visual__check--list {
+  display: inline-block;
+  margin-bottom: 0 !important;
+}
+
+.visual__check--list li {
+  float: left;
+}
+
+.header__logo {
+  float: left;
+}
+.header__tel {
+  float: right;
+}
+
+.visual__form_input--txt {
+  width: 43%;
+}
+.visual__form_input--txt:first-child {
+  float: left;
+}
+.visual__form_input--txt:last-child {
+  float: right;
+}
+
+.visual__form__btn--modal,
+.cheac_all_warp_ie,
+.ie_check {
+  float: left;
+}
+
+.visual__form__btn--modal {
+  margin-right: 10px;
+}
+
+.check__normal--box {
+  float: right;
+}
+
+.visual__form_btn--consulting,
+.visual__form_btn--kakao {
+  display: block;
+  text-align: center;
+}/*# sourceMappingURL=ie10.css.map */

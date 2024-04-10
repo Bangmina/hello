@@ -35,19 +35,21 @@
 @import url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/css/all.css");
 /* 강원교육모두 [GangwonEduAll] 300/400 */
 @font-face {
-  font-family: 'GangwonEduAll';
+  font-family: "GangwonEduAll";
   font-weight: 300;
   font-style: normal;
   src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot");
   src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.ttf") format("truetype");
-  font-display: swap; }
+  font-display: swap;
+}
 @font-face {
-  font-family: 'GangwonEduAll';
+  font-family: "GangwonEduAll";
   font-weight: 400;
   font-style: normal;
   src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot");
   src: url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllBold.ttf") format("truetype");
-  font-display: swap; }
+  font-display: swap;
+}
 /* reset */
 .adef_webzine div,
 .adef_webzine span,
@@ -133,13 +135,14 @@
   border: 0;
   font-size: 100%;
   font: inherit;
-  font-family: 'NanumSquare', 'Noto Sans', 'Noto Sans KR', 'Nanum Gothic', 'Roboto', sans-serif;
+  font-family: "NanumSquare", "Noto Sans", "Noto Sans KR", "Nanum Gothic", "Roboto", sans-serif;
   font-weight: 400;
   font-size: 3.6vw;
   line-height: 1.6;
   letter-spacing: -0.8px;
   color: #000000;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 .adef_webzine article,
 .adef_webzine aside,
 .adef_webzine details,
@@ -151,43 +154,55 @@
 .adef_webzine menu,
 .adef_webzine nav,
 .adef_webzine section {
-  display: block; }
+  display: block;
+}
 .adef_webzine ol,
 .adef_webzine ul {
   list-style: none;
-  padding: 0; }
+  padding: 0;
+}
 .adef_webzine blockquote,
 .adef_webzine q {
-  quotes: none; }
+  quotes: none;
+}
 .adef_webzine blockquote:before,
 .adef_webzine blockquote:after,
 .adef_webzine q:before,
 .adef_webzine q:after {
-  content: '';
-  content: none; }
+  content: "";
+  content: none;
+}
 .adef_webzine table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 .adef_webzine button {
   border: none;
   background: none;
-  cursor: pointer; }
+  cursor: pointer;
+}
 .adef_webzine a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 .adef_webzine img {
   width: 100%;
-  display: block; }
+  display: block;
+}
 
 /* common */
 .adef_webzine .wrap {
-  padding: 0 11vw; }
+  padding: 0 11vw;
+}
 .adef_webzine img {
   width: 100%;
-  display: block; }
+  display: block;
+}
 .adef_webzine .bold {
-  font-weight: 700; }
+  font-weight: 700;
+}
 .adef_webzine .section {
-  position: relative; }
+  position: relative;
+}
 .adef_webzine .buy__anchor,
 .adef_webzine .info {
   position: relative;
@@ -195,65 +210,84 @@
   -webkit-transform: rotate(0.04deg);
   -moz-transform: rotate(0.04deg);
   -ms-transform: rotate(0.04deg);
-  -o-transform: rotate(0.04deg); }
+  -o-transform: rotate(0.04deg);
+}
 .adef_webzine .gray_info {
   font-size: 3.33vw;
-  color: #595757; }
+  color: #595757;
+}
 .adef_webzine .buy__anchor {
   padding: 1.5vw 0;
   display: inline-block;
   text-decoration: underline;
   color: #000;
-  font-weight: 900; }
-  .adef_webzine .buy__anchor--wrap {
-    text-align: center; }
+  font-weight: 900;
+}
+.adef_webzine .buy__anchor--wrap {
+  text-align: center;
+}
 .adef_webzine .product__title {
   font-family: Uniqlo Pro Bold, NanumSquare Regular, Roboto, Droid Sans, Helvetica Neue, HiraKakuProN-W3, sans-serif;
   font-size: 4.33vw;
   text-align: center;
-  letter-spacing: 0; }
+  letter-spacing: 0;
+}
 .adef_webzine .product__list {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   margin-top: 3vw;
-  padding: 0 7.5vw; }
+  padding: 0 7.5vw;
+}
 .adef_webzine .product__item {
   width: 25%;
-  margin: 2vw 0; }
-  .adef_webzine .product__item:nth-of-type(1) .product__img--wrap, .adef_webzine .product__item:nth-of-type(2) .product__img--wrap, .adef_webzine .product__item:nth-of-type(3) .product__img--wrap, .adef_webzine .product__item:nth-of-type(4) .product__img--wrap {
-    height: 25.6vw; }
-  .adef_webzine .product__item:nth-of-type(1) .product__img--wrap img {
-    width: 18.13vw; }
-  .adef_webzine .product__item:nth-of-type(2) .product__img--wrap img {
-    width: 17.46vw; }
-  .adef_webzine .product__item:nth-of-type(3) .product__img--wrap img {
-    width: 14.93vw; }
-  .adef_webzine .product__item:nth-of-type(4) .product__img--wrap img {
-    width: 21.33vw; }
+  margin: 2vw 0;
+}
+.adef_webzine .product__item:nth-of-type(1) .product__img--wrap, .adef_webzine .product__item:nth-of-type(2) .product__img--wrap, .adef_webzine .product__item:nth-of-type(3) .product__img--wrap, .adef_webzine .product__item:nth-of-type(4) .product__img--wrap {
+  height: 25.6vw;
+}
+.adef_webzine .product__item:nth-of-type(1) .product__img--wrap img {
+  width: 18.13vw;
+}
+.adef_webzine .product__item:nth-of-type(2) .product__img--wrap img {
+  width: 17.46vw;
+}
+.adef_webzine .product__item:nth-of-type(3) .product__img--wrap img {
+  width: 14.93vw;
+}
+.adef_webzine .product__item:nth-of-type(4) .product__img--wrap img {
+  width: 21.33vw;
+}
 .adef_webzine .product__img--wrap {
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+}
 .adef_webzine .product__item--name {
   font-size: 2.66vw;
   line-height: 1.35;
   margin-top: 1.5vw;
   text-align: center;
   font-weight: 900;
-  letter-spacing: -0.5px; }
+  letter-spacing: -0.5px;
+}
 .adef_webzine .info {
   margin-top: 16vw;
-  font-size: 3.24vw; }
+  font-size: 3.24vw;
+}
 .adef_webzine .section__title {
   font-weight: 3.6vw;
-  font-weight: 900; }
-  .adef_webzine .section__title.center {
-    text-align: center; }
-  .adef_webzine .section__title.left {
-    text-align: left; }
-  .adef_webzine .section__title.right {
-    text-align: right; }
+  font-weight: 900;
+}
+.adef_webzine .section__title.center {
+  text-align: center;
+}
+.adef_webzine .section__title.left {
+  text-align: left;
+}
+.adef_webzine .section__title.right {
+  text-align: right;
+}
 .adef_webzine .section__txt {
   vertical-align: baseline;
   text-align: justify;
@@ -262,105 +296,135 @@
   -moz-transform: rotate(0.04deg);
   -ms-transform: rotate(0.04deg);
   -o-transform: rotate(0.04deg);
-  color: #322d27; }
-  .adef_webzine .section__txt p:not(:first-child) {
-    margin-top: 6vw; }
+  color: #322d27;
+}
+.adef_webzine .section__txt p:not(:first-child) {
+  margin-top: 6vw;
+}
 .adef_webzine .read__hide--box {
   height: 12vw;
   position: relative;
-  overflow: hidden; }
-  .adef_webzine .read__hide--box::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), #fff);
-    opacity: 1;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    z-index: 10; }
-  .adef_webzine .read__hide--box.open::after {
-    opacity: 0; }
-  .adef_webzine .read__hide--box.open + .read__continue--btn .read__continue--btn_ic {
-    background-image: url(https://simage-kr.uniqlo.com/display/corner/2161/img/23_SPss_pants_utility/23_SP_icon_close.png); }
+  overflow: hidden;
+}
+.adef_webzine .read__hide--box::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), #fff);
+  opacity: 1;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  z-index: 10;
+}
+.adef_webzine .read__hide--box.open::after {
+  opacity: 0;
+}
+.adef_webzine .read__hide--box.open + .read__continue--btn .read__continue--btn_ic {
+  background-image: url(https://simage-kr.uniqlo.com/display/corner/2161/img/23_SPss_pants_utility/23_SP_icon_close.png);
+}
 .adef_webzine .read__continue--btn {
   margin: 3vw auto 0;
   text-align: center;
   font-size: 1.14em;
-  display: block; }
-  .adef_webzine .read__continue--btn span {
-    text-decoration: underline;
-    font-size: 4vw; }
+  display: block;
+}
+.adef_webzine .read__continue--btn span {
+  text-decoration: underline;
+  font-size: 4vw;
+}
 .adef_webzine .read__continue--btn_ic {
   display: inline-block;
   width: 10px;
   height: 10px;
-  background: url(https://simage-kr.uniqlo.com/display/corner/2161/img/23_SPss_pants_utility/23_SP_icon_plus.png) no-repeat 0 0/100% auto; }
+  background: url(https://simage-kr.uniqlo.com/display/corner/2161/img/23_SPss_pants_utility/23_SP_icon_plus.png) no-repeat 0 0/100% auto;
+}
 .adef_webzine .slide__box, .adef_webzine .slide__item {
-  width: 42vw; }
+  width: 42vw;
+}
 .adef_webzine .slide__box {
-  overflow: hidden; }
+  overflow: hidden;
+}
 .adef_webzine .slide__list {
   display: flex;
-  width: fit-content; }
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .adef_webzine .uniqlo_light {
-  font-family: Uniqlo Pro Light, NanumSquare Regular, Roboto, Droid Sans, Helvetica Neue, HiraKakuProN-W3, sans-serif; }
+  font-family: Uniqlo Pro Light, NanumSquare Regular, Roboto, Droid Sans, Helvetica Neue, HiraKakuProN-W3, sans-serif;
+}
 .adef_webzine .uniqlo_regular {
-  font-family: Uniqlo Pro Regular, NanumSquare Regular, Roboto, Droid Sans, Helvetica Neue, HiraKakuProN-W3, sans-serif; }
+  font-family: Uniqlo Pro Regular, NanumSquare Regular, Roboto, Droid Sans, Helvetica Neue, HiraKakuProN-W3, sans-serif;
+}
 .adef_webzine .uniqlo_bold {
-  font-family: Uniqlo Pro Bold, NanumSquare Regular, Roboto, Droid Sans, Helvetica Neue, HiraKakuProN-W3, sans-serif; }
+  font-family: Uniqlo Pro Bold, NanumSquare Regular, Roboto, Droid Sans, Helvetica Neue, HiraKakuProN-W3, sans-serif;
+}
 
 /* 위에는 font 설정만 하시구 스타일적용은 아래에 작업해주시면 됩니다*/
 /* 페이지 */
 .adef_webzine .info {
-  padding-left: 4vw; }
+  padding-left: 4vw;
+}
 .adef_webzine .visual .section__txt {
-  padding: 12vw 0 0; }
+  padding: 12vw 0 0;
+}
 .adef_webzine .section1 {
-  margin-top: 12.66vw; }
+  margin-top: 12.66vw;
+}
 .adef_webzine .article .all_anchor {
   display: flex;
   align-items: center;
-  width: 100%; }
-  .adef_webzine .article .all_anchor > * {
-    width: 50%; }
+  width: 100%;
+}
+.adef_webzine .article .all_anchor > * {
+  width: 50%;
+}
 .adef_webzine .article .article__txt--box {
-  padding-left: 4vw; }
+  padding-left: 4vw;
+}
 .adef_webzine .article.left_txt {
   display: flex;
   align-items: center;
-  width: 100%; }
-  .adef_webzine .article.left_txt .article__txt--box {
-    width: 50%; }
-  .adef_webzine .article.left_txt .half_anchor {
-    width: 50%; }
+  width: 100%;
+}
+.adef_webzine .article.left_txt .article__txt--box {
+  width: 50%;
+}
+.adef_webzine .article.left_txt .half_anchor {
+  width: 50%;
+}
 .adef_webzine .article .ic_gender {
-  margin-bottom: 0.5vw; }
-  .adef_webzine .article .ic_gender.men {
-    width: 5.73vw; }
-  .adef_webzine .article .ic_gender.women {
-    width: 5.86vw; }
+  margin-bottom: 0.5vw;
+}
+.adef_webzine .article .ic_gender.men {
+  width: 5.73vw;
+}
+.adef_webzine .article .ic_gender.women {
+  width: 5.86vw;
+}
 .adef_webzine .article .section__title {
   font-size: 3.3vw;
-  font-weight: 900; }
-  .adef_webzine .article .section__title a {
-    font-size: 3.3vw;
-    font-weight: 900; }
+  font-weight: 900;
+}
+.adef_webzine .article .section__title a {
+  font-size: 3.3vw;
+  font-weight: 900;
+}
 .adef_webzine .article .section__txt {
   margin-top: 3vw;
   text-align: left;
-  font-size: 3.2vw; }
+  font-size: 3.2vw;
+}
 .adef_webzine .article__en {
   margin-bottom: 4vw;
   font-family: Uniqlo Pro Light, NanumSquare Regular, Roboto, Droid Sans, Helvetica Neue, HiraKakuProN-W3, sans-serif;
   letter-spacing: 0;
   font-size: 4.53vw;
-  line-height: 1.4; }
-
-/*# sourceMappingURL=index.css.map */
+  line-height: 1.4;
+}/*# sourceMappingURL=index.css.map */

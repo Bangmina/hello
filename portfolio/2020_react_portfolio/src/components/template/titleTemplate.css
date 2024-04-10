@@ -1,0 +1,14 @@
+.column {
+  flex-direction: column;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.section__template {
+  position: relative;
+  padding: 10rem 0;
+  left: 0;
+  top: 0;
+}/*# sourceMappingURL=titleTemplate.css.map */

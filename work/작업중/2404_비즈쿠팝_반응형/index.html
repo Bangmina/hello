@@ -1,418 +1,89 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 타이틀 -->
+    <title>쿠팝 - 오늘이 특별해지는 모든 선물</title>
+    <!-- 파비콘 -->
+    <link
+      href="https://www.coupop.co.kr/images/common/favicon.ico"
+      rel="shortcut icon"
+      type="image/ico"
+    />
+    <!-- og 태그 -->
+    <meta name="keywords" content="쿠팝" />
+    <meta name="description" content="쿠팝" />
+    <meta property="og:title" content="쿠팝" />
+    <meta property="og:description" content="쿠팝" />
+    <meta
+      property="og:image"
+      content="https://welcomedirect.co.kr/banner_follow_sunshine.jpg?v=2022 07:03:45"
+    />
+    <meta property="og:url" content="url" />
+    <meta property="og:type" content="website" />
+    <!-- jquery -->
+    <script src="./assets/plugIn/jquery-1.12.4.min.js"></script>
+    <!-- swiper -->
+    <link rel="stylesheet" href="./assets/js/swiper/swiper-bundle.min.css" />
+    <script src="./assets/js/swiper/swiper-bundle.min.js"></script>
+    <!-- aos -->
+    <link rel="stylesheet" href="./assets/js/aos/aos.css" />
+    <script src="./assets/js/aos/aos.js"></script>
+    <script
+      src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.0/kakao.min.js"
+      integrity="sha384-l+xbElFSnPZ2rOaPrU//2FF5B4LB8FiX5q4fXYTlfcG4PGpMkE1vcL7kNXI6Cci0"
+      crossorigin="anonymous"
+    ></script>
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- 타이틀 -->
-  <title>쿠팝 - 오늘이 특별해지는 모든 선물</title>
-  <!-- 파비콘 -->
-  <link href="https://www.coupop.co.kr/images/common/favicon.ico" rel="shortcut icon" type="image/ico">
-  <!-- og 태그 -->
-  <meta name="keywords" content="다우기술|쿠팝1">
-  <meta name="description" content="다우기술|쿠팝2">
-  <meta property="og:title" content="다우기술|쿠팝3">
-  <meta property="og:description" content="다우기술|쿠팝4">
-  <meta property="og:image" content="https://welcomedirect.co.kr/banner_follow_sunshine.jpg?v=2022 07:03:45">
-  <meta property="og:url" content="url">
-  <meta property="og:type" content="website">
-  <!-- jquery -->
-  <script src="./assets/plugIn/jquery-1.12.4.min.js"></script>
-  <!-- swiper -->
-  <link rel="stylesheet" href="./assets/js/swiper/swiper-bundle.min.css">
-  <script src="./assets/js/swiper/swiper-bundle.min.js"></script>
-  <!-- aos -->
-  <link rel="stylesheet" href="./assets/js/aos/aos.css">
-  <script src="./assets/js/aos/aos.js"></script>
-  <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.0/kakao.min.js"
-    integrity="sha384-l+xbElFSnPZ2rOaPrU//2FF5B4LB8FiX5q4fXYTlfcG4PGpMkE1vcL7kNXI6Cci0"
-    crossorigin="anonymous"></script>
-  <script>
-    Kakao.init('0603ffa4073a088adeed2ccfe964b66f');
-    function shareMessage() {
-      Kakao.Share.sendCustom({
-        templateId: 105170
-      });
-
-    }	
-  </script>
-  <!-- css -->
-  <link rel="stylesheet" href="./assets/css/main.css">
-</head>
-
-<body>
-  <main class="main">
-    <!-- header -->
-    <header class="header">
-      <h1 class="header__logo">
-        <a class="header__logo--anchor wrap" href="https://www.coupop.co.kr">
-          <img class="header__logo--img" src="./assets/image/logo.png" alt="로고">
-        </a>
-      </h1>
-    </header>
-    <!-- // header -->
-
-    <!-- section1 -->
-    <section class="section one">
-
-      <!-- 배경에 텍스트 넣음 -->
-      <!-- <div class="mobile_block">
-        <div class="visual__date wrap">
-          <p>
-            <span>~03.29</span>금
-          </p>
-        </div>
-        <img class="visual__title " src="./assets/image/mobile/visual_title.png" alt="삼성전자 고객님만을 위한 동료추천 이벤트">
-        <div class="visual__txt">
-          <div class="visual__txt--box">
-            <p class="extra_bold">
-              쿠팝이 삼전 고객님을 모십니다.
+  <body>
+    <main class="main">
+      <section class="section visual">
+        <img
+          class="visual__deco one"
+          src="./assets/image/mobile/ic_npay.png"
+          alt=""
+        />
+        <img
+          class="visual__deco two"
+          src="./assets/image/mobile/ic_api.png"
+          alt=""
+        />
+        <img
+          class="visual__deco three mobile_none"
+          src="./assets/image/pc/ic_api.png"
+          alt=""
+        />
+      </section>
+      <section class="section section1">
+        <div class="wrap">
+          <a href="#" class="coffee__box">
+            <div class="coffee__top">
+              전화상담 완료만 해도
+            </div>
+            <img
+              class="img_txt_coupon"
+              src="./assets/image/txt_coupon.png"
+              alt=""
+            />
+            <img
+              class="img_coffee"
+              src="./assets/image/img_coffee.png"
+              alt=""
+            />
+            <p class="coffee__direct">
+              상담신청 바로가기
+              <img src="./assets/image/ic_arrow.png" alt="" />
             </p>
-            <p>
-              쿠팝을 추천하고
-            </p>
-            <p>
-              동료와 <span class="extra_bold color_blue highlight yellow1"><span>함께 2만원 받으세요!</span></span>
-            </p>
-          </div>
+          </a>
         </div>
-      </div> -->
-
-      <!-- 배경에 텍스트 따로 -->
-      <div class="visual__date ">
-        <p>
-          <span>~03.29</span>금
-        </p>
-      </div>
-      <img class="visual__title mobile_block" src="./assets/image/mobile/visual_title.png" alt="삼성전자 고객님만을 위한 동료추천 이벤트">
-      <img class="visual__title pc_block" src="./assets/image/pc/visual_title.png" alt="삼성전자 고객님만을 위한 동료추천 이벤트">
-      <div class="visual__txt">
-        <div class="visual__txt--box mobile_block">
-          <p class="extra_bold">
-            쿠팝이 삼전 고객님을 모십니다.
-          </p>
-          <p>
-            쿠팝을 추천하고
-          </p>
-          <p>
-            동료와 <span class="extra_bold color_blue highlight yellow1"><span>함께 2만원 받으세요!</span></span>
-          </p>
-        </div>
-      </div>
-      <img class="visual__obj mobile_block" src="./assets/image/mobile/visual_obj.png" alt="캐릭터">
-      <img class="visual__obj pc_block" src="./assets/image/pc/visual_obj.png" alt="캐릭터">
-      <a class="visual__anchor " href="https://www.coupop.co.kr/user/joinStep1.do">
-        <img class="" src="./assets/image/visual_button.png" alt="">
-      </a>
-    </section>
-    <!-- //section1 -->
-
-    <!-- section2 -->
-    <section class="section two">
-      <div class="wrap">
-        <div class="section__title">
-          <img class="section__title--num " src="./assets/image/howto1.png" alt="how to 1">
-          <img class="section__title--txt " src="./assets/image/howto1_title.png" alt="동료와 함께 2만원 받아요!">
-        </div>
-        <ul class="benefit__list">
-          <li class="benefit__item">
-            <div class="benefit__title">혜택 1</div>
-            <img src="./assets/image/coupon.png" alt=" 10,000포인트 쿠폰 이미지" class="benefit__img ">
-
-            <div class="benefit__info">
-              <p>가입한 동료가 <span class="extra_bold">7일 이내</span></p>
-              <span class="extra_bold">1만원 이상 첫 구매시</span>
-            </div>
-            <div class="benefit__highlight">
-              <p class="highlight yellow2">
-                <span>모두</span>
-              </p><br />
-              <p class="highlight yellow2">
-                <span>1만P<span class="small">(=1만원)</span> 적립!</span>
-              </p>
-            </div>
-            <div class="benefit__pink">
-              <span class="color_blue extra_bold">첫 구매시</span>&nbsp;즉시 지급
-            </div>
-          </li>
-          <li class="benefit__item">
-            <div class="benefit__title">혜택 2</div>
-            <img src="./assets/image/npay.png" alt="npay 이미지" class="benefit__img">
-
-            <div class="benefit__info">
-              가입한 동료가<br>
-              <p class="extra_bold">
-                첫 구매 후 4/5(금)까지<br>
-                마케팅 수신동의 유지시
-              </p>
-
-            </div>
-            <div class="benefit__highlight">
-              <p class="highlight yellow2">
-                <span>모두</span>
-              </p>
-              <p class="highlight yellow2">
-                <span>네이버페이 1만원!</span>
-              </p>
-            </div>
-            <div class="benefit__pink">
-              <span class="color_blue extra_bold">4/5(금)</span>&nbsp;일괄지급
-            </div>
-          </li>
-        </ul>
-        <div class="event__share">
-          <h5 class="event__share--title">이벤트 공유하기</h5>
-          <ul class="event__share--list">
-            <li class="event__share--item">
-              <button class="event__share--btn kakao" onClick="javascript:shareMessage()"></button>
-            </li>
-            <li class="event__share--item">
-              <button class="event__share--btn url" onclick="clip();">
-                URL
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!-- // section2 -->
-
-    <!-- section3 -->
-    <section class="section three">
-      <div class="wrap">
-        <div class="section__title">
-          <img class="section__title--num " src="./assets/image/howto2.png" alt="how to 2">
-          <img class="section__title--txt " src="./assets/image/howto2_title.png" alt="어떻게 참여하지?">
-        </div>
-        <ul class="step__list">
-          <li class="step__item">
-            <div class="step__title">
-              <p class="step__num">Step1</p>
-              <p class="step__title--txt">
-                <span class="color_blue">삼성전자 동료에게 해당 이벤트를 소개</span>해요
-              </p>
-            </div>
-            <div class="step__content">
-              <div class="event__share">
-                <h5 class="event__share--title">동료에게 공유하기</h5>
-                <ul class="event__share--list">
-                  <li class="event__share--item">
-                    <button class="event__share--btn kakao" onClick="javascript:shareMessage()"></button>
-                  </li>
-                  <li class="event__share--item">
-                    <button class="event__share--btn url" onclick="clip();">
-                      URL
-                    </button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="step__item">
-            <div class="step__title">
-              <p class="step__num">Step2</p>
-              <p class="step__title--txt">
-                <span class="color_blue">동료가 내 전화번호를 쓰고 쿠팝 가입</span>해요
-              </p>
-            </div>
-            <div class="step__content">
-              <ul class="join_step__list">
-                <li class="join_step__item member">
-                  1. 가입시 회원유형<br />
-                  <span class="highlight yellow2 color_blue"><span>비즈회원</span></span> 선택
-                </li>
-                <li class="join_step__item company">
-                  2. 기업정보에<br />
-                  <span class="highlight yellow2 color_blue"><span>삼성전자</span></span> 정보 기입
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-        <div class="requirement">
-          <span class="requirement__ic">필수</span>
-          <span class="underline extra_bold">
-            마케팅 수신 동의</span>를 꼭! 해주셔야<span class="underline extra_bold">&nbsp;참여
-            완료돼요.
-          </span>
-        </div>
-      </div>
-    </section>
-    <!-- // section3 -->
-
-    <!-- section4 -->
-    <section class="section four">
-      <div class="wrap">
-        <div class="section__title">
-          <img class="section__title--num" src="./assets/image/whatsgood.png" alt="what's good">
-          <img class="section__title--txt" src="./assets/image/whtsgood_title.png" alt="쿠팝 비즈회원 뭐가 좋아?">
-        </div>
-        <div class="whatsgood__subtxt">
-          <span class="color_pink">업계 최대 15% 적립</span> 회사에서도 일상에서도<br />
-          적립금으로 <span class="color_pink">더 많~~이 선물하세요!</span>
-        </div>
-        <ul class="gift__list">
-          <li class="gift__item">
-            <div class="gift__item--img_box">
-              <img class="gift__item--img necktie" src="./assets/image/ic_person_necktie.png" alt="직장인 아이콘">
-            </div>
-            임직원<br />
-            선물할 때
-          </li>
-          <li class="gift__item">
-            <div class="gift__item--img_box">
-              <img class="gift__item--img necktie" src="./assets/image/ic_gift.png" alt="선물 아이콘">
-            </div>
-            경품을<br />
-            발송할 때
-          </li>
-          <li class="gift__item">
-            <div class="gift__item--img_box">
-              <img class="gift__item--img necktie" src="./assets/image/ic_person.png" alt="사람 아이콘">
-            </div>
-            친구<br />
-            선물할 때
-          </li>
-        </ul>
-        <ul class="whatsgood_benefit__list">
-          <li class="whatsgood_benefit__item">
-            <a class="whatsgood_benefit__anchor" href="https://www.coupop.co.kr/intro/gradeBenefit.do
-            ">
-              <div class="whatsgood_benefit__img--box">
-                <img src="./assets/image/ic_coin.png" alt="X2 아이콘 " class="whatsgood_benefit__img coin">
-              </div>
-              <div class="whatsgood_benefit__txt">
-                최소 적립 10%부터<br />
-                <span class="highlight yellow2 color_blue"><span>비즈회원 특별 혜택</span></span>
-              </div>
-              <p class="whatsgood_benefit__detail">
-                자세히 보기 >
-              </p>
-            </a>
-            <a class="whatsgood_benefit__btn--anchor" href="https://www.coupop.co.kr/user/joinStep1.do">
-              <img class="" src="./assets/image/button_join.png" alt="지금 쿠팝 가입하기">
-            </a>
-          </li>
-          <li class="whatsgood_benefit__item">
-            <a class="whatsgood_benefit__anchor" href="https://www.coupop.co.kr/contents/eventDetail.do?contentNo=1089">
-              <div class="whatsgood_benefit__img--box">
-                <img src="./assets/image/ic_npay.png" alt="네이버 페이 이미지" class="whatsgood_benefit__img npay">
-              </div>
-              <div class="whatsgood_benefit__txt">
-                첫 구매 혜택<br />
-                <span class="highlight yellow2 color_blue"><span>네이버페이 3만원</span></span>
-              </div>
-              <p class="whatsgood_benefit__detail">
-                자세히 보기 >
-              </p>
-            </a>
-            <a class="whatsgood_benefit__btn--anchor" href="https://www.coupop.co.kr/contents/eventList.do">
-              <img src="./assets/image/button_special_price.png" alt="진행 중인 특가 보기">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <!-- // section4 -->
-
-    <!-- section5 -->
-    <section class="section five">
-      <div class="wrap">
-        <div class="section__title">
-          <img class="section__title--num " src="./assets/image/important.png" alt="important">
-          <img class="section__title--txt " src="./assets/image/important_title.png" alt="유의사항 확인필수">
-        </div>
-      </div>
-      <div class="notice__wrap">
-        <div class="notice">
-          <h5 class="notice__title">
-            적립금
-          </h5>
-          <ul class="notice__list">
-            <li class="notice__item">
-              <p>가입한 동료가 7일 이내에 1만원 이상 첫 구매를 완료해야 포인트가 적립됩니다.</p>
-            </li>
-            <li class="notice__item">
-              <p>적립된 포인트의 유효기간은 30일입니다</p>
-            </li>
-          </ul>
-        </div>
-        <div class="notice">
-          <h5 class="notice__title">
-            네이버페이 포인트
-          </h5>
-          <ul class="notice__list">
-            <li class="notice__item">
-              <p>경품지급일(4/5) 기준 가입한 동료가 1만원 이상 첫 구매를 완료하고</p>
-            </li>
-            <li class="notice__item">
-              <p>나와 동료 모두 마케팅 수신동의가 유지된 경우만 발송됩니다.</p>
-            </li>
-            <li class="notice__item">
-              <p>경품은 계정 정보에 입력된 휴대폰번호로 쿠팝 모바일쿠폰 형태로 발송됩니다.</p>
-            </li>
-          </ul>
-        </div>
-        <div class="notice">
-          <h5 class="notice__title">
-            첫 구매 조건
-          </h5>
-          <ul class="notice__list">
-
-            <li class="notice__item">
-              <p>‘첫 구매 금액’은 최초 1회의 상품 구매 금액을 의미합니다.</p>
-            </li>
-            <li class="notice__item">
-              <p>포인트 사용 금액은 첫 구매 금액에 포함되지 않습니다.</p>
-            </li>
-            <li class="notice__item">
-              <p>상품 구매 없이 충전금만 충전한 경우는 포함되지 않습니다.</p>
-            </li>
-            <li class="notice__item">
-              <p>예약발송의 경우 ‘발송완료’ 시점에 포인트가 적립됩니다.</p>
-            </li>
-            <li class="notice__item">
-              <p>1개의 휴대폰번호는 최대 5회까지 추천인으로 입력될 수 있습니다.</p>
-            </li>
-            <li class="notice__item">
-              <p>가입한 친구가 첫 구매 후 환불 및 취소할 경우 지급된 포인트는 취소될 수 있습니다.</p>
-            </li>
-          </ul>
-        </div>
-        <div class="notice">
-          <h5 class="notice__title">
-            관련문의
-          </h5>
-          <ul class="notice__list">
-            <li class="notice__item">
-              <p>쿠팝 마케팅팀 070-8707 1542</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!-- // section5 -->
-  </main>
-
-  <!-- js -->
-  <script src="./assets/js/common.js"></script>
-  <script type="text/javascript">
-
-    // url 복사하기
-    function clip() {
-      var url = '';
-      var textarea = document.createElement("textarea");
-      document.body.appendChild(textarea);
-      url = window.document.location.href;
-      textarea.value = url;
-      textarea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textarea);
-      alert("URL이 복사되었습니다.")
-    }
-  </script>
-  <!-- // js -->
-</body>
-
+      </section>
+    </main>
+    <script></script>
+  </body>
 </html>

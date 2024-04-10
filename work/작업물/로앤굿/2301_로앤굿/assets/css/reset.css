@@ -88,9 +88,10 @@ video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  font-family: 'Pretendard', 'Roboto', 'Noto Sans KR', 'Nanum Gothic', sans-serif;
+  font-family: "Pretendard", "Roboto", "Noto Sans KR", "Nanum Gothic", sans-serif;
   vertical-align: baseline;
-  letter-spacing: -0.5px; }
+  letter-spacing: -0.5px;
+}
 
 /* HTML5 display-role reset for older browsers */
 article,
@@ -104,33 +105,38 @@ hgroup,
 menu,
 nav,
 section {
-  display: block; }
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol,
 ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote,
 q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
-  content: none; }
+  content: "";
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 button {
   border: none;
   background: none;
-  cursor: pointer; }
-
-/*# sourceMappingURL=reset.css.map */
+  cursor: pointer;
+}/*# sourceMappingURL=reset.css.map */

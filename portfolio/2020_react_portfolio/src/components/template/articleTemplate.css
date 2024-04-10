@@ -1,0 +1,33 @@
+.column {
+  flex-direction: column;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.article__template {
+  margin: 0 auto;
+  width: 102.4rem;
+  font-size: 1.6rem;
+}
+.article__template:last-child {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1119px) {
+  .article__template {
+    padding: 0 13rem;
+    width: inherit;
+  }
+}
+@media only screen and (max-width: 37.5rem) {
+  .article__template {
+    padding: 0 5rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .article__template {
+    padding: 0 2rem;
+  }
+}/*# sourceMappingURL=articleTemplate.css.map */

@@ -1,0 +1,20 @@
+.subject {
+  text-align: center;
+}
+.subject.white .subject__title {
+  color: #fff;
+}
+.subject.white .subject__subtitle {
+  color: #fff;
+}
+.subject__title {
+  font-size: 4.4rem;
+  font-weight: 700;
+}
+.subject__subtitle {
+  white-space: pre-wrap;
+  margin-top: 2rem;
+  font-size: 2.2rem;
+  color: #747474;
+  line-height: 1.5;
+}/*# sourceMappingURL=articleTitle.css.map */

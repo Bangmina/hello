@@ -1,50 +1,62 @@
 .btn__purple,
 .btn__orange {
-  border-radius: 5px; }
+  border-radius: 5px;
+}
 
 .btn__purple {
   background: #644dff;
-  color: #fff; }
+  color: #fff;
+}
 
 .btn__orange {
   background: #e18336;
-  color: #fff; }
+  color: #fff;
+}
 
 .bold {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .none {
-  display: none; }
+  display: none;
+}
 
 .inner {
   margin: 0 auto;
   padding: 0 20px;
   width: 1320px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 .note-editor {
   height: auto !important;
-  width: 100%; }
+  width: 100%;
+}
 
 .m-b-0 {
-  margin-bottom: 0 !important; }
+  margin-bottom: 0 !important;
+}
 
-input[type="checkbox"],
-input[type="radio"] {
-  display: none; }
+input[type=checkbox],
+input[type=radio] {
+  display: none;
+}
 
 input.form__input--check:disabled + label::before,
 input.form__input--radio:disabled + label::before {
   cursor: not-allowed;
-  background: #999999; }
+  background: #999999;
+}
 
 input.form__input--check:disabled:checked + label::before,
 input.form__input--radio:disabled:checked + label::before {
-  cursor: not-allowed; }
+  cursor: not-allowed;
+}
 
 input.form__input--check:checked + label::before,
 input.form__input--radio:checked + label::before {
-  background: url(../images/ic_check.png) #644dff no-repeat center; }
+  background: url(../images/ic_check.png) #644dff no-repeat center;
+}
 
 label.form__label--check,
 label.form__label--radio {
@@ -52,7 +64,8 @@ label.form__label--radio {
   display: inline-block;
   padding-left: 25px;
   color: #a9b1c6;
-  word-break: keep-all; }
+  word-break: keep-all;
+}
 
 label.form__label--radio::before,
 label.form__label--check::before {
@@ -66,28 +79,33 @@ label.form__label--check::before {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  transition: background-color 0.2s; }
+  transition: background-color 0.2s;
+}
 
 label.form__label--radio::before {
-  border-radius: 100%; }
+  border-radius: 100%;
+}
 
 .view_form__check.only_chk .form__label--check,
 .view_form__check.only_chk .form__label--radio,
 .view_form__radio.only_chk .form__label--check,
 .view_form__radio.only_chk .form__label--radio {
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+}
 
 .form__input--file_wrap {
   display: flex;
   align-items: center;
-  width: 100%; }
+  width: 100%;
+}
 
-input[type="file"] {
+input[type=file] {
   display: block;
   width: 0;
   height: 0;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .form__label--file {
   width: 80px;
@@ -99,7 +117,8 @@ input[type="file"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .form__span--file {
   padding-left: 10px;
@@ -114,9 +133,9 @@ input[type="file"] {
   color: #a9b1c6;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap; }
+  white-space: nowrap;
+}
 
 .width_100 {
-  width: 100%; }
-
-/*# sourceMappingURL=basic.css.map */
+  width: 100%;
+}/*# sourceMappingURL=basic.css.map */

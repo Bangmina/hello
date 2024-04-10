@@ -1,0 +1,14 @@
+.column {
+  flex-direction: column;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.introduce__box--content {
+  font-size: 1.6rem;
+  line-height: 2;
+  font-weight: 300;
+  text-align: center;
+}/*# sourceMappingURL=introduce.css.map */

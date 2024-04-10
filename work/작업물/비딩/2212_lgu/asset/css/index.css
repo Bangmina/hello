@@ -89,7 +89,7 @@ video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  font-family: 'Roboto', 'Noto Sans KR', 'Nanum Gothic', sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Nanum Gothic", sans-serif;
   vertical-align: baseline;
 }
 
@@ -126,7 +126,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -149,11 +149,7 @@ button {
   box-sizing: border-box;
 }
 
-@-webkit-keyframes animation {
-}
-
-@keyframes animation {
-}
+@keyframes animation {}
 body {
   background: #f2f2f2;
   padding-bottom: 65px;
@@ -171,10 +167,8 @@ body {
 }
 
 .anchor__box {
+  margin-top: -1px;
   background: #fff2f9;
-  box-sizing: border-box;
-  padding-top: 10px;
-  margin-top: -12px;
 }
 .anchor__box.two {
   padding: 40px 0;
@@ -208,7 +202,7 @@ body {
 }
 
 .slide1 {
-  margin-top: -2px;
+  margin-top: -1px;
   padding: 0 20px;
   box-sizing: border-box;
   position: relative;
@@ -237,7 +231,7 @@ body {
 }
 
 .tab__box {
-  margin-top: -4px;
+  margin-top: -1px;
   padding: 0 20px;
   box-sizing: border-box;
   background: #f5dae4;
@@ -274,12 +268,7 @@ body {
   border-right: 1px solid #ef2581;
   color: #fff;
   background: rgb(231, 2, 125);
-  background: linear-gradient(
-    0deg,
-    rgb(231, 2, 125) -25%,
-    rgb(234, 42, 110) 32%,
-    rgb(239, 101, 91) 100%
-  );
+  background: linear-gradient(0deg, rgb(231, 2, 125) -25%, rgb(234, 42, 110) 32%, rgb(239, 101, 91) 100%);
 }
 .tab_content__list {
   border: 1px solid #ef0693;
@@ -294,7 +283,7 @@ body {
 }
 
 .mySwiper2 {
-  margin-top: -2px;
+  margin-top: -1px;
 }
 .mySwiper2 .swiper-slide {
   display: flex;
@@ -306,7 +295,7 @@ body {
 }
 
 .floating {
-  background: #373737;
+  background: #4c4c4c;
   position: fixed;
   width: 100%;
   max-width: 600px;
@@ -325,7 +314,7 @@ body {
   position: relative;
 }
 .floating__item:not(:last-child)::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   width: 1px;
@@ -349,86 +338,28 @@ body {
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after,
 .swiper-button-prev:after,
-.swiper-rtl .swiper-button-next:after,
-.swiper-button-next2:after,
-.swiper-rtl .swiper-button-prev2:after,
-.swiper-button-prev2:after,
-.swiper-rtl .swiper-button-next2:after {
-  content: '';
+.swiper-rtl .swiper-button-next:after {
+  content: "";
 }
 
 .swiper-button-next,
-.swiper-button-prev,
-.swiper-button-next2,
-.swiper-button-prev2 {
-  position: absolute;
+.swiper-button-prev {
   width: 16.74%;
-  top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  z-index: 10;
 }
 .swiper-button-next img,
-.swiper-button-prev img,
-.swiper-button-next2 img,
-.swiper-button-prev2 img {
+.swiper-button-prev img {
   width: 100%;
 }
 
-.swiper-button-next,
-.swiper-button-next2 {
+.swiper-button-next {
   right: 0;
 }
 
-.swiper-button-prev,
-.swiper-button-prev2 {
+.swiper-button-prev {
   left: 0;
 }
 
 .swiper-button-next.swiper-button-disabled,
-.swiper-button-prev.swiper-button-disabled,
-.swiper-button-next2.swiper-button-disabled,
-.swiper-button-prev2.swiper-button-disabled {
+.swiper-button-prev.swiper-button-disabled {
   opacity: 1;
-} /*# sourceMappingURL=index.css.map */
-
-.header {
-  width: 100%;
-  max-width: 600px;
-  left: 50%;
-  transform: translateX(-50%);
-  position: fixed;
-  width: 100%;
-  z-index: 100;
-  border-bottom: 1px solid #eee;
-  top: 0;
-
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-}
-.header .wrap {
-  box-sizing: border-box;
-  padding: 0px 20px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.wrap {
-  padding-top: 50px;
-}
-.header_left {
-  width: 23.19%;
-  min-width: 89px;
-  max-width: 100px;
-}
-.header_right {
-  width: 27.06%;
-  min-width: 125px;
-  max-width: 117px;
-}
+}/*# sourceMappingURL=index.css.map */
