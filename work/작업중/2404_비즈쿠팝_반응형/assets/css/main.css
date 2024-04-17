@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'pc'.
-        on line 619 of ./main.scss, in `pc'
-        from line 619 of ./main.scss
+        on line 620 of ./main.scss, in `pc'
+        from line 620 of ./main.scss
 
-614:     }
 615:   }
 616: }
-617: 
-618: // 태블릿 / PC
-619: @include pc {
-620:   .visual {
-621:     position: relative;
-622:     height: auto;
-623:     background: none;
-624:     background-color: #080911;
+617: .floating {
+618: }
+619: // 태블릿 / PC
+620: @include pc {
+621:   .visual {
+622:     height: 1235px;
+623:     padding: 0 !important;
+624:     position: relative;
+625:     background: url('../image/pc/visual_bg.png') no-repeat center top;
 
 Backtrace:
-./main.scss:619:in `pc'
-./main.scss:619
+./main.scss:620:in `pc'
+./main.scss:620
 C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
 C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
@@ -62,4 +62,4 @@ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/interna
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'pc'.\A         on line 619 of ./main.scss, in `pc'\A         from line 619 of ./main.scss\A \A 614:     }\A 615:   }\A 616: }\A 617: \A 618: // 태블릿 / PC\A 619: @include pc {\A 620:   .visual {\A 621:     position: relative;\A 622:     height: auto;\A 623:     background: none;\A 624:     background-color: #080911;"; }
+  content: "Error: Undefined mixin 'pc'.\A         on line 620 of ./main.scss, in `pc'\A         from line 620 of ./main.scss\A \A 615:   }\A 616: }\A 617: .floating {\A 618: }\A 619: // 태블릿 / PC\A 620: @include pc {\A 621:   .visual {\A 622:     height: 1235px;\A 623:     padding: 0 !important;\A 624:     position: relative;\A 625:     background: url('../image/pc/visual_bg.png') no-repeat center top;"; }

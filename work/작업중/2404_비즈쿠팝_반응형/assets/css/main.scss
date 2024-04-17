@@ -1,7 +1,7 @@
 .visual {
   position: relative;
   height: 168.28vw;
-  background: url('../image/mobile/visual_bg.png') no-repeat left top / cover;
+  background: url('../image/mobile/visual_bg.png') no-repeat center top / cover;
   &__deco {
     position: absolute;
     z-index: 1;
@@ -614,17 +614,21 @@
     }
   }
 }
-
+.floating {
+}
 // 태블릿 / PC
 @include pc {
   .visual {
+    height: 1235px;
+    padding: 0 !important;
     position: relative;
-    height: auto;
-    background: none;
+    background: url('../image/pc/visual_bg.png') no-repeat center top;
+    background-size: 1920px;
     background-color: #080911;
     &__deco {
       &.three {
-        top: 0;
+        right: -120px;
+        top: -200px;
       }
     }
     .visual__img {

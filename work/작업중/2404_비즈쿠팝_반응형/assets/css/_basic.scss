@@ -158,7 +158,8 @@ option[value=''][disabled] {
   }
   .main,
   .footer {
-    min-width: 1920px;
+    min-width: 1300px;
+    overflow: hidden;
   }
   .mobile_none {
     display: block !important;
