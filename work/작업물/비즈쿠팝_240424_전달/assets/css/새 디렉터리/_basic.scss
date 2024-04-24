@@ -1,0 +1,184 @@
+// font-weight
+.thin {
+  font-weight: 100;
+}
+.extra_light {
+  font-weight: 200;
+}
+.light {
+  font-weight: 300;
+}
+.regular {
+  font-weight: 400;
+}
+.medium {
+  font-weight: 500;
+}
+.semi_bold {
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}
+.extra_bold {
+  font-weight: 800;
+}
+.black {
+  font-weight: 900;
+}
+.mobile_none {
+  display: none !important;
+}
+.mobile_block {
+  display: block !important;
+}
+.mobile_flex {
+  display: flex !important;
+}
+.mobile_br {
+  display: block;
+}
+.pc_br {
+}
+.wrap {
+  padding: 0 7.5vw;
+}
+.color_green1 {
+  color: #39844a;
+}
+.color_green2 {
+  color: #69bd5c;
+}
+.color_green3 {
+  color: #44c04d;
+}
+.color_yellow {
+  color: #f9ff98;
+}
+
+// 하이라이트
+.highlight {
+  position: relative;
+  display: inline-block;
+  span {
+    position: relative;
+    z-index: 2;
+  }
+  &::before {
+    background: #f9ff98;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 1vw;
+  }
+}
+// 체크박스 디자인
+/* input 초기화 */
+input[type='checkbox'] {
+  display: none;
+}
+/* (체크박스, 텍스트) 정렬 맞추기 */
+.checkbox_label {
+  display: flex;
+  align-items: center;
+}
+
+/* 체크박스 디자인 */
+.checkbox_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checkbox_icon::before {
+  content: '';
+  display: block;
+  margin-right: 1vw;
+  display: inline-block;
+  width: 2.5vw;
+  height: 2.5vw;
+  background-color: transparent;
+  border: 0.31vw solid #9da3a5;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+}
+
+/* checked */
+.checkbox_label input:checked + .checkbox_icon::before {
+  /*   transition: all 0.15s ease; */
+  background: url(https://intranet.adef.co.kr/asset/images/ic_check.png) #69bd5c
+    no-repeat center;
+  border: none;
+  background-size: 1.5vw;
+}
+
+// select placehoder 효과 / 화살표커스텀
+select {
+  border: 1px solid #c8c8c8;
+  padding: 5px 10px;
+  -webkit-appearance: none; /* for chrome */
+  -moz-appearance: none; /*for firefox*/
+  appearance: none;
+  background: url('../image/select_arrow.png') no-repeat 97% 50% / 1.5vw auto;
+  background-color: #fff;
+}
+option {
+  color: #111;
+}
+select:required:invalid {
+  color: #c1c1c1;
+}
+option[value=''][disabled] {
+  display: none;
+}
+@include pc {
+  .checkbox_icon::before {
+    width: 29px;
+    height: 29px;
+    border: 2px solid #9da3a5;
+    margin-right: 15px;
+  }
+  .checkbox_label input:checked + .checkbox_icon::before {
+    background-size: 15px;
+  }
+  select {
+    background-size: 29px;
+  }
+  .main,
+  .footer {
+    min-width: 1300px;
+    overflow: hidden;
+  }
+  .mobile_none {
+    display: block !important;
+  }
+  .mobile_block {
+    display: none !important;
+  }
+  .mobile_flex {
+    display: none !important;
+  }
+  .mobile_br {
+    display: inline;
+  }
+  .pc_br {
+    display: block;
+  }
+  .wrap {
+    width: 1048px;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
