@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- 타이틀 -->
-  <title>Document</title>
+  <title>board</title>
   <!-- 파비콘 -->
   <link rel="shortcut icon" type="image/x-icon" href="">
   <!-- og 태그 -->
@@ -17,21 +17,29 @@
   <meta property="og:image" content="">
   <meta property="og:url" content="">
   <meta property="og:type" content="website">
-  <!-- jquery -->
-  <script src="./assets/plugIn/jquery-1.12.4.min.js"></script>
-  <!-- swiper -->
-  <link rel="stylesheet" href="./assets/js/swiper/swiper-bundle.min.css">
-  <script src="./assets/js/swiper/swiper-bundle.min.js"></script>
-  <!-- aos -->
-  <link rel="stylesheet" href="./assets/js/aos/aos.css">
-  <script src="./assets/js/aos/aos.js"></script>
   <!-- css -->
+  <link rel="stylesheet" href="./assets/css/index.css">
   <link rel="stylesheet" href="./assets/css/main.css">
 
 </head>
 
 <body>
-
+  <h1><a href="../index.html">로고</a></h1>
+  <h2>글 수정</h2>
+  <form action="" id="modifyFrm">
+    <div>
+      제목 : <input type="text" name="subject">
+    </div>
+    <div>
+      작성자 : <input type="text" name="writer">
+    </div>
+    <div>
+      내용: <textarea name="content"></textarea>
+    </div>
+    <input type="submit" value="수정완료">
+  </form>
+  <button id="back" style="margin-top: 10px">뒤로가기</button>
+  <script src="../assets/js/modify.js"></script>
   <!-- js -->
   <script src="./assets/js/common.js"></script>
 
