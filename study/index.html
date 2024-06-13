@@ -2,31 +2,32 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
 
 <body>
   <script>
+    function solution(arr1, arr2) {
+      var answer = 0;
+      const arr1Length = arr1.length;
+      const arr2Length = arr2.length;
 
-    function solution(cipher, code) {
-
-      var answer = "";
-      const cipherArr = cipher.split('');
-      answer = cipherArr.filter((data, idx) => {
-        if ((idx + 1) % code === 0) {
-          return true
-        }
-        return false
-      }).join('')
-
+      if (arr1Length > arr2Length) {
+        answer = 1
+      } else if (arr1Length < arr2Length) {
+        answer = -1
+      } else if (arr1Length = arr2Length) {
+        arr1.reduce((prev, cur) => { })
+        answer = '?'
+      }
+      console.log(answer)
       return answer;
     }
-
-    solution("dfjardstddetckdaccccdegk", 4)
-    // solution("pfqallllabwaoclk", 2)
-
+    solution([49, 13], [70, 11, 2])
+    solution([100, 17, 84, 1], [55, 12, 65, 36])
+    soltuion([1, 2, 3, 4, 5], [3, 3, 3, 3, 3])
   </script>
 </body>
 
