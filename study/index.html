@@ -18,9 +18,12 @@
         answer = 1
       } else if (arr1Length < arr2Length) {
         answer = -1
-      } else if (arr1Length = arr2Length) {
-        arr1.reduce((prev, cur) => { })
-        answer = '?'
+      } else if (arr1Length == arr2Length) {
+        arr1.reduce((prev, cur) => {
+          answer = prev + cur
+
+        })
+
       }
       console.log(answer)
       return answer;
