@@ -1,0 +1,222 @@
+.visual {
+  height: 100vh;
+  padding-top: 35vh;
+  background: url('../image/bg_intro_m.jpg') center center / cover no-repeat;
+  &__txt {
+    // margin-top: 30px;
+    font-size: 8vw;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.5;
+    opacity: 1;
+    &:not(:first-child) {
+      margin-top: -1.5vw;
+    }
+  }
+  &__arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg) translateX(-50%);
+    animation: 1.5s ease-in-out 0s infinite normal none running AnyTopDown;
+    z-index: 1;
+    -webkit-animation: 1.5s ease-in-out 0s infinite normal none running
+      AnyTopDown;
+  }
+}
+
+.section1 {
+  // padding-top: 18vh;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background: url('../image/bg_main_2.jpg') no-repeat 79% center / cover;
+  &__desc {
+    font-size: 6vw;
+    color: #fff;
+    font-weight: 600;
+    &:not(:first-child) {
+      margin-top: 2.5vw;
+    }
+  }
+  .data__list {
+    margin-top: 14vw;
+  }
+  .data__item {
+    color: red;
+    text-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
+    &:not(:first-child) {
+      margin-top: 8vw;
+    }
+    &--title,
+    &--value {
+      color: #fff;
+    }
+    &--title {
+      font-size: 4vw;
+      font-weight: 700;
+    }
+    &--value {
+    }
+    .num_count--box {
+      margin-top: 3vw;
+    }
+    .num_count--box,
+    .num_count {
+      font-size: 8vw;
+      font-weight: 100;
+    }
+    .num_count {
+    }
+    .small {
+      margin-top: 2vw;
+      font-size: 3.5vw;
+
+      opacity: 0.7;
+    }
+  }
+}
+.section2 {
+  padding: 15vw 0;
+}
+.article {
+  &__title {
+    font-size: 6vw;
+    font-weight: 800;
+  }
+}
+
+.article1 {
+  padding-top: 10vw;
+}
+.article2 {
+  margin-top: 15vw;
+}
+
+.travel {
+  &__list {
+    margin-top: 6vw;
+  }
+  &__item {
+    &:not(:first-child) {
+      margin-top: 10vw;
+    }
+  }
+  &__item--img {
+    width: 100%;
+    height: 55vw;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  &__item--desc {
+    margin-top: 4vw;
+    & > *:not(:first-child) {
+      margin-top: 2vw;
+    }
+  }
+  &__item--sub {
+    color: #777;
+    font-size: 4vw;
+  }
+  &__item--title,
+  &__item--yellow {
+    font-size: 5.5vw;
+  }
+  &__item--yellow {
+    font-weight: 800;
+    color: #ffc72c;
+  }
+}
+.travel2 {
+  &__list {
+    margin-top: 6vw;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 40vw;
+    height: 40vw;
+    background: red;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin: 2vw 0vw 2vw 0;
+    position: relative;
+    overflow: hidden;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      left: 0;
+      top: 0;
+    }
+    &:nth-of-type(1) {
+      background: url('../image/bg_category_1.jpg') no-repeat center center /
+        cover;
+    }
+    &:nth-of-type(2) {
+      background: url('../image/bg_category_2.jpg') no-repeat center center /
+        cover;
+    }
+    &:nth-of-type(3) {
+      background: url('../image/bg_category_3.jpg') no-repeat center center /
+        cover;
+    }
+    &:nth-of-type(4) {
+      background: url('../image/bg_category_4.jpg') no-repeat center center /
+        cover;
+    }
+    &:nth-of-type(5) {
+      background: url('../image/bg_category_5.jpg') no-repeat center center /
+        cover;
+    }
+    &:nth-of-type(6) {
+      background: url('../image/bg_category_6.jpg') no-repeat center center /
+        cover;
+    }
+    &:nth-of-type(7) {
+      background: url('../image/bg_category_7.jpg') no-repeat center center /
+        cover;
+    }
+    &:nth-of-type(8) {
+      background: url('../image/bg_category_8.jpg') no-repeat center center /
+        cover;
+    }
+    &:not(:nth-of-type(2n)) {
+      margin-right: 4vw;
+    }
+  }
+  &__item--title {
+    position: absolute;
+    text-align: center;
+    line-height: 1.2;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 4.8vw;
+    font-weight: 700;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+  }
+}

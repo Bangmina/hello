@@ -113,3 +113,28 @@ $(function () {
     $(this).closest('.modal').fadeOut(300);
   });
 });
+
+// 240723 아코디언
+document.addEventListener('DOMContentLoaded', function () {
+  var headers = document.querySelectorAll('.accordion-header');
+
+  headers.forEach(function (header) {
+    header.addEventListener('click', function () {
+      var content = this.nextElementSibling;
+      var isOpen = content.style.maxHeight;
+
+      // 모든 섹션 닫기
+      headers.forEach(function (item) {
+        var content = item.nextElementSibling;
+        content.style.maxHeight = null;
+        content.style.padding = '0 15px';
+      });
+
+      // 클릭한 섹션을 토글
+      if (!isOpen) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.padding = '15px';
+      }
+    });
+  });
+});
