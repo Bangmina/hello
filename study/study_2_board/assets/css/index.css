@@ -1,0 +1,176 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(../font/NanumGothic/NanumGothic.css);
+@import url(../font/NanumSquare/nanumsquare.css);
+@import url(../font/notoSansKr/css/noto-sans-korean.css);
+@import url(../font/pretendard/pretendard.css);
+@import url(../font/Roboto/font_roboto.css);
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-family: 'Pretendard', 'Noto Sans KR', 'Nanum Gothic', 'Roboto', sans-serif;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+a {
+  text-decoration: none; }
+
+/* 불필요한거 삭제해서 사용 */
+/* 변수만 모아놓은 파일 */
+/* 반응형 화면 세팅 */
+/* 반응형 모바일 */
+/* 반응형 태블릿 */
+.inner {
+  position: relative;
+  margin: 0 auto;
+  width: 1000px;
+  box-sizing: border-box; }
+
+/* font-weight */
+.thin {
+  font-weight: 100; }
+
+.light {
+  font-weight: 300; }
+
+.regular {
+  font-weight: 400; }
+
+.medium {
+  font-weight: 500; }
+
+.bold {
+  font-weight: 700; }
+
+.eb {
+  font-weight: 900; }
+
+/* animation */
+
+/*# sourceMappingURL=index.css.map */

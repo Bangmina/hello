@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- 타이틀 -->
+  <title>쿠팝 - 오늘이 특별해지는 모든 선물</title>
+  <!-- 파비콘 -->
+  <link href="https://www.coupop.co.kr/images/common/favicon.ico" rel="shortcut icon" type="image/ico" />
+  <!-- og 태그 -->
+  <meta name="keywords" content="쿠팝" />
+  <meta name="description" content="쿠팝" />
+  <meta property="og:title" content="쿠팝" />
+  <meta property="og:description" content="쿠팝" />
+  <meta property="og:image" content="https://welcomedirect.co.kr/banner_follow_sunshine.jpg?v=2022 07:03:45" />
+  <meta property="og:url" content="url" />
+  <meta property="og:type" content="website" />
+  <!-- jquery -->
+  <script src="./assets/plugIn/jquery-1.12.4.min.js"></script>
+  <!-- swiper -->
+  <link rel="stylesheet" href="./assets/js/swiper/swiper-bundle.min.css" />
+  <script src="./assets/js/swiper/swiper-bundle.min.js"></script>
+  <!-- aos -->
+  <link rel="stylesheet" href="./assets/js/aos/aos.css" />
+  <script src="./assets/js/aos/aos.js"></script>
+  <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.0/kakao.min.js"
+    integrity="sha384-l+xbElFSnPZ2rOaPrU//2FF5B4LB8FiX5q4fXYTlfcG4PGpMkE1vcL7kNXI6Cci0"
+    crossorigin="anonymous"></script>
+  <!-- css -->
+  <link rel="stylesheet" href="./assets/css/index.css" />
+
+
+</head>
+
+<body>
+  <main class="main">
+    <section class="section visual">
+      <!-- <img class="visual__img mobile_none" src="./assets/image/pc/visual_bg.png"
+        alt="런칭기념 ! 기입비무료 ,고객을 모아주는 가장 똑똑한 마케팅툴, 네이버페이 포인트 API OPEN"> -->
+      <!-- <img class="visual__deco one mobile_block" src="./assets/image/mobile/ic_npay.png" alt="" /> -->
+      <!-- <img class="visual__deco two mobile_block" src="./assets/image/mobile/ic_api.png" alt="" /> -->
+    </section>
+    <section class="section section1">
+      <div class="wrap">
+        <img class="visual__deco three mobile_none" src="./assets/image/pc/ic_api.png" alt="" />
+        <a href="#form" class="coffee__box">
+          <div class="coffee__top">
+            전화상담 완료만 해도
+          </div>
+          <img class="img_txt_coupon" src="./assets/image/txt_coupon.png" alt="" />
+          <img class="img_coffee" src="./assets/image/img_coffee.png" alt="" />
+          <p class="coffee__direct">
+            상담신청 바로가기
+            <img src="./assets/image/ic_arrow.png" alt="" />
+          </p>
+        </a>
+        <div class="introduction">
+          <p class="introduction__title">소개서 신청</p>
+          <div class="introduction__form">
+            <input type="email" class="introduction__input" name="introductionEmail" pattern=".+@globex\.com"
+              placeholder="이메일 주소를 입력해 주세요">
+            <button class="introduction__submit" id='sendIntroductionFileEmail'>전송</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section2">
+      <div class="wrap">
+        <div class="npay__title--wrap">
+          <h3 class="npay__title">
+            <img class="npay__title--icon" src="./assets/image/img_npay.png" alt="npay icon">
+            포인트 발행API 서비스의 특장점
+          </h3>
+          <p class="npay__title--sub">
+            쿠폰 번호 복사, 입력 등의 절차를 줄인 네이버ID<br />
+            직접 지급 방식을 통해 고객의 만족도를<br />
+            최대화 할 수 있습니다.
+          </p>
+        </div>
+        <ul class="advantage__list">
+          <li class="advantage__item">
+            <!-- <img class="advantage__num one" src="./assets/image/npay_num1.png" alt="01"> -->
+            <p class="advantage__title extra_bold">
+              01 <span class="mobile_br"></span>
+              실시간 지급 기능
+            </p>
+            <p class="advantage__txt">
+              프로모션 및 구매 리워드,<span class="mobile_br"></span><span class="pc_br"></span>
+              CS 솔루션, 임직원<span class="mobile_br"></span>
+              복지포인트<span class="pc_br"></span> 지급 등<span class="mobile_br"></span>
+              다양한 상황에서<span class="mobile_br"></span>
+              고객에게<span class="pc_br"></span> 실시간 지급이<span class="mobile_br"></span>
+              가능합니다
+            </p>
+          </li>
+          <li class="advantage__item">
+            <!-- <img class="advantage__num two" src="./assets/image/npay_num2.png" alt="01"> -->
+            <p class="advantage__title extra_bold">
+              02 <span class="mobile_br"></span>
+              포인트 사용 촉진 효과
+            </p>
+            <p class="advantage__txt">
+              네이버페이 포인트 전환 <span class="mobile_br"></span>
+              서비스를<span class="pc_br"></span> 통해 포인트 <span class="mobile_br"></span>
+              사용을 촉진시키는<span class="pc_br"></span> 효과와 <span class="mobile_br"></span>
+              제휴사 서비스의 활성화를<span class="pc_br"></span> <span class="mobile_br"></span>
+              기대할 수 있습니다.
+
+            </p>
+          </li>
+          <li class="advantage__item">
+            <!-- <img class="advantage__num three" src="./assets/image/npay_num3.png" alt="01"> -->
+            <p class="advantage__title extra_bold">
+              03<span class="mobile_br"></span>
+              자율적 전환비율 설정
+            </p>
+            <p class="advantage__txt">
+              제휴사 자체 포인트와 <span class="mobile_br"></span>
+              네이버페이<span class="pc_br"></span> 포인트의 <span class="mobile_br"></span>
+              자유로운 전환 비율 설정<span class="mobile_br"></span><span class="pc_br"></span>
+              으로, 제휴사의 비용 <span class="mobile_br"></span>
+              절감과 고객의<span class="pc_br"></span> 편의 모두 <span class="mobile_br"></span>
+              만족시킬 수 있습니다.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="section section3">
+      <div class="wrap">
+        <div class="npay__title--wrap">
+          <h3 class="npay__title">
+            <img class="npay__title--icon" src="./assets/image/img_npay.png" alt="npay icon">
+            포인트 사용처
+          </h3>
+          <p class="npay__title--sub">
+            네이버페이 포인트는 80만개 스마트스토어,<br />
+            전국 약 15만개 오프라인 가맹점 등 네이버페이 가맹점과<br />
+            삼성페이 결제가 가능한 오프라인 가맹점<br />
+            어디든 <span class="color_green1 bold">금액 제한 없이 현금처럼<br />
+              사용이 가능합니다.</span>
+          </p>
+          <ul class="franchisee__list">
+            <li class="franchisee__item">
+              <img src="./assets/image/img_franchisee1.png" alt="">
+            </li>
+            <li class="franchisee__item">
+              <img src="./assets/image/img_franchisee2.png" alt="">
+            </li>
+            <li class="franchisee__item">
+              <img src="./assets/image/img_franchisee3.png" alt="">
+            </li>
+            <li class="franchisee__item">
+              <img src="./assets/image/img_franchisee4.png" alt="">
+            </li>
+            <li class="franchisee__item">
+              <img src="./assets/image/img_franchisee5.png" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="section section4">
+      <div class="wrap">
+        <h3 class="section4__title">
+          <span class="extra_bold color_green2">네이버페이포인트 API 서비스,<br /></span>
+          이렇게 쓰세요~
+        </h3>
+        <div class="example">
+          <p class="example__num">
+            적용사례 01
+          </p>
+          <div class="example__title--wrap one">
+            <h3 class="example__title">
+              제휴사 플랫폼 연동을 통한 포인트
+              <p class="example__title--icon">
+                전환 서비스
+              </p>
+            </h3>
+          </div>
+        </div>
+        <img class="example__img" src="./assets/image/img_point1.png" alt="">
+        <div class="example__disc">
+          <h4 class="example__title--point">
+            포인트 전환 예시
+          </h4>
+          <div class="example__txt">
+            제휴사 포인트몰 자체 포인트 <span class="extra_bold">1,000P</span><br />
+            <span class="extra_bold">→ 750</span> 네이베퍼이 포인트로 전환
+          </div>
+          <div class="example__txt small">
+            변환 대상, 변환 비율, 변환 기한 및 한도 등의 정책은 자율적으로 설정
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section5 grey">
+      <div class="wrap">
+        <div class="example">
+          <p class="example__num">
+            적용사례 02
+          </p>
+          <div class="example__title--wrap one">
+            <h3 class="example__title">
+              실시간으로 네이버포인트 지급이 가능한
+              <p class="example__title--icon">
+                CS 솔루션
+              </p>
+            </h3>
+          </div>
+        </div>
+        <img class="example__img" src="./assets/image/img_point2.png" alt="">
+        <div class="example__disc">
+          <h4 class="example__title--point">
+            포인트 전환 예시
+          </h4>
+          <div class="example__txt">
+            불편 민원 응대 및 상담 고객 선물 등<br />
+            다양한 상황에 네이버페이 포인트를 실시간으로 지급
+          </div>
+          <div class="example__txt small">
+            지급 대상, 지급 금액, 지급 한도 등의 정책은 자율적으로 설정
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section6">
+      <div class="wrap">
+        <div class="example">
+          <p class="example__num">
+            적용사례 03
+          </p>
+          <div class="example__title--wrap one">
+            <h3 class="example__title">
+              쇼핑몰 이벤트 참여, 구매 고객 대상
+              <p class="example__title--icon">
+                프로모션 / 리워드로 활용
+              </p>
+            </h3>
+          </div>
+        </div>
+        <img class="example__img" src="./assets/image/img_point3.png" alt="">
+        <div class="example__disc">
+          <h4 class="example__title--point">
+            리워드 지급 예시
+          </h4>
+          <div class="example__txt">
+            <span class="extra_bold">10,000원</span> 이상 상품 구매 고객<br />
+            <span class="extra_bold">→ 275원</span> 네이버페이 포인트 지급<br />
+            <span class="small">(결제 리워드 2.75% 지급 예시)</span>
+
+          </div>
+          <div class="example__txt small">
+            결제 수단과 상관 없이 자율적으로 네이버페이 포인트를 지급 가능
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section7 grey">
+      <div class="wrap">
+        <div class="example">
+          <p class="example__num">
+            적용사례 04
+          </p>
+          <div class="example__title--wrap one">
+            <h3 class="example__title">
+              편리한 복지제도 운영을 위한
+              <p class="example__title--icon">
+                임직원 복지포인트 서비스
+              </p>
+            </h3>
+          </div>
+        </div>
+        <img class="example__img" src="./assets/image/img_point4.png" alt="">
+        <div class="example__disc">
+          <h4 class="example__title--point">
+            지급 예시
+          </h4>
+          <div class="example__txt">
+            설날, 추석 등 명절, 결혼기념일,<br />
+            임직원 생일에 네이버페이 포인트 지급
+          </div>
+          <div class="example__txt small">
+            임직원 복지포인트를 네이버페이 포인트로 지급하여 편리한 복지제도 운영
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section8" id="form">
+      <div class="wrap">
+        <div class="form__title--wrap">
+          <p class="form__title"><span class="color_green3">아메리카노 쿠폰 2장</span> 받아가세요</p>
+          <img src="./assets/image/txt_npay.png" alt="">
+        </div>
+        <form id='consultation_request' method="post" action="/">
+          <ul class="form__list">
+            <li class="form__item">
+              <div class="form__item--title">
+                회사명 <span class="small">(필수)</span> </div>
+              <div class="form__item--input_wrap"><input class="form__item--input input" type="text" name='company'>
+              </div class="form__item--input_wrap">
+            </li>
+            <li class="form__item">
+              <div class="form__item--title">
+                성함 <span class="small">(필수)</span> </div>
+              <div class="form__item--input_wrap"><input class="form__item--input input" type="text" name='name'></div
+                class="form__item--input_wrap">
+            </li>
+            <li class="form__item">
+              <div class="form__item--title">
+                이메일 <span class="small">(필수)</span></div>
+              <div class="form__item--input_wrap"><input class="form__item--input input" type="email"
+                  pattern=".+@globex\.com" name='email'>
+              </div class="form__item--input_wrap">
+            </li>
+            <li class="form__item">
+              <div class="form__item--title">
+                휴대폰번호 <span class="small">(필수)</span></div>
+              <div class="form__item--input_wrap"><input class="form__item--input input" type="text"
+                  oninput="hypenTel(this)" maxlength="13" name='mobile'>
+              </div class="form__item--input_wrap">
+            </li>
+            <li class="form__item">
+              <div class="form__item--title">
+                연동유형
+              </div>
+              <div class="form__item--input_wrap">
+                <select class="form__item--input select" name="connectType">
+                  <option value="" selected disabled>선택해주세요</option>
+                  <option value="복지포인트">복지포인트</option>
+                  <option value="구매리워드">구매리워드</option>
+                  <option value="포인트 스왑">포인트 스왑</option>
+                  <option value="기타">기타</option>
+                </select>
+              </div>
+            </li>
+            <li class="form__item">
+              <div class="form__item--title">
+                예상 발행금액
+              </div>
+              <div class="form__item--input_wrap">
+                <select class="form__item--input select" name="expectedPublishingAmount">
+                  <option value="" selected disabled>선택해주세요</option>
+                  <option value="월 1,000만원 이하">월 1,000만원 이하</option>
+                  <option value="월 1,000만원~3,000만원">월 1,000만원~3,000만원</option>
+                  <option value="월 3,000만원~5,000만원">월 3,000만원~5,000만원</option>
+                  <option value="월 5,000만원 이상">월 5,000만원 이상</option>
+                  <option value="기타">기타</option>
+                </select>
+              </div>
+            </li>
+            <li class="form__item">
+              <div class="form__item--title">
+                상담내용 <span class="small">(필수)</span>
+              </div>
+              <div class="form__item--input_wrap">
+                <textarea class="form__item--input textarea" name="contents" maxlength="200"
+                  placeholder="200자 내외로 입력해 주세요."></textarea>
+              </div>
+            </li>
+          </ul>
+          <div class="agree__wrap">
+            <!-- checkbox -->
+            <div class="agree__check">
+              <label class="checkbox_label">
+                <input type="checkbox" id='chk1'>
+                <span class="checkbox_icon"></span>
+                <span class="checkbox_text">개인정보 수집 및 이용에 동의합니다. (필수)</span>
+              </label>
+              <!-- // checkbox -->
+            </div>
+            <ul class="agree__list">
+              <li class="agree__item">
+                <div class="agree__item--title">목적</div>
+                <div class="agree__item--content">
+                  <div>
+                    상담 접수 및 처리
+                    <p class="small">
+                      (상담접수 안내 전화 및 메일 발송, <span class="mobile_br"></span>
+                      이벤트 상품 전송 등)
+                    </p>
+                    <ul class="agree_depth1__list">
+                      <li class="agree_depth1__item">
+                        처리 내역 보관 용도
+                      </li>
+                      <li class="agree_depth1__item">
+                        맞춤 서비스 제공
+                      </li>
+                      <li class="agree_depth1__item">
+                        처리 내역 세부 분류
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="agree__item">
+                <div class="agree__item--title">항목</div>
+                <div class="agree__item--content">
+                  <div>
+                    (필수) 회사명, <span class="extra_bold">이메일,</span> <span class="mobile_br"></span> <span
+                      class="extra_bold">휴대폰번호,</span> 성함, 문의
+                    유형,<span class="mobile_br"></span>
+                    상담 내용
+                  </div>
+                </div>
+              </li>
+              <li class="agree__item">
+                <div class="agree__item--title">보유기간</div>
+                <div class="agree__item--content">
+                  <div class="extra_bold">
+                    <p class="mobile_block">
+                      <span class="highlight yellow"><span>수집 이용 동의일로부터</span></span><span class="mobile_br"></span>
+                      <span class="highlight yellow"><span>24개월 (단, 요청 시 삭제)</span></span>
+                    </p>
+                    <p class="mobile_none">
+                      <span class="highlight yellow"><span>수집 이용 동의일로부터 24개월</span></span><span
+                        class="mobile_br"></span>
+                      <span class="highlight yellow"><span> (단, 요청 시 삭제)</span></span>
+                    </p>
+                    </span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <ul class="notice__list">
+              <li class="notice__item">
+                개인정보 수집 및 이용에 대해서는 거부할 수 있으며, 거부 시에는 서비스 신청이 불가 합니다.
+              </li>
+              <li class="notice__item">
+                서비스 제공을 위해서 반드시 필요한 최소한의 개인정보이므로 동의를 하셔야 서비스 이용이
+                가능합니다.
+              </li>
+              <li class="notice__item">
+                그 외 문의 내용은 관계법령 및 기타 응대를 위해 개인정보를 보관할 수 있습니다. 그 밖에 사항은
+                개인정보 처리방침을 준수합니다.
+              </li>
+            </ul>
+          </div>
+          <button type="submit" class="agree__btn" id="consultRequest">
+            상담 신청 완료
+            <img src="./assets/image/mobile/ic_arrow.png" alt="">
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__title">
+        서비스이용 문의
+      </div>
+      <ul class="footer__list">
+        <li class="footer__item">
+          <span class="bold">Tel.</span> 050-4570-0029, 050-4570-8888
+        </li>
+        <li class="footer__item">
+          <span class="bold">Email.</span> bizcoupop@daou.co.kr
+        </li>
+      </ul>
+      <a href="https://biz.coupop.co.kr/service/common/faqList.do" class="footer__anchor">
+        <span class="color_yellow">FAQ &nbsp;</span>바로가기
+        <img src="./assets/image/mobile/ic_arrow.png" alt="">
+      </a>
+    </div>
+  </footer>
+  <div class="wrap floating__wrap">
+    <a href="https://biz.coupop.co.kr/service/common/serviceIntroduce.do" class="floating">
+      <img src="./assets/image/floating_banner.png" alt="">
+    </a>
+  </div>
+  <script>
+    $(document).ready(function () {
+
+      $(window).on('scroll', function () {
+        if ($(window).scrollTop() > 30) {
+          $('.floating').fadeIn(300)
+        } else {
+          $('.floating').fadeOut(300)
+        }
+      })
+
+      // 이메일 유효성 검사
+      function isEmailFormatCheck(email_address) {
+        email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+        if (!email_regex.test(email_address)) {
+          return false;
+        } else {
+          return true;
+        }
+      }
+      // 값 null 체크
+      function isEmpty(str) {
+        return !str || str.trim() === '';
+      }
+
+      // 소개서 신청 이메일 유효성 검사
+
+      $("#sendIntroductionFileEmail").click(function (e) {
+
+        e.preventDefault();
+
+        var introductionEmail = $('input[name="introductionEmail"]');
+        if (isEmpty(introductionEmail.val())) {
+          alert("이메일을 입력해 주세요.");
+          introductionEmail.focus();
+          return;
+        }
+
+        if (!isEmailFormatCheck(introductionEmail.val())) {
+          alert('이메일 주소 형식을 확인해주세요.');
+          introductionEmail.focus();
+          return;
+        }
+        else {
+          alert('입력하신 이메일 주소로 소개서가 발송되었습니다.');
+        }
+      })
+
+
+      // 네이버 페이 포인트 API 서비스 비즈쿠팝 폼 유효성 검사-- >
+      $("#consultRequest").click(function (e) {
+        if (isEmpty($('input[name="company"]').val())) {
+          alert("회사명을 입력해 주세요.");
+          $('input[name="company"]').focus();
+          e.preventDefault();
+          return;
+        }
+
+        if (isEmpty($('input[name="name"]').val())) {
+          alert("성함을 입력해 주세요.");
+          $('input[name="name"]').focus();
+          e.preventDefault();
+          return;
+        }
+
+        if (isEmpty($('input[name="email"]').val())) {
+          alert("이메일을 입력해 주세요.");
+          $('input[name="email"]').focus();
+          e.preventDefault();
+          return;
+        }
+
+        if (!isEmailFormatCheck($('input[name="email"]').val())) {
+          alert('이메일 주소 형식을 확인해주세요.');
+          $('input[name="email"]').focus();
+          e.preventDefault();
+          return
+        }
+
+        var mobile = $('input[name="mobile"]').val().replace(/-/g, "");
+        if (isEmpty(mobile)) {
+          alert("휴대폰 번호를 입력해 주세요.");
+          $('input[name="mobile"]').focus();
+          e.preventDefault();
+          return;
+        }
+        /*
+            if(isEmpty($('select[name="connectType"]').val())){
+                alert("연동유형을 선택해 주세요.");
+          $('select[name="connectType"]').focus();
+          e.preventDefault();
+                return;
+            }
+      	
+        if(isEmpty($('select[name="expectedPublishingAmount"]').val())){
+                alert("예상 발행금액을 선택해 주세요.");
+          $('select[name="expectedPublishingAmount"]').focus();
+          e.preventDefault();
+                return;
+            }
+        */
+        if (isEmpty($('textarea[name="contents"]').val())) {
+          alert("상담내용을 입력 해 주세요.");
+          $('textarea[name="contents"]').focus();
+          e.preventDefault();
+          return;
+        }
+
+
+        if (!$('#chk1').is(':checked')) {
+          alert("개인정보 수집 및 이용에 동의해 주세요.");
+          e.preventDefault();
+          return;
+        }
+
+        alert('상담 신청이 완료되었습니다.');//삭제요망
+        e.preventDefault();//삭제요망
+
+      });
+    })
+
+
+
+    const hypenTel = (target) => {
+      target.value = target.value
+        .replace(/[^0-9]/g, '')
+        .replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`);
+    }
+  </script>
+
+</body>
+
+</html>

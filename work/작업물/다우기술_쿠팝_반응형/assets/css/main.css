@@ -94,7 +94,8 @@ video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  font-family: "Pretendard", "Noto Sans KR", "Nanum Gothic", "Roboto", sans-serif;
+  font-family: 'Pretendard', 'Noto Sans KR', 'Nanum Gothic', 'Roboto',
+    sans-serif;
   vertical-align: baseline;
   box-sizing: border-box;
   letter-spacing: -0.3px;
@@ -133,7 +134,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 
@@ -177,7 +178,7 @@ a {
   position: relative;
 }
 .underline::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   width: 100%;
@@ -201,7 +202,7 @@ a {
   background: #fefb94;
 }
 .highlight::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   left: 0;
@@ -248,7 +249,8 @@ a {
 }
 
 /* animation */
-@keyframes any {}
+@keyframes any {
+}
 .mobile_block {
   display: block !important;
 }
@@ -336,7 +338,8 @@ a {
   padding: 0;
 }
 .event__share--btn.kakao {
-  background: url("../image/share_kakao.png") #f5e14b no-repeat center center/cover;
+  background: url('../image/share_kakao.png') #f5e14b no-repeat center
+    center/cover;
 }
 .event__share--btn.url {
   background: #5914e5;
@@ -348,7 +351,7 @@ a {
 .step__item {
   padding: 4.6vw 3vw 3.125vw;
   height: 51.8vw;
-  background: url("../image/mobile/step_bg.png") no-repeat 0 0/100%;
+  background: url('../image/mobile/step_bg.png') no-repeat 0 0/100%;
 }
 .step__item:not(:last-child) {
   margin-bottom: 2.8vw;
@@ -393,7 +396,7 @@ a {
   font-size: 3.43vw;
   font-weight: 700;
   color: #fff;
-  background: url("../image/mobile/ic_required.png") no-repeat 0 0/100%;
+  background: url('../image/mobile/ic_required.png') no-repeat 0 0/100%;
 }
 
 .section .visual__date {
@@ -434,7 +437,7 @@ a {
   padding: 5vw;
   width: 80.5vw;
   height: 20vw;
-  background: url("../image/mobile/visual_txt.png") 0 0/cover;
+  background: url('../image/mobile/visual_txt.png') 0 0 / cover;
 }
 .section .visual__txt--box {
   position: absolute;
@@ -481,7 +484,7 @@ a {
 .section.one {
   position: relative;
   padding-bottom: 11.25vw;
-  background: url("../image/mobile/visual_bg.png") no-repeat center 0/cover;
+  background: url('../image/mobile/visual_bg.png') no-repeat center 0 / cover;
 }
 .section.two {
   padding: 22.65vw 0 15vw;
@@ -501,7 +504,7 @@ a {
   text-align: center;
   padding: 5.5vw 0vw 14.85vw;
   width: 48.8%;
-  background: url("../image/mobile/benefit_bg.png") no-repeat 0 0/100%;
+  background: url('../image/mobile/benefit_bg.png') no-repeat 0 0/100%;
 }
 .section.two .benefit__title {
   font-size: 5.625vw;
@@ -560,7 +563,7 @@ a {
 }
 .section.three {
   padding: 14.84vw 0;
-  background: url("../image/mobile/howto2_bg.png") center 0/cover;
+  background: url('../image/mobile/howto2_bg.png') center 0 / cover;
 }
 .section.three .section__title--txt {
   margin-top: 4.2vw;
@@ -590,11 +593,11 @@ a {
   box-shadow: 0px 0px 7px -2px rgba(0, 0, 0, 0.2) inset;
 }
 .section.three .join_step__item.member {
-  background: url("../image/img_people.png") no-repeat center bottom #fff;
+  background: url('../image/img_people.png') no-repeat center bottom #fff;
   background-size: 16vw;
 }
 .section.three .join_step__item.company {
-  background: url("../image/logo_samsung.png") no-repeat center bottom 5vw #fff;
+  background: url('../image/logo_samsung.png') no-repeat center bottom 5vw #fff;
   background-size: 28vw;
 }
 .section.three .requirement {
@@ -620,7 +623,7 @@ a {
   display: flex;
   margin-top: 4.68vw;
   padding: 4vw 0;
-  background: url("../image/box_dotted.png") no-repeat 0 0/100%;
+  background: url('../image/box_dotted.png') no-repeat 0 0/100%;
 }
 .section.four .gift__item {
   width: 33.33%;
@@ -662,7 +665,7 @@ a {
 .section.four .whatsgood_benefit__anchor {
   display: block;
   padding: 4.375vw 0;
-  background: url("../image/mobile/whatsgood_bg.png") no-repeat 0 0/100%;
+  background: url('../image/mobile/whatsgood_bg.png') no-repeat 0 0/100%;
 }
 .section.four .whatsgood_benefit__img--box {
   height: 23vw;
@@ -727,7 +730,7 @@ a {
   padding-left: 2vw;
 }
 .section.five .notice__item p::before {
-  content: "·";
+  content: '·';
   display: block;
   position: absolute;
   left: 0;
@@ -802,7 +805,7 @@ a {
     padding: 0;
     width: 819px;
     height: 207px;
-    background: url(../image/pc/visual_txt.png) 0 0/cover;
+    background: url(../image/pc/visual_txt.png) 0 0 / cover;
   }
   .section .visual__anchor {
     width: 845px;
@@ -817,7 +820,7 @@ a {
   }
   .section.one {
     padding-bottom: 125px;
-    background: url(../image/pc/visual_bg.png) no-repeat center 0/cover;
+    background: url(../image/pc/visual_bg.png) no-repeat center 0 / cover;
   }
   .section.two {
     padding: 230px 0 145px;
@@ -827,7 +830,7 @@ a {
     width: 638px;
   }
   .section.two .benefit__item {
-    background: url("../image/pc/benefit_bg.png") no-repeat 0 0/100%;
+    background: url('../image/pc/benefit_bg.png') no-repeat 0 0/100%;
     margin-top: 105px;
     padding: 55px 0vw 150px;
   }
@@ -871,7 +874,7 @@ a {
   }
   .section.three {
     padding: 150px 0 145px;
-    background: url(../image/pc/howto2_bg.png) center 0/cover;
+    background: url(../image/pc/howto2_bg.png) center 0 / cover;
   }
   .section.three .section__title--txt {
     margin-top: 45px;
@@ -883,7 +886,7 @@ a {
   .section.three .step__item {
     padding: 50px 35px 0;
     height: 526px;
-    background: url("../image/mobile/step_bg.png") no-repeat 0 0/100%;
+    background: url('../image/mobile/step_bg.png') no-repeat 0 0/100%;
   }
   .section.three .step__item:not(:last-child) {
     margin-bottom: 30px;
@@ -956,7 +959,7 @@ a {
   .section.four .whatsgood_benefit__anchor {
     padding: 35px 0 0 0;
     height: 539px;
-    background: url("../image/pc/whatsgood_bg.png") no-repeat 0 0/100%;
+    background: url('../image/pc/whatsgood_bg.png') no-repeat 0 0/100%;
   }
   .section.four .whatsgood_benefit__img--box {
     height: 242px;
@@ -1011,4 +1014,4 @@ a {
   .section.five .notice__item p {
     padding-left: 13px;
   }
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */

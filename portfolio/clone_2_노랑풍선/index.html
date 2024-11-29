@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 타이틀 -->
+  <title>[Clone]노랑풍선 회사소개 [여행을 가볍게]</title>
+  <!-- 파비콘 -->
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/image/ico_yb.ico">
+  <!-- og 태그 -->
+  <meta name="keywords" content="여행을 가볍게, 해외여행, 국내여행, 항공, 호텔, 투어 티켓, 노랑풍선">
+  <meta name="description" content="여행을 가볍게, 해외여행, 국내여행, 항공, 호텔, 투어 티켓, 노랑풍선">
+
+  <meta property="og:title" content="여행을 가볍게 노랑풍선 회사소개">
+  <meta property="og:description" content="여행을 가볍게, 해외여행, 국내여행, 항공, 호텔, 투어 티켓, 노랑풍선">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <!-- https://company.ybtour.co.kr/ -->
+  <!-- jquery -->
+  <script src="./assets/plugIn/jquery-1.12.4.min.js"></script>
+  <!-- css -->
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <!-- gsap -->
+  <script src="../노랑풍선/assets/plugIn/gsap/gsap.min.js"></script>
+  <script src="../노랑풍선/assets/plugIn/gsap/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <h1 class="header__logo">
+      <a href="#"></a>
+    </h1>
+    <button class="header__menu" onclick="hamberger(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </button>
+  </header>
+  <!-- // header -->
+
+  <!-- visual -->
+  <section class="visual section0">
+    <div class="wrap">
+      <div class="visual__txt animate bottom-top " data-delay="0.3">
+        여행을 가볍게!
+      </div>
+      <div class="visual__txt animate bottom-top" data-delay="0.6">
+        일상을 빛나게!
+      </div>
+      <button class="visual__arrow">
+      </button>
+    </div>
+  </section>
+  <!-- // visual -->
+  <!-- section1 -->
+  <section class="section1">
+    <div class="wrap">
+      <div class="section1__desc--box">
+        <div class="section1__desc animate bottom-top " data-delay="0.3">
+          노랑풍선은
+        </div>
+        <div class="section1__desc animate bottom-top " data-delay="0.6">
+          24년간 축적된
+        </div>
+        <div class="section1__desc animate bottom-top " data-delay="0.9">
+          데이터와 네트워크로
+        </div>
+        <div class="section1__desc animate bottom-top " data-delay="1.2">
+          여행 문화를 만들어갑니다
+        </div>
+      </div>
+      <ul class="data__list">
+        <li class="data__item">
+          <div class="data__item--title">
+            함께 떠난 여행 수
+          </div>
+          <div class="data__item--value">
+            <p class="num_count--box">
+              <span class="num_count count" data-count="24000">24,000</span>회 +
+            </p>
+            <p class="small">
+              (2015년 이후 누적 여행상품 수)
+            </p>
+          </div>
+        </li>
+        <li class="data__item">
+          <div class="data__item--title">
+            함께 떠난 여행 고객 수
+          </div>
+          <div class="data__item--value">
+            <p class="num_count--box">
+              연
+              <span class="num_count count" data-count="102">102</span>만 +
+            </p>
+            <p class="small">
+              (2023년 기준)
+            </p>
+          </div>
+        </li>
+        <li class="data__item">
+          <div class="data__item--title">
+            함께하는 여행파트너 수
+          </div>
+          <div class="data__item--value">
+            <p class="num_count--box">
+              <span class="num_co
+              unt count" data-count="12500">12,500</span>+
+            </p>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+  <!-- // section1 -->
+  <!-- section2 -->
+  <section class="section2">
+    <div class="wrap">
+      <article class="article1">
+        <h4 class="article__title animate top-bottom">노랑풍선이 바라는 여행</h4>
+        <ul class="travel__list">
+          <li class="travel__item">
+            <div class="travel__item--img animate left-right">
+              <img src="./assets/image/bg_story_1.jpg" alt="">
+            </div>
+            <div class="travel__item--desc animate bottom-top">
+              <div class="travel__item--sub">
+                여행의 새로운 가치를 알립니다
+              </div>
+              <div class="travel__item--title">
+                가치를 전달하는 여행
+              </div>
+              <div class="travel__item--yellow">
+                Value-Creating
+              </div>
+            </div>
+          </li>
+          <li class="travel__item">
+            <div class="travel__item--img animate right-left">
+              <img src="./assets/image/bg_story_2.jpg" alt="">
+            </div>
+            <div class="travel__item--desc animate bottom-top">
+              <div class="travel__item--sub">
+                고객의, 고객에 의한, 고객을 위한
+              </div>
+              <div class="travel__item--title">
+                신뢰를 받는 여행
+              </div>
+              <div class="travel__item--yellow">
+                Trustworthy
+              </div>
+            </div>
+          </li>
+          <li class="travel__item">
+            <div class="travel__item--img animate left-right">
+              <img src="./assets/image/bg_story_3.jpg" alt="">
+            </div>
+            <div class="travel__item--desc animate bottom-top">
+              <div class="travel__item--sub">
+                일상의 가장 반짝이는 순간을 만듭니다
+              </div>
+              <div class="travel__item--title">
+                즐거움을 선사하는 여행
+              </div>
+              <div class="travel__item--yellow">
+                Joyful
+              </div>
+            </div>
+          </li>
+          <li class="travel__item">
+            <div class="travel__item--img animate right-left">
+              <img src="./assets/image/bg_story_4.jpg" alt="">
+            </div>
+            <div class="travel__item--desc animate bottom-top">
+              <div class="travel__item--sub">
+                다양한 여행상품으로 여행 문화를 선도합니다
+              </div>
+              <div class="travel__item--title">
+                혁신적인 여행
+              </div>
+              <div class="travel__item--yellow">
+                Innovative
+              </div>
+            </div>
+          </li>
+        </ul>
+      </article>
+      <article class="article2">
+        <h4 class="article__title animate top-bottom">
+          노랑풍선이 만드는 여행
+        </h4>
+        <ul class="travel2__list animate bottom-top">
+          <li class="travel2__item ">
+            <p class="travel2__item--title">Package</p>
+          </li>
+          <li class="travel2__item">
+            <p class="travel2__item--title">Honeymoon</p>
+          </li>
+          <li class="travel2__item">
+            <p class="travel2__item--title">Golf<br />&Theme</p>
+          </li>
+          <li class="travel2__item">
+            <p class="travel2__item--title">Air Ticket</p>
+          </li>
+          <li class="travel2__item">
+            <p class="travel2__item--title">Hotel</p>
+          </li>
+          <li class="travel2__item">
+            <p class="travel2__item--title">Tour<br />& Ticket</p>
+          </li>
+          <li class="travel2__item">
+            <p class="travel2__item--title">Domestic</p>
+          </li>
+          <li class="travel2__item">
+            <p class="travel2__item--title">Incentive</p>
+          </li>
+        </ul>
+      </article>
+    </div>
+  </section>
+  <!-- //section2 -->
+
+  <!-- js -->
+  <script src="./assets/js/common.js"></script>
+  <script>
+
+    // 햄버거 메뉴 토글 class
+    function hamberger(x) {
+      x.classList.toggle("active");
+    }
+
+    // visual 스크롤버튼
+    $('.visual__arrow').on('click', function () {
+      const section1Top = $('.section1').offset().top;
+      $('body,html').animate({ scrollTop: section1Top }, 350)
+    })
+
+    // gsap 스크롤 트리거 불러오기 (플러그인 안정화)
+    gsap.registerPlugin(ScrollTrigger);
+
+    // * gsap : animate 나타내기
+    // 1. 초기값 opacity:0 설정
+    const hide = (item) => {
+      gsap.set(item, { autoAlpha: 0 });
+    }
+
+    // 2. aniamte 설정 
+    const animate = (item) => {
+      // 2.1. x,y 변수 생성
+      let x = 0;
+      let y = 0;
+
+      // 2.2. dataset으로 delay설정
+      let delay = item.dataset.delay;
+
+      // 2.3. x,y 변수 할당
+      // 2.3.1. 조건문으로 hasClass마다 다른 속성값 지정
+      if (item.classList.contains("bottom-top")) {
+        x = 0,
+          y = 100
+      } else if (item.classList.contains("top-bottom")) {
+        x = 0,
+          y = -100
+      } else if (item.classList.contains("right-left")) {
+        x = 200,
+          y = 0
+      } else if (item.classList.contains("left-right")) {
+        x = -200,
+          y = 0
+      }
+      // else if (item.classList.contains("two")) {
+      //   x = 0,
+      //     y = 100
+      // }
+
+      gsap.fromTo(item,
+        { autoAlpha: 0, x: x, y: y },
+        { autoAlpha: 1, x: 0, y: 0, delay: delay, duration: 1.25, overwrite: "auto", ease: "expo" }
+      );
+    };
+
+    // 3. 선택자에 gsap 동작입히기
+    gsap.utils.toArray(".animate").forEach(item => {
+      hide(item);
+
+      ScrollTrigger.create({
+        trigger: item,
+        start: "top bottom",
+        end: "bottom top",
+        markers: false,
+        onEnter: () => { animate(item) }
+      });
+    });
+    // * gsap : 텍스트 나타내기 끝
+
+    // 숫자 카운트업
+    document.addEventListener('DOMContentLoaded', () => {
+
+      function countUp(element) {
+        const target = parseInt(element.getAttribute('data-count'), 10);
+        let count = 0;
+        const increment = target / 100;
+        const duration = 1500; // 2 seconds
+        const interval = duration / 100;
+
+        const updateCount = () => {
+          count += increment;
+          if (count < target) {
+            element.textContent = Math.floor(count).toLocaleString();
+            setTimeout(updateCount, interval);
+          } else {
+            element.textContent = target.toLocaleString();
+          }
+        };
+
+        updateCount();
+      }
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            countUp(entry.target);
+          } else {
+            // 요소가 뷰포트에서 벗어날 때 초기화
+            entry.target.textContent = '0';
+          }
+        });
+      }, {
+        threshold: 0.5 // 요소가 뷰포트의 50% 이상 들어오면 카운트업 시작
+      });
+
+      document.querySelectorAll('.count').forEach(element => {
+        observer.observe(element);
+      });
+    });
+    // 숫자 카운트업 끝
+
+
+
+  </script>
+</body>
+
+</html>

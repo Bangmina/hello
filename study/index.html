@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <script>
-      function solution(arr) {
-        var answer1 = []
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
 
-        answer = arr.map((item, index) => {
-          const arr = []
-          if (item >= 50 && item % 2 === 0) {
-            console.log(`index${index} : ${item}`)
-            arr.push(item / 2)
-            console.log(arr)
-          } else if (item < 50 && item % 2 === 1) {
-            console.log(`index${index} : ${item}`)
-            arr.push(item * 2)
-            console.log(arr)
-          } else {
-            console.log(`index${index} : ${item}`)
-            arr.push(item)
-            console.log(arr)
-          }
-        })
+<body>
+  <script>
+    function solution(arr1, arr2) {
 
-        console.log(arr)
+      var answer = 0;
+      const arr1Length = arr1.length;
+      const arr2Length = arr2.length;
 
-        return answer
+      if (arr1Length > arr2Length) {
+        console.log(arr1)
+      } else if (arr1Length > arr2Length) {
+        console.log(arr2)
       }
 
-      solution([1, 2, 3, 100, 99, 98])
-    </script>
-  </body>
+      console.log(`arr1Length : ${arr1Length}`);
+      console.log(`arr2Length : ${arr2Length}`);
+      console.log(answer);
+
+      return answer;
+
+    }
+
+    solution([49, 13], [70, 11, 2])
+  </script>
+</body>
+
 </html>
