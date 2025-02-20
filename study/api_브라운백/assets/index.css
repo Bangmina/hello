@@ -1,0 +1,19 @@
+body {
+  padding: 10px;
+}
+.input__list {
+  font-size: 10px;
+}
+.input__item {
+  display: flex;
+}
+.input__title {
+  width: 120px;
+  font-size: 12px;
+}
+.input__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+.example {
+  margin-top: 5px;
+}
