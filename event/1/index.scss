@@ -1,0 +1,135 @@
+.visual {
+  width: 100%;
+  height: 100dvh;
+
+  &__list {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  &__item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transform-origin: right;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      cursor: pointer;
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -o-transition: all 0.5s;
+    }
+    &.active {
+      &.minus {
+        width: calc(100% - 150px);
+      }
+      &::after {
+        display: none;
+      }
+    }
+    &:nth-of-type(1),
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+      width: calc(100% - 100px);
+    }
+
+    &:nth-of-type(1) {
+      background: antiquewhite;
+      left: 0;
+    }
+
+    &:nth-of-type(2) {
+      background: darkgray;
+      right: 50px;
+    }
+    &:nth-of-type(3) {
+      background: mediumslateblue;
+      right: 0px;
+      // left: calc(100% - 50px);
+    }
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+      width: 50px;
+    }
+  }
+}
+
+// .visual {
+//   width: 100%;
+//   height: 100dvh;
+
+//   &__list {
+//     height: 100%;
+//     position: relative;
+//     display: flex;
+//     align-items: center;
+//     overflow: hidden;
+//   }
+//   &__item {
+//     position: relative;
+//     width: calc(100% - 100px);
+//     height: 100%;
+//     display: flex;
+//     flex: 0 0 auto;
+//     align-items: center;
+//     justify-content: center;
+//     transition: all 0.5s;
+//     -webkit-transition: all 0.5s;
+//     -moz-transition: all 0.5s;
+//     -ms-transition: all 0.5s;
+//     -o-transition: all 0.5s;
+//     transform-origin: left;
+
+//     &::after {
+//       content: '';
+//       position: absolute;
+//       left: 0;
+//       top: 0;
+//       width: 100%;
+//       height: 100%;
+//       background: rgba(0, 0, 0, 0.7);
+//       cursor: pointer;
+//       transition: all 0.5s;
+//       -webkit-transition: all 0.5s;
+//       -moz-transition: all 0.5s;
+//       -ms-transition: all 0.5s;
+//       -o-transition: all 0.5s;
+//     }
+//     &.active {
+//       &::after {
+//         display: none;
+//       }
+//     }
+//     &:nth-of-type(2),
+//     &:nth-of-type(3) {
+//       width: 50px;
+//     }
+//     &:nth-of-type(1) {
+//       background: antiquewhite;
+//       left: 0;
+//     }
+
+//     &:nth-of-type(2) {
+//       background: darkgray;
+//     }
+//     &:nth-of-type(3) {
+//       background: mediumslateblue;
+//     }
+//   }
+// }
