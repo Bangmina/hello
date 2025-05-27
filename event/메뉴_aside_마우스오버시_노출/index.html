@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- reset -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+  <!-- css -->
+  <link rel="stylesheet" href="./index.css">
+  <!-- plugin -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <aside class="aside">
+    <button class="aside__btn--ofen">></button>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="">1</a></li>
+        <li class="nav__item"><a href="">2</a></li>
+        <li class="nav__item"><a href="">3</a></li>
+        <li class="nav__item"><a href="">4</a></li>
+        <li class="nav__item"><a href="">5</a></li>
+        <li class="nav__item"><a href="">6</a></li>
+        <li class="nav__item"><a href="">7</a></li>
+        <li class="nav__item"><a href="">8</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main">
+    asdf
+  </main>
+  <script>
+    $(function () {
+
+      // // 1️⃣ 메뉴 노출 - click
+      // $('.aside__btn--ofen').on('click', function () {
+
+      //   const $aside = $('.aside');
+      //   const $main = $('.main')
+      //   $(this).toggleClass('active');
+
+      //   if ($(this).hasClass('active')) {
+      //     // 메뉴 숨겨짐
+      //     $aside.css('transform', 'translateX(-200px)');
+      //     $main.css({
+      //       'width': 'calc(100% - 50px)',
+      //       'transform': 'translateX(-200px)',
+      //     })
+
+      //   } else {
+      //     // 메뉴 보임
+      //     $aside.css('transform', 'translateX(0)');
+      //     $main.css({
+      //       'width': 'calc(100% - 250px)',
+      //       'transform': 'translateX(0px)'
+      //     })
+      //   }
+      // });
+
+      // 2️⃣ 메뉴 노출 - mouseenter/mouseleave
+      const $aside = $('.aside');
+      const $main = $('.main');
+      $aside.on('mouseenter', function () {
+        // 메뉴 보임
+        $aside.css('transform', 'translateX(0)');
+        $main.css({
+          'width': 'calc(100% - 250px)',
+          'transform': 'translateX(0px)'
+        });
+        $('.nav').fadeIn();
+
+      });
+
+      $aside.on('mouseleave', function () {
+        // 메뉴 숨음
+        $aside.css('transform', 'translateX(-200px)');
+        $main.css({
+          'width': 'calc(100% - 50px)',
+          'transform': 'translateX(-200px)'
+        });
+        $('.nav').fadeOut()
+      });
+    })
+  </script>
+</body>
+
+</html>
