@@ -1,0 +1,107 @@
+'use strict';
+
+$(function () {
+  // pc gnb
+  const $navItem = $('.nav__item');
+  const $navDepth = $('.nav__depth');
+
+  $navItem.on({
+    'mouseenter focusin': function () {
+      $(this).find($navDepth).addClass('active');
+      $(this)
+        .addClass('active')
+        .find($navDepth)
+        .stop()
+        .fadeIn(100)
+        .css('display', 'flex');
+    },
+    'mouseleave focusout': function () {
+      $navDepth.removeClass('active');
+      $(this).removeClass('active').find($navDepth).stop().fadeOut(100);
+    },
+  });
+
+  // mobile menu btn
+  $('.header__menu--btn.open').on('click', function () {
+    $('.side__menu').stop().fadeIn();
+    $('body').css('overflow-y', 'hidden');
+  });
+  $('.header__menu--btn.close').on('click', function () {
+    $('.side__menu').stop().fadeOut();
+    $('body').css('overflow-y', 'auto');
+  });
+
+  // mobile gnb
+  $('.snav__title--item a').on('click', function () {
+    // title active
+    $(this)
+      .addClass('active')
+      .parent()
+      .siblings()
+      .children('a')
+      .removeClass('active');
+
+    //subtit show
+    const titIndex = $(this).parent().index();
+    $('.side__depth--list').hide().eq(titIndex).show();
+  });
+
+  // top btn
+  const viewHeight = window.innerHeight;
+
+  $(window).on('scroll', function () {
+    if ($(window).scrollTop() > 50) {
+      $('.top__btn').fadeIn();
+      $('.header').addClass('header__shadow');
+    } else {
+      $('.top__btn').fadeOut();
+      $('.header').removeClass('header__shadow');
+    }
+  });
+
+  $('.top__btn').on('click', function () {
+    $('html').animate({ scrollTop: 0 }, 300);
+  });
+
+  // input file name
+  const fileTarget = $('.upload__file--box input');
+
+  fileTarget.on('change', function () {
+    //var files = $('.upload__file--box input')[0].files;
+    var files = this.files;
+    var fileArr = [];
+
+    for (var i = 0; i < files.length; i++) {
+      fileArr.push(files[i].name);
+    }
+
+    $(this).siblings('.upload__name').text(fileArr);
+  });
+
+  //modal close
+  $('.modal__close--btn').on('click', function () {
+    $(this).parents('.modal__wrap').fadeOut();
+    $('body, html').css('overflow-y', 'auto');
+  });
+
+  $(document).on('keydown', function (e) {
+    if (e.keyCode == 27) {
+      if ($('.modal__wrap').css('display') === 'block') {
+        $('.modal__wrap').fadeOut();
+        $('body, html').css('overflow-y', 'auto');
+      }
+    }
+  });
+
+  $('.thumbnail__btn').on('click', function () {
+    $('.modal__wrap').fadeIn();
+    $('.modal__content').html(
+      `<img class="modal__thumbnail" src="${$(this)
+        .find('img')
+        .prop('src')}" alt="thumbnail">`,
+    );
+    $('.modal__download--btn').attr('href', $(this).find('img').prop('src'));
+
+    $('body, html').css('overflow-y', 'hidden');
+  });
+});

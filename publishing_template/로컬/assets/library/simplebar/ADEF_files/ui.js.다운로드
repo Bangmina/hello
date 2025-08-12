@@ -1,0 +1,25 @@
+$(document).ready(function (){
+	//fixed Nav
+	var $win = $(window),
+			$nav = $('.nav'),
+			$logoH = $('.logo').height(),
+			$navH = $nav.height();
+	$win.bind('scroll', function (){
+		if ($win.scrollTop() > $logoH+$navH){
+			$nav.addClass('fixNav');
+		} else {
+			$nav.removeClass('fixNav');
+		}
+	});
+
+	//layer popup
+	var $openPop = $('.openPop'),
+			$layerPop = $('#confirmPop'),
+			$closePop = $('#confirmPop .btnClosepop, #confirmPop .btnCancel');
+	$openPop.bind('click', function (){
+		$layerPop.show();
+	});
+	$closePop.bind('click', function (){
+		$layerPop.hide();
+	});
+});

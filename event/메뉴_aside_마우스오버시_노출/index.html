@@ -36,54 +36,63 @@
   <script>
     $(function () {
 
-      // // 1️⃣ 메뉴 노출 - click
-      // $('.aside__btn--ofen').on('click', function () {
+      // 1️⃣ 메뉴 노출 - click
+      $('.aside__btn--ofen').on('click', function () {
 
-      //   const $aside = $('.aside');
-      //   const $main = $('.main')
-      //   $(this).toggleClass('active');
+        const $aside = $('.aside');
+        const $main = $('.main')
+        $(this).toggleClass('active');
 
-      //   if ($(this).hasClass('active')) {
-      //     // 메뉴 숨겨짐
-      //     $aside.css('transform', 'translateX(-200px)');
-      //     $main.css({
-      //       'width': 'calc(100% - 50px)',
-      //       'transform': 'translateX(-200px)',
-      //     })
+        if ($(this).hasClass('active')) {
+          // 메뉴 숨겨짐
+          $aside.css('transform', 'translateX(-200px)');
+          $main.css({
+            'width': 'calc(100% - 50px)',
+            'transform': 'translateX(-200px)',
+          })
 
-      //   } else {
-      //     // 메뉴 보임
+        } else {
+          // 메뉴 보임
+          $aside.css('transform', 'translateX(0)');
+          $main.css({
+            'width': 'calc(100% - 250px)',
+            'transform': 'translateX(0px)'
+          })
+        }
+      });
+
+      // // 2️⃣ 메뉴 노출 - mouseenter/mouseleave
+      // const $aside = $('.aside');
+      // const $main = $('.main');
+      // $aside.on('mouseenter', function () {
+      //   // 메뉴 보임
+      //   // 0.1초 뒤에 메뉴 오픈
+      //   asideShowTimer = setTimeout(function () {
       //     $aside.css('transform', 'translateX(0)');
       //     $main.css({
       //       'width': 'calc(100% - 250px)',
       //       'transform': 'translateX(0px)'
-      //     })
-      //   }
+      //     });
+      //     $('.nav').fadeIn();
+      //   }, 100)
+
+
       // });
 
-      // 2️⃣ 메뉴 노출 - mouseenter/mouseleave
-      const $aside = $('.aside');
-      const $main = $('.main');
-      $aside.on('mouseenter', function () {
-        // 메뉴 보임
-        $aside.css('transform', 'translateX(0)');
-        $main.css({
-          'width': 'calc(100% - 250px)',
-          'transform': 'translateX(0px)'
-        });
-        $('.nav').fadeIn();
+      // $aside.on('mouseleave', function () {
 
-      });
+      //   // 메뉴 숨음
+      //   // 0.2초 뒤에 메뉴 숨김 
+      //   asideHideTimer = setTimeout(function () {
+      //     $aside.css('transform', 'translateX(-200px)');
+      //     $main.css({
+      //       'width': 'calc(100% - 50px)',
+      //       'transform': 'translateX(-200px)'
+      //     });
+      //     $('.nav').fadeOut()
+      //   }, 200)
 
-      $aside.on('mouseleave', function () {
-        // 메뉴 숨음
-        $aside.css('transform', 'translateX(-200px)');
-        $main.css({
-          'width': 'calc(100% - 50px)',
-          'transform': 'translateX(-200px)'
-        });
-        $('.nav').fadeOut()
-      });
+      // });
     })
   </script>
 </body>

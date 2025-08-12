@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://solution.adef.co.kr/kakaostyle/product -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+	<meta name="robots" content="noindex, nofollow">
+	<title>ADEF</title>
+	<link rel="stylesheet" href="./ADEF_files/bootstrap.min.css">
+	<link rel="stylesheet" href="./ADEF_files/base.css">
+	<link rel="stylesheet" href="./ADEF_files/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="./ADEF_files/jquery-ui.css">
+	<link rel="stylesheet" href="./ADEF_files/common.css">
+	<link rel="stylesheet" href="./ADEF_files/main.css">
+	<link rel="stylesheet" href="./ADEF_files/page.css">
+	<link rel="shortcut icon" type="image/x-icon" href="https://solution.adef.co.kr/resource/image/adef_solution_icon.ico">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://solution.adef.co.kr/resource/image/adef_solution_icon_apple.png">
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script type="text/javascript" async="" src="./ADEF_files/js"></script><script type="text/javascript" async="" src="./ADEF_files/analytics.js.다운로드"></script><script type="text/javascript" async="" src="./ADEF_files/js(1)"></script><script src="./ADEF_files/893704070983148" async=""></script><script async="" src="./ADEF_files/fbevents.js.다운로드"></script><script type="text/javascript" src="./ADEF_files/jquery-1.11.3.min.js.다운로드"></script>
+	<script src="./ADEF_files/jquery-ui.js.다운로드"></script>
+	<script type="text/javascript" src="./ADEF_files/respond.js.다운로드"></script>
+	<script type="text/javascript" src="./ADEF_files/ui.js.다운로드"></script>
+	<script type="text/javascript" src="./ADEF_files/common.js.다운로드"></script>	
+	<script type="text/javascript" src="./ADEF_files/bootstrap-datepicker.min.js.다운로드"></script>
+	<script type="text/javascript" src="./ADEF_files/bootstrap-datepicker.ko.js.다운로드"></script>
+	
+	<link rel="stylesheet" href="./ADEF_files/all.min.css">
+<style>
+  .fa-solid.fa-star.pre-reg {
+    margin-left: 0px;
+    display: flex;
+    color: #cfcfcf;
+    font-size: 35px;
+	cursor: pointer;
+  }
+
+  .fa-solid.fa-star.post-reg {
+    margin-left: 0px;
+    display: flex;
+    color: #ffb300;
+    font-size: 35px;
+	cursor: pointer;
+  }  
+</style>
+
+	
+	<script>
+	function menuClick(){
+		//$("#slideMenu").css("left",$('#member_list').offset().left);
+		
+		var topMenuHeight = $("#header").outerHeight();
+		var scrollTop = $( document ).scrollTop();
+	
+		var scrollHeight = scrollTop + topMenuHeight+15;
+	
+		$('#slideMenu').css('top',scrollHeight);
+		$('#slideMenu').animate({
+			height: 'toggle'
+		}, 300, function() {
+		});		
+
+	}
+
+	( function( $ ) {
+		$(document).ready(function () {
+			$('#menu').prepend('<div id="menu-button">Menu</div>');
+			$('#menu #menu-button').on('click', function () {
+				var menu = $(this).next('ul');
+				menu.toggleClass('open');
+			});
+		
+			var $title = $('h2.page__title');
+			var currentUrl = window.location.pathname;
+			var isBookmarked = false;
+		
+			// ⭐ 즐겨찾기 목록 비동기 로딩
+			$.ajax({
+				url: 'https://solution.adef.co.kr/bookmark/get_bookmark_list',
+				method: 'GET',
+				dataType: 'json',
+				success: function (data) {
+					if (Array.isArray(data)) {
+						data.forEach(function (item) {
+							// select에 즐겨찾기 추가
+							if (item.url && item.bookmark_title) {
+								$('#selMove').append(
+									$('<option>', {
+										value: item.url,
+										text: item.bookmark_title
+									})
+								);
+							}
+		
+							// 현재 페이지가 즐겨찾기 목록에 포함되어 있는지 확인
+							if (item.url === currentUrl) {
+								isBookmarked = true;
+							}
+						});
+		
+						// 즐겨찾기 버튼 추가 (조건에 따라)
+						if ($title.length > 0) {
+							if (isBookmarked) {
+								$title.append('<p class="bookmark-button" style="margin-left:10px;"><i class="fa-solid fa-star post-reg" title="북마크 삭제"></i></p>');
+							} else {
+								$title.append('<p class="bookmark-button" style="margin-left:10px;"><i class="fa-solid fa-star pre-reg" title="북마크 추가"></i></p>');
+							}
+						}
+					}
+				},
+				error: function (xhr, status, error) {
+					console.error('즐겨찾기 불러오기 실패:', error);
+				}
+			});
+		});
+
+
+		
+	} )( jQuery );
+	
+	function doMove() {
+		const selMove = document.getElementById('selMove');
+		const val = selMove.value;
+		const url = "https://solution.adef.co.kr"; 
+		if (val.startsWith('http')) {
+			location.assign(val);
+			
+		} else {
+			location.assign(url+val);
+		}
+	
+		// 다른 조건이 있으면 여기에 추가
+	}
+
+	//북마크 insert, delete 코드
+	$(document).on('click', '.bookmark-button', function () {
+		var isAdd = $(this).html().includes('pre-reg'); // 예: 비워진 별 아이콘일 때
+		var bookmarkTitle = $('h2.page__title')
+			.clone() // 원본 손상 방지
+			.find('i') // 아이콘 요소 선택
+			.remove() // 아이콘 제거
+			.end() // 제거한 후 원래 요소로 돌아감
+			.text() // 텍스트만 추출
+			.trim(); // 앞뒤 공백 제거
+
+		var pagePath = window.location.pathname; 
+
+
+	
+		if (isAdd) {
+			if (confirm('북마크를 추가하시겠습니까?')) {
+				var requestUrl = 'https://solution.adef.co.kr/bookmark/bookmark_status?' +
+				'status=insert' +
+				'&bookmark_title=' + encodeURIComponent(bookmarkTitle) +
+				'&url=' + encodeURIComponent(pagePath);
+				
+				console.log(requestUrl);
+				$.ajax({
+					url: requestUrl,
+					method: 'GET',
+					success: function (data) {
+						if (data.trim() === 'success') {
+							 alert('⬅⬅⬅⬅ 추가된 즐겨찾기는 좌측에서 확인 가능합니다.');
+							 $('.bookmark-button').replaceWith('<p class="bookmark-button" style="margin-left:10px;"><i class="fa-solid fa-star post-reg" title="북마크 삭제"></i></p>');
+							 addBookmarkOption(bookmarkTitle, pagePath);
+						} else {
+							alert('추가 실패: ' + data);
+						}
+					},
+					error: function (xhr, status, error) {
+						alert('즐겨찾기 추가에 실패했습니다.');
+						console.error(error);
+					}
+				});
+
+			}
+		} else {
+			if (confirm('즐겨찾기를 삭제하시겠습니까?')) {
+				var deleteUrl = 'https://solution.adef.co.kr/bookmark/bookmark_status?' +
+				'status=delete' +
+				'&bookmark_title=' + encodeURIComponent(bookmarkTitle) +
+				'&url=' + encodeURIComponent(pagePath);
+				
+				$.ajax({
+					url: deleteUrl,
+					method: 'GET',
+					success: function (data) {
+						if (data.trim() === 'success') {
+							
+							$('.bookmark-button').replaceWith('<p class="bookmark-button" style="margin-left:10px;"><i class="fa-solid fa-star pre-reg" title="북마크 추가"></i></p>');
+							removeBookmarkOption(pagePath);
+						} else {
+							alert('삭제 실패: ' + data);
+						}
+					},
+					error: function (xhr, status, error) {
+						alert('즐겨찾기 삭제에 실패했습니다.');
+						console.error(error);
+					}
+				});
+
+			}
+		}
+	});
+
+
+	function addBookmarkOption(title, url) {
+		// 동일한 URL을 가진 option이 있는지 검사
+		var exists = $('#selMove option').filter(function () {
+			return $(this).val() === url;
+		}).length > 0;
+	
+		if (!exists) {
+			$('#selMove').append(
+				$('<option>', {
+					value: url,
+					text: title
+				})
+			);
+		}
+	}
+	
+	function removeBookmarkOption(url) {
+		$('#selMove option').filter(function () {
+			return $(this).val() === url;
+		}).remove();
+	}
+	
+
+	</script>
+	
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<!-- ADEF GA 공통스크립트 2019.05.14 by 정주현 -->
+	<script async="" src="./ADEF_files/js(2)"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-140138914-1');
+	  gtag('config', 'AW-991460251');
+	  gtag('config', 'G-CBF3YM01JX');
+	</script>
+
+	<!-- ADEF Kakao 공통스크립트 2019.05.14 by 이용찬 -->
+	<script type="text/javascript" charset="UTF-8" src="./ADEF_files/kp.js.다운로드"></script>
+	<script type="text/javascript">
+      kakaoPixel('8883837813315027934').pageView();
+	</script>
+
+	<!-- ADEF Naver 공통스크립트 2019.05.14 by 이용찬 -->		
+	<script type="text/javascript" src="./ADEF_files/wcslog.js.다운로드"></script><script type="text/javascript" async="" src="./ADEF_files/synchronizer.js.다운로드"></script>
+	<script type="text/javascript">
+		if(!wcs_add) var wcs_add = {};
+		wcs_add["wa"] = "1923dd0e7649d9";
+		wcs_do();
+	</script>
+	<!-- ADEF Facebook Pixel Code 2019.05.14 by 이용찬  -->
+	<script>
+	  !function(f,b,e,v,n,t,s)
+	  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	  n.queue=[];t=b.createElement(e);t.async=!0;
+	  t.src=v;s=b.getElementsByTagName(e)[0];
+	  s.parentNode.insertBefore(t,s)}(window, document,'script',
+	  'https://connect.facebook.net/en_US/fbevents.js');
+	  fbq('init', '893704070983148');
+	  fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+	  src="https://www.facebook.com/tr?id=893704070983148&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- End Facebook Pixel Code -->
+
+<script type="text/javascript" async="" src="./ADEF_files/f.txt"></script></head>
+<body>
+<!-- 공통 영역 -->
+<header class="header header__shadow">
+        <div class="header__left m__none">
+			<select name="selMove" id="selMove" class="solution__select" onchange="doMove();">
+				<option value="">즐겨찾기⭐</option> 
+			<option value="/kakaostyle/product">카카오스타일 상품조회</option><option value="/klook_report/klook_report">Klook GA 보고서 다운로드</option></select>
+
+        </div>
+        <h1 class="header__logo">
+            <a href="https://solution.adef.co.kr/main"><img src="./ADEF_files/logo_header.png" alt="로고"></a>
+        </h1>
+        <div class="header__right m__none">
+            <p class="header__login--time">방미나 님 (최근 로그인 일시 2025-06-12 09:11:52)</p>
+            <a href="https://solution.adef.co.kr/login/logout"><button class="header__logout--btn common__btn--purple">로그아웃</button></a>
+        </div>
+        <button class="header__menu--btn pc__none open">
+            <span></span>
+        </button>
+    </header>
+    <nav class="nav m__none fixNav">
+        <ul class="nav__list clearfix">
+            <li class="nav__item">
+                <a href="javascript:void(0);" class="nav__item--anchor">모니터링</a>
+                <ul class="nav__depth">
+                    
+                    <li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/sns_monitoring/snsmonitoring_list">SNS 팔로워 모니터링</a></li>                    
+                    <li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/monitoring/landingcap">경쟁사-랜딩-모니터링</a></li>                    
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/monitoring/dabanner">네이버-DA-모니터링</a></li>                    
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/monitoring/banner_monitoring">경쟁사 배너 모니터링</a></li>					
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/monitoring/eventlist">경쟁사 이벤트 모니터링</a></li>						
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/monitoring/maybeone_naver_sa_monitoring">메이비원 SA 파워링크 모니터링</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/monitoring/iloveeye_naversa_monitoring">밝은세상안과 네이버SA 모니터링</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/monitoring/naver_brandsearch">경쟁사 네이버BS 모니터링</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/monitoring/naver_search">경쟁사 SA 모니터링</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/monitoring/maybeone_publog_monitoring">퍼블로그 이벤트 모니터링</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/pf_kakao/uniqlo_friend_count_list">유니클로 카카오채널 모니터링</a></li>					
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/pf_kakao/lululemon_friend_count_list">룰루레몬 카카오채널 모니터링</a></li>					
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/monitoring/essa_keyword">에싸 키워드 모니터링</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/monitoring/naver_search_rank_by_time">키워드 순위 모니터링(시간대별)</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/monitoring/naver_search_rank_dior">Dior 키워드 순위 모니터링(일별)</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/monitoring/naver_search_rank">키워드 순위 모니터링</a></li>					
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/monitoring/search_keyword_text">키워드검색_PL(Text)_모니터링</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/monitoring/youtube_trand">유투브 트랜드_모니터링</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/monitoring/eyereum_naver_sa_rank">아이리움안과 네이버 SA 순위 모니터링</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/monitoring/carmore_naver_sa_rank">카모아 네이버 SA 순위 모니터링</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/pledis/pledis_sns_monitoring">플레디스 SNS 모니터링</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/pf_kakao/northface_friend_count_list">노스페이스 카카오채널 모니터링</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/monitoring/miraen_naver_sa_rank">미래엔초코 네이버 SA 순위 모니터링</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/lululemon/product">룰루레몬 상품정보 모니터링</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/pf_kakao/sergiotacchini_friend_count_list">세르지오타키니 카카오채널 모니터링</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/etude/product">아모레퍼시픽 올리브영 상품 모니터링</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/monitoring/carinsurance_naver_sa_rank">자동차보험 네이버 SA 순위 모니터링</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/monitoring/longtermcare_insurance_naver_sa_rank">장기보험 네이버 SA 순위 모니터링</a></li>			
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/pf_kakao/marithe_friend_count_list">마리떼 카카오채널 모니터링</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/monitoring/naverbs_monitoring_list">브검 미노출 알림 목록</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/monitoring/sergio_naver_sa_rank">세르지오타키니 네이버 SA 순위 모니터링</a></li>
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/monitoring/meritz_list">메리츠 모니터링</a></li-->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/lawandgood/news_list">로앤굿 뉴스 모니터링</a></li-->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/monitoring/navershopping_keyword">네이버쇼핑 키워드 모니터링</a></li-->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/daumapi">Daum 검색순위 확인</a></li> 20230310 중단 -->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/siv/siv_insta_list">SIV 전용 팔로워 모니터링</a></li>20230310 중단 -->
+                    <!--li class="nav__depth--item"><a class="nav__depth--anchor"href="/adef/adef_sns_list">ADEF SNS 모니터링</a></li>-->
+                    <!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/goodchoice/facebook_list">여기어때 페이스북 리포트</a></li-->
+                    <!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/Bizmoney_monitoring">매체 계정잔액 모니터링</a></li>-->
+                    <!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/Trend_search">구글 트렌드 검색</a></li>-->
+                    <!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/watcha/title_crawl_list">왓챠.작품명 크롤링</a></li-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor"href="/monitoring/peoplefund_adcost">피플펀드.광고비.모니터링</a></li>-->
+                    <!--<li class="nav__depth--item"><a class="nav__depth--anchor"href="/monitoring/naver_catalog">네이버-카탈로그-모니터링</a></li>-->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/monitoring/siv_brandname">siv 브랜드명 모니터링</a></li-->
+					<!-- <li class="nav__depth--item"><a class="nav__depth--anchor"href="/monitoring/lacoste_banner">라코스테 배너 모니터링</a></li>-->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/monitoring/productlist">트립닷컴 상품정보 모니터링</a></li-->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/monitoring/clio_report">클리오 대시보드 모니터링</a></li-->
+					<!-- <li class="nav__depth--item"><a class="nav__depth--anchor" href="/Naver_shoping_keyword_query_29cm">29cm 네이버쇼핑 쿼리 모니터링</a></li>20230310 중단 -->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/hanstyle_newproduct_monitoring/hanstyle_newproduct_monitoring_list">한스타일 기획랜딩 신규제품 코드 모니터링</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/monitoring/homeshopping_travel">홈쇼핑 여행 모니터링</a></li>-->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/underarmour_kakao_audience">언더아머 카카오모먼트 타게팅 모수 모니터링</a></li-->
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="javascript:void(0);" class="nav__item--anchor">검수</a>
+                <ul class="nav__depth">                    
+                    <li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/siv/landing">SIV 랜딩테스트</a></li>					
+                    <li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/media_image/">매체 이미지 검수</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/louisvuitton/landing">루비이통 랜딩 검수</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/goodneighbors/landing">굿네이버스 랜딩 검수</a></li>					
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/celine/landing">셀린느 랜딩 검수</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/dior/landing">Dior 랜딩 검수</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/woongjinbooks/woongjinbooks_landing">웅진책방 랜딩 검수</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/dior/beauty_landing">디올뷰티 랜딩 검수</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/underarmour/landing">언더아머 랜딩 검수</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/eql/landing">EQL 랜딩 검수</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/marithe/landing">마리떼 상품조회</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/kakaostyle/landing">카카오스타일 랜딩 검수</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/kakaostyle/airbridge_landing">카카오스타일 에어브릿지 랜딩 검수</a></li>
+					
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/craw/tenbyten">10x10 랜딩테스트</a></li-->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/ikea/ikea_site_check">IKEA 오류 검수</a></li-->
+                    <!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/ebates/ebates_landing_check">Ebates 렌딩 검수</a></li-->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/craw/wadiz_invest">WADIZ 렌딩 검수</a></li-->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/ssf/landing">SSF 렌딩 검수</a></li-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/hanstyle/landing">한스타일 랜딩 검수</a></li></li>-->
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="javascript:void(0);" class="nav__item--anchor">업무 효율화</a>
+                <ul class="nav__depth">                    
+                    <li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/utility/url_divncut">URL-Blank파라미터삭제</a></li>
+                    <!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Kakaomoment_Bulkset_New/default_account">카카오모먼트 대량관리 API</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Kakaomoment_Bulkset_Create/default_account">카카오모먼트 대량등록 API</a></li>-->
+                    <li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/Nquery_report">네이버 PC/MO 검색 쿼리 리포트</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/Nquery_report/Monthly_query_underarmour">언더아머 네이버 월간 검색쿼리 리포트</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/Nquery_report/Monthly_query_skstore">SK스토아 네이버 월간 검색쿼리 리포트</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/Nquery_report/Monthly_query_essa">에싸 네이버 월간 검색쿼리 리포트</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/Nquery_report/Monthly_query_rael">라엘 네이버 월간 검색쿼리 리포트</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/Nquery_report/Monthly_query_sephora">세포라 네이버 월간 검색쿼리 리포트</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/Nquery_report/Monthly_query_eyereum">아이리움안과 네이버 월간 검색쿼리 리포트</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/klook/feed_upload">클룩 Feed 비교</a></li>
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/goodchoice/extract_raw">여기어때 RAW 가공</a></li-->
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/SK_store_shopping_schedule/shopping_list">SK스토아 TV상품 방송편성표</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/underarmour/naver_query">언더아머 네이버 검색 쿼리</a></li>					
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/kakaomoment_reservation/time_schedule/eql">한섬EQL 카카오 스케줄 예약</a></li>					
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/kakaomoment_reservation/time_schedule/hansome">한섬 카카오 스케줄 예약</a></li>					
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/kakaomoment_reservation/time_schedule/sivillage">sivillage 카카오 스케줄 예약</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/kakaomoment_reservation/time_schedule/naver_plus">네이버 플러스 카카오 스케줄 예약</a></li>					
+					
+                    <li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/kakaofriendsgolf/kakaofriendsgolf_products">카카오프렌즈골프 상품정보 다운로드</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/goodchoice/appsflyer_raw">여기어때 앱스 가공</a></li>
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/peripera/kakao_moment_image">페리페라 카카오 모먼트 이미지 다운</a></li>-->
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/wanted/kakao_moment_image">원티드 카카오 모먼트 이미지 다운</a></li>					
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/google_asset_image_down/louisvuitton_assset_image">루이비통 Asset 정보</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/naverkeywordestimate/keyword_estimate">네이버 키워드 예상입찰가 조회</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/encoding/encoding_file">GA4 파일 인코딩</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/louisvuitton/keyword_query">루이비통 주간 쿼리량 키워드 등록</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/ssf_search/ssf_datalab">네이버 데이터랩 순위 조회</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/eyereum/eyereum_realtime_cost">아이리움안과 실시간 비용조회</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/lacoste/lacoste_product">라코스테 상품정보 조회</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/goodchoice_appsflyer/goodchoice_appsflyer_onelink">여기어때 Onelink 관리</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/naversearch_query">[통합] 네이버 월간 검색쿼리 리포트</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/utility/excel_image">엑셀 이미지 URL</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/dior/ga_utm">Dior PCD URL 파라미터 추출</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/dior/cdc_url">Dior CDC URL 재고조회</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/carmore/appsflyer_raw">카모아 앱스머징</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/skstoa/skstoa_feed">SK스토아 상품코드 추출</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/carmore/feed">카모아 피드 업로드</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/taboola_reservation/time_schedule/gnbs">굿네이버스 타뷸라 스케쥴 예약</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/loropiana/keyword_query">로로피아나 주간 쿼리량 키워드 등록</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/hddepartment/keyword">현백면세 네이버 스마트블록 크롤링</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/northface/keyword_query">노스페이스 주간 쿼리량 키워드 등록</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/meta_ads/meta_ads_image">메타 광고 라이브러리 이미지 추출</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/sergio/keyword_query">세르지오 주간 쿼리량 키워드 등록</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/eql/eql_product">EQL 상품정보 조회</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/sergio/gfa_onoff">세르지오타키니 GFA 스케쥴 예약</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/dior/cdc_keyword_expend">Dior CDC 키워드 확장</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/handsome/product">한섬 실시간 상품정보 조회</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/eql/related_keyword">EQL 연관검색어 조회</a></li>
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/ikea/ikea_product_check">IKEA 검색어 상품체크</a></li-->
+                    <!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/ikea/ikea_sustainable">IKEA 기획전</a></li-->
+                    <!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/utility/url_divncut2">UTM,파라미터삭제 (삼성물산전용)</a></li-->
+                    <!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/utility/findeng">익스피디아-영문키워드찾기</a></li-->
+                    <!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/WadizAdset/wadiz_adset">와디즈 서포터</a></li-->
+                    <!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/peoplefund/bid_condition">피플펀드 - 자동입찰 기준</a></li-->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/ohou/ohou_api">오늘의집 API 보고서</a></li-->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/kakaomoment_reservation/time_schedule/woongjin">웅진 카카오 스케줄	 예약</a></li-->
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/kakaomoment_reservation/time_schedule/goodchoice">여기어때 카카오 스케줄 예약</a></li>
+					
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/goodchoice/gfa_onoff">여기어때 GFA 스케줄 예약</a></li>
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/ssf/brand">삼성물산 브랜드</a></li-->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/ssfshop_keyword_comparision/naver_keyword_comparision">삼성물산 네이버 키워드 검색</a></li-->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/Waiz_Feed_Exclusion">WADIZ 구글피드ID 제외처리</a></li></li-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/kakaokeyword_Bulkset_Create/default_account">카카오키워드 소재대량등록 API</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Nquery_report/Monthly_query_ssfshop">삼성물산 네이버 월간 검색쿼리 리포트</a></li>2025-01-02 HIH 중단-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Nquery_report/Monthly_query_interparktour">인터파크 네이버 월간 검색쿼리 리포트</a></li>-->
+                    <!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Kakao_group_monitoring_10x10">텐바이텐 - CPA 그룹최적화 기준</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Hfashion_product_master">H패션몰 네이버 쇼핑마스터 다운로드</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/kakaomoment_onoff/time_schedule/hdmarket">HD마켓 카카오 소재 On/Off 예약</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/kakaomoment_reservation/time_schedule/hanstyle">한스타일 카카오 스케줄 예약</a></li>-->
+                    <!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/hanstyle_product/hanstyle_getid">한스타일 상품정보 다운로드</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/ssf_product/ssf_getid">삼성물산 상품정보 다운로드</a></li>2025-01-02 HIH 중단-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/ssf_search/ssf_searchdata">삼성물산 연관검색어 조회</a></li>2025-01-02 HIH 중단-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/ssf_search/ssf_searchbrand">삼성물산 브랜드조회</a></li>2025-01-02 HIH 중단-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/utility/keywordExpansion">확장 키워드 Pool</a></li>20230310 중단 -->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor"href="/dbinsu/dbinsu_report">DB손해보험 RAW</a></li>
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="/dbinsu/dbinsu_groupby_report">DB손해보험 Report</a></li-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/wadiz/report">WADIZ RAW</a></li>-->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/ssf/sale">SSF 할인율</a></li-->
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/hfashion/pinfo">Hfashion 자사몰 상품 정보 크롤링</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/kakaostyle/datalab">카카오스타일 데이터랩 카테고리 등록</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/kakaostyle/product">카카오스타일 상품정보 조회</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/celine/keywordCtg">Celine 네이버 검광 카테고리 추출</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/kakaostyle/naver_bulk">지그재그 네이버 소재정보 조회</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/kakaostyle/naver_rank">카카오스타일 네이버 모바일 통검 노출순위</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/kakaostyle/product_detail">지그재그 상품 상세 크롤링</a></li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="javascript:void(0);" class="nav__item--anchor">Report &amp; 분석</a>
+                <ul class="nav__depth">
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/ges/ges_list">Google budget Estimate(GES)</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/garaw/garaw_list">GA 경로분석 Raw</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/navershopping/keyword_report">네이버쇼핑검색 키워드 Report</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/naverbsrpt/bsdetail">네이버BS 소재 상세 Report</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/naverapi/naverep">Naver EP</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/Yesform_keyword_imp_rank">예스폼 네이버 노출순위 Report</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/Account_report_gnbs">굿네이버스 계정 통합 리포트</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/Yesform_daum_report/Yesform_daum_report">예스폼 Kakao Report</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/Louisvuitton_daum_report/Louisvuitton_daum_report">루이비통 Kakao Report</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/Underarmour_daum_report/Underarmour_daum_report">언더아머 Kakao Report</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/Dior_daum_report/Dior_daum_report">디올 Kakao Report</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/Pethroom_daum_report/Pethroom_daum_report">페스룸 Kakao Report</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/celine/report">셀린느 Report</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/yesform/">Yesform Report</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/iloveeye/">밝은세상안과 Report</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/klook_report/klook_report">Klook GA Report</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/woongjinbooks/">웅진책방 Report</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/getrael/">라엘 Report</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/eyereum/eyereum_acecounter_conversion">아이리움안과 전환리포트</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/dior/beauty_keyword_report">디올뷰티 Report</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/lululemon/media_raw">룰루레몬 Report</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/isoi/">아이소이 Report</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/ppurio/">뿌리오 Report</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/daou/">문자메시지 Report</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/sabangnet/">사방넷 Report</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/northface/">노스페이스 Report</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/sergio/">세르지오타키니 Report</a></li>
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/marithe/report">마리떼 Report</a></li>
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/descente/descente_report">데상트코리아 Report</a></li>-->
+					<li class="nav__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/skstoa/report">SK스토아 Report</a></li>
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/dailyhotel/dailyhotel">데일리호텔 Report</a></li-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Google_shopping_report_29cm">29cm 구글쇼핑 Report</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Sivillage_jaju_indirect/Sivillage_jaju_indirect">Sivillage jaju 지원전환 Report</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Naver_report_29cm">29cm 네이버 계정 통합 리포트</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Loropiana_daum_report/Loropiana_daum_report">로로피아나 Kakao Report</a></li>-->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/SSFM_daum_report/SSFM_daum_report">SSFM Kakao Report</a></li-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Welcomebank_daum_report/Welcomebank_daum_report">웰컴뱅크 Kakao Report</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Interpark_daum_report/Interpark_daum_report">인터파크 Kakao Report</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Interpark_raw_report/Interpark_raw_report">인터파크 매체 계정 Report</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Bucketplace_daum_report/Bucketplace_daum_report">오늘의집 Kakao Report</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Koala_daum_report/Koala_daum_report">코알라 Kakao Report</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/watcha/twitter_dashboard_report">왓챠 트위터 대시보드 Report</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Watcha_Custom_Report">왓챠 Custom Report</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Watcha_appsflyer_report">왓챠 Appsflyer Report</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Appsflyer_report_29cm">29cm Appsflyer Report</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Appsflyer_report_grow">그로우 Appsflyer Report</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Appsflyer_report_siv">siv Appsflyer Report</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Appsflyer_report_bucketplace">오늘의집 Appsflyer Report</a></li>-->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/tumi/xml_upload">TUMI 상품 비교</a></li-->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/bizspring/lezhinkr">Bizspring(레진)</a></li-->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/peoplefund/peoplefund_csv">피플펀드CSV</a></li-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Custom_report_illy">일리카페 매체 Raw Report</a></li>-->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/ssf/keywordrpt">삼성물산 키워드 Report</a></li-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/SSFM_indirect/SSFM_indirect">삼성물산 GA 지원전환 Report</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/Toryburch_indirect/Toryburch_indirect">토리버치 지원전환 Report</a></li>-->
+					<!--li class="nav__depth--item"><a class="nav__depth--anchor" href="/heodak/report">허닭 Report</a></li-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/hanstyle/">한스타일 Report</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/hdmarket/">HD Market Report</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor"href="/lenditrpt/lenditrpt_list">랜딧 Report</a></li>-->
+					<!-- li class="nav__depth--item"><a class="nav__depth--anchor"href="/dbinsu/dbinsu_upload">DB손해보험</a></li -->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor"href="/Kurly_nate_report">마켓컬리 NATE Report</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor"href="/Wadiz_indirect/Wadiz_indirect">와디즈 리워드 지원전환 Report</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor"href="/Bodyluv_indirect">바디럽 지원전환 Report</a></li>-->
+                    <!--<li class="nav__depth--item"><a class="nav__depth--anchor"href="/bodyluv_report">바디럽 통합 Report</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor"href="/Bodyluv_daum_report/Bodyluv_daum_report">바디럽 Kakao Report</a></li>-->
+					<!--<li class="nav__depth--item"><a class="nav__depth--anchor" href="/yearshop/">백년화편 Report</a></li>-->
+                </ul>
+            </li>
+            <!--li class="nav__item">
+                <a href="javascript:void(0);" class="nav__item--anchor">사원관리</a>
+                <ul class="nav__depth">
+                    <li class="nav__depth--item"><a class="nav__depth--anchor"href="/member/member_list">사원 목록</a></li>
+                </ul>
+            </li-->
+        </ul>
+    </nav>
+    <aside class="pc__none side__menu">
+        <section class="side__menu--wrap">
+            <article class="menu_header">
+                    <form action="https://solution.adef.co.kr/kakaostyle/product" class="solution__form">
+                        <select name="selMove" id="selMove" class="solution__select">
+                            <option value="">솔루션</option>
+                            <option value="intranet">인트라넷</option>
+                        </select>
+                        <button class="solution__select--btn common__btn--orange">이동</button>
+						
+                    </form>
+                <button class="header__menu--btn pc__none close active">
+                    <span></span>
+                </button>
+            </article>
+            <article class="side__nav">
+                <!-- 메뉴 타이틀 -->
+                <ul class="snav__title">
+                    <li class="snav__title--item ">
+                        <a class="active" href="javascript:void(0);"><i class="snav__title--icon"></i>모니터링</a>
+                    </li>
+                    <li class="snav__title--item">
+                        <a href="javascript:void(0);"><i class="snav__title--icon"></i>검수</a>
+                    </li>
+                    <li class="snav__title--item">
+                        <a href="javascript:void(0);"><i class="snav__title--icon"></i>업무효율화</a>
+                    </li>
+                    <li class="snav__title--item">
+                        <a href="javascript:void(0);"><i class="snav__title--icon"></i>REPORT &amp; 분석</a>
+                    </li>
+                    <!--li class="snav__title--item">
+                        <a href="javascript:void(0);"><i class="snav__title--icon"></i>사원관리</a>
+                    </li-->
+                    <li class="snav__title--item snav__logout">
+                        <button><img src="./ADEF_files/icon_logout.png" alt="">로그아웃</button>
+                    </li>
+
+                    
+                </ul>
+                <!-- 서브메뉴 -->
+                <div class="side__depth--wrap">
+                    <ul class="side__depth--list">
+						<li class="side__depth--item side__item--title "><h3>모니터링</h3></li>
+
+
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/sns_monitoring/snsmonitoring_list">SNS 팔로워 모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/monitoring/landingcap">경쟁사-랜딩-모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/monitoring/dabanner">네이버-DA-모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/monitoring/banner_monitoring">경쟁사 배너 모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/monitoring/eventlist">경쟁사 이벤트 모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/monitoring/maybeone_naver_sa_monitoring">메이비원 SA 파워링크 모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/monitoring/iloveeye_naversa_monitoring">밝은세상안과 네이버SA 모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/monitoring/naver_brandsearch">경쟁사 네이버BS 모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/monitoring/naver_search">경쟁사 SA 모니터링</a></li>	
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/monitoring/maybeone_publog_monitoring">퍼블로그 이벤트 모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/pf_kakao/uniqlo_friend_count_list">유니클로 카카오 채널 모니터링</a></li>	
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/pf_kakao/lululemon_friend_count_list">룰루레몬 카카오 채널 모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/monitoring/essa_keyword">에싸 키워드 모니터링</a></li>						
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/monitoring/naver_search_rank_by_time">키워드 순위 모니터링(시간대별)</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/monitoring/naver_search_rank_dior">Dior 키워드 순위 모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/monitoring/naver_search_rank">키워드 순위 모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/monitoring/search_keyword_text">키워드검색_PL_모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/monitoring/youtube_trand">유투브 트랜드_모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/monitoring/eyereum_naver_sa_rank">아이리움안과 네이버 SA 순위 모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/monitoring/carmore_naver_sa_rank">카모아 네이버 SA 순위 모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/pledis/pledis_sns_monitoring">플레디스 SNS 모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/pf_kakao/northface_friend_count_list">노스페이스 카카오 채널 모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/monitoring/miraen_naver_sa_rank">미래엔초코 네이버 SA 순위 모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/lululemon/product">룰루레몬 상품정보 모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/pf_kakao/sergiotacchini_friend_count_list">세르지오타키니 카카오 채널 모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/etude/product">아모레퍼시픽 올리브영 상품 모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/monitoring/carinsurance_naver_sa_rank">자동차보험 네이버 SA 순위 모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/monitoring/longtermcare_insurance_naver_sa_rank">장기보험 네이버 SA 순위 모니터링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/pf_kakao/marithe_friend_count_list">마리떼 카카오 채널 모니터링</a></li>
+                        <li class="side__depth--item"><a href="https://solution.adef.co.kr/monitoring/naverbs_monitoring_list">브검 미노출 알림 목록</a></li>
+
+
+						<!--li class="side__depth--item"><a href="/monitoring/naver_search_rank_kt">KT 키워드 순위 모니터링</a></li-->
+						<!--li class="side__depth--item"><a href="/lawandgood/news_list">로앤굿 뉴스 모니터링</a></li-->
+						<!--li class="side__depth--item"><a href="/underarmour_kakao_audience">언더아머 카카오모먼트 타게팅 모수 모니터링</a></li-->
+						<!--li class="side__depth--item"><a href="/monitoring/navershopping_keyword">네이버쇼핑 키워드 모니터링</a></li-->
+						<!--li class="side__depth--item"><a href="/monitoring/productlist">트립닷컴 상품정보 모니터링</a></li-->
+						<!--li class="side__depth--item"><a href="/monitoring/clio_report">클리오 대시보드 모니터링</a></li-->
+						<!--li class="side__depth--item"><a href="/monitoring/siv_brandname">SIV 브랜드명 모니터링</a></li-->
+						<!--li class="side__depth--item"><a href="/goodchoice/facebook_list">여기어때 페이스북 리포트</a></li-->
+						<!--li class="side__depth--item"><a href="/watcha/title_crawl_list">왓챠-작품명 크롤링</a></li-->
+						<!--<li class="side__depth--item"><a href="/daumapi">Daum 검색순위 확인</a></li>-->
+						<!-- <li class="side__depth--item"><a href="/siv/siv_insta_list">SIV 전용 팔로워 모니터링</a></li>-->
+						<!--<li class="side__depth--item"><a href="/adef/adef_sns_list">ADEF SNS 모니터링</a></li>-->
+						<!--<li class="side__depth--item"><a href="/Bizmoney_monitoring">매체 계정잔액 모니터링</a></li>-->
+						<!-- <li class="side__depth--item"><a href="/Trend_search">구글 트랜드 검색</a></li>-->
+						<!--<li class="side__depth--item"><a href="/monitoring/peoplefund_adcost">피플펀드-광고비-모니터링</a></li>-->
+						<!--<li class="side__depth--item"><a href="/monitoring/naver_catalog">네이버-카탈로그-모니터링</a></li>-->
+						<!--<li class="side__depth--item"><a href="/monitoring/lacoste_banner">라코스테 배너 모니터링</a></li>-->
+						<!--<li class="side__depth--item"><a href="/hanstyle_newproduct_monitoring/hanstyle_newproduct_monitoring_list">한스타일 기획랜딩 신규제품 코드 모니터링</a></li>-->
+						<!--<li class="side__depth--item"><a href="/monitoring/homeshopping_travel">홈쇼핑 여행 모니터링</a></li>-->
+
+					</ul>
+                    <ul class="side__depth--list none">
+						<li class="side__depth--item side__item--title "><h3>검수</h3></li>	
+						
+
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/siv/landing">SIV 랜딩테스트</a></li>						
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/media_image/">매체 이미지 검수</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/louisvuitton/landing">루이비통 랜딩 검수</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/goodneighbors/landing">굿네이버스 랜딩 검수</a></li>						
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/celine/landing">셀린느 랜딩 검수</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/dior/landing">Dior 랜딩 검수</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/woongjinbooks/woongjinbooks_landing">웅진책방 랜딩 검수</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/dior/beauty_landing">디올뷰티 랜딩 검수</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/underarmour/landing">언더아머 랜딩 검수</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/eql/landing">EQL 랜딩 검수</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/marithe/landing">마리떼 상품조회</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/kakaostyle/airbridge_landing">카카오스타일 에어브릿지 랜딩 검수</a></li>
+
+						<!--li class="side__depth--item"><a href="/ikea/ikea_site_check">IKEA 오류 검수</a></li-->
+						<!--li class="side__depth--item"><a href="/ssf/landing">SSF 랜딩 검수</a></li-->
+						<!--li class="side__depth--item"><a href="/craw/wadiz_invest">WADIZ 랜딩 검수</a></li-->
+						<!--li class="side__depth--item"><a href="/ebates/ebates_landing_check">Ebates 랜딩 검수</a></li-->
+						<!--li class="side__depth--item"><a href="/craw/tenbyten">10x10 랜딩테스트</a></li-->
+						<!--li class="side__depth--item"><a href="/hanstyle/landing">한스타일 랜딩 검수</a></li-->
+                    </ul>
+                    <ul class="side__depth--list none">
+						<li class="side__depth--item side__item--title "><h3>업무효율화</h3></li>	
+						
+
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/utility/url_divncut">URL-Blank 파라미터 삭제</a></li>
+						<!--<li class="side__depth--item"><a href="/Kakaomoment_Bulkset_New/default_account">카카오모먼트 대량관리 API</a></li>
+						<li class="side__depth--item"><a href="/Kakaomoment_Bulkset_Create/default_account">카카오모먼트 대량등록 API</a></li>-->
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/Nquery_report">네이버 PC/MO 검색 쿼리 리포트</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/Nquery_report/Monthly_query_underarmour">언더아머 네이버 월간 검색쿼리 리포트</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/Nquery_report/Monthly_query_skstore">SK스토아 네이버 월간 검색쿼리 리포트</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/Nquery_report/Monthly_query_essa">에싸 네이버 월간 검색쿼리 리포트</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/Nquery_report/Monthly_query_rael">라엘 네이버 월간 검색쿼리 리포트</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/Nquery_report/Monthly_query_sephora">세포라 네이버 월간 검색쿼리 리포트</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/Nquery_report/Monthly_query_eyereum">아이리움안과 네이버 월간 검색쿼리 리포트</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/klook/feed_upload">클록 Feed 비교</a></li>
+						<!--li class="side__depth--item"><a href="/goodchoice/extract_raw">여기어때 RAW 가공</a></li-->
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/SK_store_shopping_schedule/shopping_list">SK스토아 TV상품 방송편성표</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/underarmour/naver_query">언더아머 네이버 검색 쿼리</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/kakaomoment_reservation/time_schedule/eql">한섬EQL 카카오 스케줄 예약</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/kakaomoment_reservation/time_schedule/hansome">한섬 카카오 스케줄 예약</a></li>					
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/kakaomoment_reservation/time_schedule/sivillage">sivillage 카카오 스케줄 예약</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/kakaomoment_reservation/time_schedule/naver_plus">네이버플러스 카카오 스케줄 예약</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/kakaofriendsgolf/kakaofriendsgolf_products">카카오프렌즈골프 상품정보 다운로드</a></li>	
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/goodchoice/appsflyer_raw">여기어때 앱스 가공</a></li>
+						<!--<li class="side__depth--item"><a href="/peripera/kakao_moment_image">페리페라 카카오 모먼트 이미지 다운</a></li>-->
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/wanted/kakao_moment_image">원티드 카카오 모먼트 이미지 다운</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/google_asset_image_down/louisvuitton_assset_image">루이비통 Asset 정보</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/naverkeywordestimate/keyword_estimate">네이버 키워드 예상입찰가 조회</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/encoding/encoding_file">GA4 파일 인코딩</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/louisvuitton/keyword_query">루이비통 주간 쿼리량 키워드 등록</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/ssf_search/ssf_datalab">네이버 데이터랩 순위 조회</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/eyereum/eyereum_realtime_cost">아이리움안과 실시간 비용조회</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/lacoste/lacoste_product">라코스테 상품정보 조회</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/goodchoice_appsflyer/goodchoice_appsflyer_onelink">여기어때 Onelink 관리</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/naversearch_query">[통합] 네이버 월간 검색쿼리 리포트</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/utility/excel_image">엑셀 이미지 URL</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/dior/ga_utm">Dior PCD URL 파라미터 추출</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/dior/cdc_url">Dior CDC URL 재고조회</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/carmore/appsflyer_raw">카모아 앱스머징</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/skstoa/skstoa_feed">SK스토아 상품코드 추출</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/carmore/feed">카모아 피드 업로드</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/taboola_reservation/time_schedule/gnbs">굿네이버스 타뷸라 스케쥴 예약</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/loropiana/keyword_query">로로피아나 주간 쿼리량 키워드 등록</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/hddepartment/keyword">현백면세 네이버 스마트블록 크롤링</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/northface/keyword_query">노스페이스 주간 쿼리량 키워드 등록</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/meta_ads/meta_ads_image">메타 광고 라이브러리 이미지 추출</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/sergio/keyword_query">세르지오 주간 쿼리량 키워드 등록</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/eql/eql_product">EQL 상품정보 조회</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/sergio/gfa_onoff">세르지오타키니 GFA 스케쥴 예약</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/dior/cdc_keyword_expend">Dior CDC 키워드 확장</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/handsome/product">한섬 실시간 상품정보 조회</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/eql/related_keyword">EQL 연관검색어 조회</a></li>
+
+
+						<!--li class="side__depth--item"><a href="/ikea/ikea_product_check">IKEA 검색어 상품체크</a></li-->
+						<!--li class="side__depth--item"><a href="/ikea/ikea_sustainable">IKEA 기획전</a></li-->
+						<!--li class="side__depth--item"><a href="/dbinsu/dbinsu_report">DB손해보험 RAW</a></li-->
+						<!--li class="side__depth--item"><a href="/dbinsu/dbinsu_groupby_report">DB손해보험 Report</a></li-->
+						<!--li class="side__depth--item"><a href="/ssf/sale">SSF 할인율</a></li-->
+						<!--<li class="side__depth--item"><a href="/wadiz/report">WADIZ RAW</a></li>-->
+						<!--li class="side__depth--item"><a href="/Waiz_Feed_Exclusion">WADIZ 구글피드 ID 제외처리</a></li-->
+						<!--li class="side__depth--item"><a href="/utility/url_divncut2">UTM,파라미터 삭제<br/>삼성물산 전용</a></li-->
+						<!--li class="side__depth--item"><a href="/utility/keywordExpansion">확장 키워드 Pool</a></li-->
+						<!--li class="side__depth--item"><a href="/utility/findeng">익스피디아-영문 키워드 찾기</a></li-->
+						<!--li class="side__depth--item"><a href="/WadizAdset/wadiz_adset">와디즈 서포터</a></li-->
+						<!--li class="side__depth--item"><a href="/peoplefund/bid_condition">피플펀드 - 자동입찰 기준</a></li-->
+						<!--li class="side__depth--item"><a href="/ohou/ohou_api">오늘의집 API 보고서</a></li-->
+						<!--<li class="side__depth--item"><a href="/hanstyle_product/hanstyle_getid">한스타일 상품정보 다운로드</a></li>-->
+						<!--li class="side__depth--item"><a href="/ssf/brand">삼성물산 브랜드</a></li-->
+						<!--li class="side__depth--item"><a href="/ssfshop_keyword_comparision/naver_keyword_comparision">삼성물산 네이버 키워드 검색</a></li-->
+						<!--<li class="side__depth--item"><a href="/ssf_product/ssf_getid">삼성물산 상품정보 다운로드</a></li>2025-01-02 HIH 중단-->
+						<!--li class="side__depth--item"><a href="/kakaomoment_reservation/time_schedule/hanstyle">한스타일 카카오 스케줄 예약</a></li-->
+						<!--li class="side__depth--item"><a href="/kakaomoment_reservation/time_schedule/woongjin">웅진 카카오 스케줄	 예약</a></li-->
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/kakaomoment_reservation/time_schedule/goodchoice">여기어때 카카오 스케줄 예약</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/goodchoice/gfa_onoff">여기어때 GFA 스케줄 예약</a></li>
+						<!--<li class="side__depth--item"><a href="/ssf_search/ssf_searchdata">삼성물산 연관검색어 조회</a></li>2025-01-02 HIH 중단-->
+						<!--<li class="side__depth--item"><a href="/ssf_search/ssf_searchbrand">삼성물산 브랜드조회</a></li>2025-01-02 HIH 중단-->
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/kakaostyle/datalab">카카오스타일 데이터랩 카테고리 등록</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/kakaostyle/product">카카오스타일 상품정보 조회</a></li>
+						<li class="side__depth--item"><a href="https://solution.adef.co.kr/kakaostyle/naver_rank">카카오스타일 네이버 모바일 통검노출순위</a></li>
+					</ul>
+                    <ul class="side__depth--list none">
+                        <li class="side__depth--item side__item--title "><h3>REPORT &amp; 분석</h3></li>
+
+
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/ges/ges_list">Google budget Estimate(GES)</a></li>
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/garaw/garaw_list">GA 경로분석 Raw</a></li>
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/navershopping/keyword_report">네이버쇼핑검색 키워드 Report</a></li>
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/naverbsrpt/bsdetail">네이버BS 소재 상세 Report</a></li>
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/naverapi/naverep">Naver EP</a></li>
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/Yesform_keyword_imp_rank">예스폼 네이버 노출순위 Report</a></li>						
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/Account_report_gnbs">굿네이버스 계정 통합 리포트</a></li>
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/Yesform_daum_report/Yesform_daum_report">예스폼 Kakao Report</a></li>
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/Louisvuitton_daum_report/Louisvuitton_daum_report">루이비통 Kakao Report</a></li>						
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/Underarmour_daum_report/Underarmour_daum_report">언더아머 Kakao Report</a></li>
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/Dior_daum_report/Dior_daum_report">디올 Kakao Report</a></li>						
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/Pethroom_daum_report/Pethroom_daum_report">페스룸 Kakao Report</a></li>						
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/celine/report">셀린느 Report</a></li>						
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/yesform/">Yesform Report</a></li>
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/iloveeye/">밝은세상안과 Report</a></li>
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/klook_report/klook_report">Klook GA Report</a></li>
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/woongjinbooks/">웅진책방 Report</a></li>
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/getrael/">라엘 Report</a></li>
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/eyereum/eyereum_acecounter_conversion">아이리움안과 전환리포트</a></li>
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/dior/beauty_keyword_report">디올뷰티 Report</a></li>
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/lululemon/media_raw">룰루레몬 Report</a></li>
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/isoi/">아이소이 Report</a></li>
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/ppurio/">뿌리오 Report</a></li>
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/daou/">문자메시지 Report</a></li>
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/sabangnet/">사방넷 Report</a></li>						
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/northface/">노스페이스 Report</a></li>
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/sergio/">세르지오타키니 Report</a></li>
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/marithe/report">마리떼 Report</a></li>
+						<!--<li class="side__depth--item"><a class="nav__depth--anchor" href="/descente/descente_report">데상트코리아 Report</a></li>-->
+						<li class="side__depth--item"><a class="nav__depth--anchor" href="https://solution.adef.co.kr/skstoa/report">SK스토아 Report</a></li>
+
+						<!--li class="side__depth--item"><a class="nav__depth--anchor" href="/Google_shopping_report_29cm">29cm 구글쇼핑 Report</a></li-->
+						<!--li class="side__depth--item"><a class="nav__depth--anchor" href="/dailyhotel/dailyhotel">데일리호텔 Report</a></li-->
+						<!--li class="side__depth--item"><a class="nav__depth--anchor" href="/Sivillage_jaju_indirect/Sivillage_jaju_indirect">Sivillage jaju 지원전환 Report</a></li-->
+						<!--li class="side__depth--item"><a class="nav__depth--anchor" href="/Naver_report_29cm">29cm 네이버 계정 통합 리포트</a></li-->
+						<!--li class="side__depth--item"><a class="nav__depth--anchor" href="/Loropiana_daum_report/Loropiana_daum_report">로로피아나 Kakao Report</a></li-->
+						<!--li class="side__depth--item"><a class="nav__depth--anchor" href="/SSFM_daum_report/SSFM_daum_report">SSFM Kakao Report</a></li-->
+						<!--li class="side__depth--item"><a class="nav__depth--anchor" href="/Welcomebank_daum_report/Welcomebank_daum_report">웰컴뱅크 Kakao Report</a></li-->
+						<!--li class="side__depth--item"><a class="nav__depth--anchor" href="/Interpark_daum_report/Interpark_daum_report">인터파크 Kakao Report</a></li-->
+						<!--li class="side__depth--item"><a class="nav__depth--anchor" href="/Interpark_raw_report/Interpark_raw_report">인터파크 매체 계정 Report</a></li-->
+						<!--<li class="side__depth--item"><a class="nav__depth--anchor" href="/Bucketplace_daum_report/Bucketplace_daum_report">오늘의집 Kakao Report</a></li>-->
+						<!--<li class="side__depth--item"><a class="nav__depth--anchor" href="/Koala_daum_report/Koala_daum_report">코알라 Kakao Report</a></li>-->
+						<!--<li class="side__depth--item"><a class="nav__depth--anchor" href="/watcha/twitter_dashboard_report">왓챠 트위터 대시보드 Report</a></li>-->
+						<!--<li class="side__depth--item"><a class="nav__depth--anchor" href="/Watcha_Custom_Report">왓챠 Custom Report</a></li>-->
+						<!--<li class="side__depth--item"><a class="nav__depth--anchor" href="/Watcha_appsflyer_report">왓챠 Appsflyer Report</a></li>-->
+						<!--<li class="side__depth--item"><a class="nav__depth--anchor" href="/Appsflyer_report_29cm">29cm Appsflyer Report</a></li>-->
+						<!--<li class="side__depth--item"><a class="nav__depth--anchor" href="/Appsflyer_report_grow">그로우 Appsflyer Report</a></li>-->
+						<!--<li class="side__depth--item"><a class="nav__depth--anchor" href="/Appsflyer_report_siv">siv Appsflyer Report</a></li>-->
+						<!--<li class="side__depth--item"><a class="nav__depth--anchor" href="/Appsflyer_report_bucketplace">오늘의집 Appsflyer Report</a></li-->
+						<!--li class="side__depth--item"><a class="nav__depth--anchor" href="/tumi/xml_upload">TUMI 상품 비교</a></li>
+						<!--li class="side__depth--item"><a class="nav__depth--anchor" href="/bizspring/lezhinkr">Bizspring(레진)</a></li-->
+						<!--li class="side__depth--item"><a class="nav__depth--anchor" href="/peoplefund/peoplefund_csv">피플펀드CSV</a></li-->
+						<!--li class="side__depth--item"><a class="nav__depth--anchor" href="/Custom_report_illy">일리카페 매체 Raw Report</a></li-->
+						<!--li class="side__depth--item"><a class="nav__depth--anchor" href="/ssf/keywordrpt">삼성물산 키워드 Report</a></li-->
+						<!--li class="side__depth--item"><a class="nav__depth--anchor" href="/SSFM_indirect/SSFM_indirect">삼성물산 GA 지원전환 Report</a></li-->
+						<!--li class="side__depth--item"><a class="nav__depth--anchor" href="/Toryburch_indirect/Toryburch_indirect">토리버치 지원전환 Report</a></li-->
+						<!--li class="side__depth--item"><a class="nav__depth--anchor" href="/heodak/report">허닭 Report</a></li-->
+						<!--li class="side__depth--item"><a class="nav__depth--anchor" href="/hanstyle/">한스타일 Report</a></li-->
+						<!--<li class="side__depth--item"><a class="nav__depth--anchor" href="/hdmarket/">HD Market Report</a></li>-->
+						<!--<li class="side__depth--item"><a class="nav__depth--anchor" href="/yearshop/">백년화편 Report</a></li>-->
+
+                    </ul>
+                    <!--ul class="side__depth--list none">
+                        <li class="side__depth--item side__item--title ">
+                            <h3>사원관리</h3>
+                        </li>
+                        <li class="side__depth--item">
+                            <a href="/member/member_list">사원관리</a>
+                        </li>
+                    </ul-->
+                </div>
+            </article>
+            <article class="menu__footer">
+                2020, adefficiency all rights reserved.<br>
+                <a href="javascript:void(0);">인트라넷 바로가기 &gt;</a>
+            </article>
+        </section>
+        
+    </aside>
+    <!-- //공통 영역 -->
+<script type="text/javascript">
+$(function(){
+	$('#topmenu_soluition1').addClass("current");
+});
+
+function exhibition_upload()
+{    
+    var frm = document.frm1;
+    frm.action = "/kakaostyle/product_exhibition";
+    frm.submit();	   
+}
+
+function exhibition_upload2()
+{    
+    var frm = document.frm5;
+    frm.action = "/kakaostyle/product_exhibition2";
+    frm.submit();	   
+}
+
+function exhibition_download()
+{
+	window.location.href = 'https://reportdown.adef.co.kr/docform/kakaostyle_exhibition_sample.csv';
+}
+
+
+
+function store_upload()
+{
+    var frm = document.frm2;
+    frm.action = "/kakaostyle/product_store";
+    frm.submit();	
+}
+
+function store_download()
+{
+	window.location.href = 'https://reportdown.adef.co.kr/docform/kakaostyle_store_sample.csv';
+}
+
+function search_upload()
+{
+    var frm = document.frm3;
+    frm.action = "/kakaostyle/product_search";
+    frm.submit();	
+}
+
+function search_download()
+{
+	window.location.href = 'https://reportdown.adef.co.kr/docform/kakaostyle_search_sample.csv';
+}
+
+function posty_store_upload()
+{
+    var frm = document.frm4;
+    frm.action = "/kakaostyle/posty_product_store";
+    frm.submit();	
+}
+
+function posty_store_download()
+{
+	window.location.href = 'https://reportdown.adef.co.kr/docform/kakaostyle_posty_store_sample.csv';
+}
+
+</script>
+
+
+
+<style>
+  .common__btn--disabled {
+    background-color: #777777; /* 회색 배경색으로 변경 */
+    color: white; /* 글자색은 흰색으로 설정 (선택사항) */
+  }
+</style>
+
+    <main class="page__main">
+	<h2 class="page__title">카카오스타일 상품조회<p class="bookmark-button" style="margin-left:10px;"><i class="fa-solid fa-star post-reg" title="북마크 삭제"></i></p></h2>
+	<section class="page__section">
+		<ul class="upload__list border-none">					
+			<li>
+					<h4 class="upload__title m-b-10">지그재그 기획전</h4>
+					<div class="upload__box ">								
+						<div class="upload__file--box m-l-0">
+							<form enctype="multipart/form-data" method="post" name="frm1" id="frm1">
+								<input id="upload1" type="file" name="userfile">
+								<label for="upload1" class="upload__input--label">파일선택</label>
+								<span class="upload__name">선택된 파일이 없습니다.</span>
+							</form>
+						</div>
+						<button class="common__btn--orange form__btn" onclick="exhibition_upload()">업로드</button>
+						&nbsp;&nbsp;&nbsp;
+						<button class="common__btn--navy form__btn" onclick="exhibition_download()">파일 다운로드</button>
+					</div>
+				<!-- <div class="upload__box">								
+					<h4 class="upload__title">지그재그 기획전(서브탭별)</h4>
+					<div class="upload__file--box">
+						<form enctype="multipart/form-data" method="post" name="frm5" id="frm5">
+							<input id="upload5" type="file" name="userfile"  >
+							<label for="upload5" class="upload__input--label">파일선택</label>
+							<span class="upload__name">선택된 파일이 없습니다.</span>
+						</form>
+					</div>
+					<button class="common__btn--orange form__btn" onclick="exhibition_upload2()">업로드</button>
+					&nbsp;&nbsp;&nbsp;
+					<button class="common__btn--navy form__btn" onclick="exhibition_download()">파일 다운로드</button>
+				</div>
+				<br/>
+				<br/> -->
+			</li>
+			<li>
+				<h4 class="upload__title m-b-10">지그재그 스토어</h4>
+				<div class="upload__box">								
+					<div class="upload__file--box m-l-0">
+						<form enctype="multipart/form-data" method="post" name="frm2" id="frm2">
+							<input id="upload2" type="file" name="userfile">
+							<label for="upload2" class="upload__input--label">파일선택</label>
+							<span class="upload__name">선택된 파일이 없습니다.</span>
+						</form>
+					</div>
+					<button class="common__btn--orange form__btn" onclick="store_upload()">업로드</button>
+					&nbsp;&nbsp;&nbsp;
+					<button class="common__btn--navy form__btn" onclick="store_download()">파일 다운로드</button>
+				</div>
+			</li>
+			<li>
+				<br>
+				<br>
+				<h4 class="upload__title m-b-10">지그재그 검색어</h4>
+				<div class="upload__box">								
+					<div class="upload__file--box m-l-0">
+						<form enctype="multipart/form-data" method="post" name="frm3" id="frm3">
+							<input id="upload3" type="file" name="userfile">
+							<label for="upload3" class="upload__input--label">파일선택</label>
+							<span class="upload__name">선택된 파일이 없습니다.</span>
+						</form>
+					</div>
+					<button class="common__btn--orange form__btn" onclick="search_upload()">업로드</button>
+					&nbsp;&nbsp;&nbsp;
+					<button class="common__btn--navy form__btn" onclick="search_download()">파일 다운로드</button>
+				</div>
+			</li>
+			<li>
+				<hr style="border: none; height: 2px; background-color: #ccc;">
+				<h4 class="upload__title m-b-10">포스티 스토어</h4>
+				<div class="upload__box">								
+					<div class="upload__file--box m-l-0">
+						<form enctype="multipart/form-data" method="post" name="frm4" id="frm4">
+							<input id="upload4" type="file" name="userfile">
+							<label for="upload4" class="upload__input--label">파일선택</label>
+							<span class="upload__name">선택된 파일이 없습니다.</span>
+						</form>
+					</div>
+					<button class="common__btn--orange form__btn" onclick="posty_store_upload()">업로드</button>
+					&nbsp;&nbsp;&nbsp;
+					<button class="common__btn--navy form__btn" onclick="posty_search_download()">파일 다운로드</button>
+				</div>
+				<ul class="info__list--none">
+					<li class="">※ 기능 : 포스티 입점 스토어의 전체 상품 개수 크롤링</li>
+					<li class="">※ https://intranet.adef.co.kr/IT/irequest_view?idx=6870</li>
+				</ul>
+				<hr style="border: none; height: 2px; background-color: #ccc;">
+				<ul class="info__list--none">
+					<li class="">※ URL 갯수에 따라 실행시간이 소요됩니다.</li>
+					<li class="">※ CSV 형식의 파일을 지원합니다.</li>
+				</ul>
+			</li>
+
+		</ul>
+	</section>
+</main>
+<!-- 공통 영역 -->
+<footer class="footer m__none">
+		2020, <span class="orange__color">adefficiency</span> all rights reserved. <a href="https://intranet.adef.co.kr/login" class="intranet__anchor" target="_blank">인트라넷 바로가기 &gt;</a>
+</footer>
+<!-- 탑버튼 -->
+<button class="top__btn" style="display: block;">
+		<span></span>
+		<p>TOP
+</p></button>
+<!-- //공통 영역 --><iframe allow="join-ad-interest-group" data-tagging-id="AW-991460251" data-load-time="1749696111092" height="0" width="0" src="./ADEF_files/991460251.html" style="display: none; visibility: hidden;"></iframe><iframe height="0" width="0" style="display: none; visibility: hidden;" src="./ADEF_files/saved_resource.html"></iframe>
+
+</body></html>
